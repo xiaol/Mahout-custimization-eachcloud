@@ -23,7 +23,7 @@ public class AzureStorageHelper {
                     "AccountKey= mo1bmV+/AAbDTNpLFVV1F64zNEpB8v96fxX4x+HemU9tEUrF49oEp4FabUmlOVQWWramhyohjeWj70wVEQooug==";
     private CloudTableClient _tableClient;
 
-    public void initialize()
+    public void init()
     {
         try
         {
@@ -59,7 +59,7 @@ public class AzureStorageHelper {
     }
 
 
-    public void uploadToAzureTable(String tableName, List<TableServiceEntity> listEntity){
+    public void uploadToAzureTable(String tableName, List<? extends TableServiceEntity> listEntity){
         // Define a batch operation.
         TableBatchOperation batchOperation = new TableBatchOperation();
 

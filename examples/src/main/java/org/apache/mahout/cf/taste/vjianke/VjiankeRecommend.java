@@ -138,15 +138,6 @@ public class VjiankeRecommend {
                 // No additional action if close() statements fail.
             }
         }
-
-        try{
-            if (null != connection) connection.close();
-            if (null != statement) statement.close();
-            if (null != resultSet) resultSet.close();
-        }
-        catch (SQLException e){
-            e.printStackTrace();
-        }
         return prefsMap;
     }
 
@@ -156,7 +147,7 @@ public class VjiankeRecommend {
     }
 
     public List<RecommendedItem> recommend(String strUuid, FastByIDMap<PreferenceArray> prefsMap,
-                          ArrayList<UUID> users) throws TasteException {
+                          ArrayList<UUID> users, int howMany) throws TasteException {
         DataModel model = new GenericBooleanPrefDataModel(
                 GenericBooleanPrefDataModel.toDataMap(prefsMap));
 
@@ -170,7 +161,7 @@ public class VjiankeRecommend {
 
         int userIndex = users.indexOf(UUID.fromString(strUuid/*"07221718-b190-4536-8191-a0410029de34")*/));
         List<RecommendedItem> recommendations =
-                recommender.recommend(userIndex,10);
+                recommender.recommend(userIndex,howMany);
 
         System.out.println("user: " +users.get(userIndex));
         for(RecommendedItem item : recommendations ){
