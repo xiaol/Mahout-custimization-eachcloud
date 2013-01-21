@@ -1,0 +1,12 @@
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/points Out: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/canopy Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@43f7b41b t1: 4.0 t2: 3.0
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/points Clusters In: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/canopy/clusters-0-final Out: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/kmeans Distance: org.apache.mahout.common.distance.ManhattanDistanceMeasure
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 1.0 max Iterations: 1 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/points Clusters In: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/kmeans Out: file:/tmp/mahout-ClusterCountReaderTest-5536887556500809728/kmeans Distance: org.apache.mahout.common.distance.ManhattanDistanceMeasure@43f7b41b

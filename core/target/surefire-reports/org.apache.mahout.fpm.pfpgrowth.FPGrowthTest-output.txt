@@ -1,0 +1,74 @@
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique items 5
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique pruned items 5
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Nodes in the FP Tree: 12
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 4
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 1 Patterns with Least Support 3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 3 Patterns with Least Support 4
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 2
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 7 Patterns with Least Support 5
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 1
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 5 Patterns with Least Support 6
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 6 Patterns with Least Support 6
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Tree Cache: First Level: Cache hits=10 Cache Misses=5
+[(X,22), (Y,14)]
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique items 2
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique pruned items 2
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Nodes in the FP Tree: 3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 1
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 2 Patterns with Least Support 14
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 2 Patterns with Least Support 22
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Tree Cache: First Level: Cache hits=1 Cache Misses=2
+[(X,33), (Y,25), (Z,11)]
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique items 3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique pruned items 3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Nodes in the FP Tree: 4
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 2
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 1 Patterns with Least Support 11
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 1
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 3 Patterns with Least Support 25
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 3 Patterns with Least Support 33
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Tree Cache: First Level: Cache hits=3 Cache Misses=3
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique items 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique pruned items 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Nodes in the FP Tree: 0
+2013-1-15 15:58:17 org.slf4j.impl.JCLLoggerAdapter info
+信息: Tree Cache: First Level: Cache hits=0 Cache Misses=0

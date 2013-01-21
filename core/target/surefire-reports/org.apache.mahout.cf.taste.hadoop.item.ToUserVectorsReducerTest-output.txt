@@ -1,0 +1,4 @@
+2013-1-15 15:41:26 org.slf4j.impl.JCLLoggerAdapter info
+пео╒: Command line arguments: {--booleanData=[false], --endPhase=[2147483647], --maxPrefsPerUser=[1000], --maxSimilaritiesPerItem=[100], --minPrefsPerUser=[1], --similarityClassname=[org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.CosineSimilarity], --startPhase=[0], --tempDir=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ItemSimilarityJobTest-2045907264680880128/tmp]}
+2013-1-15 15:41:26 org.slf4j.impl.JCLLoggerAdapter info
+

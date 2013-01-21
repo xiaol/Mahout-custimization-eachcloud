@@ -1,0 +1,1257 @@
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:03 INFO canopy.CanopyDriver: Build Clusters Input: file:/tmp/mahout-TestClusterDumper-3278227973011196928/testdata Out: file:/tmp/mahout-TestClusterDumper-3278227973011196928/output Measure: org.apache.mahout.common.distance.EuclideanDistanceMeasure@3844006e t1: 8.0 t2: 4.0
+C-0{n=5 c=[baseball:0.464, brown:1.679, cap:0.464, cat:1.044, dogs:1.533, fleece:0.326, fox:1.044, jacket:0.464, jumped:1.679, lazy:1.679, over:1.679, quick:1.679, red:1.916, robber:0.464, wore:0.464] r=[baseball:0.929, brown:0.839, cap:0.929, cat:1.278, dogs:0.767, fleece:0.651, fox:1.278, jacket:0.929, jumped:0.839, lazy:0.839, over:0.839, quick:0.839, robber:0.929, wore:0.929]}
+	Top Terms: 
+		red                                     =>  1.9162907600402832
+		quick                                   =>   1.678889846801758
+		over                                    =>   1.678889846801758
+		lazy                                    =>   1.678889846801758
+		jumped                                  =>   1.678889846801758
+		brown                                   =>   1.678889846801758
+		dogs                                    =>  1.5330326080322265
+		fox                                     =>  1.0437751770019532
+		cat                                     =>  1.0437751770019532
+		robber                                  => 0.46435117721557617
+	Weight : [props - optional]:  Point:
+	0.27092821972925724: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.27092821972925724: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.2709282197292573: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.2709282197292573: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+C-1{n=5 c=[baseball:0.464, black:0.522, cap:0.464, dick:0.464, fleece:1.629, goat:1.044, had:1.679, jacket:0.464, lamb:1.044, little:1.679, mary:1.393, robber:0.464, snow:1.393, tar:0.603, white:1.679, whose:1.679, wore:0.464] r=[baseball:0.929, black:1.044, cap:0.929, dick:0.929, goat:1.278, had:0.839, jacket:0.929, lamb:1.278, little:0.839, mary:1.137, robber:0.929, snow:1.137, tar:1.206, white:0.839, whose:0.839, wore:0.929]}
+	Top Terms: 
+		white                                   =>   1.678889846801758
+		little                                  =>   1.678889846801758
+		had                                     =>   1.678889846801758
+		whose                                   =>   1.678889846801758
+		fleece                                  =>  1.6286087036132812
+		snow                                    =>  1.3930535316467285
+		mary                                    =>  1.3930535316467285
+		lamb                                    =>  1.0437751770019532
+		goat                                    =>  1.0437751770019532
+		tar                                     =>  0.6029806137084961
+	Weight : [props - optional]:  Point:
+	0.22941804461977644: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.22730223643861602: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.1938374512126532: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+C-2{n=3 c=[baseball:0.774, black:1.740, cap:0.774, dick:0.774, fleece:1.629, goat:0.870, had:1.399, jacket:0.774, lamb:0.870, little:1.399, mary:0.774, robber:0.774, snow:0.774, tar:1.005, white:0.700, whose:1.399, wore:0.774] r=[baseball:1.094, black:1.230, cap:1.094, dick:1.094, goat:1.230, had:0.989, jacket:1.094, lamb:1.230, little:0.989, mary:1.094, robber:1.094, snow:1.094, tar:1.421, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		black                                   =>  1.7396252950032551
+		fleece                                  =>  1.6286087036132812
+		little                                  =>   1.399074872334798
+		had                                     =>   1.399074872334798
+		whose                                   =>   1.399074872334798
+		tar                                     =>  1.0049676895141602
+		lamb                                    =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		baseball                                =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+	Weight : [props - optional]:  Point:
+	0.18969659961613985: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+C-3{n=3 c=[baseball:0.774, cap:0.774, dick:1.548, fleece:1.086, goat:0.870, had:0.700, jacket:0.774, little:0.700, man:0.774, moby:0.774, obsessed:0.870, robber:0.774, snow:0.774, story:0.774, whale:0.870, white:1.399, whose:0.700, wore:0.774] r=[baseball:1.094, cap:1.094, dick:1.094, fleece:0.768, goat:1.230, had:0.989, jacket:1.094, little:0.989, man:1.094, moby:1.094, obsessed:1.230, robber:1.094, snow:1.094, story:1.094, whale:1.230, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		dick                                    =>   1.547837257385254
+		white                                   =>   1.399074872334798
+		fleece                                  =>  1.0857391357421875
+		whale                                   =>  0.8698126475016276
+		obsessed                                =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		wore                                    =>   0.773918628692627
+		story                                   =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+		robber                                  =>   0.773918628692627
+C-4{n=3 c=[bob:1.005, crazy:1.005, dick:1.548, man:2.322, moby:2.322, obsessed:1.740, story:2.322, walrus:1.005, whale:1.740] r=[bob:1.421, crazy:1.421, dick:1.094, obsessed:1.230, walrus:1.421, whale:1.230]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		obsessed                                =>  1.7396252950032551
+		whale                                   =>  1.7396252950032551
+		dick                                    =>   1.547837257385254
+		crazy                                   =>  1.0049676895141602
+		walrus                                  =>  1.0049676895141602
+		bob                                     =>  1.0049676895141602
+	Weight : [props - optional]:  Point:
+	0.24075206555429404: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	0.2012499104818703: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+C-5{n=2 c=[bob:1.507, crazy:1.507, dick:1.161, man:2.322, moby:2.322, obsessed:1.305, story:2.322, walrus:1.507, whale:1.305] r=[bob:1.507, crazy:1.507, dick:1.161, obsessed:1.305, walrus:1.507, whale:1.305]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		crazy                                   =>  1.5074515342712402
+		walrus                                  =>  1.5074515342712402
+		bob                                     =>  1.5074515342712402
+		obsessed                                =>  1.3047189712524414
+		whale                                   =>  1.3047189712524414
+		dick                                    =>  1.1608779430389404
+	Weight : [props - optional]:  Point:
+	0.20589055622613786: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+C-6{n=3 c=[baseball:2.322, black:0.870, cap:2.322, fleece:1.629, jacket:2.322, red:0.639, robber:2.322, white:0.700, wore:2.322] r=[black:1.230, red:0.903, white:0.989]}
+	Top Terms: 
+		robber                                  =>   2.321755886077881
+		jacket                                  =>   2.321755886077881
+		wore                                    =>   2.321755886077881
+		cap                                     =>   2.321755886077881
+		baseball                                =>   2.321755886077881
+		fleece                                  =>  1.6286087036132812
+		black                                   =>  0.8698126475016276
+		white                                   =>   0.699537436167399
+		red                                     =>  0.6387635866800944
+	Weight : [props - optional]:  Point:
+	0.2694581424203502: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	0.28661801752969407: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	0.2774086407502039: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+C-7{n=1 c=[all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015] r=[]}
+	Top Terms: 
+		english                                 =>  3.0149030685424805
+		springer                                =>  3.0149030685424805
+		spaniel                                 =>  3.0149030685424805
+		best                                    =>  3.0149030685424805
+		all                                     =>  3.0149030685424805
+		dogs                                    =>  1.9162907600402832
+	Weight : [props - optional]:  Point:
+	0.5749105277432465: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:03 INFO clustering.ClusterDumper: Wrote 8 clusters
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:03 INFO canopy.CanopyDriver: Build Clusters Input: file:/tmp/mahout-TestClusterDumper-1786384485007168512/testdata Out: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output Measure: org.apache.mahout.common.distance.EuclideanDistanceMeasure@344e17f9 t1: 8.0 t2: 4.0
+12/09/08 16:21:03 INFO kmeans.KMeansDriver: Input: file:/tmp/mahout-TestClusterDumper-1786384485007168512/testdata Clusters In: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/clusters-0-final Out: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+12/09/08 16:21:03 INFO kmeans.KMeansDriver: convergence: 0.0010 max Iterations: 10 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+Cluster Iterator running iteration 1 over priorPath: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans/clusters-0
+12/09/08 16:21:03 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+12/09/08 16:21:03 INFO input.FileInputFormat: Total input paths to process : 1
+12/09/08 16:21:04 INFO mapred.JobClient: Running job: job_local_0001
+12/09/08 16:21:04 INFO mapred.MapTask: io.sort.mb = 100
+12/09/08 16:21:04 INFO mapred.MapTask: data buffer = 79691776/99614720
+12/09/08 16:21:04 INFO mapred.MapTask: record buffer = 262144/327680
+12/09/08 16:21:04 INFO mapred.MapTask: Starting flush of map output
+12/09/08 16:21:04 INFO mapred.MapTask: Finished spill 0
+12/09/08 16:21:04 INFO mapred.Task: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+12/09/08 16:21:05 INFO mapred.JobClient:  map 0% reduce 0%
+12/09/08 16:21:07 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:07 INFO mapred.Task: Task 'attempt_local_0001_m_000000_0' done.
+12/09/08 16:21:07 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:07 INFO mapred.Merger: Merging 1 sorted segments
+12/09/08 16:21:07 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 3124 bytes
+12/09/08 16:21:07 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:07 INFO mapred.Task: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+12/09/08 16:21:07 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:07 INFO mapred.Task: Task attempt_local_0001_r_000000_0 is allowed to commit now
+12/09/08 16:21:07 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0001_r_000000_0' to file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans/clusters-1
+12/09/08 16:21:08 INFO mapred.JobClient:  map 100% reduce 0%
+12/09/08 16:21:10 INFO mapred.LocalJobRunner: reduce > reduce
+12/09/08 16:21:10 INFO mapred.Task: Task 'attempt_local_0001_r_000000_0' done.
+12/09/08 16:21:11 INFO mapred.JobClient:  map 100% reduce 100%
+12/09/08 16:21:11 INFO mapred.JobClient: Job complete: job_local_0001
+12/09/08 16:21:11 INFO mapred.JobClient: Counters: 16
+12/09/08 16:21:11 INFO mapred.JobClient:   File Output Format Counters 
+12/09/08 16:21:11 INFO mapred.JobClient:     Bytes Written=2161
+12/09/08 16:21:11 INFO mapred.JobClient:   FileSystemCounters
+12/09/08 16:21:11 INFO mapred.JobClient:     FILE_BYTES_READ=12302724
+12/09/08 16:21:11 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=5910425
+12/09/08 16:21:11 INFO mapred.JobClient:   File Input Format Counters 
+12/09/08 16:21:11 INFO mapred.JobClient:     Bytes Read=1418
+12/09/08 16:21:11 INFO mapred.JobClient:   Map-Reduce Framework
+12/09/08 16:21:11 INFO mapred.JobClient:     Reduce input groups=8
+12/09/08 16:21:11 INFO mapred.JobClient:     Map output materialized bytes=3128
+12/09/08 16:21:11 INFO mapred.JobClient:     Combine output records=0
+12/09/08 16:21:11 INFO mapred.JobClient:     Map input records=15
+12/09/08 16:21:11 INFO mapred.JobClient:     Reduce shuffle bytes=0
+12/09/08 16:21:11 INFO mapred.JobClient:     Reduce output records=8
+12/09/08 16:21:11 INFO mapred.JobClient:     Spilled Records=16
+12/09/08 16:21:11 INFO mapred.JobClient:     Map output bytes=3090
+12/09/08 16:21:11 INFO mapred.JobClient:     Combine input records=0
+12/09/08 16:21:11 INFO mapred.JobClient:     Map output records=8
+12/09/08 16:21:11 INFO mapred.JobClient:     SPLIT_RAW_BYTES=134
+12/09/08 16:21:11 INFO mapred.JobClient:     Reduce input records=8
+Cluster Iterator running iteration 2 over priorPath: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans/clusters-1
+12/09/08 16:21:11 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+12/09/08 16:21:11 INFO input.FileInputFormat: Total input paths to process : 1
+12/09/08 16:21:11 INFO mapred.JobClient: Running job: job_local_0002
+12/09/08 16:21:11 INFO mapred.MapTask: io.sort.mb = 100
+12/09/08 16:21:11 INFO mapred.MapTask: data buffer = 79691776/99614720
+12/09/08 16:21:11 INFO mapred.MapTask: record buffer = 262144/327680
+12/09/08 16:21:11 INFO mapred.MapTask: Starting flush of map output
+12/09/08 16:21:11 INFO mapred.MapTask: Finished spill 0
+12/09/08 16:21:11 INFO mapred.Task: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+12/09/08 16:21:12 INFO mapred.JobClient:  map 0% reduce 0%
+12/09/08 16:21:14 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:14 INFO mapred.Task: Task 'attempt_local_0002_m_000000_0' done.
+12/09/08 16:21:14 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:14 INFO mapred.Merger: Merging 1 sorted segments
+12/09/08 16:21:14 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 2980 bytes
+12/09/08 16:21:14 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:14 INFO mapred.Task: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+12/09/08 16:21:14 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:14 INFO mapred.Task: Task attempt_local_0002_r_000000_0 is allowed to commit now
+12/09/08 16:21:14 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0002_r_000000_0' to file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans/clusters-2
+12/09/08 16:21:15 INFO mapred.JobClient:  map 100% reduce 0%
+12/09/08 16:21:17 INFO mapred.LocalJobRunner: reduce > reduce
+12/09/08 16:21:17 INFO mapred.Task: Task 'attempt_local_0002_r_000000_0' done.
+12/09/08 16:21:18 INFO mapred.JobClient:  map 100% reduce 100%
+12/09/08 16:21:18 INFO mapred.JobClient: Job complete: job_local_0002
+12/09/08 16:21:18 INFO mapred.JobClient: Counters: 16
+12/09/08 16:21:18 INFO mapred.JobClient:   File Output Format Counters 
+12/09/08 16:21:18 INFO mapred.JobClient:     Bytes Written=2161
+12/09/08 16:21:18 INFO mapred.JobClient:   FileSystemCounters
+12/09/08 16:21:18 INFO mapred.JobClient:     FILE_BYTES_READ=15353579
+12/09/08 16:21:18 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=9037743
+12/09/08 16:21:18 INFO mapred.JobClient:   File Input Format Counters 
+12/09/08 16:21:18 INFO mapred.JobClient:     Bytes Read=1418
+12/09/08 16:21:18 INFO mapred.JobClient:   Map-Reduce Framework
+12/09/08 16:21:18 INFO mapred.JobClient:     Reduce input groups=8
+12/09/08 16:21:18 INFO mapred.JobClient:     Map output materialized bytes=2984
+12/09/08 16:21:18 INFO mapred.JobClient:     Combine output records=0
+12/09/08 16:21:18 INFO mapred.JobClient:     Map input records=15
+12/09/08 16:21:18 INFO mapred.JobClient:     Reduce shuffle bytes=0
+12/09/08 16:21:18 INFO mapred.JobClient:     Reduce output records=8
+12/09/08 16:21:18 INFO mapred.JobClient:     Spilled Records=16
+12/09/08 16:21:18 INFO mapred.JobClient:     Map output bytes=2946
+12/09/08 16:21:18 INFO mapred.JobClient:     Combine input records=0
+12/09/08 16:21:18 INFO mapred.JobClient:     Map output records=8
+12/09/08 16:21:18 INFO mapred.JobClient:     SPLIT_RAW_BYTES=134
+12/09/08 16:21:18 INFO mapred.JobClient:     Reduce input records=8
+12/09/08 16:21:18 INFO kmeans.KMeansDriver: Clustering data
+12/09/08 16:21:18 INFO kmeans.KMeansDriver: Running Clustering
+12/09/08 16:21:18 INFO kmeans.KMeansDriver: Input: file:/tmp/mahout-TestClusterDumper-1786384485007168512/testdata Clusters In: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans Out: file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@344e17f9
+12/09/08 16:21:18 WARN mapred.JobClient: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+12/09/08 16:21:18 INFO input.FileInputFormat: Total input paths to process : 1
+12/09/08 16:21:18 INFO mapred.JobClient: Running job: job_local_0003
+12/09/08 16:21:18 INFO mapred.Task: Task:attempt_local_0003_m_000000_0 is done. And is in the process of commiting
+12/09/08 16:21:18 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:18 INFO mapred.Task: Task attempt_local_0003_m_000000_0 is allowed to commit now
+12/09/08 16:21:18 INFO output.FileOutputCommitter: Saved output of task 'attempt_local_0003_m_000000_0' to file:/tmp/mahout-TestClusterDumper-1786384485007168512/output/kmeans/clusteredPoints
+12/09/08 16:21:19 INFO mapred.JobClient:  map 0% reduce 0%
+12/09/08 16:21:21 INFO mapred.LocalJobRunner: 
+12/09/08 16:21:21 INFO mapred.Task: Task 'attempt_local_0003_m_000000_0' done.
+12/09/08 16:21:22 INFO mapred.JobClient:  map 100% reduce 0%
+12/09/08 16:21:22 INFO mapred.JobClient: Job complete: job_local_0003
+12/09/08 16:21:22 INFO mapred.JobClient: Counters: 8
+12/09/08 16:21:22 INFO mapred.JobClient:   File Output Format Counters 
+12/09/08 16:21:22 INFO mapred.JobClient:     Bytes Written=1565
+12/09/08 16:21:22 INFO mapred.JobClient:   File Input Format Counters 
+12/09/08 16:21:22 INFO mapred.JobClient:     Bytes Read=1418
+12/09/08 16:21:22 INFO mapred.JobClient:   FileSystemCounters
+12/09/08 16:21:22 INFO mapred.JobClient:     FILE_BYTES_READ=9198968
+12/09/08 16:21:22 INFO mapred.JobClient:     FILE_BYTES_WRITTEN=6079551
+12/09/08 16:21:22 INFO mapred.JobClient:   Map-Reduce Framework
+12/09/08 16:21:22 INFO mapred.JobClient:     Map input records=15
+12/09/08 16:21:22 INFO mapred.JobClient:     Spilled Records=0
+12/09/08 16:21:22 INFO mapred.JobClient:     SPLIT_RAW_BYTES=134
+12/09/08 16:21:22 INFO mapred.JobClient:     Map output records=15
+C-0{n=5 c=[baseball:0.464, brown:1.679, cap:0.464, cat:1.044, dogs:1.533, fleece:0.326, fox:1.044, jacket:0.464, jumped:1.679, lazy:1.679, over:1.679, quick:1.679, red:1.916, robber:0.464, wore:0.464] r=[baseball:0.929, brown:0.839, cap:0.929, cat:1.278, dogs:0.767, fleece:0.651, fox:1.278, jacket:0.929, jumped:0.839, lazy:0.839, over:0.839, quick:0.839, robber:0.929, wore:0.929]}
+	Top Terms: 
+		red                                     =>  1.9162907600402832
+		quick                                   =>   1.678889846801758
+		over                                    =>   1.678889846801758
+		lazy                                    =>   1.678889846801758
+		jumped                                  =>   1.678889846801758
+		brown                                   =>   1.678889846801758
+		dogs                                    =>  1.5330326080322265
+		fox                                     =>  1.0437751770019532
+		cat                                     =>  1.0437751770019532
+		robber                                  => 0.46435117721557617
+	Weight : [props - optional]:  Point:
+	1.0: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+C-1{n=5 c=[baseball:0.464, black:0.522, cap:0.464, dick:0.464, fleece:1.629, goat:1.044, had:1.679, jacket:0.464, lamb:1.044, little:1.679, mary:1.393, robber:0.464, snow:1.393, tar:0.603, white:1.679, whose:1.679, wore:0.464] r=[baseball:0.929, black:1.044, cap:0.929, dick:0.929, goat:1.278, had:0.839, jacket:0.929, lamb:1.278, little:0.839, mary:1.137, robber:0.929, snow:1.137, tar:1.206, white:0.839, whose:0.839, wore:0.929]}
+	Top Terms: 
+		white                                   =>   1.678889846801758
+		little                                  =>   1.678889846801758
+		had                                     =>   1.678889846801758
+		whose                                   =>   1.678889846801758
+		fleece                                  =>  1.6286087036132812
+		snow                                    =>  1.3930535316467285
+		mary                                    =>  1.3930535316467285
+		lamb                                    =>  1.0437751770019532
+		goat                                    =>  1.0437751770019532
+		tar                                     =>  0.6029806137084961
+	Weight : [props - optional]:  Point:
+	1.0: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	1.0: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	1.0: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+C-2{n=3 c=[baseball:0.774, black:1.740, cap:0.774, dick:0.774, fleece:1.629, goat:0.870, had:1.399, jacket:0.774, lamb:0.870, little:1.399, mary:0.774, robber:0.774, snow:0.774, tar:1.005, white:0.700, whose:1.399, wore:0.774] r=[baseball:1.094, black:1.230, cap:1.094, dick:1.094, goat:1.230, had:0.989, jacket:1.094, lamb:1.230, little:0.989, mary:1.094, robber:1.094, snow:1.094, tar:1.421, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		black                                   =>  1.7396252950032551
+		fleece                                  =>  1.6286087036132812
+		little                                  =>   1.399074872334798
+		had                                     =>   1.399074872334798
+		whose                                   =>   1.399074872334798
+		tar                                     =>  1.0049676895141602
+		lamb                                    =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		baseball                                =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+	Weight : [props - optional]:  Point:
+	1.0: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+C-3{n=3 c=[baseball:0.774, cap:0.774, dick:1.548, fleece:1.086, goat:0.870, had:0.700, jacket:0.774, little:0.700, man:0.774, moby:0.774, obsessed:0.870, robber:0.774, snow:0.774, story:0.774, whale:0.870, white:1.399, whose:0.700, wore:0.774] r=[baseball:1.094, cap:1.094, dick:1.094, fleece:0.768, goat:1.230, had:0.989, jacket:1.094, little:0.989, man:1.094, moby:1.094, obsessed:1.230, robber:1.094, snow:1.094, story:1.094, whale:1.230, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		dick                                    =>   1.547837257385254
+		white                                   =>   1.399074872334798
+		fleece                                  =>  1.0857391357421875
+		whale                                   =>  0.8698126475016276
+		obsessed                                =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		wore                                    =>   0.773918628692627
+		story                                   =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+		robber                                  =>   0.773918628692627
+C-4{n=3 c=[bob:1.005, crazy:1.005, dick:1.548, man:2.322, moby:2.322, obsessed:1.740, story:2.322, walrus:1.005, whale:1.740] r=[bob:1.421, crazy:1.421, dick:1.094, obsessed:1.230, walrus:1.421, whale:1.230]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		obsessed                                =>  1.7396252950032551
+		whale                                   =>  1.7396252950032551
+		dick                                    =>   1.547837257385254
+		crazy                                   =>  1.0049676895141602
+		walrus                                  =>  1.0049676895141602
+		bob                                     =>  1.0049676895141602
+	Weight : [props - optional]:  Point:
+	1.0: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	1.0: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+C-5{n=2 c=[bob:1.507, crazy:1.507, dick:1.161, man:2.322, moby:2.322, obsessed:1.305, story:2.322, walrus:1.507, whale:1.305] r=[bob:1.507, crazy:1.507, dick:1.161, obsessed:1.305, walrus:1.507, whale:1.305]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		crazy                                   =>  1.5074515342712402
+		walrus                                  =>  1.5074515342712402
+		bob                                     =>  1.5074515342712402
+		obsessed                                =>  1.3047189712524414
+		whale                                   =>  1.3047189712524414
+		dick                                    =>  1.1608779430389404
+	Weight : [props - optional]:  Point:
+	1.0: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+C-6{n=3 c=[baseball:2.322, black:0.870, cap:2.322, fleece:1.629, jacket:2.322, red:0.639, robber:2.322, white:0.700, wore:2.322] r=[black:1.230, red:0.903, white:0.989]}
+	Top Terms: 
+		robber                                  =>   2.321755886077881
+		jacket                                  =>   2.321755886077881
+		wore                                    =>   2.321755886077881
+		cap                                     =>   2.321755886077881
+		baseball                                =>   2.321755886077881
+		fleece                                  =>  1.6286087036132812
+		black                                   =>  0.8698126475016276
+		white                                   =>   0.699537436167399
+		red                                     =>  0.6387635866800944
+	Weight : [props - optional]:  Point:
+	1.0: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	1.0: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	1.0: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+C-7{n=1 c=[all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015] r=[]}
+	Top Terms: 
+		english                                 =>  3.0149030685424805
+		springer                                =>  3.0149030685424805
+		spaniel                                 =>  3.0149030685424805
+		best                                    =>  3.0149030685424805
+		all                                     =>  3.0149030685424805
+		dogs                                    =>  1.9162907600402832
+	Weight : [props - optional]:  Point:
+	1.0: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:22 INFO clustering.ClusterDumper: Wrote 8 clusters
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:22 INFO canopy.CanopyDriver: Build Clusters Input: file:/tmp/mahout-TestClusterDumper-4112931436171604992/testdata Out: file:/tmp/mahout-TestClusterDumper-4112931436171604992/output Measure: org.apache.mahout.common.distance.EuclideanDistanceMeasure@7c40627c t1: 8.0 t2: 4.0
+12/09/08 16:21:22 INFO fuzzykmeans.FuzzyKMeansDriver: Clustering
+C-0{n=5 c=[baseball:0.464, brown:1.679, cap:0.464, cat:1.044, dogs:1.533, fleece:0.326, fox:1.044, jacket:0.464, jumped:1.679, lazy:1.679, over:1.679, quick:1.679, red:1.916, robber:0.464, wore:0.464] r=[baseball:0.929, brown:0.839, cap:0.929, cat:1.278, dogs:0.767, fleece:0.651, fox:1.278, jacket:0.929, jumped:0.839, lazy:0.839, over:0.839, quick:0.839, robber:0.929, wore:0.929]}
+	Top Terms: 
+		red                                     =>  1.9162907600402832
+		quick                                   =>   1.678889846801758
+		over                                    =>   1.678889846801758
+		lazy                                    =>   1.678889846801758
+		jumped                                  =>   1.678889846801758
+		brown                                   =>   1.678889846801758
+		dogs                                    =>  1.5330326080322265
+		fox                                     =>  1.0437751770019532
+		cat                                     =>  1.0437751770019532
+		robber                                  => 0.46435117721557617
+	Weight : [props - optional]:  Point:
+	0.9999999999995706: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9999999999995706: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9999999999995706: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9999999999995706: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+C-1{n=5 c=[baseball:0.464, black:0.522, cap:0.464, dick:0.464, fleece:1.629, goat:1.044, had:1.679, jacket:0.464, lamb:1.044, little:1.679, mary:1.393, robber:0.464, snow:1.393, tar:0.603, white:1.679, whose:1.679, wore:0.464] r=[baseball:0.929, black:1.044, cap:0.929, dick:0.929, goat:1.278, had:0.839, jacket:0.929, lamb:1.278, little:0.839, mary:1.137, robber:0.929, snow:1.137, tar:1.206, white:0.839, whose:0.839, wore:0.929]}
+	Top Terms: 
+		white                                   =>   1.678889846801758
+		little                                  =>   1.678889846801758
+		had                                     =>   1.678889846801758
+		whose                                   =>   1.678889846801758
+		fleece                                  =>  1.6286087036132812
+		snow                                    =>  1.3930535316467285
+		mary                                    =>  1.3930535316467285
+		lamb                                    =>  1.0437751770019532
+		goat                                    =>  1.0437751770019532
+		tar                                     =>  0.6029806137084961
+	Weight : [props - optional]:  Point:
+	0.9999999955329524: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.9999901341397273: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+C-2{n=3 c=[baseball:0.774, black:1.740, cap:0.774, dick:0.774, fleece:1.629, goat:0.870, had:1.399, jacket:0.774, lamb:0.870, little:1.399, mary:0.774, robber:0.774, snow:0.774, tar:1.005, white:0.700, whose:1.399, wore:0.774] r=[baseball:1.094, black:1.230, cap:1.094, dick:1.094, goat:1.230, had:0.989, jacket:1.094, lamb:1.230, little:0.989, mary:1.094, robber:1.094, snow:1.094, tar:1.421, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		black                                   =>  1.7396252950032551
+		fleece                                  =>  1.6286087036132812
+		little                                  =>   1.399074872334798
+		had                                     =>   1.399074872334798
+		whose                                   =>   1.399074872334798
+		tar                                     =>  1.0049676895141602
+		lamb                                    =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		baseball                                =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+	Weight : [props - optional]:  Point:
+	1.0: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+C-3{n=3 c=[baseball:0.774, cap:0.774, dick:1.548, fleece:1.086, goat:0.870, had:0.700, jacket:0.774, little:0.700, man:0.774, moby:0.774, obsessed:0.870, robber:0.774, snow:0.774, story:0.774, whale:0.870, white:1.399, whose:0.700, wore:0.774] r=[baseball:1.094, cap:1.094, dick:1.094, fleece:0.768, goat:1.230, had:0.989, jacket:1.094, little:0.989, man:1.094, moby:1.094, obsessed:1.230, robber:1.094, snow:1.094, story:1.094, whale:1.230, white:0.989, whose:0.989, wore:1.094]}
+	Top Terms: 
+		dick                                    =>   1.547837257385254
+		white                                   =>   1.399074872334798
+		fleece                                  =>  1.0857391357421875
+		whale                                   =>  0.8698126475016276
+		obsessed                                =>  0.8698126475016276
+		goat                                    =>  0.8698126475016276
+		wore                                    =>   0.773918628692627
+		story                                   =>   0.773918628692627
+		snow                                    =>   0.773918628692627
+		robber                                  =>   0.773918628692627
+	Weight : [props - optional]:  Point:
+	1.0: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+C-4{n=3 c=[bob:1.005, crazy:1.005, dick:1.548, man:2.322, moby:2.322, obsessed:1.740, story:2.322, walrus:1.005, whale:1.740] r=[bob:1.421, crazy:1.421, dick:1.094, obsessed:1.230, walrus:1.421, whale:1.230]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		obsessed                                =>  1.7396252950032551
+		whale                                   =>  1.7396252950032551
+		dick                                    =>   1.547837257385254
+		crazy                                   =>  1.0049676895141602
+		walrus                                  =>  1.0049676895141602
+		bob                                     =>  1.0049676895141602
+	Weight : [props - optional]:  Point:
+	0.99999999852731: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	0.9999999999762312: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+C-5{n=2 c=[bob:1.507, crazy:1.507, dick:1.161, man:2.322, moby:2.322, obsessed:1.305, story:2.322, walrus:1.507, whale:1.305] r=[bob:1.507, crazy:1.507, dick:1.161, obsessed:1.305, walrus:1.507, whale:1.305]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		crazy                                   =>  1.5074515342712402
+		walrus                                  =>  1.5074515342712402
+		bob                                     =>  1.5074515342712402
+		obsessed                                =>  1.3047189712524414
+		whale                                   =>  1.3047189712524414
+		dick                                    =>  1.1608779430389404
+	Weight : [props - optional]:  Point:
+	1.0: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+C-6{n=3 c=[baseball:2.322, black:0.870, cap:2.322, fleece:1.629, jacket:2.322, red:0.639, robber:2.322, white:0.700, wore:2.322] r=[black:1.230, red:0.903, white:0.989]}
+	Top Terms: 
+		robber                                  =>   2.321755886077881
+		jacket                                  =>   2.321755886077881
+		wore                                    =>   2.321755886077881
+		cap                                     =>   2.321755886077881
+		baseball                                =>   2.321755886077881
+		fleece                                  =>  1.6286087036132812
+		black                                   =>  0.8698126475016276
+		white                                   =>   0.699537436167399
+		red                                     =>  0.6387635866800944
+	Weight : [props - optional]:  Point:
+	0.999999999997069: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	0.9999999999998039: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	0.9999999999992506: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+C-7{n=1 c=[all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015] r=[]}
+	Top Terms: 
+		english                                 =>  3.0149030685424805
+		springer                                =>  3.0149030685424805
+		spaniel                                 =>  3.0149030685424805
+		best                                    =>  3.0149030685424805
+		all                                     =>  3.0149030685424805
+		dogs                                    =>  1.9162907600402832
+	Weight : [props - optional]:  Point:
+	1.0: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:22 INFO clustering.ClusterDumper: Wrote 8 clusters
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+12/09/08 16:21:22 INFO meanshift.MeanShiftCanopyDriver: Mean Shift Iteration: 1
+12/09/08 16:21:22 INFO meanshift.MeanShiftCanopyDriver: Mean Shift Iteration: 2
+MSV-0{n=6 c=[brown:2.099, cat:1.218, dogs:1.916, fox:1.392, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916] r=[cat:0.246, fox:0.246]}
+	Top Terms: 
+		quick                                   =>  2.0986123085021973
+		over                                    =>  2.0986123085021973
+		lazy                                    =>  2.0986123085021973
+		jumped                                  =>  2.0986123085021973
+		brown                                   =>  2.0986123085021973
+		red                                     =>  1.9162907600402832
+		dogs                                    =>  1.9162907600402832
+		fox                                     =>  1.3917002360026043
+		cat                                     =>  1.2177377065022787
+	Weight : [props - optional]:  Point:
+	1.0: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	1.0: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+MSV-4{n=5 c=[black:0.565, dick:0.503, fleece:1.629, goat:1.305, had:2.099, lamb:1.305, little:2.099, mary:1.819, snow:1.819, tar:0.653, white:1.644, whose:2.099] r=[black:0.295, dick:0.262, goat:0.275, lamb:0.275, mary:0.262, snow:0.262, tar:0.341, white:0.237]}
+	Top Terms: 
+		little                                  =>  2.0986123085021973
+		had                                     =>  2.0986123085021973
+		whose                                   =>  2.0986123085021973
+		snow                                    =>  1.8187087774276733
+		mary                                    =>  1.8187087774276733
+		white                                   =>  1.6439129749933876
+		fleece                                  =>  1.6286087036132812
+12/09/08 16:21:22 INFO clustering.ClusterDumper: Wrote 5 clusters
+		lamb                                    =>  1.3047189712524414
+		goat                                    =>  1.3047189712524414
+		tar                                     =>  0.6532289981842041
+	Weight : [props - optional]:  Point:
+	1.0: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	1.0: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	1.0: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+	1.0: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+MSV-8{n=3 c=[bob:0.837, crazy:0.837, dick:1.677, man:2.322, moby:2.322, obsessed:1.885, story:2.322, walrus:0.837, whale:1.885] r=[bob:0.627, crazy:0.627, dick:0.483, obsessed:0.542, walrus:0.627, whale:0.542]}
+	Top Terms: 
+		moby                                    =>   2.321755886077881
+		man                                     =>   2.321755886077881
+		story                                   =>   2.321755886077881
+		obsessed                                =>  1.8845940695868597
+		whale                                   =>  1.8845940695868597
+		dick                                    =>  1.6768236955006917
+		crazy                                   =>  0.8374730745951334
+		walrus                                  =>  0.8374730745951334
+		bob                                     =>  0.8374730745951334
+	Weight : [props - optional]:  Point:
+	1.0: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	1.0: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+	1.0: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+MSV-11{n=5 c=[baseball:2.322, black:0.870, cap:2.322, fleece:1.629, jacket:2.322, red:0.639, robber:2.322, white:0.700, wore:2.322] r=[black:0.000, red:0.000, white:0.000]}
+	Top Terms: 
+		robber                                  =>   2.321755886077881
+		jacket                                  =>   2.321755886077881
+		wore                                    =>   2.321755886077881
+		cap                                     =>   2.321755886077881
+		baseball                                =>   2.321755886077881
+		fleece                                  =>  1.6286087036132812
+		black                                   =>  0.8698126475016276
+		white                                   =>   0.699537436167399
+		red                                     =>  0.6387635866800944
+	Weight : [props - optional]:  Point:
+	1.0: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	1.0: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	1.0: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+MSV-14{n=1 c=[all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015] r=[]}
+	Top Terms: 
+		english                                 =>  3.0149030685424805
+		springer                                =>  3.0149030685424805
+		spaniel                                 =>  3.0149030685424805
+		best                                    =>  3.0149030685424805
+		all                                     =>  3.0149030685424805
+		dogs                                    =>  1.9162907600402832
+	Weight : [props - optional]:  Point:
+	1.0: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+GC:0{n=1 c=[fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099] r=[all:0.752, baseball:0.929, best:0.752, black:0.887, bob:0.752, brown:0.928, cap:0.929, cat:0.887, crazy:0.752, dick:0.929, dogs:0.903, english:0.752, fleece:0.812, fox:0.887, goat:0.887, had:0.928, jacket:0.929, jumped:0.928, lamb:0.887, lazy:0.928, little:0.928, man:0.929, mary:0.929, moby:0.929, obsessed:0.887, over:0.928, quick:0.928, red:0.903, robber:0.929, snow:0.929, spaniel:0.752, springer:0.752, story:0.929, tar:0.752, walrus:0.752, whale:0.887, white:0.928, whose:0.928, wore:0.929]}
+	Top Terms: 
+		goat                                    =>   2.609437942504883
+		snow                                    =>   2.321755886077881
+		mary                                    =>   2.321755886077881
+		little                                  =>  2.0986123085021973
+		had                                     =>  2.0986123085021973
+		whose                                   =>  2.0986123085021973
+		white                                   =>  2.0986123085021973
+		fleece                                  =>  1.6286087036132812
+	Weight : [props - optional]:  Point:
+	0.9990209211465853: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.9435531718704135: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+GC:1{n=0 c=[all:0.748, baseball:0.097, best:-0.831, black:0.814, bob:1.201, brown:0.475, cap:1.955, cat:0.271, crazy:-0.076, dick:0.512, dogs:1.648, english:1.150, fleece:1.509, fox:0.016, goat:0.260, had:1.563, jacket:-0.078, jumped:-0.058, lamb:1.064, lazy:1.312, little:-0.362, man:-1.437, mary:1.155, moby:0.798, obsessed:0.708, over:0.154, quick:-1.008, red:0.891, robber:-0.032, snow:1.358, spaniel:0.254, springer:-0.159, story:0.047, tar:-0.397, walrus:0.353, whale:-0.217, white:-0.722, whose:-0.794, wore:0.906] r=[all:1.511, baseball:0.258, best:-0.627, black:1.259, bob:2.254, brown:2.073, cap:0.021, cat:2.377, crazy:2.655, dick:-1.704, dogs:3.064, english:-0.444, fleece:1.212, fox:0.120, goat:0.212, had:-1.024, jacket:-1.043, jumped:0.871, lamb:0.444, lazy:1.036, little:0.461, man:0.337, mary:0.551, moby:0.128, obsessed:-0.372, over:2.300, quick:-0.198, red:1.739, robber:0.544, snow:0.344, spaniel:0.583, springer:2.614, story:1.700, tar:0.289, walrus:-0.749, whale:2.273, white:2.075, whose:0.912, wore:-2.777]}
+	Top Terms: 
+		cap                                     =>   1.955101760830744
+		dogs                                    =>   1.648484016530693
+		had                                     =>   1.562827770513212
+		fleece                                  =>  1.5086713526190985
+		snow                                    =>  1.3584694137334954
+		lazy                                    =>    1.31230884601195
+		bob                                     =>  1.2014524794567476
+		mary                                    =>   1.155114056222531
+		english                                 =>   1.149657640589799
+		lamb                                    =>  1.0641885117052403
+GC:2{n=0 c=[all:0.587, baseball:0.792, best:0.370, black:-2.535, bob:-1.910, brown:2.608, cap:0.639, cat:0.127, crazy:-0.396, dick:0.631, dogs:-0.214, english:1.790, fleece:1.492, fox:-0.849, goat:0.611, had:-1.466, jacket:0.370, jumped:0.017, lamb:-0.934, lazy:-0.806, little:0.352, man:-0.550, mary:0.414, moby:0.427, obsessed:0.350, over:-1.446, quick:0.615, red:0.330, robber:-0.523, snow:-0.381, spaniel:0.990, springer:0.013, story:0.335, tar:-0.782, walrus:-0.769, whale:0.284, white:-1.594, whose:-0.864, wore:0.003] r=[all:0.221, baseball:2.660, best:1.199, black:1.682, bob:2.687, brown:2.059, cap:1.442, cat:-0.445, crazy:0.366, dick:0.787, dogs:1.466, english:0.647, fleece:1.378, fox:0.880, goat:0.703, had:-1.873, jacket:1.578, jumped:1.714, lamb:2.166, lazy:0.645, little:-0.360, man:2.035, mary:1.443, moby:-2.211, obsessed:3.625, over:1.680, quick:0.587, red:1.766, robber:0.806, snow:-0.045, spaniel:0.204, springer:-0.732, story:1.901, tar:-0.022, walrus:0.443, whale:0.524, white:1.636, whose:0.199, wore:1.774]}
+	Top Terms: 
+		brown                                   =>   2.608164470319294
+		english                                 =>  1.7904228276547747
+		fleece                                  =>  1.4923358768689288
+		spaniel                                 =>  0.9902760721945967
+		baseball                                =>  0.7919566979633716
+		cap                                     =>  0.6387556170800741
+		dick                                    =>  0.6311592487361558
+		quick                                   =>  0.6145537299287354
+		goat                                    =>  0.6111513650717361
+		all                                     =>  0.5874501195096351
+GC:3{n=11 c=[all:0.274, baseball:0.633, best:0.274, black:0.237, bob:0.274, brown:0.763, cap:0.633, cat:0.474, crazy:0.274, dick:0.422, dogs:0.871, english:0.274, fleece:0.444, fox:0.474, jacket:0.633, jumped:0.763, lazy:0.763, man:0.633, moby:0.633, obsessed:0.474, over:0.763, quick:0.763, red:0.871, robber:0.633, spaniel:0.274, springer:0.274, story:0.633, walrus:0.274, whale:0.474, white:0.191, wore:0.633] r=[all:0.867, baseball:1.034, best:0.867, black:0.750, bob:0.867, brown:1.010, cap:1.034, cat:1.006, crazy:0.867, dick:0.895, dogs:0.954, english:0.867, fleece:0.725, fox:1.006, jacket:1.034, jumped:1.010, lazy:1.010, man:1.034, moby:1.034, obsessed:1.006, over:1.010, quick:1.010, red:0.954, robber:1.034, spaniel:0.867, springer:0.867, story:1.034, walrus:0.867, whale:1.006, white:0.603, wore:1.034]}
+	Top Terms: 
+		red                                     =>  0.8710412545637651
+		dogs                                    =>  0.8710412545637651
+		quick                                   =>  0.7631317485462535
+		over                                    =>  0.7631317485462535
+		lazy                                    =>  0.7631317485462535
+		jumped                                  =>  0.7631317485462535
+		brown                                   =>  0.7631317485462535
+		wore                                    =>  0.6332061507485129
+		story                                   =>  0.6332061507485129
+		robber                                  =>  0.6332061507485129
+	Weight : [props - optional]:  Point:
+	0.9998952269827923: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9998952269827923: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9998952269827922: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.9998952269827922: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.848839264436186: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.9999999458037662: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+	0.9996539547142369: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	0.9999866884755438: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+	0.9998701099690355: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+	0.9921051082216009: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	0.9992367816319128: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	0.9455105531380373: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+	0.99999955030817: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+GC:4{n=0 c=[all:0.590, baseball:-0.620, best:-1.209, black:-0.961, bob:-0.078, brown:-1.143, cap:0.594, cat:-1.257, crazy:0.195, dick:0.988, dogs:0.635, english:0.074, fleece:0.054, fox:1.218, goat:-1.076, had:-0.099, jacket:-1.221, jumped:-0.251, lamb:-0.062, lazy:-0.465, little:-1.013, man:1.101, mary:0.963, moby:0.900, obsessed:-0.326, over:1.140, quick:-0.835, red:0.474, robber:-0.681, snow:-1.104, spaniel:0.044, springer:0.322, story:-0.972, tar:0.002, walrus:-1.945, whale:-0.559, white:0.179, whose:0.840, wore:-0.840] r=[all:1.911, baseball:1.041, best:2.512, black:0.270, bob:2.067, brown:1.789, cap:0.702, cat:2.022, crazy:1.127, dick:1.178, dogs:0.026, english:1.867, fleece:1.815, fox:-0.182, goat:2.118, had:1.620, jacket:1.603, jumped:-0.455, lamb:-0.012, lazy:2.118, little:1.069, man:-0.509, mary:1.507, moby:1.744, obsessed:0.274, over:1.556, quick:2.160, red:0.578, robber:0.268, snow:2.689, spaniel:1.226, springer:0.245, story:1.346, tar:0.269, walrus:1.412, whale:1.664, white:1.150, whose:1.532, wore:1.595]}
+	Top Terms: 
+		fox                                     =>  1.2182018735014724
+		over                                    =>  1.1396060660000635
+		man                                     =>  1.1013403738882135
+		dick                                    =>  0.9883752392905986
+		mary                                    =>  0.9630053374193978
+		moby                                    =>  0.8997803576789307
+		whose                                   =>  0.8396089360221238
+		dogs                                    =>  0.6345022227208884
+		cap                                     =>  0.5938398927708516
+		all                                     =>  0.5904716856042868
+GC:5{n=0 c=[all:-0.101, baseball:1.132, best:-0.450, black:-0.755, bob:0.265, brown:-0.324, cap:0.511, cat:0.652, crazy:-0.487, dick:-1.843, dogs:-0.749, english:1.043, fleece:-1.986, fox:-0.939, goat:-0.610, had:0.663, jacket:0.695, jumped:-0.389, lamb:-0.372, lazy:-1.167, little:-2.478, man:1.635, mary:-0.687, moby:-1.061, obsessed:0.548, over:1.444, quick:0.025, red:-0.089, robber:0.115, snow:0.038, spaniel:0.080, springer:0.240, story:0.181, tar:0.482, walrus:0.373, whale:0.805, white:-0.018, whose:1.520, wore:0.345] r=[all:3.130, baseball:0.774, best:-0.304, black:0.949, bob:-0.362, brown:0.968, cap:1.128, cat:2.026, crazy:-0.147, dick:1.666, dogs:0.342, english:0.892, fleece:1.705, fox:0.362, goat:0.498, had:3.121, jacket:0.879, jumped:0.583, lamb:1.309, lazy:0.043, little:1.497, man:0.222, mary:1.245, moby:2.543, obsessed:-0.174, over:0.272, quick:0.183, red:-0.139, robber:3.212, snow:1.157, spaniel:0.581, springer:1.028, story:0.422, tar:1.226, walrus:1.541, whale:-0.441, white:0.193, whose:2.086, wore:-0.262]}
+	Top Terms: 
+		man                                     =>  1.6346421760857988
+		whose                                   =>   1.519812127077538
+		over                                    =>  1.4438415569383714
+		baseball                                =>  1.1320486732961819
+		english                                 =>  1.0433013497730899
+		whale                                   =>  0.8049495899536403
+		jacket                                  =>  0.6946365626272785
+		had                                     =>  0.6626091359231352
+		cat                                     =>  0.6520785735264639
+		obsessed                                =>  0.5480699029394583
+GC:6{n=0 c=[all:-1.911, baseball:1.065, best:-2.284, black:-1.390, bob:-0.896, brown:-0.507, cap:1.074, cat:0.637, crazy:-0.303, dick:-0.001, dogs:0.557, english:-1.704, fleece:-0.020, fox:0.360, goat:1.431, had:-0.415, jacket:1.122, jumped:-0.538, lamb:-1.723, lazy:2.124, little:-0.277, man:0.419, mary:-0.337, moby:-1.491, obsessed:-0.525, over:-0.014, quick:0.052, red:-0.265, robber:-0.026, snow:0.982, spaniel:0.812, springer:-1.395, story:0.821, tar:-0.805, walrus:-0.706, whale:-0.632, white:-0.033, whose:-0.502, wore:-1.040] r=[all:1.895, baseball:0.928, best:0.903, black:0.871, bob:0.274, brown:0.192, cap:1.846, cat:0.901, crazy:2.453, dick:1.254, dogs:1.710, english:2.112, fleece:1.083, fox:0.692, goat:1.678, had:-0.129, jacket:0.912, jumped:1.691, lamb:0.584, lazy:1.458, little:0.008, man:-0.408, mary:0.759, moby:0.984, obsessed:0.040, over:0.571, quick:1.835, red:0.370, robber:0.366, snow:1.935, spaniel:0.920, springer:1.765, story:2.770, tar:0.848, walrus:0.852, whale:1.328, white:1.088, whose:0.145, wore:0.633]}
+	Top Terms: 
+		lazy                                    =>  2.1243740812345586
+		goat                                    =>   1.431346353732727
+		jacket                                  =>   1.122491162284519
+		cap                                     =>   1.073859170258784
+		baseball                                =>  1.0648601771845254
+		snow                                    =>  0.9815665864444776
+		story                                   =>  0.8213735360325957
+		spaniel                                 =>    0.81168859636609
+		cat                                     =>  0.6365453464707274
+		dogs                                    =>  0.5570262302588865
+GC:7{n=0 c=[all:-0.860, baseball:-0.191, best:-0.279, black:0.543, bob:0.015, brown:-0.856, cap:0.163, cat:0.805, crazy:-0.790, dick:0.830, dogs:-0.850, english:2.010, fleece:-0.540, fox:1.744, goat:-1.565, had:1.965, jacket:0.505, jumped:1.319, lamb:0.267, lazy:0.532, little:-0.228, man:-0.649, mary:-1.088, moby:-0.134, obsessed:-1.126, over:-0.808, quick:0.138, red:-1.115, robber:1.343, snow:2.045, spaniel:-1.399, springer:0.783, story:0.418, tar:1.030, walrus:-0.832, whale:-0.090, white:0.589, whose:-1.876, wore:0.502] r=[all:0.780, baseball:1.728, best:3.588, black:0.348, bob:2.107, brown:1.414, cap:0.143, cat:0.520, crazy:1.221, dick:1.325, dogs:2.278, english:0.883, fleece:2.504, fox:2.005, goat:-0.148, had:0.412, jacket:0.962, jumped:0.768, lamb:1.895, lazy:0.886, little:1.528, man:0.691, mary:-0.930, moby:-0.610, obsessed:0.581, over:-0.588, quick:2.378, red:1.528, robber:-0.591, snow:0.082, spaniel:0.065, springer:1.486, story:1.949, tar:1.646, walrus:0.387, whale:1.290, white:-0.602, whose:2.682, wore:0.251]}
+	Top Terms: 
+		snow                                    =>  2.0451480797522112
+		english                                 =>  2.0100882198086425
+		had                                     =>  1.9645300713695881
+		fox                                     =>  1.7438458633979286
+		robber                                  =>   1.343190651194885
+		jumped                                  =>  1.3193533267686948
+		tar                                     =>  1.0296636804787103
+		dick                                    =>    0.82950433729611
+		cat                                     =>  0.8048548618378223
+		springer                                =>  0.7831888548856802
+GC:8{n=0 c=[all:-1.398, baseball:-1.198, best:-0.424, black:0.432, bob:-0.044, brown:-0.888, cap:1.397, cat:-1.570, crazy:-0.218, dick:1.417, dogs:0.209, english:-0.147, fleece:1.038, fox:-0.996, goat:0.889, had:-0.073, jacket:-0.243, jumped:-1.280, lamb:-0.922, lazy:-1.708, little:0.394, man:-0.559, mary:2.144, moby:-0.030, obsessed:-0.426, over:-0.824, quick:0.647, red:-0.485, robber:0.770, snow:-1.288, spaniel:-0.354, springer:-0.999, story:0.320, tar:0.371, walrus:-0.911, whale:-0.190, white:-0.618, whose:-0.021, wore:0.707] r=[all:2.592, baseball:2.248, best:2.042, black:1.560, bob:0.915, brown:-0.620, cap:1.846, cat:0.185, crazy:-0.316, dick:0.202, dogs:-0.012, english:1.948, fleece:1.378, fox:-1.092, goat:0.620, had:-0.617, jacket:1.857, jumped:1.854, lamb:-0.839, lazy:1.696, little:0.973, man:0.515, mary:1.393, moby:1.092, obsessed:-0.494, over:1.623, quick:-0.817, red:3.430, robber:0.682, snow:2.941, spaniel:-0.200, springer:1.058, story:-1.175, tar:-0.001, walrus:1.802, whale:0.823, white:0.840, whose:-0.054, wore:0.418]}
+	Top Terms: 
+		mary                                    =>  2.1444610936525406
+		dick                                    =>  1.4167495121609222
+		cap                                     =>  1.3966653085630967
+		fleece                                  =>   1.038417204667345
+		goat                                    =>  0.8887095267930343
+		robber                                  =>  0.7696595767293585
+		wore                                    =>   0.707257923376402
+		quick                                   =>  0.6470001809705438
+		black                                   =>  0.4322435428169309
+		little                                  =>  0.3937865705310535
+GC:9{n=0 c=[all:-0.487, baseball:0.292, best:1.083, black:0.070, bob:-1.059, brown:0.168, cap:-0.050, cat:-0.476, crazy:1.060, dick:-0.226, dogs:2.037, english:-1.643, fleece:0.410, fox:-1.082, goat:0.006, had:-1.906, jacket:-1.886, jumped:-0.153, lamb:0.600, lazy:-0.560, little:-0.898, man:-1.413, mary:-0.252, moby:0.570, obsessed:0.062, over:0.140, quick:1.764, red:1.259, robber:-0.261, snow:0.570, spaniel:0.753, springer:-0.097, story:-0.133, tar:-0.744, walrus:1.448, whale:-2.143, white:0.432, whose:1.309, wore:-0.869] r=[all:2.142, baseball:1.061, best:2.306, black:0.199, bob:1.239, brown:0.853, cap:0.525, cat:0.667, crazy:1.533, dick:1.812, dogs:0.454, english:0.916, fleece:1.175, fox:1.787, goat:0.780, had:-0.421, jacket:1.645, jumped:2.088, lamb:-0.201, lazy:0.035, little:2.302, man:2.424, mary:-1.251, moby:1.936, obsessed:1.080, over:0.962, quick:1.364, red:0.679, robber:0.531, snow:1.431, spaniel:0.284, springer:-0.847, story:1.309, tar:2.128, walrus:1.319, whale:0.230, white:1.511, whose:0.226, wore:2.581]}
+	Top Terms: 
+		dogs                                    =>   2.036951955606532
+		quick                                   =>  1.7637092027388774
+		walrus                                  =>  1.4483694344447868
+		whose                                   =>  1.3089455698111827
+		red                                     =>  1.2594558561985303
+		best                                    =>   1.082544636207646
+		crazy                                   =>   1.060356366091645
+		spaniel                                 =>  0.7533649843892223
+		lamb                                    =>  0.6004591588848311
+		moby                                    =>  0.5699213377444902
+GC:10{n=0 c=[all:-0.317, baseball:-0.732, best:0.809, black:-0.920, bob:-0.840, brown:-0.300, cap:-0.467, cat:-0.028, crazy:-0.409, dick:-0.106, dogs:-0.094, english:1.162, fleece:-2.026, fox:1.572, goat:0.342, had:-1.271, jacket:-1.213, jumped:0.510, lamb:0.090, lazy:1.803, little:-0.494, man:-2.091, mary:-0.226, moby:0.249, obsessed:1.646, over:0.150, quick:2.002, red:-0.859, robber:1.467, snow:-1.496, spaniel:-2.122, springer:0.674, story:2.567, tar:-0.034, walrus:-2.496, whale:0.127, white:-0.970, whose:1.560, wore:0.020] r=[all:1.261, baseball:-0.895, best:1.428, black:1.705, bob:1.850, brown:-0.268, cap:-0.260, cat:0.394, crazy:0.519, dick:1.682, dogs:0.685, english:0.047, fleece:1.846, fox:0.346, goat:0.616, had:0.535, jacket:2.078, jumped:2.611, lamb:1.414, lazy:0.796, little:1.151, man:0.572, mary:1.719, moby:0.142, obsessed:2.387, over:-0.669, quick:0.878, red:1.495, robber:2.627, snow:1.358, spaniel:1.649, springer:0.162, story:1.266, tar:-0.176, walrus:0.763, whale:1.557, white:0.169, whose:0.971, wore:0.844]}
+	Top Terms: 
+		story                                   =>  2.5672873088108985
+		quick                                   =>  2.0018984171375362
+		lazy                                    =>    1.80293859554116
+		obsessed                                =>  1.6460282540500148
+		fox                                     =>  1.5720335866398243
+		whose                                   =>   1.560315935773147
+		robber                                  =>  1.4670001593430786
+		english                                 =>  1.1622866876542195
+		best                                    =>  0.8088091240862504
+		springer                                =>   0.674393552353831
+GC:11{n=0 c=[all:-0.428, baseball:-2.359, best:-0.357, black:0.749, bob:-0.031, brown:0.314, cap:1.871, cat:1.873, crazy:-0.063, dick:-0.374, dogs:0.461, english:1.375, fleece:-1.286, fox:0.092, goat:-0.200, had:0.176, jacket:-0.763, jumped:1.158, lamb:-0.041, lazy:0.196, little:-1.786, man:0.712, mary:2.196, moby:1.921, obsessed:2.080, over:0.559, quick:0.948, red:0.126, robber:0.799, snow:-0.003, spaniel:0.808, springer:-0.612, story:-1.061, tar:0.881, walrus:0.095, whale:1.667, white:1.467, whose:-0.504, wore:0.218] r=[all:-0.639, baseball:1.544, best:0.260, black:-0.115, bob:0.888, brown:2.190, cap:2.572, cat:0.246, crazy:1.505, dick:1.422, dogs:2.479, english:1.673, fleece:0.174, fox:0.372, goat:0.994, had:-0.124, jacket:0.493, jumped:1.421, lamb:1.335, lazy:0.661, little:1.196, man:1.437, mary:-0.062, moby:0.164, obsessed:-0.357, over:0.455, quick:0.272, red:1.081, robber:0.377, snow:1.214, spaniel:-0.482, springer:1.407, story:1.322, tar:0.350, walrus:1.019, whale:0.324, white:0.888, whose:-0.171, wore:2.504]}
+	Top Terms: 
+		mary                                    =>  2.1960196895949835
+		obsessed                                =>  2.0797270120307267
+		moby                                    =>  1.9213491278694135
+		cat                                     =>   1.872608845367156
+		cap                                     =>  1.8706081997207824
+		whale                                   =>  1.6671696964177758
+		white                                   =>  1.4674218069573939
+		english                                 =>  1.3751181391125624
+		jumped                                  =>  1.1575636082591918
+		quick                                   =>   0.947652128929508
+GC:12{n=15 c=[all:0.201, baseball:0.464, best:0.201, black:0.348, bob:0.201, brown:0.560, cap:0.464, cat:0.348, crazy:0.201, dick:0.464, dogs:0.639, english:0.201, fleece:0.760, fox:0.348, goat:0.348, had:0.560, jacket:0.464, jumped:0.560, lamb:0.348, lazy:0.560, little:0.560, man:0.464, mary:0.464, moby:0.464, obsessed:0.348, over:0.560, quick:0.560, red:0.639, robber:0.464, snow:0.464, spaniel:0.201, springer:0.201, story:0.464, tar:0.201, walrus:0.201, whale:0.348, white:0.560, whose:0.560, wore:0.464] r=[all:0.752, baseball:0.929, best:0.752, black:0.887, bob:0.752, brown:0.928, cap:0.929, cat:0.887, crazy:0.752, dick:0.929, dogs:0.903, english:0.752, fleece:0.812, fox:0.887, goat:0.887, had:0.928, jacket:0.929, jumped:0.928, lamb:0.887, lazy:0.928, little:0.928, man:0.929, mary:0.929, moby:0.929, obsessed:0.887, over:0.928, quick:0.928, red:0.903, robber:0.929, snow:0.929, spaniel:0.752, springer:0.752, story:0.929, tar:0.752, walrus:0.752, whale:0.887, white:0.928, whose:0.928, wore:0.929]}
+	Top Terms: 
+		fleece                                  =>  0.7600173950195312
+		red                                     =>  0.6387635866800944
+		dogs                                    =>  0.6387635866800944
+		whose                                   =>  0.5596299489339193
+		white                                   =>  0.5596299489339193
+		quick                                   =>  0.5596299489339193
+		over                                    =>  0.5596299489339193
+		little                                  =>  0.5596299489339193
+		lazy                                    =>  0.5596299489339193
+		jumped                                  =>  0.5596299489339193
+GC:13{n=0 c=[all:-0.903, baseball:1.504, best:-1.745, black:-2.034, bob:-1.089, brown:-0.413, cap:-0.837, cat:-0.988, crazy:3.195, dick:0.268, dogs:0.364, english:-0.833, fleece:-0.002, fox:1.512, goat:0.329, had:-0.013, jacket:-0.283, jumped:0.785, lamb:-0.014, lazy:-1.417, little:-0.812, man:-1.299, mary:-0.024, moby:-0.409, obsessed:-0.238, over:0.768, quick:-0.671, red:1.627, robber:0.269, snow:-0.972, spaniel:0.797, springer:-0.331, story:-0.175, tar:-0.094, walrus:-0.752, whale:0.011, white:-1.207, whose:0.927, wore:1.303] r=[all:-1.164, baseball:2.294, best:0.490, black:0.708, bob:0.288, brown:-0.250, cap:2.619, cat:-0.087, crazy:3.032, dick:1.127, dogs:0.784, english:2.282, fleece:2.784, fox:1.445, goat:0.325, had:0.838, jacket:2.689, jumped:1.720, lamb:1.239, lazy:0.971, little:-0.389, man:-0.022, mary:-0.094, moby:1.396, obsessed:1.220, over:1.846, quick:-0.727, red:-1.194, robber:0.111, snow:1.460, spaniel:1.565, springer:1.401, story:-1.814, tar:1.251, walrus:2.589, whale:1.495, white:1.782, whose:1.197, wore:0.798]}
+	Top Terms: 
+		crazy                                   =>   3.194531925363701
+		red                                     =>  1.6271393005061157
+		fox                                     =>  1.5119463170995118
+		baseball                                =>  1.5039167963254076
+		wore                                    =>  1.3032841459601525
+		whose                                   =>  0.9269002470160349
+		spaniel                                 =>  0.7973147115722895
+		jumped                                  =>  0.7851763224165439
+		over                                    =>   0.768254258935549
+		dogs                                    => 0.36398475697357274
+GC:14{n=0 c=[all:-0.400, baseball:1.997, best:-1.132, black:-1.138, bob:0.280, brown:-0.116, cap:1.359, cat:-0.716, crazy:-1.051, dick:0.359, dogs:-1.497, english:-0.841, fleece:0.625, fox:0.885, goat:-1.532, had:-1.374, jacket:-1.784, jumped:1.037, lamb:1.577, lazy:-1.765, little:-0.129, man:-0.246, mary:-2.147, moby:0.498, obsessed:0.402, over:0.148, quick:0.744, red:-1.090, robber:1.077, snow:-0.490, spaniel:1.190, springer:1.025, story:-0.483, tar:-0.327, walrus:0.928, whale:1.636, white:-0.119, whose:-1.023, wore:-0.617] r=[all:-0.246, baseball:1.572, best:1.412, black:1.018, bob:-0.136, brown:1.283, cap:-1.182, cat:1.134, crazy:-0.031, dick:1.343, dogs:1.338, english:-0.473, fleece:0.974, fox:0.016, goat:0.165, had:-0.561, jacket:1.984, jumped:2.335, lamb:1.094, lazy:1.505, little:1.319, man:0.936, mary:2.004, moby:1.014, obsessed:1.473, over:0.465, quick:2.788, red:2.593, robber:1.918, snow:0.914, spaniel:1.487, springer:1.208, story:1.404, tar:2.355, walrus:0.689, whale:0.775, white:4.146, whose:0.220, wore:1.745]}
+	Top Terms: 
+		baseball                                =>    1.99687414933503
+		whale                                   =>  1.6364122022285434
+		lamb                                    =>  1.5765227854523665
+		cap                                     =>  1.3587699078003688
+		spaniel                                 =>  1.1897325320087888
+		robber                                  =>  1.0774520624097599
+		jumped                                  =>   1.036792051056826
+		springer                                =>  1.0251560766117276
+		walrus                                  =>  0.9282678423680581
+		fox                                     =>  0.8845695224622988
+12/09/08 16:21:23 INFO clustering.ClusterDumper: Wrote 15 clusters
+0 all
+1 baseball
+2 best
+3 black
+4 bob
+5 brown
+6 cap
+7 cat
+8 crazy
+9 dick
+10 dogs
+11 english
+12 fleece
+13 fox
+14 goat
+15 had
+16 jacket
+17 jumped
+18 lamb
+19 lazy
+20 little
+21 man
+22 mary
+23 moby
+24 obsessed
+25 over
+26 quick
+27 red
+28 robber
+29 snow
+30 spaniel
+31 springer
+32 story
+33 tar
+34 walrus
+35 whale
+36 white
+37 whose
+38 wore
+P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+DMC:0{n=4 c=[crazy:0.754, dick:1.741, fleece:0.814, goat:0.652, had:1.049, lamb:0.652, little:1.049, man:1.161, mary:0.580, moby:1.161, obsessed:0.652, snow:1.161, story:1.161, whale:1.305, white:1.049, whose:1.049] r=[crazy:1.305, dick:1.005, fleece:0.814, goat:1.130, had:1.049, lamb:1.130, little:1.049, man:1.161, mary:1.005, moby:1.161, obsessed:1.130, snow:1.161, story:1.161, whale:1.305, white:1.049, whose:1.049]}
+	Top Terms: 
+		dick                                    =>  1.7413169145584106
+		whale                                   =>  1.3047189712524414
+		story                                   =>  1.1608779430389404
+		snow                                    =>  1.1608779430389404
+		moby                                    =>  1.1608779430389404
+		man                                     =>  1.1608779430389404
+		white                                   =>  1.0493061542510986
+		little                                  =>  1.0493061542510986
+		had                                     =>  1.0493061542510986
+		whose                                   =>  1.0493061542510986
+	Weight : [props - optional]:  Point:
+	0.12497583530145762: P(8) = [dick:2.322, man:2.322, moby:2.322, obsessed:2.609, story:2.322, whale:2.609]
+	0.12568059698326955: P(10) = [crazy:3.015, dick:2.322, man:2.322, moby:2.322, story:2.322, whale:2.609]
+DMC:1{n=1 c=[baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322] r=[all:1.421, best:1.421, black:1.230, dogs:0.903, english:1.421, fleece:0.768, goat:1.230, had:0.989, lamb:1.230, little:0.989, mary:1.094, snow:1.094, spaniel:1.421, springer:1.421, tar:1.421, white:0.989, whose:0.989]}
+	Top Terms: 
+		black                                   =>   2.609437942504883
+		jacket                                  =>   2.321755886077881
+		wore                                    =>   2.321755886077881
+		cap                                     =>   2.321755886077881
+		robber                                  =>   2.321755886077881
+		baseball                                =>   2.321755886077881
+		fleece                                  =>  1.6286087036132812
+	Weight : [props - optional]:  Point:
+	0.7136755792293384: P(11) = [baseball:2.322, black:2.609, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, wore:2.322]
+	0.3044494697043299: P(12) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, red:1.916, robber:2.322, wore:2.322]
+	0.29802364890122013: P(13) = [baseball:2.322, cap:2.322, fleece:1.629, jacket:2.322, robber:2.322, white:2.099, wore:2.322]
+DMC:2{n=2 c=[all:1.507, best:1.507, dogs:0.958, english:1.507, fleece:0.814, goat:1.305, had:1.049, little:1.049, mary:1.161, snow:1.161, spaniel:1.507, springer:1.507, white:1.049, whose:1.049] r=[all:1.507, best:1.507, dogs:0.958, english:1.507, fleece:0.814, goat:1.305, had:1.049, little:1.049, mary:1.161, snow:1.161, spaniel:1.507, springer:1.507, white:1.049, whose:1.049]}
+	Top Terms: 
+		springer                                =>  1.5074515342712402
+		spaniel                                 =>  1.5074515342712402
+		english                                 =>  1.5074515342712402
+		best                                    =>  1.5074515342712402
+		all                                     =>  1.5074515342712402
+		goat                                    =>  1.3047189712524414
+		snow                                    =>  1.1608779430389404
+		mary                                    =>  1.1608779430389404
+		white                                   =>  1.0493061542510986
+		whose                                   =>  1.0493061542510986
+	Weight : [props - optional]:  Point:
+	0.13238509282284472: P(14) = [all:3.015, best:3.015, dogs:1.916, english:3.015, spaniel:3.015, springer:3.015]
+DMC:3{n=4 c=[baseball:0.580, brown:1.574, cap:0.580, cat:0.652, dogs:1.437, fleece:0.407, fox:1.305, jacket:0.580, jumped:1.574, lazy:1.574, over:1.574, quick:1.574, red:1.437, robber:0.580, white:0.525, wore:0.580] r=[baseball:1.005, brown:0.909, cap:1.005, cat:1.130, dogs:0.830, fleece:0.705, fox:1.305, jacket:1.005, jumped:0.909, lazy:0.909, over:0.909, quick:0.909, red:0.830, robber:1.005, white:0.909, wore:1.005]}
+	Top Terms: 
+		quick                                   =>   1.573959231376648
+		over                                    =>   1.573959231376648
+		lazy                                    =>   1.573959231376648
+		jumped                                  =>   1.573959231376648
+		brown                                   =>   1.573959231376648
+		red                                     =>  1.4372180700302124
+		dogs                                    =>  1.4372180700302124
+		fox                                     =>  1.3047189712524414
+		cat                                     =>  0.6523594856262207
+		robber                                  =>  0.5804389715194702
+	Weight : [props - optional]:  Point:
+	0.20708715519982004: P(0) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.20708715519982004: P(1) = [brown:2.099, dogs:1.916, fox:2.609, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.18730010993779675: P(2) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+	0.18730010993779675: P(3) = [brown:2.099, cat:2.609, dogs:1.916, jumped:2.099, lazy:2.099, over:2.099, quick:2.099, red:1.916]
+DMC:4{n=3 c=[baseball:0.774, bob:1.005, brown:0.700, cap:0.774, cat:0.870, dogs:0.639, fleece:0.543, jacket:0.774, jumped:0.700, lazy:0.700, man:0.774, moby:0.774, obsessed:0.870, over:0.700, quick:0.700, red:1.278, robber:0.774, story:0.774, walrus:1.005, wore:0.774] r=[baseball:1.094, bob:1.421, brown:0.989, cap:1.094, cat:1.230, dogs:0.903, fleece:0.768, jacket:1.094, jumped:0.989, lazy:0.989, man:1.094, moby:1.094, obsessed:1.230, over:0.989, quick:0.989, red:0.903, robber:1.094, story:1.094, walrus:1.421, wore:1.094]}
+	Top Terms: 
+		red                                     =>  1.2775271733601887
+		walrus                                  =>  1.0049676895141602
+		bob                                     =>  1.0049676895141602
+		obsessed                                =>  0.8698126475016276
+		cat                                     =>  0.8698126475016276
+		wore                                    =>   0.773918628692627
+		story                                   =>   0.773918628692627
+		robber                                  =>   0.773918628692627
+		moby                                    =>   0.773918628692627
+		man                                     =>   0.773918628692627
+	Weight : [props - optional]:  Point:
+	0.09798438241269199: P(9) = [bob:3.015, man:2.322, moby:2.322, obsessed:2.609, story:2.322, walrus:3.015]
+DMC:5{n=1 c=[fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099] r=[baseball:1.161, cap:1.161, had:1.049, jacket:1.161, lamb:1.305, little:1.049, mary:1.161, robber:1.161, tar:1.507, whose:1.049, wore:1.161]}
+	Top Terms: 
+		goat                                    =>   2.609437942504883
+		snow                                    =>   2.321755886077881
+		mary                                    =>   2.321755886077881
+		little                                  =>  2.0986123085021973
+		had                                     =>  2.0986123085021973
+		whose                                   =>  2.0986123085021973
+		white                                   =>  2.0986123085021973
+		fleece                                  =>  1.6286087036132812
+	Weight : [props - optional]:  Point:
+	0.26058122172527626: P(4) = [fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.6973543198940503: P(5) = [fleece:1.629, goat:2.609, had:2.099, little:2.099, mary:2.322, snow:2.322, white:2.099, whose:2.099]
+	0.29619657578036: P(7) = [dick:2.322, fleece:1.629, goat:2.609, had:2.099, little:2.099, snow:2.322, white:2.099, whose:2.099]
+DMC:6{n=1 c=[black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099] r=[brown:0.989, crazy:1.421, dick:1.094, dogs:0.903, fox:1.230, jumped:0.989, lazy:0.989, man:1.094, moby:1.094, obsessed:1.230, over:0.989, quick:0.989, red:0.903, story:1.094, whale:1.230]}
+	Top Terms: 
+		tar                                     =>  3.0149030685424805
+		lamb                                    =>   2.609437942504883
+		black                                   =>   2.609437942504883
+		mary                                    =>   2.321755886077881
+		little                                  =>  2.0986123085021973
+		had                                     =>  2.0986123085021973
+		whose                                   =>  2.0986123085021973
+		fleece                                  =>  1.6286087036132812
+	Weight : [props - optional]:  Point:
+	0.7088912468763482: P(6) = [black:2.609, fleece:1.629, had:2.099, lamb:2.609, little:2.099, mary:2.322, tar:3.015, whose:2.099]
+DMC:7{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:8{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:9{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:10{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:11{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:12{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+12/09/08 16:21:23 INFO clustering.ClusterDumper: Wrote 15 clusters
+DMC:13{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604
+DMC:14{n=0 c=[all:0.431, baseball:-0.832, best:0.150, black:-1.058, bob:0.986, brown:0.193, cap:0.527, cat:-1.101, crazy:-0.050, dick:-0.149, dogs:-1.496, english:0.043, fleece:-1.197, fox:0.137, goat:-2.031, had:-1.158, jacket:-0.560, jumped:0.309, lamb:0.024, lazy:-0.086, little:-0.000, man:2.539, mary:-1.534, moby:0.479, obsessed:-0.322, over:-2.617, quick:0.161, red:-1.582, robber:0.765, snow:-0.783, spaniel:-0.043, springer:0.664, story:0.327, tar:1.046, walrus:0.536, whale:-0.479, white:-0.490, whose:-0.910, wore:-0.174] r=[]}
+	Top Terms: 
+		man                                     =>   2.539076458672437
+		tar                                     =>  1.0455566790762703
+		bob                                     =>  0.9862473161085918
+		robber                                  =>  0.7651115683808453
+		springer                                =>  0.6637602380800843
+		walrus                                  =>  0.5363016593067816
+		cap                                     =>  0.5271273405917853
+		moby                                    =>  0.4793799596979927
+		all                                     => 0.43128677905483626
+		story                                   =>  0.3267630048615604

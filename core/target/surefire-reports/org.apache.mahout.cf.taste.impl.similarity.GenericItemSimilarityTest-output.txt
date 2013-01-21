@@ -1,0 +1,13 @@
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 3 users
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: GenericDataModel[users:1,2,3...]
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [GenericDataModel[users:1,2,3...]]
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 5 users
+2013-1-15 15:43:16 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+

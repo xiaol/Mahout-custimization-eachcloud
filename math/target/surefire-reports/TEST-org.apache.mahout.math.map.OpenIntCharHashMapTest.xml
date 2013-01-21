@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="0" time="0.01" errors="0" skipped="0" tests="17" name="org.apache.mahout.math.map.OpenIntCharHashMapTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.10-b01-428"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M3811"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math"/>
+    <property name="java.runtime.version" value="1.6.0_35-b10-428-11M3811"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/surefire/surefirebooter7249243067928715057.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="EUC_CN"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="surefire.test.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/test-classes:/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/classes:/Users/liuivan/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/Users/liuivan/.m2/repository/org/uncommons/maths/uncommons-maths/1.2.2/uncommons-maths-1.2.2.jar:/Users/liuivan/.m2/repository/jfree/jcommon/1.0.12/jcommon-1.0.12.jar:/Users/liuivan/.m2/repository/com/google/guava/guava/r09/guava-r09.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-jcl/1.6.1/slf4j-jcl-1.6.1.jar:/Users/liuivan/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/liuivan/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.7.4"/>
+    <property name="http.nonProxyHosts" value="local„ÄÅ169.254/16„ÄÅ127.0.0.1|*.local„ÄÅ169.254/16„ÄÅ127.0.0.1"/>
+    <property name="user.home" value="/Users/liuivan"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="EUC_CN"/>
+    <property name="user.name" value="liuivan"/>
+    <property name="java.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/test-classes:/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/classes:/Users/liuivan/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/Users/liuivan/.m2/repository/org/uncommons/maths/uncommons-maths/1.2.2/uncommons-maths-1.2.2.jar:/Users/liuivan/.m2/repository/jfree/jcommon/1.0.12/jcommon-1.0.12.jar:/Users/liuivan/.m2/repository/com/google/guava/guava/r09/guava-r09.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-jcl/1.6.1/slf4j-jcl-1.6.1.jar:/Users/liuivan/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/liuivan/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/surefire/surefirebooter7249243067928715057.jar /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/surefire/surefire2693429068314903289tmp /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/math/target/surefire/surefire4491279799133129094tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_35"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="localRepository" value="/Users/liuivan/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_35-428"/>
+    <property name="socksNonProxyHosts" value="local„ÄÅ169.254/16„ÄÅ127.0.0.1|*.local„ÄÅ169.254/16„ÄÅ127.0.0.1"/>
+    <property name="ftp.nonProxyHosts" value="local„ÄÅ169.254/16„ÄÅ127.0.0.1|*.local„ÄÅ169.254/16„ÄÅ127.0.0.1"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="0.001" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testClone"/>
+  <testcase time="0.001" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testEquals"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testConstructors"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testEnsureCapacity"/>
+  <testcase time="0.001" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testClear"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testContainsKey"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testContainValue"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testForEachKey"/>
+  <testcase time="0.001" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testForEachPair"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testGet"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testAdjustOrPutValue"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testKeys"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testPairsMatching"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testValues"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testCopy"/>
+  <testcase time="0.001" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testKeysSortedByValue"/>
+  <testcase time="0" classname="org.apache.mahout.math.map.OpenIntCharHashMapTest" name="testPairsSortedByKey"/>
+</testsuite>

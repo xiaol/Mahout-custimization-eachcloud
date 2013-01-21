@@ -1,0 +1,216 @@
+2013-1-15 16:18:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--analyzerName=[org.apache.mahout.vectorizer.DefaultAnalyzer], --cardinality=[5000], --encoderClass=[org.apache.mahout.vectorizer.encoders.LuceneTextValueEncoder], --encoderFieldName=[text], --endPhase=[2147483647], --input=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-3705172581204844544/documents/docs.file], --output=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-3705172581204844544/output], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 16:18:07 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:18:07 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:18:07 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0342
+2013-1-15 16:18:08 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0342_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:18:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:08 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0342_m_000000_0 is allowed to commit now
+2013-1-15 16:18:08 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0342_m_000000_0' to file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-3705172581204844544/output
+2013-1-15 16:18:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:18:10 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:10 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0342_m_000000_0' done.
+2013-1-15 16:18:10 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:18:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0342
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=286216
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=102734
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=99795309
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=87688551
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=100
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=157
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=100
+2013-1-15 16:18:11 org.slf4j.impl.JCLLoggerAdapter info
+信息: result of run: true
+2013-1-15 16:18:11 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--analyzerName=[org.apache.mahout.vectorizer.DefaultAnalyzer], --cardinality=[5000], --encoderClass=[org.apache.mahout.vectorizer.encoders.LuceneTextValueEncoder], --encoderFieldName=[text], --endPhase=[2147483647], --input=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-1199174599192755200/documents/docs.file], --namedVector=null, --output=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-1199174599192755200/output], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 16:18:11 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:18:11 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:18:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0343
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0343_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:18:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:11 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0343_m_000000_0 is allowed to commit now
+2013-1-15 16:18:11 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0343_m_000000_0' to file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-1199174599192755200/output
+2013-1-15 16:18:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:18:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0343_m_000000_0' done.
+2013-1-15 16:18:14 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:18:14 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0343
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=288062
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=102734
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=100184473
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=88112118
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=100
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=157
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=100
+2013-1-15 16:18:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: result of run: true
+2013-1-15 16:18:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--analyzerName=[org.apache.mahout.vectorizer.DefaultAnalyzer], --cardinality=[5000], --encoderClass=[org.apache.mahout.vectorizer.encoders.LuceneTextValueEncoder], --encoderFieldName=[text], --endPhase=[2147483647], --input=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-5745847506318125056/documents/docs.file], --output=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-5745847506318125056/output], --sequentialAccessVector=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 16:18:14 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:18:14 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:18:14 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0344
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0344_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:18:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:14 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0344_m_000000_0 is allowed to commit now
+2013-1-15 16:18:14 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0344_m_000000_0' to file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-5745847506318125056/output
+2013-1-15 16:18:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:18:17 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:17 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0344_m_000000_0' done.
+2013-1-15 16:18:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:18:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0344
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=258702
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=102734
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=100575483
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=88506323
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=100
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=157
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=100
+2013-1-15 16:18:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: result of run: true
+2013-1-15 16:18:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--analyzerName=[org.apache.mahout.vectorizer.DefaultAnalyzer], --cardinality=[5000], --encoderClass=[org.apache.mahout.vectorizer.encoders.LuceneTextValueEncoder], --encoderFieldName=[text], --endPhase=[2147483647], --input=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-291029562569309184/documents/docs.file], --namedVector=null, --output=[file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-291029562569309184/output], --sequentialAccessVector=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 16:18:18 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:18:18 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:18:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0345
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0345_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:18:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:18 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0345_m_000000_0 is allowed to commit now
+2013-1-15 16:18:18 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0345_m_000000_0' to file:/tmp/mahout-EncodedVectorsFromSequenceFilesTest-291029562569309184/output
+2013-1-15 16:18:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:18:21 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:18:21 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0345_m_000000_0' done.
+2013-1-15 16:18:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:18:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0345
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=260504
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=102734
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=100937132
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=88902323
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=100
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=156
+2013-1-15 16:18:22 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=100
+2013-1-15 16:18:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: result of run: true

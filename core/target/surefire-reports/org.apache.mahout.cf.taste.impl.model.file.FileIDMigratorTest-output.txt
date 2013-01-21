@@ -1,0 +1,7 @@
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileReadonlyIDMigrator for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileIDMigratorTest-4702922485366022144/test.txt
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileReadonlyIDMigrator for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileIDMigratorTest-8542353950227577856/test.txt
+
+2013-1-15 15:43:09 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileReadonlyIDMigrator for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileIDMigratorTest-1698681052410445824/test.txt

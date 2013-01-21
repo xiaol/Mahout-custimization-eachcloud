@@ -1,0 +1,28 @@
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: OL Observed 50000.0 samples m=[1.0064148495883092, 1.9790657064457131] sd=[2.993946926544437, 4.0090158538774725]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: RS Observed 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939169869255076, 4.008975763518485]
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Generating 50000 samples m=[1.0, 2.0] sd=[3.0, 4.0]
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Observing 50000 samples m=[1.0064148495883074, 1.979065706445737] sd=[2.9939469265444614, 4.009015853877473]

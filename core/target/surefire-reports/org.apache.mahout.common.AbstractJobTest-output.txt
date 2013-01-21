@@ -1,0 +1,173 @@
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --startPhase=[0], --tempDir=[temp], --testFlag=null}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: Missing required option --required
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Missing required option --required                                              
+Usage:                                                                          
+ [--overwrite --option <option> --required <required> --notRequired             
+<notRequired> --hasDefault <hasDefault> --help --tempDir <tempDir> --startPhase 
+<startPhase> --endPhase <endPhase>]                                             
+--required (-r) required    required                                            
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --hasDefault=[defaultValue], --required=[requiredArg], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: Unexpected --unknownArg while processing Job-Specific Options:
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Unexpected --unknownArg while processing Job-Specific Options:                  
+Usage:                                                                          
+ [--overwrite --option <option> --required <required> --notRequired             
+<notRequired> --hasDefault <hasDefault> --help --tempDir <tempDir> --startPhase 
+<startPhase> --endPhase <endPhase>]                                             
+Job-Specific Options:                                                           
+  --overwrite (-ow)                  If present, overwrite the output directory 
+                                     before running job                         
+  --option (-o) option               option                                     
+  --required (-r) required           required                                   
+  --notRequired (-nr) notRequired    not required                               
+  --hasDefault (-hd) hasDefault      option w/ default                          
+  --help (-h)                        Print out help                             
+  --tempDir tempDir                  Intermediate output directory              
+  --startPhase startPhase            First phase to run                         
+  --endPhase endPhase                Last phase to run                          
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: Unexpected requiredArg2 while processing Job-Specific Options:
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Unexpected requiredArg2 while processing Job-Specific Options:                  
+Usage:                                                                          
+ [--overwrite --option <option> --required <required> --notRequired             
+<notRequired> --hasDefault <hasDefault> --help --tempDir <tempDir> --startPhase 
+<startPhase> --endPhase <endPhase>]                                             
+Job-Specific Options:                                                           
+  --overwrite (-ow)                  If present, overwrite the output directory 
+                                     before running job                         
+  --option (-o) option               option                                     
+  --required (-r) required           required                                   
+  --notRequired (-nr) notRequired    not required                               
+  --hasDefault (-hd) hasDefault      option w/ default                          
+  --help (-h)                        Print out help                             
+  --tempDir tempDir                  Intermediate output directory              
+  --startPhase startPhase            First phase to run                         
+  --endPhase endPhase                Last phase to run                          
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --hasDefault=[nonDefault], --notRequired=[notRequired], --option=[optionValue], --overwrite=null, --required=[requiredArg], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --hasDefault=[nonDefault], --notRequired=[notRequired], --option=[optionValue], --overwrite=null, --required=[requiredArg], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: No input specified or -Dmapred.input.dir must be provided to specify input directory
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Job-Specific Options:                                                           
+  --input (-i) input         Path to job input directory.                       
+  --output (-o) output       The directory pathname for output.                 
+  --help (-h)                Print out help                                     
+  --tempDir tempDir          Intermediate output directory                      
+  --startPhase startPhase    First phase to run                                 
+  --endPhase endPhase        Last phase to run                                  
+Specify HDFS directories while running on hadoop; else specify local file       
+system directories                                                              
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: No output specified:  or -Dmapred.output.dir must be provided to specify output directory
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Job-Specific Options:                                                           
+  --input (-i) input         Path to job input directory.                       
+  --output (-o) output       The directory pathname for output.                 
+  --help (-h)                Print out help                                     
+  --tempDir tempDir          Intermediate output directory                      
+  --startPhase startPhase    First phase to run                                 
+  --endPhase endPhase        Last phase to run                                  
+Specify HDFS directories while running on hadoop; else specify local file       
+system directories                                                              
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter error
+严重: No input specified or -Dmapred.input.dir must be provided to specify input directory
+usage: <command> [Generic Options] [Job-Specific Options]
+Generic Options:
+ -archives <paths>              comma separated archives to be unarchived
+                                on the compute machines.
+ -conf <configuration file>     specify an application configuration file
+ -D <property=value>            use value for given property
+ -files <paths>                 comma separated files to be copied to the
+                                map reduce cluster
+ -fs <local|namenode:port>      specify a namenode
+ -jt <local|jobtracker:port>    specify a job tracker
+ -libjars <paths>               comma separated jar files to include in
+                                the classpath.
+ -tokenCacheFile <tokensFile>   name of the file with the tokens
+Job-Specific Options:                                                           
+  --input (-i) input         Path to job input directory.                       
+  --output (-o) output       The directory pathname for output.                 
+  --help (-h)                Print out help                                     
+  --tempDir tempDir          Intermediate output directory                      
+  --startPhase startPhase    First phase to run                                 
+  --endPhase endPhase        Last phase to run                                  
+Specify HDFS directories while running on hadoop; else specify local file       
+system directories                                                              
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --input=[testInputPath], --output=[testOutputPath], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --input=[testInputPath], --output=[testOutputPath], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--endPhase=[2147483647], --input=[testInputPath], --output=[testOutputPath], --startPhase=[0], --tempDir=[temp]}

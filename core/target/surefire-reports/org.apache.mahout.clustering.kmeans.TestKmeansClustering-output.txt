@@ -1,0 +1,1433 @@
+testKMeansMRJob k= 1
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@3a4346cd
+testKMeansMRJob k= 2
+2013-1-15 15:49:57 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@14e44dd3
+testKMeansMRJob k= 3
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@7b681460
+testKMeansMRJob k= 4
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@175beef
+testKMeansMRJob k= 5
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@26d6466f
+testKMeansMRJob k= 6
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@71f84d01
+testKMeansMRJob k= 7
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@8517bc3
+testKMeansMRJob k= 8
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points], --maxIter=[2], --method=[sequential], --output=[file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/clusters Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Out: file:/tmp/mahout-TestKmeansClustering-8444379983162654720/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@203eb8a
+testKMeansMRJob k= 1
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points], --maxIter=[2], --method=[mapreduce], --output=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:49:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+Cluster Iterator running iteration 1 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-0
+2013-1-15 15:49:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:49:58 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:49:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0131
+2013-1-15 15:49:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:49:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:49:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:49:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:49:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:49:58 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0131_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:49:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:01 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0131_m_000000_0' done.
+2013-1-15 15:50:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:01 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0131_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:04 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0131_m_000001_0' done.
+2013-1-15 15:50:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:50:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 832 bytes
+2013-1-15 15:50:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:04 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0131_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:04 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0131_r_000000_0 is allowed to commit now
+2013-1-15 15:50:04 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0131_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:50:07 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:50:07 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0131_r_000000_0' done.
+2013-1-15 15:50:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:50:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0131
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=504
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3393847
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=14778757
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=2
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=840
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=2
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=8
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=816
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=4
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:50:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=4
+Cluster Iterator running iteration 2 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:50:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:09 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0132
+2013-1-15 15:50:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:09 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0132_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:10 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:12 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0132_m_000000_0' done.
+2013-1-15 15:50:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:12 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0132_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:15 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0132_m_000001_0' done.
+2013-1-15 15:50:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:15 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:50:15 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 886 bytes
+2013-1-15 15:50:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:15 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0132_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:15 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0132_r_000000_0 is allowed to commit now
+2013-1-15 15:50:15 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0132_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-2
+2013-1-15 15:50:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:50:18 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0132_r_000000_0' done.
+2013-1-15 15:50:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:50:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0132
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=513
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3409162
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=14882914
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=2
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=894
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=2
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=8
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=870
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=4
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=4
+2013-1-15 15:50:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:50:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:50:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@26b54dba
+2013-1-15 15:50:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:50:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:19 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0133
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0133_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:19 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:19 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0133_m_000000_0 is allowed to commit now
+2013-1-15 15:50:19 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0133_m_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:50:20 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:22 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0133_m_000000_0' done.
+2013-1-15 15:50:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:22 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0133_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:22 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0133_m_000001_0 is allowed to commit now
+2013-1-15 15:50:22 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0133_m_000001_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:50:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 50% reduce 0%
+2013-1-15 15:50:25 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0133_m_000001_0' done.
+2013-1-15 15:50:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0133
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1002
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=2281224
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=9989755
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=18
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+testKMeansMRJob k= 4
+2013-1-15 15:50:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points], --maxIter=[2], --method=[mapreduce], --output=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:50:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output
+2013-1-15 15:50:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:50:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+Cluster Iterator running iteration 1 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-0
+2013-1-15 15:50:25 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:25 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0134
+2013-1-15 15:50:25 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:25 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:25 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:25 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:25 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:25 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0134_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:28 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:28 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0134_m_000000_0' done.
+2013-1-15 15:50:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:28 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0134_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:31 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0134_m_000001_0' done.
+2013-1-15 15:50:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:31 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:50:31 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 2074 bytes
+2013-1-15 15:50:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:31 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0134_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:31 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0134_r_000000_0 is allowed to commit now
+2013-1-15 15:50:31 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0134_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:50:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:50:34 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0134_r_000000_0' done.
+2013-1-15 15:50:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:50:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0134
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1027
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3445996
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15099482
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=5
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=2082
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=5
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=20
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=2040
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=10
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=10
+Cluster Iterator running iteration 2 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:50:35 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:35 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0135
+2013-1-15 15:50:35 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:35 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:35 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:35 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:35 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:35 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0135_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:38 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:38 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0135_m_000000_0' done.
+2013-1-15 15:50:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:38 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0135_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:41 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0135_m_000001_0' done.
+2013-1-15 15:50:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:41 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:50:41 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 2110 bytes
+2013-1-15 15:50:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:41 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0135_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:41 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0135_r_000000_0 is allowed to commit now
+2013-1-15 15:50:41 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0135_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-2
+2013-1-15 15:50:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:50:44 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0135_r_000000_0' done.
+2013-1-15 15:50:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:50:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0135
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1049
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3472759
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15208896
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=5
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=2118
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=5
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=20
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=2076
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=10
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=10
+2013-1-15 15:50:45 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:50:45 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:50:45 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@3196076f
+2013-1-15 15:50:45 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:50:45 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:45 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0136
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0136_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:45 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:45 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0136_m_000000_0 is allowed to commit now
+2013-1-15 15:50:45 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0136_m_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:50:46 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:48 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0136_m_000000_0' done.
+2013-1-15 15:50:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:48 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0136_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:48 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0136_m_000001_0 is allowed to commit now
+2013-1-15 15:50:48 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0136_m_000001_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:50:49 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 50% reduce 0%
+2013-1-15 15:50:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:51 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0136_m_000001_0' done.
+2013-1-15 15:50:51 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0136
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1002
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=2328980
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=10208195
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=18
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+testKMeansMRJob k= 7
+2013-1-15 15:50:52 org.slf4j.impl.JCLLoggerAdapter info
+信息: Command line arguments: {--clustering=null, --clusters=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters], --convergenceDelta=[0.001], --distanceMeasure=[org.apache.mahout.common.distance.EuclideanDistanceMeasure], --endPhase=[2147483647], --input=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points], --maxIter=[2], --method=[mapreduce], --output=[file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output], --overwrite=null, --startPhase=[0], --tempDir=[temp]}
+2013-1-15 15:50:52 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output
+2013-1-15 15:50:52 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/clusters Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:50:52 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 2 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+Cluster Iterator running iteration 1 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-0
+2013-1-15 15:50:52 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:50:52 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:50:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0137
+2013-1-15 15:50:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:52 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0137_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:53 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:50:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:55 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0137_m_000000_0' done.
+2013-1-15 15:50:55 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:50:55 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:50:55 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:50:55 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:50:55 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:50:55 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0137_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:50:56 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:50:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:58 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0137_m_000001_0' done.
+2013-1-15 15:50:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:58 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:50:58 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 3316 bytes
+2013-1-15 15:50:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:58 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0137_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:50:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:50:58 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0137_r_000000_0 is allowed to commit now
+2013-1-15 15:50:58 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0137_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:51:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:51:01 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0137_r_000000_0' done.
+2013-1-15 15:51:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:51:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0137
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1550
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3527266
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15435321
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=8
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=3324
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=8
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=32
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=3264
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=16
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=16
+Cluster Iterator running iteration 2 over priorPath: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-1
+2013-1-15 15:51:02 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:02 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0138
+2013-1-15 15:51:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:02 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0138_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:03 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:05 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0138_m_000000_0' done.
+2013-1-15 15:51:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:05 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0138_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:08 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0138_m_000001_0' done.
+2013-1-15 15:51:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:08 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:51:08 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 3334 bytes
+2013-1-15 15:51:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:08 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0138_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:08 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0138_r_000000_0 is allowed to commit now
+2013-1-15 15:51:08 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0138_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusters-2
+2013-1-15 15:51:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0138_r_000000_0' done.
+2013-1-15 15:51:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:51:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0138
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1550
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3565477
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15549963
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=8
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=3342
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=8
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=32
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=3282
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=16
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=16
+2013-1-15 15:51:11 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:51:11 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:51:11 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/points Clusters In: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Out: file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@625f4e03
+2013-1-15 15:51:11 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:51:11 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:11 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0139
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0139_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:11 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0139_m_000000_0 is allowed to commit now
+2013-1-15 15:51:11 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0139_m_000000_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:51:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:14 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0139_m_000000_0' done.
+2013-1-15 15:51:14 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:14 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0139_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:14 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0139_m_000001_0 is allowed to commit now
+2013-1-15 15:51:14 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0139_m_000001_0' to file:/tmp/mahout-TestKmeansClustering-2865140628901868544/output/clusteredPoints
+2013-1-15 15:51:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 50% reduce 0%
+2013-1-15 15:51:17 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:17 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0139_m_000001_0' done.
+2013-1-15 15:51:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0139
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1002
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=2395975
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=10436653
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=18
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/points Out: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@3ef91c8f t1: 3.1 t2: 2.1
+2013-1-15 15:51:18 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:51:18 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:18 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0140
+2013-1-15 15:51:18 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:18 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:18 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:18 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:18 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:18 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0140_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:21 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:21 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0140_m_000000_0' done.
+2013-1-15 15:51:21 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:21 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:21 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:21 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:21 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:21 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0140_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:24 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0140_m_000001_0' done.
+2013-1-15 15:51:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:24 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:51:24 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 196 bytes
+2013-1-15 15:51:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:24 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0140_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:24 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0140_r_000000_0 is allowed to commit now
+2013-1-15 15:51:24 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0140_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/clusters-0-final
+2013-1-15 15:51:27 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:51:27 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0140_r_000000_0' done.
+2013-1-15 15:51:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:51:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0140
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=484
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3602980
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15760478
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=204
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=2
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=12
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=180
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=6
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=6
+2013-1-15 15:51:28 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/clusters-0-final Out: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure
+2013-1-15 15:51:28 org.slf4j.impl.JCLLoggerAdapter info
+信息: convergence: 0.0010 max Iterations: 10 num Reduce Tasks: org.apache.mahout.math.VectorWritable Input Vectors: {}
+Cluster Iterator running iteration 1 over priorPath: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusters-0
+2013-1-15 15:51:28 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:51:28 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:28 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0141
+2013-1-15 15:51:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:28 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:28 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0141_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:31 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0141_m_000000_0' done.
+2013-1-15 15:51:31 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:31 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:31 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:31 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:31 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:31 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:31 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0141_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:34 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0141_m_000001_0' done.
+2013-1-15 15:51:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:34 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:51:34 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 832 bytes
+2013-1-15 15:51:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:34 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0141_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:34 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0141_r_000000_0 is allowed to commit now
+2013-1-15 15:51:34 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0141_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusters-1
+2013-1-15 15:51:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:51:37 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0141_r_000000_0' done.
+2013-1-15 15:51:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:51:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0141
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=513
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3616927
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15865558
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=2
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=840
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=2
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=8
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=816
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=4
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=4
+Cluster Iterator running iteration 2 over priorPath: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusters-1
+2013-1-15 15:51:38 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:51:38 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:38 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0142
+2013-1-15 15:51:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:38 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:38 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0142_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:39 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:41 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0142_m_000000_0' done.
+2013-1-15 15:51:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:51:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:51:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:51:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:51:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:51:41 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0142_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:44 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0142_m_000001_0' done.
+2013-1-15 15:51:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 2 sorted segments
+2013-1-15 15:51:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 2 segments left of total size: 904 bytes
+2013-1-15 15:51:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:44 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0142_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:44 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0142_r_000000_0 is allowed to commit now
+2013-1-15 15:51:44 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0142_r_000000_0' to file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusters-2
+2013-1-15 15:51:47 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:51:47 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0142_r_000000_0' done.
+2013-1-15 15:51:47 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:51:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0142
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=513
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=3632125
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=15969388
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=2
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=912
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=2
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=8
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=888
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=4
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=4
+2013-1-15 15:51:48 org.slf4j.impl.JCLLoggerAdapter info
+信息: Clustering data
+2013-1-15 15:51:48 org.slf4j.impl.JCLLoggerAdapter info
+信息: Running Clustering
+2013-1-15 15:51:48 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/points Clusters In: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans Out: file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans Distance: org.apache.mahout.common.distance.EuclideanDistanceMeasure@2dcbcc56
+2013-1-15 15:51:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:51:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:51:48 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 2
+2013-1-15 15:51:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0143
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0143_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:51:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:48 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0143_m_000000_0 is allowed to commit now
+2013-1-15 15:51:48 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0143_m_000000_0' to file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusteredPoints
+2013-1-15 15:51:49 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:51:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:51 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0143_m_000000_0' done.
+2013-1-15 15:51:51 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0143_m_000001_0 is done. And is in the process of commiting
+2013-1-15 15:51:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:51 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0143_m_000001_0 is allowed to commit now
+2013-1-15 15:51:51 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0143_m_000001_0' to file:/tmp/mahout-TestKmeansClustering-8389439809172642816/output/kmeans/clusteredPoints
+2013-1-15 15:51:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 50% reduce 0%
+2013-1-15 15:51:54 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:51:54 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0143_m_000001_0' done.
+2013-1-15 15:51:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:51:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0143
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=1002
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=2429908
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=10714133
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=812
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=18
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=18
+2013-1-15 15:51:55 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=270

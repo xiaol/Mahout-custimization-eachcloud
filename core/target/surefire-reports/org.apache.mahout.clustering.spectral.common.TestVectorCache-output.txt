@@ -1,0 +1,14 @@
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestVectorCache-3256031250506573824/output
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestVectorCache-6986719280599613440/output
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Files are: [file:/tmp/mahout-TestVectorCache-6986719280599613440/output]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Loading vector from: /tmp/mahout-TestVectorCache-6986719280599613440/output
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestVectorCache-2730556406344209408/output
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Files are: [file:/tmp/mahout-TestVectorCache-2730556406344209408/output]
+2013-1-15 15:57:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Loading vector from: /tmp/mahout-TestVectorCache-2730556406344209408/output

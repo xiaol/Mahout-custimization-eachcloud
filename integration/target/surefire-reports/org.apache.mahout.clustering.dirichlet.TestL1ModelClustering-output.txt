@@ -1,0 +1,279 @@
+
+0. The quick red fox jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+1. The quick brown fox jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+2. The quick red cat jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+3. The quick brown cat jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+4. Mary had a little lamb whose fleece was white as snow.
+	(8nz) [..{10}=1.98, ..{12}=2.39, ..{15}=2.39, ..{17}=2.39, ..{19}=2.39, ..{26}=2.39, ..{31}=2.39, 2.39, ]
+5. Moby Dick is a story of a whale and a man obsessed.
+	(6nz) [..{7}=2.39, ..{18}=2.39, ..{20}=2.39, 2.39, ..{29}=2.39, 2.39, ]
+6. The robber wore a black fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.39, ..{3}=2.39, ..{5}=2.39, ..{10}=1.98, ..{13}=2.39, ..{25}=2.39, ..{33}=2.39, ]
+7. The English Springer Spaniel is the best of all dogs.
+	(6nz) [2.39, ..{2}=2.39, ..{8}=1.29, 2.39, ..{27}=2.39, 2.39, ]
+
+Model[8] had 4 observations
+pdf           document
+1.000 The robber wore a black fleece jacket and a baseball cap.
+0.000 Mary had a little lamb whose fleece was white as snow.
+0.000 The quick red fox jumped over the lazy brown dogs.
+0.000 The quick brown fox jumped over the lazy red dogs.
+0.000 The quick red cat jumped over the lazy brown dogs.
+0.000 The quick brown cat jumped over the lazy red dogs.
+0.000 The English Springer Spaniel is the best of all dogs.
+0.000 Moby Dick is a story of a whale and a man obsessed.
+
+Model[11] had 45 observations
+pdf           document
+1.000 The robber wore a black fleece jacket and a baseball cap.
+0.125 The quick red cat jumped over the lazy brown dogs.
+0.125 The quick brown cat jumped over the lazy red dogs.
+0.125 The quick red fox jumped over the lazy brown dogs.
+0.125 The quick brown fox jumped over the lazy red dogs.
+0.001 The English Springer Spaniel is the best of all dogs.
+0.000 Moby Dick is a story of a whale and a man obsessed.
+0.000 Mary had a little lamb whose fleece was white as snow.
+
+Model[12] had 31 observations
+pdf           document
+1.000 The quick red fox jumped over the lazy brown dogs.
+1.000 The quick brown fox jumped over the lazy red dogs.
+1.000 The quick red cat jumped over the lazy brown dogs.
+1.000 The quick brown cat jumped over the lazy red dogs.
+0.000 The English Springer Spaniel is the best of all dogs.
+0.000 Moby Dick is a story of a whale and a man obsessed.
+0.000 The robber wore a black fleece jacket and a baseball cap.
+0.000 Mary had a little lamb whose fleece was white as snow.
+
+0. The quick red fox jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+1. The quick brown fox jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+2. The quick red cat jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+3. The quick brown cat jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+4. Mary had a little lamb whose fleece was white as snow.
+	(8nz) [..{10}=1.98, ..{12}=2.39, ..{15}=2.39, ..{17}=2.39, ..{19}=2.39, ..{26}=2.39, ..{31}=2.39, 2.39, ]
+5. Moby Dick is a story of a whale and a man obsessed.
+	(6nz) [..{7}=2.39, ..{18}=2.39, ..{20}=2.39, 2.39, ..{29}=2.39, 2.39, ]
+6. The robber wore a black fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.39, ..{3}=2.39, ..{5}=2.39, ..{10}=1.98, ..{13}=2.39, ..{25}=2.39, ..{33}=2.39, ]
+7. The English Springer Spaniel is the best of all dogs.
+	(6nz) [2.39, ..{2}=2.39, ..{8}=1.29, 2.39, ..{27}=2.39, 2.39, ]
+
+Model[0] had 10 observations
+pdf           document
+1.000 The quick red cat jumped over the lazy brown dogs.
+1.000 The quick brown cat jumped over the lazy red dogs.
+0.825 The quick red fox jumped over the lazy brown dogs.
+0.825 The quick brown fox jumped over the lazy red dogs.
+0.518 The English Springer Spaniel is the best of all dogs.
+0.500 Mary had a little lamb whose fleece was white as snow.
+0.500 Moby Dick is a story of a whale and a man obsessed.
+0.500 The robber wore a black fleece jacket and a baseball cap.
+
+Model[1] had 48 observations
+pdf           document
+1.000 The quick red fox jumped over the lazy brown dogs.
+1.000 The quick brown fox jumped over the lazy red dogs.
+0.933 Mary had a little lamb whose fleece was white as snow.
+0.915 The robber wore a black fleece jacket and a baseball cap.
+0.915 The quick red cat jumped over the lazy brown dogs.
+0.915 The quick brown cat jumped over the lazy red dogs.
+0.876 Moby Dick is a story of a whale and a man obsessed.
+0.709 The English Springer Spaniel is the best of all dogs.
+
+Model[2] had 19 observations
+pdf           document
+1.000 The English Springer Spaniel is the best of all dogs.
+0.887 The quick red cat jumped over the lazy brown dogs.
+0.887 The quick brown cat jumped over the lazy red dogs.
+0.811 The quick red fox jumped over the lazy brown dogs.
+0.811 The quick brown fox jumped over the lazy red dogs.
+0.598 Mary had a little lamb whose fleece was white as snow.
+0.598 Moby Dick is a story of a whale and a man obsessed.
+0.598 The robber wore a black fleece jacket and a baseball cap.
+
+Model[3] had 1 observations
+pdf           document
+1.000 The robber wore a black fleece jacket and a baseball cap.
+0.525 Mary had a little lamb whose fleece was white as snow.
+0.500 The quick red fox jumped over the lazy brown dogs.
+0.500 The quick brown fox jumped over the lazy red dogs.
+0.500 The quick red cat jumped over the lazy brown dogs.
+0.500 The quick brown cat jumped over the lazy red dogs.
+0.500 Moby Dick is a story of a whale and a man obsessed.
+0.500 The English Springer Spaniel is the best of all dogs.
+
+Model[4] had 2 observations
+pdf           document
+1.000 The English Springer Spaniel is the best of all dogs.
+0.518 The quick red fox jumped over the lazy brown dogs.
+0.518 The quick brown fox jumped over the lazy red dogs.
+0.518 The quick red cat jumped over the lazy brown dogs.
+0.518 The quick brown cat jumped over the lazy red dogs.
+0.500 Mary had a little lamb whose fleece was white as snow.
+0.500 Moby Dick is a story of a whale and a man obsessed.
+0.500 The robber wore a black fleece jacket and a baseball cap.
+
+0. The quick red fox jumped over the lazy brown dogs.
+	(8nz) [..{5}=2.10, ..{10}=1.92, ..{13}=2.61, ..{17}=2.10, ..{19}=2.10, ..{25}=2.10, 2.10, 1.92, ]
+1. The quick brown fox jumped over the lazy red dogs.
+	(8nz) [..{5}=2.10, ..{10}=1.92, ..{13}=2.61, ..{17}=2.10, ..{19}=2.10, ..{25}=2.10, 2.10, 1.92, ]
+2. The quick red cat jumped over the lazy brown dogs.
+	(8nz) [..{5}=2.10, ..{7}=2.61, ..{10}=1.92, ..{17}=2.10, ..{19}=2.10, ..{25}=2.10, 2.10, 1.92, ]
+3. The quick brown cat jumped over the lazy red dogs.
+	(8nz) [..{5}=2.10, ..{7}=2.61, ..{10}=1.92, ..{17}=2.10, ..{19}=2.10, ..{25}=2.10, 2.10, 1.92, ]
+4. Mary had a little lamb whose fleece was white as snow.
+	(8nz) [..{12}=1.63, ..{15}=2.10, ..{18}=2.61, ..{20}=2.10, ..{22}=2.32, ..{29}=2.32, ..{36}=2.10, 2.10, ]
+5. Mary had a little goat whose fleece was white as snow.
+	(8nz) [..{12}=1.63, ..{14}=2.61, 2.10, ..{20}=2.10, ..{22}=2.32, ..{29}=2.32, ..{36}=2.10, 2.10, ]
+6. Mary had a little lamb whose fleece was black as tar.
+	(8nz) [..{3}=2.61, ..{12}=1.63, ..{15}=2.10, ..{18}=2.61, ..{20}=2.10, ..{22}=2.32, ..{33}=3.01, ..{37}=2.10, ]
+7. Dick had a little goat whose fleece was white as snow.
+	(8nz) [..{9}=2.32, ..{12}=1.63, ..{14}=2.61, 2.10, ..{20}=2.10, ..{29}=2.32, ..{36}=2.10, 2.10, ]
+8. Moby Dick is a story of a whale and a man obsessed.
+	(6nz) [..{9}=2.32, ..{21}=2.32, ..{23}=2.32, 2.61, ..{32}=2.32, ..{35}=2.61, ]
+9. Moby Bob is a story of a walrus and a man obsessed.
+	(6nz) [..{4}=3.01, ..{21}=2.32, ..{23}=2.32, 2.61, ..{32}=2.32, ..{34}=3.01, ]
+10. Moby Dick is a story of a whale and a crazy man.
+	(6nz) [..{8}=3.01, 2.32, ..{21}=2.32, ..{23}=2.32, ..{32}=2.32, ..{35}=2.61, ]
+11. The robber wore a black fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.32, ..{3}=2.61, ..{6}=2.32, ..{12}=1.63, ..{16}=2.32, ..{28}=2.32, ..{38}=2.32, ]
+12. The robber wore a red fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.32, ..{6}=2.32, ..{12}=1.63, ..{16}=2.32, ..{27}=1.92, 2.32, ..{38}=2.32, ]
+13. The robber wore a white fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.32, ..{6}=2.32, ..{12}=1.63, ..{16}=2.32, ..{28}=2.32, ..{36}=2.10, ..{38}=2.32, ]
+14. The English Springer Spaniel is the best of all dogs.
+	(6nz) [3.01, ..{2}=3.01, ..{10}=1.92, 3.01, ..{30}=3.01, 3.01, ]
+
+Model[0] had 53 observations
+pdf           document
+1.000 The quick red fox jumped over the lazy brown dogs.
+1.000 The quick brown fox jumped over the lazy red dogs.
+1.000 The quick red cat jumped over the lazy brown dogs.
+1.000 The quick brown cat jumped over the lazy red dogs.
+0.249 Mary had a little lamb whose fleece was white as snow.
+0.249 Mary had a little goat whose fleece was white as snow.
+0.249 Dick had a little goat whose fleece was white as snow.
+0.040 Moby Dick is a story of a whale and a man obsessed.
+0.002 The robber wore a red fleece jacket and a baseball cap.
+0.001 The robber wore a white fleece jacket and a baseball cap.
+0.001 Moby Dick is a story of a whale and a crazy man.
+0.000 Moby Bob is a story of a walrus and a man obsessed.
+0.000 Mary had a little lamb whose fleece was black as tar.
+0.000 The robber wore a black fleece jacket and a baseball cap.
+0.000 The English Springer Spaniel is the best of all dogs.
+
+Model[3] had 60 observations
+pdf           document
+1.000 The robber wore a red fleece jacket and a baseball cap.
+0.684 The quick red fox jumped over the lazy brown dogs.
+0.684 The quick brown fox jumped over the lazy red dogs.
+0.684 The quick red cat jumped over the lazy brown dogs.
+0.684 The quick brown cat jumped over the lazy red dogs.
+0.642 The robber wore a white fleece jacket and a baseball cap.
+0.208 Mary had a little lamb whose fleece was white as snow.
+0.208 Mary had a little goat whose fleece was white as snow.
+0.208 Dick had a little goat whose fleece was white as snow.
+0.089 The robber wore a black fleece jacket and a baseball cap.
+0.028 Moby Dick is a story of a whale and a man obsessed.
+0.001 Moby Dick is a story of a whale and a crazy man.
+0.000 Mary had a little lamb whose fleece was black as tar.
+0.000 Moby Bob is a story of a walrus and a man obsessed.
+0.000 The English Springer Spaniel is the best of all dogs.
+
+Model[12] had 37 observations
+pdf           document
+1.000 The robber wore a black fleece jacket and a baseball cap.
+0.001 The robber wore a red fleece jacket and a baseball cap.
+0.001 The robber wore a white fleece jacket and a baseball cap.
+0.000 Mary had a little lamb whose fleece was black as tar.
+0.000 Mary had a little lamb whose fleece was white as snow.
+0.000 Mary had a little goat whose fleece was white as snow.
+0.000 Dick had a little goat whose fleece was white as snow.
+0.000 Moby Dick is a story of a whale and a man obsessed.
+0.000 The quick red fox jumped over the lazy brown dogs.
+0.000 The quick brown fox jumped over the lazy red dogs.
+0.000 The quick red cat jumped over the lazy brown dogs.
+0.000 The quick brown cat jumped over the lazy red dogs.
+0.000 Moby Dick is a story of a whale and a crazy man.
+0.000 Moby Bob is a story of a walrus and a man obsessed.
+0.000 The English Springer Spaniel is the best of all dogs.
+
+0. The quick red fox jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+1. The quick brown fox jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{8}=1.29, ..{11}=1.98, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+2. The quick red cat jumped over the lazy brown dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+3. The quick brown cat jumped over the lazy red dogs.
+	(8nz) [..{4}=1.47, ..{6}=1.98, ..{8}=1.29, ..{14}=1.47, ..{16}=1.47, ..{22}=1.47, 1.47, 1.47, ]
+4. Mary had a little lamb whose fleece was white as snow.
+	(8nz) [..{10}=1.98, ..{12}=2.39, ..{15}=2.39, ..{17}=2.39, ..{19}=2.39, ..{26}=2.39, ..{31}=2.39, 2.39, ]
+5. Moby Dick is a story of a whale and a man obsessed.
+	(6nz) [..{7}=2.39, ..{18}=2.39, ..{20}=2.39, 2.39, ..{29}=2.39, 2.39, ]
+6. The robber wore a black fleece jacket and a baseball cap.
+	(7nz) [..{1}=2.39, ..{3}=2.39, ..{5}=2.39, ..{10}=1.98, ..{13}=2.39, ..{25}=2.39, ..{33}=2.39, ]
+7. The English Springer Spaniel is the best of all dogs.
+	(6nz) [2.39, ..{2}=2.39, ..{8}=1.29, 2.39, ..{27}=2.39, 2.39, ]
+
+Model[0] had 10 observations
+pdf           document
+1.000 The quick red cat jumped over the lazy brown dogs.
+1.000 The quick brown cat jumped over the lazy red dogs.
+0.825 The quick red fox jumped over the lazy brown dogs.
+0.825 The quick brown fox jumped over the lazy red dogs.
+0.518 Dick had a little goat whose fleece was white as snow.
+0.500 Mary had a little lamb whose fleece was white as snow.
+0.500 Mary had a little goat whose fleece was white as snow.
+0.500 Mary had a little lamb whose fleece was black as tar.
+
+Model[1] had 48 observations
+pdf           document
+1.000 The quick red fox jumped over the lazy brown dogs.
+1.000 The quick brown fox jumped over the lazy red dogs.
+0.933 Mary had a little lamb whose fleece was white as snow.
+0.915 Mary had a little lamb whose fleece was black as tar.
+0.915 The quick red cat jumped over the lazy brown dogs.
+0.915 The quick brown cat jumped over the lazy red dogs.
+0.876 Mary had a little goat whose fleece was white as snow.
+0.709 Dick had a little goat whose fleece was white as snow.
+
+Model[2] had 19 observations
+pdf           document
+1.000 Dick had a little goat whose fleece was white as snow.
+0.887 The quick red cat jumped over the lazy brown dogs.
+0.887 The quick brown cat jumped over the lazy red dogs.
+0.811 The quick red fox jumped over the lazy brown dogs.
+0.811 The quick brown fox jumped over the lazy red dogs.
+0.598 Mary had a little lamb whose fleece was white as snow.
+0.598 Mary had a little goat whose fleece was white as snow.
+0.598 Mary had a little lamb whose fleece was black as tar.
+
+Model[3] had 1 observations
+pdf           document
+1.000 Mary had a little lamb whose fleece was black as tar.
+0.525 Mary had a little lamb whose fleece was white as snow.
+0.500 The quick red fox jumped over the lazy brown dogs.
+0.500 The quick brown fox jumped over the lazy red dogs.
+0.500 The quick red cat jumped over the lazy brown dogs.
+0.500 The quick brown cat jumped over the lazy red dogs.
+0.500 Mary had a little goat whose fleece was white as snow.
+0.500 Dick had a little goat whose fleece was white as snow.
+
+Model[4] had 2 observations
+pdf           document
+1.000 Dick had a little goat whose fleece was white as snow.
+0.518 The quick red fox jumped over the lazy brown dogs.
+0.518 The quick brown fox jumped over the lazy red dogs.
+0.518 The quick red cat jumped over the lazy brown dogs.
+0.518 The quick brown cat jumped over the lazy red dogs.
+0.500 Mary had a little lamb whose fleece was white as snow.
+0.500 Mary had a little goat whose fleece was white as snow.
+0.500 Mary had a little lamb whose fleece was black as tar.

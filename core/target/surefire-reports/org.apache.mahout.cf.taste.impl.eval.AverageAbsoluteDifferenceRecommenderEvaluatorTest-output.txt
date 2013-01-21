@@ -1,0 +1,20 @@
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Beginning evaluation using 0.85 of GenericDataModel[users:1,2,3...]
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Building average diffs...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Beginning evaluation of 3 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Starting timing of 3 tasks in 4 threads
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Average time per recommendation: 0ms
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Approximate memory used: 24MB / 796MB
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Unable to recommend in 0 cases
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Evaluation result: 0.3833333055178324

@@ -1,0 +1,14 @@
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: NGram Total: 7, Min LLR value: 1.0, Emit Unigrams: false
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:1 k12:1 k21:0 k22:5
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:1 k12:0 k21:1 k22:5
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:2 k12:0 k21:0 k22:5
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:1 k12:0 k21:0 k22:6
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:1 k12:1 k21:0 k22:5
+2013-1-15 16:15:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: k11:1 k12:0 k21:1 k22:5

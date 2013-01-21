@@ -1,0 +1,894 @@
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Finding 80 singular vectors of matrix with 100 rows, via Lanczos
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 1 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 2 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 3 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 4 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 5 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 6 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 7 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 8 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 9 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 10 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 11 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 12 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 13 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 14 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 15 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 16 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 17 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 18 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 19 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 20 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 21 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 22 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 23 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 24 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 25 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 26 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 27 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 28 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 29 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 30 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 31 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 32 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 33 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 34 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 35 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 36 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 37 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 38 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 39 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 40 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 41 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 42 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 43 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 44 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 45 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 46 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 47 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 48 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 49 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 50 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 51 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 52 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 53 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 54 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 55 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 56 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 57 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 58 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 59 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 60 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 61 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 62 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 63 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 64 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 65 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 66 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 67 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 68 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 69 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 70 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 71 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 72 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 73 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 74 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 75 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 76 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 77 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 78 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 79 passes through the corpus so far...
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Lanczos iteration complete - now to diagonalize the tri-diagonal auxiliary matrix.
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 0 found with eigenvalue 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 1 found with eigenvalue 2.046292131205252E-7
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 2 found with eigenvalue 8.93786387194942E-7
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 3 found with eigenvalue 2.4511076502347024E-6
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 4 found with eigenvalue 5.674536236008488E-6
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 5 found with eigenvalue 8.188457529572732E-6
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 6 found with eigenvalue 1.2650725817923499E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 7 found with eigenvalue 1.725656047918668E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 8 found with eigenvalue 2.3911673694250246E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 9 found with eigenvalue 2.8413112990830624E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 10 found with eigenvalue 4.127048134683644E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 11 found with eigenvalue 4.952658946450845E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 12 found with eigenvalue 5.63579075887121E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 13 found with eigenvalue 6.547097290861853E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 14 found with eigenvalue 7.506064462459931E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 15 found with eigenvalue 8.475898830958795E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 16 found with eigenvalue 9.988637781285721E-5
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 17 found with eigenvalue 1.1434543452192604E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 18 found with eigenvalue 1.3013646116904367E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 19 found with eigenvalue 1.3619260851797468E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 20 found with eigenvalue 1.4980127779751332E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 21 found with eigenvalue 1.588331053867575E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 22 found with eigenvalue 1.791703963035035E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 23 found with eigenvalue 1.8860138868162103E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 24 found with eigenvalue 1.9743669727331553E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 25 found with eigenvalue 2.078364292642642E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 26 found with eigenvalue 2.279535553012902E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 27 found with eigenvalue 2.406031249208246E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 28 found with eigenvalue 2.571116886230465E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 29 found with eigenvalue 2.642485845343027E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 30 found with eigenvalue 2.7856369987782964E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 31 found with eigenvalue 2.8931169744551805E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 32 found with eigenvalue 3.0923778901364204E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 33 found with eigenvalue 3.3440199316892363E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 34 found with eigenvalue 3.4512196552544464E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 35 found with eigenvalue 3.7337509487741035E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 36 found with eigenvalue 4.075226915331533E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 37 found with eigenvalue 4.166259069616226E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 38 found with eigenvalue 4.4163554936529805E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 39 found with eigenvalue 4.988689909242643E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 40 found with eigenvalue 5.271617146506057E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 41 found with eigenvalue 5.388796867166954E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 42 found with eigenvalue 5.66143197011959E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 43 found with eigenvalue 6.282913849806021E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 44 found with eigenvalue 6.30724812873384E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 45 found with eigenvalue 7.191266984807426E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 46 found with eigenvalue 7.471508093112325E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 47 found with eigenvalue 7.873658415106227E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 48 found with eigenvalue 8.32644676243956E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 49 found with eigenvalue 8.755189656501869E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 50 found with eigenvalue 8.963100965933827E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 51 found with eigenvalue 0.0010096179469811309
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 52 found with eigenvalue 0.001120005564895002
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 53 found with eigenvalue 0.0011960175551677945
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 54 found with eigenvalue 0.0013106024327802811
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 55 found with eigenvalue 0.0013380373697749017
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 56 found with eigenvalue 0.0015374557767098083
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 57 found with eigenvalue 0.001633871781808669
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 58 found with eigenvalue 0.001878179911915666
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 59 found with eigenvalue 0.002258339460829023
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 60 found with eigenvalue 0.0024373818311816935
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 61 found with eigenvalue 0.002604618123082183
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 62 found with eigenvalue 0.00306665412145858
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 63 found with eigenvalue 0.00335952668889872
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 64 found with eigenvalue 0.0037470785485304247
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 65 found with eigenvalue 0.004085905862219158
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 66 found with eigenvalue 0.0054152179973131565
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 67 found with eigenvalue 0.006135656626477373
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 68 found with eigenvalue 0.007220343695634625
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 69 found with eigenvalue 0.008012142442610516
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 70 found with eigenvalue 0.010872248978212597
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 71 found with eigenvalue 0.01285169500292306
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 72 found with eigenvalue 0.014415772799915794
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 73 found with eigenvalue 0.020766567913587657
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 74 found with eigenvalue 0.028380654155965183
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 75 found with eigenvalue 0.040018752323325864
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 76 found with eigenvalue 0.05972738806000627
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 77 found with eigenvalue 0.11229610479966325
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 78 found with eigenvalue 0.2582030542335118
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 79 found with eigenvalue 1.0027707094691873
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: LanczosSolver finished.
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 0 : L = 1.0027707094691873, E = 1.0027707094691871
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 1 : L = 0.2582030542335118, E = 0.25820305423351164
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 2 : L = 0.11229610479966325, E = 0.1122961047996629
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 3 : L = 0.05972738806000627, E = 0.059727388060006305
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 4 : L = 0.040018752323325864, E = 0.040018752323325746
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 5 : L = 0.028380654155965183, E = 0.028380654155965024
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 6 : L = 0.020766567913587657, E = 0.02076656791358767
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 7 : L = 0.014415772799915794, E = 0.014415772799915768
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 8 : L = 0.01285169500292306, E = 0.012851695002922962
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 9 : L = 0.010872248978212597, E = 0.01087224897821255
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 10 : L = 0.008012142442610516, E = 0.008012142442610518
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 11 : L = 0.007220343695634625, E = 0.007220343695634618
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -6.661338147750939E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 12 : L = 0.006135656626477373, E = 0.006135656626477356
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 5.551115123125783E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 13 : L = 0.0054152179973131565, E = 0.005415217997313148
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 14 : L = 0.004085905862219158, E = 0.004085905862219156
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 15 : L = 0.0037470785485304247, E = 0.003747078548530413
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 16 : L = 0.00335952668889872, E = 0.0033595266888987226
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 17 : L = 0.00306665412145858, E = 0.0030666541214585904
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 18 : L = 0.002604618123082183, E = 0.002604618123082181
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 19 : L = 0.0024373818311816935, E = 0.002437381831181695
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 20 : L = 0.002258339460829023, E = 0.0022583394608290197
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 21 : L = 0.001878179911915666, E = 0.0018781799119156654
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 22 : L = 0.001633871781808669, E = 0.0016338717818086654
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 23 : L = 0.0015374557767098083, E = 0.0015374557767098113
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 24 : L = 0.0013380373697749017, E = 0.0013380373697749013
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 25 : L = 0.0013106024327802811, E = 0.0013106024327802768
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 26 : L = 0.0011960175551677945, E = 0.0011960175551677871
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 27 : L = 0.001120005564895002, E = 0.0011200055648950022
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 28 : L = 0.0010096179469811309, E = 0.0010096179469811272
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 1.1102230246251565E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 29 : L = 8.963100965933827E-4, E = 8.963100965933763E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 30 : L = 8.755189656501869E-4, E = 8.755189656501763E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 31 : L = 8.32644676243956E-4, E = 8.326446762439527E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 32 : L = 7.873658415106227E-4, E = 7.873658415106189E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -6.661338147750939E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 33 : L = 7.471508093112325E-4, E = 7.471508093112298E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 34 : L = 7.191266984807426E-4, E = 7.191266984807375E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 35 : L = 6.30724812873384E-4, E = 6.307248128733844E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 36 : L = 6.282913849806021E-4, E = 6.282913849806005E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 0.0
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 37 : L = 5.66143197011959E-4, E = 5.6614319701195E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -6.661338147750939E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 38 : L = 5.388796867166954E-4, E = 5.38879686716683E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 39 : L = 5.271617146506057E-4, E = 5.271617146505988E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 40 : L = 4.988689909242643E-4, E = 4.988689909242616E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -2.220446049250313E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 41 : L = 4.4163554936529805E-4, E = 4.416355493652949E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 1.1102230246251565E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 42 : L = 4.166259069616226E-4, E = 4.1662590696162256E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 1.1102230246251565E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 43 : L = 4.075226915331533E-4, E = 4.0752269153323384E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 1.566524687746096E-13
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 44 : L = 3.7337509487741035E-4, E = 3.733750948774078E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: -4.440892098500626E-16
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 45 : L = 3.4512196552544464E-4, E = 3.451219655255472E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 2.6711965972481266E-13
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 46 : L = 3.3440199316892363E-4, E = 3.344019931868172E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 4.811284703976071E-11
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: 47 : L = 3.0923778901364204E-4, E = 3.0923779063577036E-4
+2012-9-8 13:47:22 org.slf4j.impl.JCLLoggerAdapter info
+信息: error: 5.273936620753261E-9
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: Finding 50 singular vectors of matrix with 800 rows, via Lanczos
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 1 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 2 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 3 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 4 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 5 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 6 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 7 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 8 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 9 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 10 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 11 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 12 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 13 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 14 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 15 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 16 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 17 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 18 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 19 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 20 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 21 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 22 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 23 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 24 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 25 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 26 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 27 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 28 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 29 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 30 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 31 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 32 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 33 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 34 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 35 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 36 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 37 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 38 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 39 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 40 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 41 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 42 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 43 passes through the corpus so far...
+2012-9-8 13:47:23 org.slf4j.impl.JCLLoggerAdapter info
+信息: 44 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: 45 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: 46 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: 47 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: 48 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: 49 passes through the corpus so far...
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Lanczos iteration complete - now to diagonalize the tri-diagonal auxiliary matrix.
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 0 found with eigenvalue 0.0
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 1 found with eigenvalue 0.0012834677500674612
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 2 found with eigenvalue 0.0026380674128377523
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 3 found with eigenvalue 0.004434549667320527
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 4 found with eigenvalue 0.006362588475012025
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 5 found with eigenvalue 0.0080567593535376
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 6 found with eigenvalue 0.00972939632824258
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 7 found with eigenvalue 0.011756549877919926
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 8 found with eigenvalue 0.013849968657235475
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 9 found with eigenvalue 0.015613504588346858
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 10 found with eigenvalue 0.017192080673532503
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 11 found with eigenvalue 0.019269424836335067
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 12 found with eigenvalue 0.021598314700239974
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 13 found with eigenvalue 0.023266937951795626
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 14 found with eigenvalue 0.024360745632311453
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 15 found with eigenvalue 0.025323972333385653
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 16 found with eigenvalue 0.027556650859469237
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 17 found with eigenvalue 0.028449626001396534
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 18 found with eigenvalue 0.030506879722488722
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 19 found with eigenvalue 0.03141858148935687
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 20 found with eigenvalue 0.03300575502311877
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 21 found with eigenvalue 0.0348426355262627
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 22 found with eigenvalue 0.035276832401787285
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 23 found with eigenvalue 0.036420791136491
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 24 found with eigenvalue 0.039193530567093564
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 25 found with eigenvalue 0.03987441099002258
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 26 found with eigenvalue 0.04117187015755446
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 27 found with eigenvalue 0.04324060397941256
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 28 found with eigenvalue 0.045341544101347615
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 29 found with eigenvalue 0.048241819663486805
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 30 found with eigenvalue 0.05053293608192887
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 31 found with eigenvalue 0.05276571349212622
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 32 found with eigenvalue 0.05492840738532377
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 33 found with eigenvalue 0.05750699459886665
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 34 found with eigenvalue 0.06198243096363415
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 35 found with eigenvalue 0.06533860591514284
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 36 found with eigenvalue 0.07280721481540602
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 37 found with eigenvalue 0.0772188365204358
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 38 found with eigenvalue 0.08449647081109042
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 39 found with eigenvalue 0.09160975884532054
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 40 found with eigenvalue 0.10068595658458886
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 41 found with eigenvalue 0.10977215057216241
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 42 found with eigenvalue 0.12573880090650955
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 43 found with eigenvalue 0.1421009619690392
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 44 found with eigenvalue 0.16721795126225025
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 45 found with eigenvalue 0.1998618662480472
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 46 found with eigenvalue 0.2500655693875298
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 47 found with eigenvalue 0.33497715734042965
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 48 found with eigenvalue 0.5002728665246405
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 49 found with eigenvalue 1.0003956700365846
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: LanczosSolver finished.
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -1.5543122344752192E-15 for eigen 0
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -2.220446049250313E-16 for eigen 1
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 7.771561172376096E-16 for eigen 2
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 2.220446049250313E-16 for eigen 3
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 0.0 for eigen 4
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 1.6653345369377348E-15 for eigen 5
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 2.220446049250313E-16 for eigen 6
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -4.440892098500626E-16 for eigen 7
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -4.440892098500626E-16 for eigen 8
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -1.1102230246251565E-15 for eigen 9
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -1.5543122344752192E-15 for eigen 10
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 9.992007221626409E-16 for eigen 11
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -4.440892098500626E-16 for eigen 12
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -2.220446049250313E-16 for eigen 13
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 2.220446049250313E-16 for eigen 14
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 2.220446049250313E-16 for eigen 15
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -2.220446049250313E-16 for eigen 16
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -2.220446049250313E-16 for eigen 17
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -6.661338147750939E-16 for eigen 18
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 0.0 for eigen 19
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 2.220446049250313E-16 for eigen 20
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 0.0 for eigen 21
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: -1.3322676295501878E-15 for eigen 22
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 1.4865886299730846E-13 for eigen 23
+2012-9-8 13:47:24 org.slf4j.impl.JCLLoggerAdapter info
+信息: the eigen-error: 3.3433811275074277E-11 for eigen 24
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Finding 30 singular vectors of matrix with 500 rows, via Lanczos
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 1 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 2 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 3 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 4 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 5 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 6 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 7 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 8 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 9 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 10 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 11 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 12 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 13 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 14 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 15 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 16 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 17 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 18 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 19 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 20 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 21 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 22 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 23 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 24 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 25 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 26 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 27 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 28 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: 29 passes through the corpus so far...
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Lanczos iteration complete - now to diagonalize the tri-diagonal auxiliary matrix.
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 0 found with eigenvalue 0.0
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 1 found with eigenvalue 3.6916148845599774E-6
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 2 found with eigenvalue 4.270978349720664E-5
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 3 found with eigenvalue 1.3211039225112243E-4
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 4 found with eigenvalue 3.0143707447315263E-4
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 5 found with eigenvalue 5.35389667226183E-4
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 6 found with eigenvalue 8.026817366541955E-4
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 7 found with eigenvalue 0.001036473733608028
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 8 found with eigenvalue 0.0014767995192015082
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 9 found with eigenvalue 0.0017410062981313274
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 10 found with eigenvalue 0.002130589015607488
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 11 found with eigenvalue 0.00268603233998313
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 12 found with eigenvalue 0.002930335005739324
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 13 found with eigenvalue 0.0032045025421512416
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 14 found with eigenvalue 0.0038401549710161214
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 15 found with eigenvalue 0.004267603969767171
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 16 found with eigenvalue 0.005299297605810887
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 17 found with eigenvalue 0.005961261899693508
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 18 found with eigenvalue 0.0071379906835054826
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 19 found with eigenvalue 0.008391049374921222
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 20 found with eigenvalue 0.010136094441482061
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 21 found with eigenvalue 0.012048425604557683
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 22 found with eigenvalue 0.01580864718712629
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 23 found with eigenvalue 0.020191273208804927
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 24 found with eigenvalue 0.027960451096460986
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 25 found with eigenvalue 0.039943400180166615
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 26 found with eigenvalue 0.06253134030977722
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 27 found with eigenvalue 0.11220837646354843
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 28 found with eigenvalue 0.25027134049683925
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: Eigenvector 29 found with eigenvalue 1.0007899614201043
+2012-9-8 13:47:25 org.slf4j.impl.JCLLoggerAdapter info
+信息: LanczosSolver finished.

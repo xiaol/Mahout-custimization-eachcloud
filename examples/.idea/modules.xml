@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/src/main/Main.iml" filepath="$PROJECT_DIR$/src/main/Main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/Test.iml" filepath="$PROJECT_DIR$/src/test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../mahout.iml" filepath="$PROJECT_DIR$/../mahout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../buildtools/mahout-buildtools.iml" filepath="$PROJECT_DIR$/../buildtools/mahout-buildtools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../core/mahout-core.iml" filepath="$PROJECT_DIR$/../core/mahout-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../distribution/mahout-distribution.iml" filepath="$PROJECT_DIR$/../distribution/mahout-distribution.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mahout-examples.iml" filepath="$PROJECT_DIR$/mahout-examples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../integration/mahout-integration.iml" filepath="$PROJECT_DIR$/../integration/mahout-integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../math/mahout-math.iml" filepath="$PROJECT_DIR$/../math/mahout-math.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,4 @@
+2013-1-15 15:51:55 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-TestRandomSeedGenerator-5588156413340291072/random-output
+2013-1-15 15:51:55 org.slf4j.impl.JCLLoggerAdapter info
+信息: Wrote 4 Klusters to file:/tmp/mahout-TestRandomSeedGenerator-5588156413340291072/random-output/part-randomSeed

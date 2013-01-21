@@ -1,0 +1,154 @@
+2013-1-15 15:45:10 org.slf4j.impl.JCLLoggerAdapter info
+信息: Deleting file:/tmp/mahout-ClusterClassificationDriverTest-5011175584715867136/classifiedClusters
+2013-1-15 15:45:10 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterClassificationDriverTest-5011175584715867136/points Out: file:/tmp/mahout-ClusterClassificationDriverTest-5011175584715867136/output Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@1339a0dc t1: 3.1 t2: 2.1
+2013-1-15 15:45:10 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:45:10 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:45:10 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 15:45:10 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0084
+2013-1-15 15:45:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 15:45:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 15:45:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 15:45:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 15:45:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 15:45:10 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0084_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:45:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:45:13 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:13 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0084_m_000000_0' done.
+2013-1-15 15:45:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:45:13 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:13 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 15:45:13 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 98 bytes
+2013-1-15 15:45:13 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:13 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0084_r_000000_0 is done. And is in the process of commiting
+2013-1-15 15:45:13 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:13 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0084_r_000000_0 is allowed to commit now
+2013-1-15 15:45:13 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0084_r_000000_0' to file:/tmp/mahout-ClusterClassificationDriverTest-5011175584715867136/output/clusters-0-final
+2013-1-15 15:45:16 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 15:45:16 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0084_r_000000_0' done.
+2013-1-15 15:45:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 15:45:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0084
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息: Counters: 16
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=644
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=249118
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=5734520
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=406
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=102
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=0
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=9
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=3
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=6
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=90
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=0
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=3
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=146
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=3
+2013-1-15 15:45:17 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 15:45:17 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 15:45:17 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 15:45:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0085
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0085_m_000000_0 is done. And is in the process of commiting
+2013-1-15 15:45:17 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:17 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0085_m_000000_0 is allowed to commit now
+2013-1-15 15:45:17 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0085_m_000000_0' to file:/tmp/mahout-ClusterClassificationDriverTest-5011175584715867136/classifiedClusters
+2013-1-15 15:45:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 15:45:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 15:45:20 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0085_m_000000_0' done.
+2013-1-15 15:45:20 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 15:45:21 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0085
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息: Counters: 8
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=214
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=406
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=126076
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=2900195
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=9
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=0
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=146
+2013-1-15 15:45:21 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=2
+2013-1-15 15:45:21 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterClassificationDriverTest-5659854969613185024/points Out: file:/tmp/mahout-ClusterClassificationDriverTest-5659854969613185024/output Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@4f6b3939 t1: 3.1 t2: 2.1
+2013-1-15 15:45:21 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterClassificationDriverTest-1796652505457246208/points Out: file:/tmp/mahout-ClusterClassificationDriverTest-1796652505457246208/output Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@24060e78 t1: 3.1 t2: 2.1

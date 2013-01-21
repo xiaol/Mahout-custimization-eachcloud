@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="org.codehaus.mojo.taglist-maven-plugin">
+  <tags>
+    <tag name="TODO" count="7">
+      <files>
+        <file name="org.apache.mahout.classifier.sgd.TrainASFEmail" count="1">
+          <comments>
+            <comment>
+              <lineNumber>113</lineNumber>
+              <comment>how to dissection since we aren't processing the files here SGDHelper.dissect(leakType, asfDictionary, learningAlgorithm, files, overallCounts);</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.apache.mahout.classifier.sgd.ValidateAdaptiveLogistic" count="1">
+          <comments>
+            <comment>
+              <lineNumber>102</lineNumber>
+              <comment>How to avoid extra target values not shown in the training process.</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.apache.mahout.classifier.email.PrepEmailReducer" count="1">
+          <comments>
+            <comment>
+              <lineNumber>39</lineNumber>
+              <comment>support randomization?  Likely not needed due to the SplitInput utility which does random selection</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.apache.mahout.cf.taste.example.email.EmailUtility" count="1">
+          <comments>
+            <comment>
+              <lineNumber>57</lineNumber>
+              <comment>is there more to clean up here?</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.apache.mahout.cf.taste.example.email.FromEmailToDictionaryMapper" count="1">
+          <comments>
+            <comment>
+              <lineNumber>50</lineNumber>
+              <comment>is there more to clean up here?</comment>
+            </comment>
+          </comments>
+        </file>
+        <file name="org.apache.mahout.cf.taste.example.email.MailToPrefsDriver" count="2">
+          <comments>
+            <comment>
+              <lineNumber>104</lineNumber>
+              <comment>mod this to not do so many passes over the data.  Dictionary creation could probably be a chain mapper</comment>
+            </comment>
+            <comment>
+              <lineNumber>109</lineNumber>
+              <comment>there seems to be a pattern emerging for dictionary creation -- sparse vectors from seq files also has this.</comment>
+            </comment>
+          </comments>
+        </file>
+      </files>
+    </tag>
+    <tag name="todo" count="0" />
+  </tags>
+</report>

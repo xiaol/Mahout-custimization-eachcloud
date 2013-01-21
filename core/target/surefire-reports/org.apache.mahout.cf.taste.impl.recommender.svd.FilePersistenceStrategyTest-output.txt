@@ -1,0 +1,6 @@
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FilePersistenceStrategyTest-1452911213295151104/storage.bin does not yet exist, no factorization found
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Writing factorization to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FilePersistenceStrategyTest-1452911213295151104/storage.bin...
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading factorization from /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FilePersistenceStrategyTest-1452911213295151104/storage.bin...

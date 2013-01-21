@@ -1,0 +1,42 @@
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique items 185
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Adding Pattern 41=>4
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Adding Pattern 36=>10
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Adding Pattern 39=>0
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of unique pruned items 185
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 10000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 20000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 30000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 40000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 50000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 60000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 70000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: FPTree Building: Read 80000 Transactions
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Nodes in the FP Tree: 91037
+2013-1-15 15:57:18 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 10
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 12 Patterns with Least Support 2936
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 4
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 47 Patterns with Least Support 14945
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Mining FTree Tree for all patterns with 0
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Found 156 Patterns with Least Support 50675
+2013-1-15 15:57:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Tree Cache: First Level: Cache hits=1 Cache Misses=540

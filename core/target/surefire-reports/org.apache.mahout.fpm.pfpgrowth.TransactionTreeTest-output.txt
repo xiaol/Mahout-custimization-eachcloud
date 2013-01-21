@@ -1,0 +1,14 @@
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input integers: 1499610
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Input data Size: 5.99844
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Nodes in Tree: 146713
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Size of Tree: 2.93426
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of transaction integers: 566927
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Size of Transactions: 3.145692
+2013-1-15 16:01:02 org.slf4j.impl.JCLLoggerAdapter info
+信息: Number of Transactions: 109748

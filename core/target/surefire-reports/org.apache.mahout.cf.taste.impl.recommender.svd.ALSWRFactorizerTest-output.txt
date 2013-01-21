@@ -1,0 +1,34 @@
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: starting to compute the factorization...
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 0
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 1
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 2
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 3
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 4
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 5
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 6
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 7
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 8
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: iteration 9
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: finished computation of the factorization...

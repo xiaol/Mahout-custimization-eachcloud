@@ -1,0 +1,12 @@
+12/09/08 16:22:18 ERROR lucene.LuceneIterator: There are too many documents that do not have a term vector for content
+12/09/08 16:22:18 ERROR lucene.LuceneIterator: There are too many documents that do not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_5 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_6 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_7 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_8 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_9 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_5 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_6 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_7 does not have a term vector for content
+12/09/08 16:22:18 WARN lucene.LuceneIterator: doc_8 does not have a term vector for content
+12/09/08 16:22:18 ERROR lucene.LuceneIterator: There are too many documents that do not have a term vector for content

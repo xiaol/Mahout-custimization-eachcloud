@@ -1,0 +1,102 @@
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-5213555761510463488/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-5310410111511211008/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-5310410111511211008/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 6 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-1461863686070968320/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-6125268977482898432/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-6237040716398927872/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-7938500041636450304/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-7000715819523126272/test.txt
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-6332067790974454784/test.txt
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-6332067790974454784/refresh
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 1
+2013-1-15 15:43:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 1 users
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 1
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 1 users
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-4071220444790628352/test.txt
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileDataModel for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileDataModelTest-7131955248264612864/test.txt
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Reading file info...
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Read lines: 15
+2013-1-15 15:43:07 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 4 users

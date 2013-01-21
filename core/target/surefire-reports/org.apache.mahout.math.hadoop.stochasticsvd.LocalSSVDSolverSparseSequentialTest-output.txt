@@ -1,0 +1,179 @@
+Input prepared, starting solver...
+2013-1-15 16:10:44 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:44 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:44 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:45 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0281_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:45 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:45 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0281_m_000000_0 is allowed to commit now
+2013-1-15 16:10:45 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0281_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job
+2013-1-15 16:10:47 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:47 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0281_m_000000_0' done.
+2013-1-15 16:10:49 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:49 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:49 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:49 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Creating R-m-00000 in /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-2118944908087698787_-1303215440_1027780096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job-work-5425354052296359289 with rwxr-xr-x
+2013-1-15 16:10:49 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job/R-m-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-2118944908087698787_-1303215440_1027780096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job/R-m-00000
+2013-1-15 16:10:49 org.apache.hadoop.filecache.TrackerDistributedCacheManager localizePublicCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job/R-m-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-2118944908087698787_-1303215440_1027780096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Q-job/R-m-00000
+2013-1-15 16:10:49 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:10:49 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:10:49 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:10:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:10:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:10:50 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0282_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:50 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:50 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0282_m_000000_0 is allowed to commit now
+2013-1-15 16:10:50 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0282_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:10:52 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:52 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0282_m_000000_0' done.
+2013-1-15 16:10:52 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:52 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:10:52 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 80316 bytes
+2013-1-15 16:10:52 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:52 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0282_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:52 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:52 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0282_r_000000_0 is allowed to commit now
+2013-1-15 16:10:52 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0282_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:10:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:10:55 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0282_r_000000_0' done.
+2013-1-15 16:10:59 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:59 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:59 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:59 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Creating part-r-00000 in /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-1096032898426599748_-900686735_1027787096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job-work-4497536784133352374 with rwxr-xr-x
+2013-1-15 16:10:59 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job/part-r-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-1096032898426599748_-900686735_1027787096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job/part-r-00000
+2013-1-15 16:10:59 org.apache.hadoop.filecache.TrackerDistributedCacheManager localizePublicCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job/part-r-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-1096032898426599748_-900686735_1027787096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job/part-r-00000
+2013-1-15 16:10:59 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:10:59 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:10:59 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:11:00 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:11:00 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:11:00 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0283_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:11:02 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:02 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0283_m_000000_0' done.
+2013-1-15 16:11:02 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:02 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:11:02 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 1600122 bytes
+2013-1-15 16:11:02 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:03 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0283_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:11:03 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:03 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0283_r_000000_0 is allowed to commit now
+2013-1-15 16:11:03 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0283_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1
+2013-1-15 16:11:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:11:05 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0283_r_000000_0' done.
+2013-1-15 16:11:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:11:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:11:09 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:11:09 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Creating R-m-00000 in /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-6967683590730797462_-613880650_1027798096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1-work--1931621584698796154 with rwxr-xr-x
+2013-1-15 16:11:09 org.apache.hadoop.filecache.TrackerDistributedCacheManager downloadCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1/R-m-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-6967683590730797462_-613880650_1027798096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1/R-m-00000
+2013-1-15 16:11:09 org.apache.hadoop.filecache.TrackerDistributedCacheManager localizePublicCacheObject
+信息: Cached file:///tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1/R-m-00000 as /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-LocalSSVDSolverSparseSequentialTest-1533529825816964096/svdtmp/mapred/local/archive/-6967683590730797462_-613880650_1027798096/file/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/ABt-job-1/R-m-00000
+2013-1-15 16:11:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:11:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:11:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:11:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:11:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:11:10 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0284_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:11:10 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:10 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0284_m_000000_0 is allowed to commit now
+2013-1-15 16:11:10 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0284_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job-1
+2013-1-15 16:11:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:12 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0284_m_000000_0' done.
+2013-1-15 16:11:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:11:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 80316 bytes
+2013-1-15 16:11:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:12 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0284_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:11:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:11:12 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0284_r_000000_0 is allowed to commit now
+2013-1-15 16:11:12 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0284_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverSparseSequentialTest-7743393942166658048/svd-proc/SSVD-out/Bt-job-1
+2013-1-15 16:11:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:11:15 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0284_r_000000_0' done.
+--SSVD solver singular values:
+svs: 177.423485  173.239374  172.361459  169.065242  168.127862  167.356080  167.246319  165.794068  165.362753  164.365129  163.344217  163.069520  161.354235  161.073079  160.850422  158.749109  158.734228  157.815838  157.245817  156.733745  155.752063  154.930325  154.645884  154.124945  153.259284  153.173780  152.984252  152.706275  151.868924  151.291152  150.931457  150.227610  149.772402  148.865837  148.631378  147.455444  147.263372  146.688662  146.429056  146.091233  145.588389  144.426762  144.195559  143.574482  142.605283  142.168148  141.605311  141.385445  140.911377  140.521120  140.090623  139.934387  139.548563  138.887287  138.278120  138.151893  137.748013  137.373890  136.857419  136.077073  135.462785  134.455824  134.333789  133.761110  133.180089  132.933562  131.992377  131.185725  130.784904  130.579640  129.839259  129.496038  129.410416  128.862943  128.671378  128.165814  126.940880  126.780222  125.433184  125.186273  124.901566  123.775617  123.221235  122.307214  121.812380  121.447379  120.957480  120.781545  120.119859  119.871652  118.113824  116.921597  116.443491  115.911285  115.368946  114.812873  113.429659  112.451488  111.172543  109.214523  
+--Colt SVD solver singular values:
+svs: 177.423485  173.239374  172.361459  169.065242  168.127862  167.356080  167.246319  165.794068  165.362753  164.365129  163.344217  163.069520  161.354235  161.073079  160.850422  158.749109  158.734228  157.815838  157.245817  156.733745  155.752063  154.930325  154.645884  154.124945  153.259284  153.173780  152.984252  152.706275  151.868924  151.291152  150.931457  150.227610  149.772402  148.865837  148.631378  147.455444  147.263372  146.688662  146.429056  146.091233  145.588389  144.426762  144.195559  143.574482  142.605283  142.168148  141.605311  141.385445  140.911377  140.521120  140.090623  139.934387  139.548563  138.887287  138.278120  138.151893  137.748013  137.373890  136.857419  136.077073  135.462785  134.455824  134.333789  133.761110  133.180089  132.933562  131.992377  131.185725  130.784904  130.579640  129.839259  129.496038  129.410416  128.862943  128.671378  128.165814  126.940880  126.780222  125.433184  125.186273  124.901566  123.775617  123.221235  122.307214  121.812380  121.447379  120.957480  120.781545  120.119859  119.871652  118.113824  116.921597  116.443491  115.911285  115.368946  114.812873  113.429659  112.451488  111.172543  109.214523  

@@ -1,0 +1,9 @@
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileItemSimilarity for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileItemSimilarityTest-4040465933161992192/test.txt
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileItemSimilarity for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileItemSimilarityTest-2865103614461969408/test.txt
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileItemSimilarity for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileItemSimilarityTest-8997755255251841024/test.txt
+
+2013-1-15 15:43:14 org.slf4j.impl.JCLLoggerAdapter info
+信息: Creating FileItemSimilarity for file /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-FileItemSimilarityTest-2300480222492790784/test.txt

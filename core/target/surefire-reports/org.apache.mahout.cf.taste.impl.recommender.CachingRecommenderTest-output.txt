@@ -1,0 +1,14 @@
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Processed 3 users
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d]
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d]
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d
+2013-1-15 15:43:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.recommender.MockRecommender@662ad0d]

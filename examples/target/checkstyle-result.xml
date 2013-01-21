@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="5.0">
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingBooleanRecommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingBooleanRecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingBooleanRecommenderEvaluatorRunner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModel.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModelBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingRecommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingRecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingRecommenderEvaluatorRunner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/EmailUtility.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/FromEmailToDictionaryMapper.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/MailToDictionaryReducer.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/MailToPrefsDriver.java">
+<error line="60" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="63" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="85" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="86" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="87" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="88" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="109" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="131" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="158" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="163" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="184" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="192" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="193" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="197" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="210" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="220" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/MailToRecMapper.java">
+<error line="83" column="41" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/MailToRecReducer.java">
+<error line="27" column="86" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="41" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/email/MsgIdToDictionaryMapper.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/grouplens/GroupLensRecommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/grouplens/GroupLensRecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/grouplens/GroupLensRecommenderEvaluatorRunner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/jester/JesterDataModel.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/jester/JesterRecommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/jester/JesterRecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/jester/JesterRecommenderEvaluatorRunner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/DataFileIterable.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/DataFileIterator.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/KDDCupDataModel.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/ToCSV.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/EstimateConverter.java">
+<error line="23" severity="error" message="Class EstimateConverter should be declared as final." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+<error line="27" column="32" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="27" column="32" severity="error" message="&apos;}&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/svd/DataModelFactorizablePreferences.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/svd/FactorizablePreferences.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/svd/KDDCupFactorizablePreferences.java">
+<error line="58" severity="error" message="object def rcurly at indentation level 28 not at correct indentation, [10, 12]" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/svd/ParallelArraysSGDFactorizer.java">
+<error line="174" severity="error" message="for child at indentation level 5 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="174" severity="error" message="method call child at indentation level 5 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/svd/Track1SVDRunner.java">
+<error line="47" severity="error" message="Class Track1SVDRunner should be declared as final." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+<error line="87" column="54" severity="error" message="&apos;:&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+<error line="110" column="50" severity="error" message="&apos;:&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1Callable.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1Recommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1RecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1RecommenderEvaluator.java">
+<error line="74" column="48" severity="error" message="&apos;:&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1RecommenderEvaluatorRunner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track1/Track1Runner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/HybridSimilarity.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/Track2Callable.java">
+<error line="57" column="5" severity="error" message="Declaring variables, return values or parameters of type &apos;TreeMap&apos; is not allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.IllegalTypeCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/Track2Recommender.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/Track2RecommenderBuilder.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/Track2Runner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/TrackData.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/TrackItemSimilarity.java">
+<error line="44" column="3" severity="error" message="Return count is 7 (max allowed is 6)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/kddcup/track2/UserResult.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/example/TasteOptionParser.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/cf/taste/hadoop/example/als/netflix/NetflixDatasetConverter.java">
+<error line="58" column="107" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/df/BreimanExample.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/df/mapreduce/BuildForest.java">
+<error line="95" column="110" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+<error line="109" column="70" severity="error" message="&apos;+&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/df/mapreduce/TestForest.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/email/PrepEmailMapper.java">
+<error line="24" column="8" severity="error" message="Unused import - org.apache.mahout.utils.email.MailProcessor." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="38" column="19" severity="error" message="Variable &apos;useListName&apos; explicitly initialized to &apos;false&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/email/PrepEmailReducer.java">
+<error line="27" column="90" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/email/PrepEmailVectorsDriver.java">
+<error line="37" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="54" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="55" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="67" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/NewsgroupHelper.java">
+<error line="52" severity="error" message="array initialization child at indentation level 10 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="53" severity="error" message="array initialization child at indentation level 10 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="54" severity="error" message="array initialization child at indentation level 10 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="91" column="73" severity="error" message="&apos;||&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sequencelearning/hmm/PosTagger.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/AdaptiveLogisticModelParameters.java">
+<error line="48" column="18" severity="error" message="Variable &apos;auc&apos; explicitly initialized to &apos;null&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
+<error line="65" column="65" severity="error" message="&apos;||&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+<error line="74" column="3" severity="error" message="Return count is 7 (max allowed is 6)." source="com.puppycrawl.tools.checkstyle.checks.coding.ReturnCountCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/LogisticModelParameters.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/PrintResourceOrFile.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/RunAdaptiveLogistic.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/RunLogistic.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/SGDHelper.java">
+<error line="94" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/SGDInfo.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/SimpleCsvExamples.java">
+<error line="142" column="32" severity="error" message="Name &apos;rand&apos; must match pattern &apos;^([A-Z][A-Z0-9]*(_[A-Z0-9]+)*|log)$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ConstantNameCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TestASFEmail.java">
+<error line="81" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TestNewsGroups.java">
+<error line="67" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="87" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TrainAdaptiveLogistic.java">
+<error line="233" severity="error" message="method call child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="234" severity="error" message="method call child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="235" severity="error" message="method call child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="238" severity="error" message="method call child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="376" severity="error" message="method def modifier at indentation level 3 not at correct indentation, 2" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TrainASFEmail.java">
+<error line="38" column="8" severity="error" message="Unused import - java.io.IOException." source="com.puppycrawl.tools.checkstyle.checks.imports.UnusedImportsCheck"/>
+<error line="57" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="72" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="84" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TrainLogistic.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/TrainNewsGroups.java">
+<error line="100" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/classifier/sgd/ValidateAdaptiveLogistic.java">
+<error line="77" column="46" severity="error" message="&apos;&lt;=&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="77" column="47" severity="error" message="&apos;)&apos; is preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.ParenPadCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/ClustersFilter.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayCanopy.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayClustering.java">
+<error line="78" severity="error" message="array initialization child at indentation level 6 not at correct indentation, [4, 33]" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="200" column="5" severity="error" message="Declaring variables, return values or parameters of type &apos;HashMap&apos; is not allowed." source="com.puppycrawl.tools.checkstyle.checks.coding.IllegalTypeCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayDirichlet.java">
+<error line="61" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="85" severity="error" message="method def throws at indentation level 6 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="99" severity="error" message="method def throws at indentation level 6 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayFuzzyKMeans.java">
+<error line="105" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayKMeans.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayMeanShift.java">
+<error line="41" severity="error" message="Class DisplayMeanShift should be declared as final." source="com.puppycrawl.tools.checkstyle.checks.design.FinalClassCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplayMinHash.java">
+<error line="96" column="21" severity="error" message="&apos;static&apos; modifier out of order with the JLS suggestions." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="103" column="23" severity="error" message="Variable &apos;lastUpdateTime&apos; explicitly initialized to &apos;0&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
+<error line="104" column="26" severity="error" message="Variable &apos;isSlideShowOnHold&apos; explicitly initialized to &apos;false&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
+<error line="144" severity="error" message="case child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="145" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="145" severity="error" message="method call child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="146" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="147" severity="error" message="case child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="148" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="148" severity="error" message="method call child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="149" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="150" severity="error" message="case child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="151" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="151" severity="error" message="method call child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="152" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="153" severity="error" message="case child at indentation level 4 not at correct indentation, 6" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="154" severity="error" message="block child at indentation level 6 not at correct indentation, 8" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="217" column="22" severity="error" message="&apos;{&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"/>
+<error line="226" column="22" severity="error" message="&apos;{&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"/>
+<error line="367" severity="error" message="method def throws at indentation level 6 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="370" column="45" severity="error" message="&apos;{&apos; is followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.NoWhitespaceAfterCheck"/>
+<error line="371" severity="error" message="array initialization child at indentation level 8 not at correct indentation, [6, 45]" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/display/DisplaySpectralKMeans.java">
+<error line="39" severity="error" message="member def modifier at indentation level 8 not at correct indentation, 2" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="40" severity="error" message="member def modifier at indentation level 8 not at correct indentation, 2" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="41" severity="error" message="member def modifier at indentation level 8 not at correct indentation, 2" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="76" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+<error line="83" severity="error" message="method def child at indentation level 8 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/minhash/LastfmClusterEvaluator.java">
+<error line="98" column="43" severity="error" message="&apos;:&apos; should be on a new line." source="com.puppycrawl.tools.checkstyle.checks.whitespace.OperatorWrapCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/minhash/LastfmDataConverter.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/syntheticcontrol/canopy/Job.java">
+<error line="82" column="45" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/syntheticcontrol/dirichlet/Job.java">
+<error line="46" column="18" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="46" column="18" severity="error" message="&apos;}&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="116" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/Job.java">
+<error line="50" column="18" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="50" column="18" severity="error" message="&apos;}&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="138" severity="error" message="Line is longer than 120 characters." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/syntheticcontrol/kmeans/Job.java">
+<error line="48" column="18" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="48" column="18" severity="error" message="&apos;}&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/clustering/syntheticcontrol/meanshift/Job.java">
+<error line="46" column="18" severity="error" message="&apos;{&apos; is not followed by whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="46" column="18" severity="error" message="&apos;}&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="64" column="49" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+<error line="136" severity="error" message="method def throws at indentation level 10 not at correct indentation, 4" source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
+<error line="136" column="27" severity="error" message="&apos;{&apos; is not preceded with whitespace." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleCombiner.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleGrouper.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleMapper.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleReducer.java">
+</file>
+<file name="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/src/main/java/org/apache/mahout/fpm/pfpgrowth/DeliciousTagsExample.java">
+</file>
+</checkstyle>

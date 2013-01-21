@@ -1,0 +1,300 @@
+Input prepared, starting solver...
+2013-1-15 16:09:42 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:09:42 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:09:42 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:09:43 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0271_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:09:43 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:43 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0271_m_000000_0 is allowed to commit now
+2013-1-15 16:09:43 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0271_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-8144678919153195008/svd-proc/SSVD-out/Q-job
+2013-1-15 16:09:45 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:45 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0271_m_000000_0' done.
+2013-1-15 16:09:47 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:09:47 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:09:47 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:09:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:09:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:09:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:09:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:09:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:09:48 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0272_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:09:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:48 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0272_m_000000_0 is allowed to commit now
+2013-1-15 16:09:48 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0272_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-8144678919153195008/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:09:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:51 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0272_m_000000_0' done.
+2013-1-15 16:09:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:09:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 10715 bytes
+2013-1-15 16:09:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:51 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0272_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:09:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:51 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0272_r_000000_0 is allowed to commit now
+2013-1-15 16:09:51 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0272_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-8144678919153195008/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:09:54 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:09:54 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0272_r_000000_0' done.
+2013-1-15 16:09:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:09:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:09:58 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:09:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:09:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:09:58 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:09:58 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0273_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:09:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:58 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0273_m_000000_0 is allowed to commit now
+2013-1-15 16:09:58 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0274_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:09:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:09:58 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0274_m_000000_0 is allowed to commit now
+2013-1-15 16:09:58 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0273_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-8144678919153195008/svd-proc/SSVD-out/U
+2013-1-15 16:09:58 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0274_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-8144678919153195008/svd-proc/SSVD-out/V
+2013-1-15 16:10:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:01 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0273_m_000000_0' done.
+2013-1-15 16:10:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:01 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0274_m_000000_0' done.
+--SSVD solver singular values:
+svs: 9.998872  3.997452  0.976556  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  
+Input prepared, starting solver...
+2013-1-15 16:10:04 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:04 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:04 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:04 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0275_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:04 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0275_m_000000_0 is allowed to commit now
+2013-1-15 16:10:04 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0275_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/Q-job
+2013-1-15 16:10:07 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:07 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0275_m_000000_0' done.
+2013-1-15 16:10:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:09 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:10:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:10:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:10:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:10:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:10:09 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0276_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:09 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:09 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0276_m_000000_0 is allowed to commit now
+2013-1-15 16:10:09 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0276_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:10:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:12 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0276_m_000000_0' done.
+2013-1-15 16:10:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:10:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 10715 bytes
+2013-1-15 16:10:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:12 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0276_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:12 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0276_r_000000_0 is allowed to commit now
+2013-1-15 16:10:12 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0276_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/Bt-job
+2013-1-15 16:10:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:10:15 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0276_r_000000_0' done.
+2013-1-15 16:10:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:19 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:10:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:10:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:10:20 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:10:20 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:10:20 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0277_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:22 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0277_m_000000_0' done.
+2013-1-15 16:10:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:22 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:10:22 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 208072 bytes
+2013-1-15 16:10:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:22 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0277_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:22 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0277_r_000000_0 is allowed to commit now
+2013-1-15 16:10:22 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0277_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/ABt-job-1
+2013-1-15 16:10:25 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:10:25 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0277_r_000000_0' done.
+2013-1-15 16:10:29 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:29 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:29 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:29 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:10:29 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:10:29 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:10:29 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:10:29 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:10:29 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0278_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:29 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0278_m_000000_0 is allowed to commit now
+2013-1-15 16:10:29 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0278_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/Bt-job-1
+2013-1-15 16:10:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:32 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0278_m_000000_0' done.
+2013-1-15 16:10:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:32 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:10:32 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 10715 bytes
+2013-1-15 16:10:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:32 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0278_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:32 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0278_r_000000_0 is allowed to commit now
+2013-1-15 16:10:32 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0278_r_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/Bt-job-1
+2013-1-15 16:10:35 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:10:35 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0278_r_000000_0' done.
+2013-1-15 16:10:39 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:39 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:39 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:39 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:10:39 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:10:39 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:10:39 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0280_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:39 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0280_m_000000_0 is allowed to commit now
+2013-1-15 16:10:39 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0280_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/V
+2013-1-15 16:10:39 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0279_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:10:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:39 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0279_m_000000_0 is allowed to commit now
+2013-1-15 16:10:39 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0279_m_000000_0' to file:/tmp/mahout-LocalSSVDSolverDenseTest-4085235761804798976/svd-proc/SSVD-out/U
+2013-1-15 16:10:42 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:42 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0279_m_000000_0' done.
+2013-1-15 16:10:42 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:10:42 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0280_m_000000_0' done.
+--SSVD solver singular values:
+svs: 10.000000  4.000000  0.999998  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  0.100000  

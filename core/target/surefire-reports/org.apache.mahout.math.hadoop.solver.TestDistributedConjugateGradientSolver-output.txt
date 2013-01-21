@@ -1,0 +1,1198 @@
+2013-1-15 16:05:45 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:05:45 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:05:45 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:05:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0239
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:05:45 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:05:45 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0239_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:05:46 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:05:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:05:48 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0239_m_000000_0' done.
+2013-1-15 16:05:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:48 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:05:48 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:05:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:48 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0239_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:05:48 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:48 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0239_r_000000_0 is allowed to commit now
+2013-1-15 16:05:48 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0239_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237144998415000/DistributedMatrix.times.outputVector
+2013-1-15 16:05:49 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:05:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:05:51 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0239_r_000000_0' done.
+2013-1-15 16:05:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:05:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0239
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73029706
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=53793044
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:05:52 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient initial residual norm = 21.317589079286606
+2013-1-15 16:05:52 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:05:52 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:05:52 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0240
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:05:52 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:05:52 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0240_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:05:53 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:05:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:05:55 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0240_m_000000_0' done.
+2013-1-15 16:05:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:55 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:05:55 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:05:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:55 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0240_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:05:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:05:55 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0240_r_000000_0 is allowed to commit now
+2013-1-15 16:05:55 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0240_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237152136099000/DistributedMatrix.times.outputVector
+2013-1-15 16:05:56 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:05:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0240_r_000000_0' done.
+2013-1-15 16:05:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:05:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0240
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73033538
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=53864622
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:05:58 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 1 residual norm = 28.806069448647126
+2013-1-15 16:05:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:05:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:05:58 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0241
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:05:58 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:05:58 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0241_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:05:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:01 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0241_m_000000_0' done.
+2013-1-15 16:06:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:01 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:01 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:01 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0241_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:01 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0241_r_000000_0 is allowed to commit now
+2013-1-15 16:06:01 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0241_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237158279010000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:04 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0241_r_000000_0' done.
+2013-1-15 16:06:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0241
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73037370
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=53936206
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:05 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 2 residual norm = 32.938255203084246
+2013-1-15 16:06:05 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:05 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:05 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0242
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:05 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:05 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0242_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:06 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:08 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0242_m_000000_0' done.
+2013-1-15 16:06:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:08 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:08 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:08 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0242_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:08 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0242_r_000000_0 is allowed to commit now
+2013-1-15 16:06:08 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0242_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237165430620000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:11 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0242_r_000000_0' done.
+2013-1-15 16:06:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0242
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73041202
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54007786
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:12 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 3 residual norm = 26.832787500518357
+2013-1-15 16:06:12 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:12 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:12 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0243
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:12 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:12 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0243_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:15 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0243_m_000000_0' done.
+2013-1-15 16:06:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:15 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:15 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:15 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0243_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:15 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0243_r_000000_0 is allowed to commit now
+2013-1-15 16:06:15 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0243_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237172558612000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:16 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:18 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0243_r_000000_0' done.
+2013-1-15 16:06:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0243
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73045034
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54079370
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:19 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 4 residual norm = 20.937199482348916
+2013-1-15 16:06:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:19 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0244
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:19 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:19 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0244_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:20 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:22 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0244_m_000000_0' done.
+2013-1-15 16:06:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:22 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:22 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:22 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0244_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:22 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0244_r_000000_0 is allowed to commit now
+2013-1-15 16:06:22 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0244_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237179680021000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:25 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:25 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0244_r_000000_0' done.
+2013-1-15 16:06:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0244
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73048866
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54150952
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:26 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 5 residual norm = 23.988138173823685
+2013-1-15 16:06:26 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:26 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:26 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0245
+2013-1-15 16:06:26 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:26 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:27 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:27 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:27 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:27 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:27 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0245_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:27 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:29 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0245_m_000000_0' done.
+2013-1-15 16:06:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:29 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:29 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:29 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0245_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:29 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0245_r_000000_0 is allowed to commit now
+2013-1-15 16:06:29 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0245_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237186791844000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:30 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:32 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0245_r_000000_0' done.
+2013-1-15 16:06:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0245
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73052698
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54222534
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:33 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:33 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 6 residual norm = 34.38929783301892
+2013-1-15 16:06:33 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:34 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:34 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0246
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:34 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0246_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:37 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0246_m_000000_0' done.
+2013-1-15 16:06:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:37 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:37 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:37 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0246_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:37 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0246_r_000000_0 is allowed to commit now
+2013-1-15 16:06:37 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0246_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237193951930000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:40 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:40 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0246_r_000000_0' done.
+2013-1-15 16:06:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0246
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73056530
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54294112
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:41 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 7 residual norm = 36.45669109841988
+2013-1-15 16:06:41 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:41 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:41 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0247
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:41 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0247_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:44 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0247_m_000000_0' done.
+2013-1-15 16:06:44 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:44 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0247_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:44 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0247_r_000000_0 is allowed to commit now
+2013-1-15 16:06:44 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0247_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237201080792000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:47 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:47 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0247_r_000000_0' done.
+2013-1-15 16:06:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0247
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73060362
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54365690
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:48 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 8 residual norm = 63.60670435305076
+2013-1-15 16:06:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:48 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0248
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:48 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0248_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:49 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:51 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0248_m_000000_0' done.
+2013-1-15 16:06:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:51 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0248_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:51 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0248_r_000000_0 is allowed to commit now
+2013-1-15 16:06:51 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0248_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237208196793000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:51 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:06:54 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0248_r_000000_0' done.
+2013-1-15 16:06:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:06:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0248
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73064194
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54437278
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:06:54 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 9 residual norm = 32.23800237097451
+2013-1-15 16:06:54 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:06:54 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:06:54 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0249
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:06:54 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:06:54 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0249_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:06:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:06:57 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0249_m_000000_0' done.
+2013-1-15 16:06:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:57 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:06:57 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:06:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:57 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0249_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:06:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:06:57 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0249_r_000000_0 is allowed to commit now
+2013-1-15 16:06:57 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0249_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237214320964000/DistributedMatrix.times.outputVector
+2013-1-15 16:06:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:07:00 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:07:00 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0249_r_000000_0' done.
+2013-1-15 16:07:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:07:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0249
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73068026
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54508856
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1
+2013-1-15 16:07:01 org.slf4j.impl.JCLLoggerAdapter info
+信息: Conjugate gradient iteration 10 residual norm = 4.529248719702376E-9
+2013-1-15 16:07:01 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-1-15 16:07:01 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-1-15 16:07:01 org.apache.hadoop.mapred.FileInputFormat listStatus
+信息: Total input paths to process : 1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Running job: job_local_0250
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask runOldMapper
+信息: numReduceTasks: 1
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: io.sort.mb = 100
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: data buffer = 79691776/99614720
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+信息: record buffer = 262144/327680
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+信息: Starting flush of map output
+2013-1-15 16:07:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+信息: Finished spill 0
+2013-1-15 16:07:01 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0250_m_000000_0 is done. And is in the process of commiting
+2013-1-15 16:07:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 0% reduce 0%
+2013-1-15 16:07:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/distMatrix/part-00000:0+1147
+2013-1-15 16:07:04 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0250_m_000000_0' done.
+2013-1-15 16:07:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:07:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Merging 1 sorted segments
+2013-1-15 16:07:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+信息: Down to the last merge-pass, with 1 segments left of total size: 86 bytes
+2013-1-15 16:07:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:07:04 org.apache.hadoop.mapred.Task done
+信息: Task:attempt_local_0250_r_000000_0 is done. And is in the process of commiting
+2013-1-15 16:07:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: 
+2013-1-15 16:07:04 org.apache.hadoop.mapred.Task commit
+信息: Task attempt_local_0250_r_000000_0 is allowed to commit now
+2013-1-15 16:07:04 org.apache.hadoop.mapred.FileOutputCommitter commitTask
+信息: Saved output of task 'attempt_local_0250_r_000000_0' to file:/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-TestDistributedConjugateGradientSolver-5734704619546468352/testdata/tmpOut/1358237221428378000/DistributedMatrix.times.outputVector
+2013-1-15 16:07:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 0%
+2013-1-15 16:07:07 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+信息: reduce > reduce
+2013-1-15 16:07:07 org.apache.hadoop.mapred.Task sendDone
+信息: Task 'attempt_local_0250_r_000000_0' done.
+2013-1-15 16:07:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息:  map 100% reduce 100%
+2013-1-15 16:07:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+信息: Job complete: job_local_0250
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息: Counters: 17
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:   File Input Format Counters 
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Read=1167
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:   File Output Format Counters 
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Bytes Written=200
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:   FileSystemCounters
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_READ=73071858
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     FILE_BYTES_WRITTEN=54580438
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:   Map-Reduce Framework
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output materialized bytes=90
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Map input records=10
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce shuffle bytes=0
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Spilled Records=2
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output bytes=82
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Map input bytes=1050
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     SPLIT_RAW_BYTES=203
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Combine input records=1
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input records=1
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce input groups=1
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Combine output records=1
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Reduce output records=1
+2013-1-15 16:07:08 org.apache.hadoop.mapred.Counters log
+信息:     Map output records=1

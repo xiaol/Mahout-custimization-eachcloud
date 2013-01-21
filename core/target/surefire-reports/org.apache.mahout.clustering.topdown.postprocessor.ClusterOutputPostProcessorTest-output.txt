@@ -1,0 +1,6 @@
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/points Out: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/output Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@3327d4d9 t1: 3.1 t2: 2.1
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/output/1 Out: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/output/bottomLevelCluster/1 Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@2510bb7 t1: 2.1 t2: 2.0
+2013-1-15 15:57:15 org.slf4j.impl.JCLLoggerAdapter info
+信息: Build Clusters Input: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/output/0 Out: file:/tmp/mahout-ClusterOutputPostProcessorTest-4249510754281149440/output/bottomLevelCluster/0 Measure: org.apache.mahout.common.distance.ManhattanDistanceMeasure@1c18a79e t1: 2.1 t2: 2.0

@@ -1,0 +1,12 @@
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.common.MockRefreshable@7276f1f4
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.common.MockRefreshable@7276f1f4]
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.common.MockRefreshable@5f0704e1
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.common.MockRefreshable@7276f1f4, org.apache.mahout.cf.taste.impl.common.MockRefreshable@5f0704e1]
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Added refreshable: org.apache.mahout.cf.taste.impl.common.MockRefreshable@3d4c7deb
+2013-1-15 15:43:04 org.slf4j.impl.JCLLoggerAdapter info
+信息: Refreshed: [org.apache.mahout.cf.taste.impl.common.MockRefreshable@45d18084, org.apache.mahout.cf.taste.impl.common.MockRefreshable@3d4c7deb]
