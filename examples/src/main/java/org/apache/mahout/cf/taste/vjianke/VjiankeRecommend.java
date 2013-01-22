@@ -1,16 +1,15 @@
 package org.apache.mahout.cf.taste.vjianke;
 
+import org.apache.commons.lang.ArrayUtils;
+import org.apache.lucene.util.ArrayUtil;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
-import org.apache.mahout.cf.taste.impl.model.BooleanItemPreferenceArray;
 import org.apache.mahout.cf.taste.impl.model.BooleanPreference;
 import org.apache.mahout.cf.taste.impl.model.BooleanUserPreferenceArray;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
-import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
-import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
-import org.apache.mahout.cf.taste.impl.similarity.TanimotoCoefficientSimilarity;
+import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
@@ -18,17 +17,10 @@ import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.recommender.Recommender;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
-import java.io.File;
-import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 
 import java.sql.*;
-import java.util.UUID;
-
-import com.microsoft.sqlserver.jdbc.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -147,12 +139,12 @@ public class VjiankeRecommend {
     }
 
     public List<RecommendedItem> recommend(String strUuid, FastByIDMap<PreferenceArray> prefsMap,
-                          ArrayList<UUID> users, int howMany) throws TasteException {
+                          ArrayList<UUID> users, int howMany, List<Long> nearestNUsers) throws TasteException {
         DataModel model = new GenericBooleanPrefDataModel(
                 GenericBooleanPrefDataModel.toDataMap(prefsMap));
 
         UserSimilarity similarity =
-                new TanimotoCoefficientSimilarity(model);
+                new LogLikelihoodSimilarity(model);
         UserNeighborhood neighborhood =
                 new NearestNUserNeighborhood(users.size(), similarity, model);
 
@@ -162,10 +154,18 @@ public class VjiankeRecommend {
         int userIndex = users.indexOf(UUID.fromString(strUuid/*"07221718-b190-4536-8191-a0410029de34")*/));
         List<RecommendedItem> recommendations =
                 recommender.recommend(userIndex,howMany);
+        for(long entity: neighborhood.getUserNeighborhood(userIndex)){
+            nearestNUsers.add(entity);
+        }
 
         System.out.println("user: " +users.get(userIndex));
         for(RecommendedItem item : recommendations ){
             System.out.println(Long.toString(item.getItemID(),36).toUpperCase());
+        }
+
+        System.out.println("user: " +users.get(userIndex));
+        for(long item : nearestNUsers ){
+            System.out.println(users.get((int)item));
         }
         return recommendations;
     }
