@@ -4,6 +4,7 @@ import org.apache.commons.lang.ArrayUtils;
 import org.apache.lucene.util.ArrayUtil;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
+import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.BooleanPreference;
 import org.apache.mahout.cf.taste.impl.model.BooleanUserPreferenceArray;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
@@ -37,6 +38,26 @@ public class VjiankeRecommend {
             "user=eachcloud@llwko2tjlq" + ";" +
             "password=IONisgreat!";
 
+    public Timestamp get_ts() {
+        return _ts;
+    }
+
+    public void set_ts(Timestamp _ts) {
+        this._ts = _ts;
+    }
+
+    private Timestamp _ts;
+
+    public Timestamp get_tsEnd() {
+        return _tsEnd;
+    }
+
+    public void set_tsEnd(Timestamp _tsEnd) {
+        this._tsEnd = _tsEnd;
+    }
+
+    private Timestamp _tsEnd;
+
     private FastByIDMap<PreferenceArray> fetchData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users){
         // The types for the following variables are
@@ -59,22 +80,21 @@ public class VjiankeRecommend {
             String sqlString = "SELECT * FROM ClickEntity " +
                     "WHERE add_time BETWEEN ? AND ? ORDER BY user_id";
 
-
             PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-            preparedStatement.setTimestamp(1,Timestamp.valueOf("2012-12-09 23:23:23"));
-            preparedStatement.setTimestamp(2,Timestamp.valueOf("2013-01-20 23:23:23"));
+            preparedStatement.setTimestamp(1, _ts);
+            preparedStatement.setTimestamp(2, _tsEnd);
 
             resultSet = preparedStatement.executeQuery();
             ArrayList<BooleanPreference> prefs = new ArrayList<BooleanPreference>();
             // Print out the returned number of rows.
             while (resultSet.next())
             {
-                System.out.println("There were " +
+                /*System.out.println("There were " +
                         resultSet.getLong(1) +"2: " +resultSet.getString(2) +  " "     +
                         Long.parseLong(resultSet.getString(2),36) +  " "
                         +Long.toString(Long.parseLong(resultSet.getString(2),36),36)+
                         "3: " + UUID.fromString(resultSet.getString(3)) + "4: " + resultSet.getDate(4)
-                        +" rows returned.");
+                        +" rows returned.");*/
 
                 UUID uuid = UUID.fromString(resultSet.getString(3));
                 if(!users.contains(uuid))  {
@@ -98,11 +118,11 @@ public class VjiankeRecommend {
                 prefsMap.put(prefs.get(0).getUserID(), new BooleanUserPreferenceArray(prefs));
             }
 
-            System.out.println("There were " +
+            /*System.out.println("There were " +
                     rowCount +
                     " rows returned.");
             // Provide a message when processing is complete.
-            System.out.println("Processing complete.");
+            System.out.println("Processing complete.");  */
 
         }
         catch (ClassNotFoundException cnfe)
@@ -134,14 +154,15 @@ public class VjiankeRecommend {
     }
 
     public void init(
-            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users){
+            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, Timestamp ts, Timestamp tsEnd){
+        set_ts(ts);
+        set_tsEnd(tsEnd);
         fetchData(prefsMap,users);
     }
 
-    public List<RecommendedItem> recommend(String strUuid, FastByIDMap<PreferenceArray> prefsMap,
+    public List<RecommendedItem> recommend(String strUuid, FastByIDMap<FastIDSet> prefsIDSet,
                           ArrayList<UUID> users, int howMany, List<Long> nearestNUsers) throws TasteException {
-        DataModel model = new GenericBooleanPrefDataModel(
-                GenericBooleanPrefDataModel.toDataMap(prefsMap));
+        DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
 
         UserSimilarity similarity =
                 new LogLikelihoodSimilarity(model);
@@ -163,10 +184,10 @@ public class VjiankeRecommend {
             System.out.println(Long.toString(item.getItemID(),36).toUpperCase());
         }
 
-        System.out.println("user: " +users.get(userIndex));
+        /*System.out.println("user: " +users.get(userIndex));
         for(long item : nearestNUsers ){
             System.out.println(users.get((int)item));
-        }
+        }*/
         return recommendations;
     }
 }
