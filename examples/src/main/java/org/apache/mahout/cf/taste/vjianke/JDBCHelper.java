@@ -1,5 +1,10 @@
 package org.apache.mahout.cf.taste.vjianke;
 
+import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
+import org.apache.mahout.cf.taste.impl.model.BooleanPreference;
+import org.apache.mahout.cf.taste.impl.model.BooleanUserPreferenceArray;
+import org.apache.mahout.cf.taste.model.PreferenceArray;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +24,26 @@ public class JDBCHelper {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
+    public Timestamp get_ts() {
+        return _ts;
+    }
+
+    public void set_ts(Timestamp _ts) {
+        this._ts = _ts;
+    }
+
+    private Timestamp _ts;
+
+    public Timestamp get_tsEnd() {
+        return _tsEnd;
+    }
+
+    public void set_tsEnd(Timestamp _tsEnd) {
+        this._tsEnd = _tsEnd;
+    }
+
+    private Timestamp _tsEnd;
+
     public UserEntity Query(String uuid){
         // The types for the following variables are
         // defined in the java.sql library.
@@ -37,11 +62,8 @@ public class JDBCHelper {
 
             String sqlString = "SELECT * FROM PanamaUserEntity WHERE id = '" + uuid +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-
             Statement smt = connection.createStatement();
             resultSet = smt.executeQuery(sqlString);
-
-
             // Print out the returned number of rows.
             while (resultSet.next())
             {
@@ -52,19 +74,11 @@ public class JDBCHelper {
                 rowCount++;
             }
 
-
-            System.out.println("There were " +
-                    rowCount +
-                    " rows returned.");
-            // Provide a message when processing is complete.
-            System.out.println("Processing complete.");
-
         }
         catch (ClassNotFoundException cnfe)
         {
 
-            System.out.println("ClassNotFoundException " +
-                    cnfe.getMessage());
+            System.out.println("ClassNotFoundException " +cnfe.getMessage());
         }
         catch (Exception e)
         {
@@ -80,10 +94,7 @@ public class JDBCHelper {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
             }
-            catch (SQLException sqlException)
-            {
-                // No additional action if close() statements fail.
-            }
+            catch (SQLException sqlException) {}
         }
         return userEntity;
     }
@@ -116,5 +127,191 @@ public class JDBCHelper {
         String uuid;
         String user_screen_name;
         String profile_image_url;
+    }
+
+   public List<String> queryClipByBoard(List<String> boards){
+       Connection connection = null;
+       Statement statement = null;
+       ResultSet resultSet = null;
+       int rowCount = 0;
+       List<String> clipIds = new ArrayList<String>();
+       try
+       {
+           Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+           connection = DriverManager.getConnection(_connectionString);
+
+           String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
+           for(String board: boards){
+               if(boards.indexOf(board) != (boards.size()-1)){
+                   sqlString  = sqlString + "board_id = '" + board + "' OR ";
+               }else{
+                   sqlString  = sqlString + "board_id = '" + board + "'";
+               }
+           }
+           statement = connection.createStatement();
+           resultSet = statement.executeQuery(sqlString);
+
+           while (resultSet.next())
+           {
+               String clipId = resultSet.getString(3);
+               clipIds.add(clipId);
+               rowCount++;
+           }
+
+           System.out.println("There were " + rowCount +" clips.");
+       }
+       catch (ClassNotFoundException cnfe)
+       {
+           System.out.println("ClassNotFoundException " + cnfe.getMessage());
+       }
+       catch (Exception e)
+       {
+           System.out.println("Exception " + e.getMessage());
+           e.printStackTrace();
+       }
+       finally
+       {
+           try
+           {
+               if (null != connection) connection.close();
+               if (null != statement) statement.close();
+               if (null != resultSet) resultSet.close();
+           }
+           catch (SQLException sqlException){}
+       }
+       return clipIds;
+   }
+
+   public List<String> querySubscription(String userId){
+       Connection connection = null;
+       Statement statement = null;
+       ResultSet resultSet = null;
+       int rowCount = 0;
+       List<String> boardIds = new ArrayList<String>();
+       try
+       {
+           Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+           connection = DriverManager.getConnection(_connectionString);
+
+           String sqlString = "SELECT * FROM BoardFollowerEntity WHERE follower_id = '" + userId +"' AND board_id NOT IN " +
+                   "(SELECT id FROM BoardEntity WHERE owner_id = '" + userId + "')";
+           statement = connection.createStatement();
+           resultSet = statement.executeQuery(sqlString);
+
+           while (resultSet.next())
+           {
+               String boardId = resultSet.getString(2);
+               boardIds.add(boardId);
+               rowCount++;
+           }
+
+           System.out.println("There were " + rowCount +" subscription.");
+       }
+       catch (ClassNotFoundException cnfe)
+       {
+           System.out.println("ClassNotFoundException " + cnfe.getMessage());
+       }
+       catch (Exception e)
+       {
+           System.out.println("Exception " + e.getMessage());
+           e.printStackTrace();
+       }
+       finally
+       {
+           try
+           {
+               if (null != connection) connection.close();
+               if (null != statement) statement.close();
+               if (null != resultSet) resultSet.close();
+           }
+           catch (SQLException sqlException){}
+       }
+
+       return boardIds;
+   }
+
+    public FastByIDMap<PreferenceArray> fetchData(
+            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
+        Connection connection = null;  // For making the connection
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            connection = DriverManager.getConnection(_connectionString);
+            String sqlString = "SELECT * FROM ClickEntity " +
+                    "WHERE ";
+            for(String clipId:clipIds){
+                if(clipIds.indexOf(clipId) != (clipIds.size()-1)){
+                    sqlString = sqlString + "clip_id = '" +clipId + "' OR ";
+                }else{
+                    sqlString = sqlString + "clip_id = '" +clipId + "'";
+                }
+            }
+            sqlString = sqlString + " ORDER BY user_id";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+
+            resultSet = preparedStatement.executeQuery();
+            ArrayList<BooleanPreference> prefs = new ArrayList<BooleanPreference>();
+
+            while (resultSet.next())
+            {
+                /*System.out.println("There were " +
+                        resultSet.getLong(1) +"2: " +resultSet.getString(2) +  " "     +
+                        Long.parseLong(resultSet.getString(2),36) +  " "
+                        +Long.toString(Long.parseLong(resultSet.getString(2),36),36)+
+                        "3: " + UUID.fromString(resultSet.getString(3)) + "4: " + resultSet.getDate(4)
+                        +" rows returned.");*/
+
+                UUID uuid = UUID.fromString(resultSet.getString(3));
+                if(!users.contains(uuid))  {
+                    users.add(uuid);
+                    BooleanPreference booleanPreference = new BooleanPreference(
+                            users.indexOf(uuid), Long.parseLong(resultSet.getString(2),36));
+                    if(rowCount != 0){
+                        prefsMap.put(users.indexOf(uuid)-1,new BooleanUserPreferenceArray(prefs));
+                        prefs = new ArrayList<BooleanPreference>();
+                    }
+                    prefs.add(booleanPreference);
+                }else{
+                    BooleanPreference booleanPreference = new BooleanPreference(
+                            users.indexOf(uuid), Long.parseLong(resultSet.getString(2),36));
+                    prefs.add(booleanPreference);
+                }
+                rowCount++;
+            }
+            //Add last one
+            if(prefs.size() != 0){
+                prefsMap.put(prefs.get(0).getUserID(), new BooleanUserPreferenceArray(prefs));
+            }
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+
+            System.out.println("ClassNotFoundException " +cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != connection) connection.close();
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
     }
 }

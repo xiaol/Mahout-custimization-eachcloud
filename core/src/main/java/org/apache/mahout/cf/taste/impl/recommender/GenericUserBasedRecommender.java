@@ -48,8 +48,8 @@ import com.google.common.base.Preconditions;
 public class GenericUserBasedRecommender extends AbstractRecommender implements UserBasedRecommender {
   
   private static final Logger log = LoggerFactory.getLogger(GenericUserBasedRecommender.class);
-  
-  private final UserNeighborhood neighborhood;
+
+  protected final UserNeighborhood neighborhood;
   private final UserSimilarity similarity;
   private final RefreshHelper refreshHelper;
   private EstimatedPreferenceCapper capper;
@@ -179,7 +179,7 @@ public class GenericUserBasedRecommender extends AbstractRecommender implements 
   public void refresh(Collection<Refreshable> alreadyRefreshed) {
     refreshHelper.refresh(alreadyRefreshed);
   }
-  
+
   @Override
   public String toString() {
     return "GenericUserBasedRecommender[neighborhood:" + neighborhood + ']';
@@ -226,15 +226,15 @@ public class GenericUserBasedRecommender extends AbstractRecommender implements 
   }
   
   private final class Estimator implements TopItems.Estimator<Long> {
-    
+
     private final long theUserID;
     private final long[] theNeighborhood;
-    
+
     Estimator(long theUserID, long[] theNeighborhood) {
       this.theUserID = theUserID;
       this.theNeighborhood = theNeighborhood;
     }
-    
+
     @Override
     public double estimate(Long itemID) throws TasteException {
       return doEstimatePreference(theUserID, theNeighborhood, itemID);

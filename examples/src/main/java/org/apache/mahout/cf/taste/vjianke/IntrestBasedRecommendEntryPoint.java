@@ -3,8 +3,13 @@ package org.apache.mahout.cf.taste.vjianke;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
+import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
+import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
+import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
+import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
+import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
 import java.sql.Timestamp;
 import java.util.*;
@@ -12,12 +17,11 @@ import java.util.*;
 /**
  * Created with IntelliJ IDEA.
  * User: liuivan
- * Date: 13-1-21
- * Time: 上午11:27
+ * Date: 13-1-26
+ * Time: 下午12:57
  * To change this template use File | Settings | File Templates.
  */
-public class EntryPoint {
-
+public class IntrestBasedRecommendEntryPoint {
     public static List<String> mates =
             Arrays.asList(
                     "07221718-b190-4536-8191-a0410029de34",     // ivanl
@@ -35,35 +39,55 @@ public class EntryPoint {
                     "b30bb7e0-0722-4bca-85c2-a146006abf0a",     // oaliw
                     "27e6b768-de93-446a-8637-a12a00dfcb89",     // monica
                     "a90c77a2-767c-47fc-b7d9-a101005d58ba",     // vivi
-                    "9d293f0f-2bb1-43b7-80cd-b3caed577e1e"      // chris
+                    "9d293f0f-2bb1-43b7-80cd-b3caed577e1e",     // chris
+                    "a6490629-e92f-4edd-9aa0-9f7f007b4f46",     // jacky
+                    "b5d3b26b-876b-4827-a904-d68130639d82"      // abely
             );
 
     public static List<String> mates2 =
             Arrays.asList(
-                    "a6490629-e92f-4edd-9aa0-9f7f007b4f46",     // jacky
-                    "b5d3b26b-876b-4827-a904-d68130639d82"      // abely
+
             );
 
     public static void main(String[] args) throws Exception{
         Timestamp _ts = Timestamp.valueOf("2011-12-01 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
-        UserBasedRecommend recommend = new UserBasedRecommend();
+
+
         FastByIDMap<PreferenceArray> prefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> users = new ArrayList<UUID>();
-        recommend.init(prefsMap, users, _ts, _tsEnd);
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
-        FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
-
         azureStorageHelper.init();
+        JDBCHelper jdbcHelper = new JDBCHelper();
 
-          for(String uuid: mates2){
-              proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
-          }
+        for(String uuid: mates){
+            List<String> boards = jdbcHelper.querySubscription(uuid);
+            for(final String board:boards){
+                System.out.println("baord: http://vjianke.com/board/"+board.replace("-","") +".clip");
+                List<String> clipIds = jdbcHelper.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
+                if(clipIds.isEmpty())
+                    continue;
+
+                jdbcHelper.fetchData(prefsMap, users, clipIds);
+                FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
+                DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
+
+                UserSimilarity similarity =
+                        new LogLikelihoodSimilarity(model);
+                UserNeighborhood neighborhood =
+                        new NearestNUserNeighborhood(users.size(), similarity, model);
+                IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
+
+                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
+                prefsMap.clear();
+                users.clear();
+            }
+        }
 
     }
 
     public static void proceed(String uuid,
-                               UserBasedRecommend recommend,
+                               IntrestBasedRecommend recommend,
                                FastByIDMap<FastIDSet> prefsIDSet,
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
@@ -72,7 +96,7 @@ public class EntryPoint {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
         List<RecommendedItem> recommendedItemList =
-                recommend.recommend(uuid, prefsIDSet, users, 12, neighborhoodUsers);
+                recommend.recommend(uuid, prefsIDSet, users, 3, neighborhoodUsers);
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
@@ -91,6 +115,8 @@ public class EntryPoint {
             String uuidWithoutDash = uuid.replace("-","");
             if(sourceUser == -1)
                 throw new Exception("No Way");
+
+
 
             RecommendClipEntity clipEntity = new RecommendClipEntity(
                     uuidWithoutDash,
@@ -141,9 +167,9 @@ public class EntryPoint {
         }
 
         if(recommendClipEntityList.isEmpty()){
-           System.out.println("no recommend clip found.");
+            System.out.println("no recommend clip found.");
         }else{
-            azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+            //azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
         }
     }
 }
