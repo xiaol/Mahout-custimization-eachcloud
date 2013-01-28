@@ -77,8 +77,7 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
 
         System.out.println("user: " +users.get(userIndex));
         for(RecommendedItem item : topItems ){
-            System.out.println("http://vjianke.com/"+Long.toString(item.getItemID(),36).toUpperCase()+".clip" +
-                    " influence: " + estimator.estimate(item.getItemID()));
+            System.out.println("http://vjianke.com/"+Long.toString(item.getItemID(),36).toUpperCase()+".clip");
         }
 
         /*System.out.println("user: " +users.get(userIndex));

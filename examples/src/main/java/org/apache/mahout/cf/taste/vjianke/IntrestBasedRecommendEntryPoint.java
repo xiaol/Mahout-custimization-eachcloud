@@ -11,6 +11,7 @@ import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -50,7 +51,7 @@ public class IntrestBasedRecommendEntryPoint {
             );
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2011-12-01 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2011-12-03 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
 
 
@@ -63,7 +64,7 @@ public class IntrestBasedRecommendEntryPoint {
         for(String uuid: mates){
             List<String> boards = jdbcHelper.querySubscription(uuid);
             for(final String board:boards){
-                System.out.println("baord: http://vjianke.com/board/"+board.replace("-","") +".clip");
+                System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
                 List<String> clipIds = jdbcHelper.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
                 if(clipIds.isEmpty())
                     continue;
@@ -78,7 +79,7 @@ public class IntrestBasedRecommendEntryPoint {
                         new NearestNUserNeighborhood(users.size(), similarity, model);
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
+                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd,2);
                 prefsMap.clear();
                 users.clear();
             }
@@ -92,11 +93,11 @@ public class IntrestBasedRecommendEntryPoint {
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
                                Timestamp _ts,
-                               Timestamp _tsEnd) throws Exception {
+                               Timestamp _tsEnd, int howMany) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
         List<RecommendedItem> recommendedItemList =
-                recommend.recommend(uuid, prefsIDSet, users, 3, neighborhoodUsers);
+                recommend.recommend(uuid, prefsIDSet, users, howMany, neighborhoodUsers);
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
@@ -116,11 +117,19 @@ public class IntrestBasedRecommendEntryPoint {
             if(sourceUser == -1)
                 throw new Exception("No Way");
 
+            int userIndex = users.indexOf(UUID.fromString(uuid));
 
+            double value = recommend.getSimilarity().userSimilarity(sourceUser,userIndex);
+            BigDecimal influence = new BigDecimal(value);
+
+            System.out.println(users.get((int)sourceUser).toString()+" to user's influence: " +influence.setScale(2,2));
+
+            Date date = new Date();
+            String rowKey = new Timestamp(date.getTime()).toString()+"i"+recommendedItemList.indexOf(item);
 
             RecommendClipEntity clipEntity = new RecommendClipEntity(
                     uuidWithoutDash,
-                    Long.toString(_ts.getTime())+recommendedItemList.indexOf(item));
+                    rowKey);
 
             AzureStorageHelper.FeedClipEntity feedClipEntity =
                     azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
@@ -136,7 +145,7 @@ public class IntrestBasedRecommendEntryPoint {
             clipEntity.setBase36(clipId);
             clipEntity.setAction("");
             clipEntity.setSender(uuidWithoutDash);
-            clipEntity.setSenderName(userEntity.getUser_screen_name());
+            clipEntity.setSenderName(influence.setScale(2,2) + ":"+userEntity.getUser_screen_name());
             clipEntity.setSenderImage(userEntity.getProfile_image_url());
             clipEntity.setSenderLink("/home/" + uuidWithoutDash + ".clip");
             clipEntity.setSenderComment("");
@@ -169,7 +178,7 @@ public class IntrestBasedRecommendEntryPoint {
         if(recommendClipEntityList.isEmpty()){
             System.out.println("no recommend clip found.");
         }else{
-            //azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+            azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
         }
     }
 }

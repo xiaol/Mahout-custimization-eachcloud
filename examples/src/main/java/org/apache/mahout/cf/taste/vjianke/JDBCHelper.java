@@ -24,6 +24,16 @@ public class JDBCHelper {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
+    private  Connection connection = null;
+
+    public JDBCHelper(){
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     public Timestamp get_ts() {
         return _ts;
     }
@@ -47,7 +57,6 @@ public class JDBCHelper {
     public UserEntity Query(String uuid){
         // The types for the following variables are
         // defined in the java.sql library.
-        Connection connection = null;  // For making the connection
         Statement statement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -58,12 +67,13 @@ public class JDBCHelper {
             // Ensure the SQL Server driver class is available.
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             // Establish the connection.
-            connection = DriverManager.getConnection(_connectionString);
+
 
             String sqlString = "SELECT * FROM PanamaUserEntity WHERE id = '" + uuid +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-            Statement smt = connection.createStatement();
-            resultSet = smt.executeQuery(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
             // Print out the returned number of rows.
             while (resultSet.next())
             {
@@ -90,7 +100,6 @@ public class JDBCHelper {
             try
             {
                 // Close resources.
-                if (null != connection) connection.close();
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
             }
@@ -130,25 +139,25 @@ public class JDBCHelper {
     }
 
    public List<String> queryClipByBoard(List<String> boards){
-       Connection connection = null;
        Statement statement = null;
        ResultSet resultSet = null;
        int rowCount = 0;
+       if(boards.isEmpty())
+           return null;
        List<String> clipIds = new ArrayList<String>();
+       String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
+
+       sqlString = sqlString + "board_id = '" + boards.get(0) +"'";
+       for(int i=1;i < boards.size(); i++){
+           sqlString = sqlString +"' OR " + boards.get(i) + "'";
+       }
+
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-           connection = DriverManager.getConnection(_connectionString);
 
-           String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
-           for(String board: boards){
-               if(boards.indexOf(board) != (boards.size()-1)){
-                   sqlString  = sqlString + "board_id = '" + board + "' OR ";
-               }else{
-                   sqlString  = sqlString + "board_id = '" + board + "'";
-               }
-           }
            statement = connection.createStatement();
+           statement.setQueryTimeout(0);
            resultSet = statement.executeQuery(sqlString);
 
            while (resultSet.next())
@@ -173,7 +182,6 @@ public class JDBCHelper {
        {
            try
            {
-               if (null != connection) connection.close();
                if (null != statement) statement.close();
                if (null != resultSet) resultSet.close();
            }
@@ -183,7 +191,6 @@ public class JDBCHelper {
    }
 
    public List<String> querySubscription(String userId){
-       Connection connection = null;
        Statement statement = null;
        ResultSet resultSet = null;
        int rowCount = 0;
@@ -191,11 +198,11 @@ public class JDBCHelper {
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-           connection = DriverManager.getConnection(_connectionString);
 
            String sqlString = "SELECT * FROM BoardFollowerEntity WHERE follower_id = '" + userId +"' AND board_id NOT IN " +
                    "(SELECT id FROM BoardEntity WHERE owner_id = '" + userId + "')";
            statement = connection.createStatement();
+           statement.setQueryTimeout(0);
            resultSet = statement.executeQuery(sqlString);
 
            while (resultSet.next())
@@ -220,7 +227,6 @@ public class JDBCHelper {
        {
            try
            {
-               if (null != connection) connection.close();
                if (null != statement) statement.close();
                if (null != resultSet) resultSet.close();
            }
@@ -232,31 +238,30 @@ public class JDBCHelper {
 
     public FastByIDMap<PreferenceArray> fetchData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
-        Connection connection = null;  // For making the connection
         Statement statement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
         PreferenceArray preferenceArray = null;
+        if(clipIds.isEmpty())
+            return null;
+
+        String sqlString = "SELECT * FROM ClickEntity " +
+                "WHERE ";
+        sqlString = sqlString + "clip_id = '" +clipIds.get(0) +"'";
+        for(int i=1; i< clipIds.size(); i++){
+            sqlString = sqlString + " OR clip_id = '" + clipIds.get(i) + "'";
+
+        }
+        sqlString = sqlString + " ORDER BY user_id";
 
         try
         {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            connection = DriverManager.getConnection(_connectionString);
-            String sqlString = "SELECT * FROM ClickEntity " +
-                    "WHERE ";
-            for(String clipId:clipIds){
-                if(clipIds.indexOf(clipId) != (clipIds.size()-1)){
-                    sqlString = sqlString + "clip_id = '" +clipId + "' OR ";
-                }else{
-                    sqlString = sqlString + "clip_id = '" +clipId + "'";
-                }
-            }
-            sqlString = sqlString + " ORDER BY user_id";
 
             PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             //preparedStatement.setTimestamp(1, _ts);
             //preparedStatement.setTimestamp(2, _tsEnd);
-
+            preparedStatement.setQueryTimeout(0);
             resultSet = preparedStatement.executeQuery();
             ArrayList<BooleanPreference> prefs = new ArrayList<BooleanPreference>();
 
@@ -306,7 +311,6 @@ public class JDBCHelper {
             try
             {
                 // Close resources.
-                if (null != connection) connection.close();
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
             }
