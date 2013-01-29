@@ -1,8 +1,7 @@
 package org.apache.mahout.cf.taste.vjianke;
 
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
-import org.apache.mahout.cf.taste.impl.model.BooleanPreference;
-import org.apache.mahout.cf.taste.impl.model.BooleanUserPreferenceArray;
+import org.apache.mahout.cf.taste.impl.model.*;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
@@ -236,9 +235,55 @@ public class JDBCHelper {
        return boardIds;
    }
 
+    public List<String> queryRelatedBoards(String userId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+        List<String> boardIds = new ArrayList<String>();
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            String sqlString = "SELECT DISTINCT(from_board) FROM ReclipEntity WHERE board IN " +
+                    "(SELECT id FROM BoardEntity WHERE owner_id = '" + userId + "')";
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(1);
+                boardIds.add(boardId);
+                rowCount++;
+            }
+
+            System.out.println("There were " + rowCount +" subscription.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return boardIds;
+    }
+
     public FastByIDMap<PreferenceArray> fetchData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
-        Statement statement = null;    // For the SQL statement
+        PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
         PreferenceArray preferenceArray = null;
@@ -256,9 +301,7 @@ public class JDBCHelper {
 
         try
         {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
-            PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+             preparedStatement = connection.prepareStatement(sqlString);
             //preparedStatement.setTimestamp(1, _ts);
             //preparedStatement.setTimestamp(2, _tsEnd);
             preparedStatement.setQueryTimeout(0);
@@ -296,11 +339,6 @@ public class JDBCHelper {
                 prefsMap.put(prefs.get(0).getUserID(), new BooleanUserPreferenceArray(prefs));
             }
         }
-        catch (ClassNotFoundException cnfe)
-        {
-
-            System.out.println("ClassNotFoundException " +cnfe.getMessage());
-        }
         catch (Exception e)
         {
             System.out.println("Exception " + e.getMessage());
@@ -311,7 +349,80 @@ public class JDBCHelper {
             try
             {
                 // Close resources.
-                if (null != statement) statement.close();
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
+    }
+
+
+    public FastByIDMap<PreferenceArray> fetchBoardRelationsData(
+            FastByIDMap<PreferenceArray> prefsMap,ArrayList<String> boards, ArrayList<String> users){
+
+        PreparedStatement preparedStatement= null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+
+        String sqlString = "SELECT * FROM BoardFollowerEntity LEFT JOIN BoardEntity ON BoardFollowerEntity.board_id = BoardEntity.id";
+        sqlString = sqlString + " ORDER BY follower_id ";
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            ArrayList<GenericPreference> prefs = new ArrayList<GenericPreference>();
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(2);
+                String followerId = resultSet.getString(3);
+                String ownerId = resultSet.getString(8);
+                if(!boards.contains(boardId)){
+                    boards.add(boardId);
+                }
+                float value = 1.0f;
+                if(followerId.equals(ownerId)){
+                    value = 0;
+                }else{
+                    value = 1.0f;
+                }
+                if(!users.contains(followerId))  {
+                    users.add(followerId);
+                    GenericPreference pref = new GenericPreference(
+                            users.indexOf(followerId),boards.indexOf(boardId),value);
+                    if(rowCount != 0){
+                        prefsMap.put(users.indexOf(followerId)-1,new GenericUserPreferenceArray(prefs));
+                        prefs = new ArrayList<GenericPreference>();
+                    }
+                    prefs.add(pref);
+                }else{
+                    GenericPreference pref = new GenericPreference(
+                            users.indexOf(followerId),boards.indexOf(boardId),value);
+                    prefs.add(pref);
+                }
+                rowCount++;
+            }
+            //Add last one
+            if(prefs.size() != 0){
+                prefsMap.put(prefs.get(0).getUserID(), new GenericUserPreferenceArray(prefs));
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
             }
             catch (SQLException sqlException){}
