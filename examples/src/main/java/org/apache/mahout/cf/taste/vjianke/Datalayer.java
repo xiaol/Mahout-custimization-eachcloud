@@ -282,6 +282,45 @@ public class Datalayer {
         return listBoardRelated;
     }
 
+    public List<String> queryCreatedBoards(String userId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+        List<String> boardIds = new ArrayList<String>();
+        try
+        {
+            String sqlString = "SELECT TOP 3 id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(1);
+                boardIds.add(boardId);
+                rowCount++;
+            }
+
+            System.out.println("There were " + rowCount +" subscription.");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return boardIds;
+    }
+
     protected class BoardRelated{
         String board;
         String source;

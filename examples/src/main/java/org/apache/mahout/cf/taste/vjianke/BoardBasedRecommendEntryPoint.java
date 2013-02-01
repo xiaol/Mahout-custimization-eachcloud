@@ -36,21 +36,21 @@ public class BoardBasedRecommendEntryPoint {
 
         for(String uuid: IntrestBasedRecommendEntryPoint.mates){
 
-            List<String> itsboards = datalayer.querySubscription(uuid);
+            List<String> itsboards = datalayer.queryCreatedBoards(uuid);
             System.out.println("user: "+ uuid);
             for(String because: itsboards){
-                List<RecommendedItem> items = recommend.recommendedBecause(users.indexOf(uuid.toUpperCase()), boardIds.indexOf(because), 2);
-                //List<RecommendedItem> items = recommend.mostSimilarItems(boardIds.indexOf(because),2);
+                //List<RecommendedItem> items = recommend.recommendedBecause(users.indexOf(uuid.toUpperCase()), boardIds.indexOf(because), 2);
+                List<RecommendedItem> items = recommend.mostSimilarItems(boardIds.indexOf(because),2);
                 for(RecommendedItem item:items){
                     System.out.println("Because: "+because+
                             " recommend "+boardIds.get((int)item.getItemID())+" :"+ item.getValue());
                 }
 
             }
-            prefsMap.clear();
-            boardIds.clear();
-
         }
+
+        prefsMap.clear();
+        boardIds.clear();
 
     }
 }
