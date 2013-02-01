@@ -23,6 +23,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class IntrestBasedRecommendEntryPoint {
+    public static List<String> version = Arrays.asList("1.0v");
     public static List<String> mates =
             Arrays.asList(
                     "07221718-b190-4536-8191-a0410029de34",     // ivanl
@@ -37,17 +38,18 @@ public class IntrestBasedRecommendEntryPoint {
                     "80c0161a-34a4-4363-b9b7-9c513020e083",     // bruce
                     "fad2cc24-c259-4d81-ac60-e4bf18606378",     // zilong
                     "7de3bb1e-13aa-44ae-ab1e-a0d100995f63",     // michael
-                    "b30bb7e0-0722-4bca-85c2-a146006abf0a",     // oaliw
+                    "b30bb7e0-0722-4bca-85c2-a146006abf0a",     // aoliw
                     "27e6b768-de93-446a-8637-a12a00dfcb89",     // monica
                     "a90c77a2-767c-47fc-b7d9-a101005d58ba",     // vivi
                     "9d293f0f-2bb1-43b7-80cd-b3caed577e1e",     // chris
                     "a6490629-e92f-4edd-9aa0-9f7f007b4f46",     // jacky
-                    "b5d3b26b-876b-4827-a904-d68130639d82"      // abely
+                    "b5d3b26b-876b-4827-a904-d68130639d82",     // abely
+                    "96c04d86-c4a4-487a-ba6d-a0e400299937"      //paul
             );
 
     public static List<String> mates2 =
             Arrays.asList(
-                    "96c04d86-c4a4-487a-ba6d-a0e400299937"      //paul
+
             );
 
     public static void main(String[] args) throws Exception{
@@ -59,19 +61,21 @@ public class IntrestBasedRecommendEntryPoint {
         ArrayList<UUID> users = new ArrayList<UUID>();
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
         azureStorageHelper.init();
-        JDBCHelper jdbcHelper = new JDBCHelper();
+        Datalayer datalayer = new Datalayer();
+
 
         for(String uuid: mates){
-            List<String> boards = jdbcHelper.querySubscription(uuid);
-            List<String> relatedBoards = jdbcHelper.queryRelatedBoards(uuid);
+            List<String> boards = datalayer.querySubscription(uuid);
+            List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
+            RecommendBalancer balancer = new RecommendBalancer(boards.size());
 
             for(final String board:boards){
                 System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
-                List<String> clipIds = jdbcHelper.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
+                List<String> clipIds = datalayer.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
                 if(clipIds.isEmpty())
                     continue;
 
-                jdbcHelper.fetchData(prefsMap, users, clipIds);
+                datalayer.fetchData(prefsMap, users, clipIds);
                 FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
                 DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
 
@@ -81,7 +85,8 @@ public class IntrestBasedRecommendEntryPoint {
                         new NearestNUserNeighborhood(users.size(), similarity, model);
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd,2);
+                RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
+                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany);
                 prefsMap.clear();
                 users.clear();
             }
@@ -103,7 +108,7 @@ public class IntrestBasedRecommendEntryPoint {
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
-        JDBCHelper jdbcHelper = new JDBCHelper();
+        Datalayer datalayer = new Datalayer();
 
         List<Long> arraySourceUser = new ArrayList<Long>();
         Map<Long,Double> mapSourceUserInfluence = new HashMap<Long, Double>();
@@ -134,7 +139,9 @@ public class IntrestBasedRecommendEntryPoint {
 
 
             Date date = new Date();
-            String rowKey = new Timestamp(date.getTime()).toString()+"i"+recommendedItemList.indexOf(item);
+
+            long time =  date.getTime();
+            String rowKey = version.get(version.size()-1) +"|"+ time + "|i|"+ recommendedItemList.indexOf(item);
 
             RecommendClipEntity clipEntity = new RecommendClipEntity(
                     uuidWithoutDash,
@@ -148,7 +155,7 @@ public class IntrestBasedRecommendEntryPoint {
                 continue;
             }
 
-            JDBCHelper.UserEntity userEntity = jdbcHelper.Query(users.get((int) mate).toString());
+            Datalayer.UserEntity userEntity = datalayer.Query(users.get((int) mate).toString());
             clipEntity.setRecommendStrategy("user-based:log-likelyhood");
             clipEntity.setRecommendContext("feedhome");
             clipEntity.setBase36(clipId);
@@ -157,7 +164,7 @@ public class IntrestBasedRecommendEntryPoint {
 
             String strSource="";
             for(int i =0; i< arraySourceUser.size();i++){
-                JDBCHelper.UserEntity entity = jdbcHelper.Query(users.get(arraySourceUser.get(i).intValue()).toString());
+                Datalayer.UserEntity entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
                 strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
             }
             System.out.println(strSource);
@@ -196,7 +203,7 @@ public class IntrestBasedRecommendEntryPoint {
         if(recommendClipEntityList.isEmpty()){
             System.out.println("no recommend clip found.");
         }else{
-            //azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+            azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
         }
     }
 }

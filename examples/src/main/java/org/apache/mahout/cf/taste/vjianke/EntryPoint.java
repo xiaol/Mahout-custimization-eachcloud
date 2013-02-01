@@ -76,7 +76,7 @@ public class EntryPoint {
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
-        JDBCHelper jdbcHelper = new JDBCHelper();
+        Datalayer datalayer = new Datalayer();
 
         for(RecommendedItem item : recommendedItemList ){
             String clipId = Long.toString(item.getItemID(),36).toUpperCase();
@@ -104,7 +104,7 @@ public class EntryPoint {
                 continue;
             }
 
-            JDBCHelper.UserEntity userEntity = jdbcHelper.Query(users.get((int)sourceUser).toString());
+            Datalayer.UserEntity userEntity = datalayer.Query(users.get((int)sourceUser).toString());
             clipEntity.setRecommendStrategy("user-based:log-likelyhood");
             clipEntity.setRecommendContext("feedhome");
             clipEntity.setBase36(clipId);
