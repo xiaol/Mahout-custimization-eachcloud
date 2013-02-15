@@ -99,7 +99,7 @@ public class IntrestBasedRecommendEntryPoint {
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
                 RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
-                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany);
+                proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"");
                 prefsMap.clear();
                 users.clear();
             }
@@ -110,6 +110,8 @@ public class IntrestBasedRecommendEntryPoint {
                     final String recommendBoard =  boardIds.get((int)item.getItemID());
                     System.out.println("Because: "+board+
                             " recommend "+recommendBoard +" :"+ item.getValue());
+                    String prefix =  "Because: "+board+
+                            " recommend "+recommendBoard +" :"+ item.getValue()+" ";
                     List<String> clipIds = datalayer.queryClipByBoard(new ArrayList<String>(){{ add(recommendBoard); }});
                     if(clipIds.isEmpty())
                         continue;
@@ -124,7 +126,7 @@ public class IntrestBasedRecommendEntryPoint {
                             new NearestNUserNeighborhood(users.size(), similarity, model);
                     IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                    proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1);
+                    proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix);
                     prefsMap.clear();
                     users.clear();
                 }
@@ -140,7 +142,7 @@ public class IntrestBasedRecommendEntryPoint {
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
                                Timestamp _ts,
-                               Timestamp _tsEnd, int howMany) throws Exception {
+                               Timestamp _tsEnd, int howMany, String prefix) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
         List<RecommendedItem> recommendedItemList =
@@ -202,7 +204,7 @@ public class IntrestBasedRecommendEntryPoint {
             clipEntity.setAction("");
             clipEntity.setSender(uuidWithoutDash);
 
-            String strSource="";
+            String strSource= prefix;
             for(int i =0; i< arraySourceUser.size();i++){
                 Datalayer.UserEntity entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
                 strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
