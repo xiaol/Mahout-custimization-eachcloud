@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.013" errors="0" skipped="0" tests="1" name="org.apache.mahout.cf.taste.impl.recommender.ItemUserAverageRecommenderTest">
+<testsuite failures="0" time="0.006" errors="0" skipped="0" tests="1" name="org.apache.mahout.cf.taste.impl.recommender.ItemUserAverageRecommenderTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
@@ -22,14 +22,14 @@
     <property name="basedir" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core"/>
     <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
     <property name="os.arch" value="x86_64"/>
-    <property name="surefire.real.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefirebooter5612282350031776587.jar"/>
+    <property name="surefire.real.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefirebooter590368719764320829.jar"/>
     <property name="java.io.tmpdir" value="/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="os.name" value="Mac OS X"/>
     <property name="sun.jnu.encoding" value="EUC_CN"/>
-    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="java.library.path" value="/Applications/IntelliJ IDEA 11.app/Contents/Resources/Java:/System/Library/PrivateFrameworks/JavaApplicationLauncher.framework/Resources:.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="surefire.test.class.path" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/test-classes:/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/classes:/Users/liuivan/.m2/repository/org/apache/mahout/mahout-math/0.7/mahout-math-0.7.jar:/Users/liuivan/.m2/repository/org/uncommons/maths/uncommons-maths/1.2.2/uncommons-maths-1.2.2.jar:/Users/liuivan/.m2/repository/jfree/jcommon/1.0.12/jcommon-1.0.12.jar:/Users/liuivan/.m2/repository/com/google/guava/guava/r09/guava-r09.jar:/Users/liuivan/.m2/repository/org/apache/mahout/mahout-math/0.7/mahout-math-0.7-tests.jar:/Users/liuivan/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.8.2/jackson-core-asl-1.8.2.jar:/Users/liuivan/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.8.2/jackson-mapper-asl-1.8.2.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/Users/liuivan/.m2/repository/org/slf4j/slf4j-jcl/1.6.1/slf4j-jcl-1.6.1.jar:/Users/liuivan/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/liuivan/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/Users/liuivan/.m2/repository/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar:/Users/liuivan/.m2/repository/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar:/Users/liuivan/.m2/repository/org/apache/lucene/lucene-core/3.6.0/lucene-core-3.6.0.jar:/Users/liuivan/.m2/repository/org/apache/lucene/lucene-analyzers/3.6.0/lucene-analyzers-3.6.0.jar:/Users/liuivan/.m2/repository/org/apache/mahout/commons/commons-cli/2.0-mahout/commons-cli-2.0-mahout.jar:/Users/liuivan/.m2/repository/org/apache/commons/commons-math/2.2/commons-math-2.2.jar:/Users/liuivan/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/Users/liuivan/.m2/repository/org/easymock/easymock/3.0/easymock-3.0.jar:/Users/liuivan/.m2/repository/cglib/cglib-nodep/2.2/cglib-nodep-2.2.jar:/Users/liuivan/.m2/repository/org/objenesis/objenesis/1.2/objenesis-1.2.jar:/Users/liuivan/.m2/repository/org/apache/hadoop/hadoop-core/0.20.204.0/hadoop-core-0.20.204.0.jar:/Users/liuivan/.m2/repository/commons-cli/commons-cli/1.2/commons-cli-1.2.jar:/Users/liuivan/.m2/repository/commons-httpclient/commons-httpclient/3.0.1/commons-httpclient-3.0.1.jar:/Users/liuivan/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4.jar:/Users/liuivan/.m2/repository/commons-configuration/commons-configuration/1.6/commons-configuration-1.6.jar:/Users/liuivan/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/liuivan/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar:/Users/liuivan/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar:/Users/liuivan/.m2/repository/commons-beanutils/commons-beanutils-core/1.8.0/commons-beanutils-core-1.8.0.jar:"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
-    <property name="sun.java.command" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefirebooter5612282350031776587.jar /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefire1728699524224897593tmp /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefire8531530033982042059tmp"/>
+    <property name="sun.java.command" value="/Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefirebooter590368719764320829.jar /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefire9038329321194943772tmp /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/core/target/surefire/surefire7868455948417951582tmp"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="zh"/>
     <property name="awt.toolkit" value="apple.awt.CToolkit"/>
@@ -65,5 +65,5 @@
     <property name="ftp.nonProxyHosts" value="local„ÄÅ169.254/16„ÄÅ127.0.0.1|*.local„ÄÅ169.254/16„ÄÅ127.0.0.1"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="0.008" classname="org.apache.mahout.cf.taste.impl.recommender.ItemUserAverageRecommenderTest" name="testRecommender"/>
+  <testcase time="0.004" classname="org.apache.mahout.cf.taste.impl.recommender.ItemUserAverageRecommenderTest" name="testRecommender"/>
 </testsuite>

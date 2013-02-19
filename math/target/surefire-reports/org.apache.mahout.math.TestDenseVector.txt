@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: org.apache.mahout.math.TestDenseVector
 -------------------------------------------------------------------------------
-Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Tests run: 39, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 sec

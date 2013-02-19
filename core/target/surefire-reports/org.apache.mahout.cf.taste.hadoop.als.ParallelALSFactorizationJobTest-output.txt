@@ -1,836 +1,836 @@
-2013-1-15 15:35:33 org.slf4j.impl.JCLLoggerAdapter info
-信息: Command line arguments: {--alpha=[40], --endPhase=[2147483647], --implicitFeedback=[false], --input=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/prefs.txt], --lambda=[0.065], --numFeatures=[3], --numIterations=[5], --output=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/output], --startPhase=[0], --tempDir=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp]}
-2013-01-15 15:35:33.535 java[3257:1903] Unable to load realm info from SCDynamicStore
-2013-1-15 15:35:33 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:35:33 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:35:33 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:35:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0001
-2013-1-15 15:35:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:35:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:35:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:35:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:35:34 org.apache.hadoop.util.NativeCodeLoader <clinit>
-警告: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-2013-1-15 15:35:34 org.apache.hadoop.io.compress.CodecPool getCompressor
-信息: Got brand-new compressor
-2013-1-15 15:35:34 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:35:34 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:35:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:37 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0001_m_000000_0' done.
-2013-1-15 15:35:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:37 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:35:37 org.apache.hadoop.io.compress.CodecPool getDecompressor
-信息: Got brand-new decompressor
-2013-1-15 15:35:37 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
-2013-1-15 15:35:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:37 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:37 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0001_r_000000_0 is allowed to commit now
-2013-1-15 15:35:37 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0001_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/itemRatings
-2013-1-15 15:35:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:35:40 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:35:40 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0001_r_000000_0' done.
-2013-1-15 15:35:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:35:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0001
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=275
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=713
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=66029
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=80
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=4
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=71
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=4
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=10
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=4
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=8
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=160
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=10
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=10
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=187
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=4
-2013-1-15 15:35:41 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:35:41 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:35:41 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:35:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0002
-2013-1-15 15:35:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:35:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:35:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:35:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:35:41 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:35:41 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:35:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:44 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0002_m_000000_0' done.
-2013-1-15 15:35:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:35:44 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
-2013-1-15 15:35:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:44 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:44 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0002_r_000000_0 is allowed to commit now
-2013-1-15 15:35:44 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0002_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/output/userRatings
-2013-1-15 15:35:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:35:47 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:35:47 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0002_r_000000_0' done.
-2013-1-15 15:35:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:35:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0002
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=275
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=1931
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=132301
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=4
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=71
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=4
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=4
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=8
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=200
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=10
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=10
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=4
-2013-1-15 15:35:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:35:48 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:35:48 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:35:48 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0003
-2013-1-15 15:35:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:35:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:35:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:35:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:35:48 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:35:48 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0003_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:49 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:35:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:51 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0003_m_000000_0' done.
-2013-1-15 15:35:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:35:51 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 42 bytes
-2013-1-15 15:35:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:51 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0003_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:51 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:51 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0003_r_000000_0 is allowed to commit now
-2013-1-15 15:35:51 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0003_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/averageRatings
-2013-1-15 15:35:52 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:35:54 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:35:54 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0003_r_000000_0' done.
-2013-1-15 15:35:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:35:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0003
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=164
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=3124
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=198568
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=1
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=46
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=1
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=1
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=2
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=80
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=4
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=1
-2013-1-15 15:35:55 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 0/5)
-2013-1-15 15:35:55 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:35:55 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:35:55 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:35:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0004
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0004_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:55 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:55 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0004_m_000000_0 is allowed to commit now
-2013-1-15 15:35:55 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0004_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/U-0
-2013-1-15 15:35:56 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:35:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:58 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0004_m_000000_0' done.
-2013-1-15 15:35:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:35:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0004
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=2551
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=133333
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:35:59 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 0/5)
-2013-1-15 15:35:59 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:35:59 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:35:59 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:35:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0005
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0005_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:35:59 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:35:59 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0005_m_000000_0 is allowed to commit now
-2013-1-15 15:35:59 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0005_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/M-0
-2013-1-15 15:36:00 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:02 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:02 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0005_m_000000_0' done.
-2013-1-15 15:36:03 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:03 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0005
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=3350
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=167028
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:03 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 1/5)
-2013-1-15 15:36:03 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:03 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:03 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:03 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0006
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0006_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:03 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:03 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0006_m_000000_0 is allowed to commit now
-2013-1-15 15:36:03 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0006_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/U-1
-2013-1-15 15:36:04 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:06 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:06 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0006_m_000000_0' done.
-2013-1-15 15:36:07 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:07 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0006
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=4152
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=200736
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:07 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 1/5)
-2013-1-15 15:36:07 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:07 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:07 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:07 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0007
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0007_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:07 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:07 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0007_m_000000_0 is allowed to commit now
-2013-1-15 15:36:07 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0007_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/M-1
-2013-1-15 15:36:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:10 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:10 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0007_m_000000_0' done.
-2013-1-15 15:36:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0007
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=4951
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=234431
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:11 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 2/5)
-2013-1-15 15:36:11 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:11 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:11 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:11 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0008
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0008_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:11 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0008_m_000000_0 is allowed to commit now
-2013-1-15 15:36:11 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0008_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/U-2
-2013-1-15 15:36:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:14 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0008_m_000000_0' done.
-2013-1-15 15:36:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0008
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=5753
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=268137
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:15 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 2/5)
-2013-1-15 15:36:15 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:15 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:15 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0009
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0009_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:15 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0009_m_000000_0 is allowed to commit now
-2013-1-15 15:36:15 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0009_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/M-2
-2013-1-15 15:36:16 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:18 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0009_m_000000_0' done.
-2013-1-15 15:36:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0009
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=6552
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=301836
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:19 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 3/5)
-2013-1-15 15:36:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:19 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:19 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0010
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0010_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:19 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:19 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0010_m_000000_0 is allowed to commit now
-2013-1-15 15:36:19 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0010_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/U-3
-2013-1-15 15:36:20 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:22 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0010_m_000000_0' done.
-2013-1-15 15:36:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0010
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=7354
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=335544
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:23 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 3/5)
-2013-1-15 15:36:23 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:23 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:23 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0011
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0011_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:23 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:23 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0011_m_000000_0 is allowed to commit now
-2013-1-15 15:36:23 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0011_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/tmp/M-3
-2013-1-15 15:36:24 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:26 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:26 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0011_m_000000_0' done.
-2013-1-15 15:36:27 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:27 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0011
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=8153
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=369243
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:27 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 4/5)
-2013-1-15 15:36:27 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:27 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:27 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:27 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0012
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0012_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:27 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:27 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0012_m_000000_0 is allowed to commit now
-2013-1-15 15:36:27 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0012_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/output/U
-2013-1-15 15:36:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:30 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:30 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0012_m_000000_0' done.
-2013-1-15 15:36:31 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:31 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0012
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=8955
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=402949
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:36:31 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:31 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 4/5)
-2013-1-15 15:36:31 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:31 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:31 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:32 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0013
-2013-1-15 15:36:32 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0013_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:32 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0013_m_000000_0 is allowed to commit now
-2013-1-15 15:36:32 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0013_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-1958128885988331520/output/M
-2013-1-15 15:36:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:35 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:35 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0013_m_000000_0' done.
-2013-1-15 15:36:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0013
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=9754
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=436652
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: 
+2013-2-18 11:40:00 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Command line arguments: {--alpha=[40], --endPhase=[2147483647], --implicitFeedback=[false], --input=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/prefs.txt], --lambda=[0.065], --numFeatures=[3], --numIterations=[5], --output=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/output], --startPhase=[0], --tempDir=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp]}
+2013-02-18 11:40:00.512 java[23794:1903] Unable to load realm info from SCDynamicStore
+2013-2-18 11:40:00 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:00 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:00 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0001
+2013-2-18 11:40:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:40:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:40:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:40:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:40:01 org.apache.hadoop.util.NativeCodeLoader <clinit>
+锟斤拷锟斤拷: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2013-2-18 11:40:01 org.apache.hadoop.io.compress.CodecPool getCompressor
+锟斤拷息: Got brand-new compressor
+2013-2-18 11:40:01 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:40:01 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0001_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:04 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0001_m_000000_0' done.
+2013-2-18 11:40:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:40:04 org.apache.hadoop.io.compress.CodecPool getDecompressor
+锟斤拷息: Got brand-new decompressor
+2013-2-18 11:40:04 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
+2013-2-18 11:40:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:04 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0001_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:04 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0001_r_000000_0 is allowed to commit now
+2013-2-18 11:40:04 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0001_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/itemRatings
+2013-2-18 11:40:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:07 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:40:07 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0001_r_000000_0' done.
+2013-2-18 11:40:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:40:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0001
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=275
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=711
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=66011
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=80
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=4
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=71
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=4
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=10
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=4
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=8
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=160
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=10
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=10
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=186
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=4
+2013-2-18 11:40:08 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:08 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:08 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:08 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0002
+2013-2-18 11:40:08 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:40:08 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:40:08 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:40:08 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:40:08 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:40:08 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0002_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:11 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0002_m_000000_0' done.
+2013-2-18 11:40:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:11 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:40:11 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
+2013-2-18 11:40:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:11 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0002_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:11 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:11 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0002_r_000000_0 is allowed to commit now
+2013-2-18 11:40:11 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0002_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/output/userRatings
+2013-2-18 11:40:12 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:14 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:40:14 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0002_r_000000_0' done.
+2013-2-18 11:40:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:40:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0002
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=275
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=1927
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=132277
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=4
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=71
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=4
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=4
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=8
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=200
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=10
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=10
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=4
+2013-2-18 11:40:15 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:15 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:15 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:15 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0003
+2013-2-18 11:40:15 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:40:15 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:40:15 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:40:15 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:40:15 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:40:15 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0003_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:16 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:18 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0003_m_000000_0' done.
+2013-2-18 11:40:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:18 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:40:18 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 42 bytes
+2013-2-18 11:40:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:18 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0003_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:18 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:18 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0003_r_000000_0 is allowed to commit now
+2013-2-18 11:40:18 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0003_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/averageRatings
+2013-2-18 11:40:19 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:21 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:40:21 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0003_r_000000_0' done.
+2013-2-18 11:40:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:40:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0003
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=164
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=3118
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=198534
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=1
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=46
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=1
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=1
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=2
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=80
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=4
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=1
+2013-2-18 11:40:22 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 0/5)
+2013-2-18 11:40:22 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:22 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:22 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0004
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0004_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:22 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:22 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0004_m_000000_0 is allowed to commit now
+2013-2-18 11:40:22 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0004_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/U-0
+2013-2-18 11:40:23 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:25 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:25 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0004_m_000000_0' done.
+2013-2-18 11:40:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0004
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=2547
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=133315
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=209
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:26 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 0/5)
+2013-2-18 11:40:26 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:26 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:26 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0005
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0005_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:26 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:26 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0005_m_000000_0 is allowed to commit now
+2013-2-18 11:40:26 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0005_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/M-0
+2013-2-18 11:40:27 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:29 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0005_m_000000_0' done.
+2013-2-18 11:40:30 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:30 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0005
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=3345
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=167005
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:30 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 1/5)
+2013-2-18 11:40:30 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:30 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:30 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:30 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0006
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0006_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:30 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:30 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0006_m_000000_0 is allowed to commit now
+2013-2-18 11:40:30 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0006_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/U-1
+2013-2-18 11:40:31 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:33 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:33 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0006_m_000000_0' done.
+2013-2-18 11:40:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0006
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=4146
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=200708
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=209
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:34 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 1/5)
+2013-2-18 11:40:34 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:34 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:34 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0007
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0007_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:34 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:34 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0007_m_000000_0 is allowed to commit now
+2013-2-18 11:40:34 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0007_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/M-1
+2013-2-18 11:40:35 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:37 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:37 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0007_m_000000_0' done.
+2013-2-18 11:40:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0007
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=4944
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=234400
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:38 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 2/5)
+2013-2-18 11:40:38 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:38 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:38 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:38 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0008
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0008_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:38 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:38 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0008_m_000000_0 is allowed to commit now
+2013-2-18 11:40:38 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0008_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/U-2
+2013-2-18 11:40:39 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:41 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:41 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0008_m_000000_0' done.
+2013-2-18 11:40:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0008
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=5745
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=268099
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=209
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:42 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 2/5)
+2013-2-18 11:40:42 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:42 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:42 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0009
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0009_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:42 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:42 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0009_m_000000_0 is allowed to commit now
+2013-2-18 11:40:42 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0009_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/M-2
+2013-2-18 11:40:43 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:45 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:45 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0009_m_000000_0' done.
+2013-2-18 11:40:46 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:46 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0009
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=6543
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=301791
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:46 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 3/5)
+2013-2-18 11:40:46 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:46 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:46 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:46 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0010
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0010_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:46 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:46 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0010_m_000000_0 is allowed to commit now
+2013-2-18 11:40:46 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0010_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/U-3
+2013-2-18 11:40:47 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:49 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:49 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0010_m_000000_0' done.
+2013-2-18 11:40:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0010
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=7344
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=335492
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=209
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:50 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 3/5)
+2013-2-18 11:40:50 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:50 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:50 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0011
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0011_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:50 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:50 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0011_m_000000_0 is allowed to commit now
+2013-2-18 11:40:50 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0011_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/tmp/M-3
+2013-2-18 11:40:51 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:53 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:53 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0011_m_000000_0' done.
+2013-2-18 11:40:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0011
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=8142
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=369184
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:54 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 4/5)
+2013-2-18 11:40:54 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:54 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:54 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0012
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0012_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:54 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:54 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0012_m_000000_0 is allowed to commit now
+2013-2-18 11:40:54 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0012_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/output/U
+2013-2-18 11:40:55 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:40:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:57 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0012_m_000000_0' done.
+2013-2-18 11:40:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:40:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0012
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=8943
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=402889
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=209
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:40:58 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 4/5)
+2013-2-18 11:40:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:40:58 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:40:58 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:40:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0013
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0013_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:40:58 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:40:58 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0013_m_000000_0 is allowed to commit now
+2013-2-18 11:40:58 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0013_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-568992024957680640/output/M
+2013-2-18 11:40:59 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:01 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0013_m_000000_0' done.
+2013-2-18 11:41:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0013
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=9741
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=436585
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=206
+2013-2-18 11:41:02 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: 
 A - users x items
 
 [ 5.00	 5.00	 2.00	  -   ]
@@ -860,920 +860,600 @@ Ak - users x items
 [ 2.94	 3.32	 2.75	 4.79 ]
 
 
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [0], was [5.0] estimate is [4.7836844755228976]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [1], was [5.0] estimate is [4.98113031284158]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [2], was [2.0] estimate is [1.969369571348337]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [0], was [2.0] estimate is [1.9824085623130538]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [2], was [3.0] estimate is [2.8547164375902088]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [3], was [5.0] estimate is [4.807857648159461]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [1], was [5.0] estimate is [4.711731274628629]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [3], was [3.0] estimate is [2.937180889006492]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [0], was [3.0] estimate is [2.936080744372563]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [3], was [5.0] estimate is [4.789865154729337]
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: RMSE: 0.1554701170997093
-2013-1-15 15:36:36 org.slf4j.impl.JCLLoggerAdapter info
-信息: Command line arguments: {--alpha=[20.0], --endPhase=[2147483647], --implicitFeedback=[true], --input=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/prefs.txt], --lambda=[0.065], --numFeatures=[3], --numIterations=[5], --output=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/output], --startPhase=[0], --tempDir=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp]}
-2013-1-15 15:36:36 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:36 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:36 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0014
-2013-1-15 15:36:36 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:36:36 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:36:36 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:36:36 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:36:36 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:36:36 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0014_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:37 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:39 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0014_m_000000_0' done.
-2013-1-15 15:36:39 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:39 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:36:39 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
-2013-1-15 15:36:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:39 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0014_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:39 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0014_r_000000_0 is allowed to commit now
-2013-1-15 15:36:39 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0014_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/itemRatings
-2013-1-15 15:36:42 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:36:42 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:36:42 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0014_r_000000_0' done.
-2013-1-15 15:36:43 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0014
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=275
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=21265
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=939345
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=80
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=4
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=71
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=4
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=10
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=4
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=8
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=160
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=10
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=10
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=187
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=4
-2013-1-15 15:36:43 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:43 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:43 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:43 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0015
-2013-1-15 15:36:43 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:36:43 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:36:43 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:36:43 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:36:43 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:36:43 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0015_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:44 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:46 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:46 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0015_m_000000_0' done.
-2013-1-15 15:36:46 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:46 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:36:46 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
-2013-1-15 15:36:46 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:46 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0015_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:46 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:46 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0015_r_000000_0 is allowed to commit now
-2013-1-15 15:36:46 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0015_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/output/userRatings
-2013-1-15 15:36:47 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:49 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:36:49 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0015_r_000000_0' done.
-2013-1-15 15:36:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:36:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0015
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=275
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=22483
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=1005613
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=4
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=71
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=4
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=4
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=8
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=200
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=10
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=10
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=4
-2013-1-15 15:36:50 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:50 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:50 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:50 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0016
-2013-1-15 15:36:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: io.sort.mb = 100
-2013-1-15 15:36:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: data buffer = 79691776/99614720
-2013-1-15 15:36:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
-信息: record buffer = 262144/327680
-2013-1-15 15:36:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
-信息: Starting flush of map output
-2013-1-15 15:36:50 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
-信息: Finished spill 0
-2013-1-15 15:36:50 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0016_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:51 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:36:53 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:53 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0016_m_000000_0' done.
-2013-1-15 15:36:53 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:53 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Merging 1 sorted segments
-2013-1-15 15:36:53 org.apache.hadoop.mapred.Merger$MergeQueue merge
-信息: Down to the last merge-pass, with 1 segments left of total size: 42 bytes
-2013-1-15 15:36:53 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:53 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0016_r_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:53 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:53 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0016_r_000000_0 is allowed to commit now
-2013-1-15 15:36:53 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0016_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/averageRatings
-2013-1-15 15:36:54 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:36:56 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: reduce > reduce
-2013-1-15 15:36:56 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0016_r_000000_0' done.
-2013-1-15 15:36:57 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 100%
-2013-1-15 15:36:57 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0016
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息: Counters: 16
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=164
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=23676
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=1071872
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input groups=1
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Map output materialized bytes=46
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Combine output records=1
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Reduce shuffle bytes=0
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Reduce output records=1
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=2
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Map output bytes=80
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Combine input records=4
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Counters log
-信息:     Reduce input records=1
-2013-1-15 15:36:57 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 0/5)
-2013-1-15 15:36:57 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:36:57 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:36:57 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:36:57 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0017
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0017_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:36:57 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:36:57 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0017_m_000000_0 is allowed to commit now
-2013-1-15 15:36:57 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0017_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/U-0
-2013-1-15 15:36:58 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:00 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:00 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0017_m_000000_0' done.
-2013-1-15 15:37:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0017
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=12827
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=569989
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:01 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 0/5)
-2013-1-15 15:37:01 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:01 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:01 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:01 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0018
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0018_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:01 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:01 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0018_m_000000_0 is allowed to commit now
-2013-1-15 15:37:01 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0018_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/M-0
-2013-1-15 15:37:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:04 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:04 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0018_m_000000_0' done.
-2013-1-15 15:37:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0018
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=13626
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=603684
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:05 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 1/5)
-2013-1-15 15:37:05 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:05 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:05 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:05 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0019
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0019_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:05 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0019_m_000000_0 is allowed to commit now
-2013-1-15 15:37:05 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0019_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/U-1
-2013-1-15 15:37:06 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:08 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0019_m_000000_0' done.
-2013-1-15 15:37:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0019
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=14428
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=637388
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:09 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 1/5)
-2013-1-15 15:37:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:09 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0020
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0020_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:09 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:09 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0020_m_000000_0 is allowed to commit now
-2013-1-15 15:37:09 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0020_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/M-1
-2013-1-15 15:37:10 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:12 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0020_m_000000_0' done.
-2013-1-15 15:37:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0020
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=15227
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=671083
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:13 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 2/5)
-2013-1-15 15:37:13 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:13 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:13 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0021
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0021_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:13 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:13 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0021_m_000000_0 is allowed to commit now
-2013-1-15 15:37:13 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0021_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/U-2
-2013-1-15 15:37:14 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:16 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:16 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0021_m_000000_0' done.
-2013-1-15 15:37:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0021
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=16029
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=704791
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:17 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 2/5)
-2013-1-15 15:37:17 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:17 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:17 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0022
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0022_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:17 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:17 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0022_m_000000_0 is allowed to commit now
-2013-1-15 15:37:17 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0022_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/M-2
-2013-1-15 15:37:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:20 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0022_m_000000_0' done.
-2013-1-15 15:37:21 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:21 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0022
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=16828
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=738486
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:21 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 3/5)
-2013-1-15 15:37:21 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:21 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:21 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:21 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0023
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0023_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:21 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:21 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0023_m_000000_0 is allowed to commit now
-2013-1-15 15:37:21 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0023_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/U-3
-2013-1-15 15:37:22 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:24 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0023_m_000000_0' done.
-2013-1-15 15:37:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0023
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=17630
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=772192
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:25 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 3/5)
-2013-1-15 15:37:25 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:25 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:25 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0024
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0024_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:25 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:25 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0024_m_000000_0 is allowed to commit now
-2013-1-15 15:37:25 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0024_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/tmp/M-3
-2013-1-15 15:37:26 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:28 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:28 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0024_m_000000_0' done.
-2013-1-15 15:37:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0024
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=18429
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=805889
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:29 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing U (iteration 4/5)
-2013-1-15 15:37:29 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:29 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:29 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0025
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0025_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:29 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:29 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0025_m_000000_0 is allowed to commit now
-2013-1-15 15:37:29 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0025_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/output/U
-2013-1-15 15:37:30 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:32 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0025_m_000000_0' done.
-2013-1-15 15:37:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0025
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=19231
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=839599
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=210
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:33 org.slf4j.impl.JCLLoggerAdapter info
-信息: Recomputing M (iteration 4/5)
-2013-1-15 15:37:33 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
-2013-1-15 15:37:33 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
-警告: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
-2013-1-15 15:37:33 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
-信息: Total input paths to process : 1
-2013-1-15 15:37:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Running job: job_local_0026
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Task done
-信息: Task:attempt_local_0026_m_000000_0 is done. And is in the process of commiting
-2013-1-15 15:37:33 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:33 org.apache.hadoop.mapred.Task commit
-信息: Task attempt_local_0026_m_000000_0 is allowed to commit now
-2013-1-15 15:37:33 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
-信息: Saved output of task 'attempt_local_0026_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-3074616753404375040/output/M
-2013-1-15 15:37:34 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 0% reduce 0%
-2013-1-15 15:37:36 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
-信息: 
-2013-1-15 15:37:36 org.apache.hadoop.mapred.Task sendDone
-信息: Task 'attempt_local_0026_m_000000_0' done.
-2013-1-15 15:37:37 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息:  map 100% reduce 0%
-2013-1-15 15:37:37 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
-信息: Job complete: job_local_0026
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息: Counters: 8
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:   File Output Format Counters 
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Written=261
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:   File Input Format Counters 
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     Bytes Read=275
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:   FileSystemCounters
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_READ=20030
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     FILE_BYTES_WRITTEN=873302
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:   Map-Reduce Framework
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     Map input records=4
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     Spilled Records=0
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     SPLIT_RAW_BYTES=207
-2013-1-15 15:37:37 org.apache.hadoop.mapred.Counters log
-信息:     Map output records=4
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: 
-Observations - users x items
-[ 5.00	 5.00	 2.00	 0.00 ]
-[ 2.00	 0.00	 3.00	 5.00 ]
-[ 0.00	 5.00	 0.00	 3.00 ]
-[ 3.00	 0.00	 0.00	 5.00 ]
-
-A - users x items
-
-[ 1.00	 1.00	 1.00	 0.00 ]
-[ 1.00	 0.00	 1.00	 1.00 ]
-[ 0.00	 1.00	 0.00	 1.00 ]
-[ 1.00	 0.00	 0.00	 1.00 ]
-
-U - users x features
-
-[ 0.25	 0.69	-2.41 ]
-[ 0.34	 0.21	-1.18 ]
-[ 0.28	-1.08	 1.39 ]
-[ 0.15	 0.95	-0.80 ]
-
-M - items x features
-
-[ 2.62	 0.69	 0.05 ]
-[ 1.79	-1.19	-0.57 ]
-[ 1.95	-0.35	-0.32 ]
-[ 4.23	 0.85	 0.53 ]
-
-Ak - users x items
-
-[ 1.00	 0.99	 1.02	 0.34 ]
-[ 0.98	 1.03	 0.98	 0.99 ]
-[ 0.05	 0.99	 0.47	 1.00 ]
-[ 1.00	-0.41	 0.21	 1.00 ]
-
-
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [0], was [1.0] with confidence [101.0] estimate is [1.0047380622813213]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [1], was [1.0] with confidence [101.0] estimate is [0.9919078650694693]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [2], was [1.0] with confidence [41.0] estimate is [1.0226158461507935]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [0] towards item [3], was [0.0] with confidence [1.0] estimate is [0.34217955330150907]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [0], was [1.0] with confidence [41.0] estimate is [0.9801884603621297]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [1], was [0.0] with confidence [1.0] estimate is [1.0334047628773935]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [2], was [1.0] with confidence [61.0] estimate is [0.9752011017536796]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [1] towards item [3], was [1.0] with confidence [101.0] estimate is [0.9934335481734273]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [0], was [0.0] with confidence [1.0] estimate is [0.046516171939049014]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [1], was [1.0] with confidence [101.0] estimate is [0.9925544039398969]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [2], was [0.0] with confidence [1.0] estimate is [0.4674571077400443]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [2] towards item [3], was [1.0] with confidence [61.0] estimate is [0.9959534941423527]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [0], was [1.0] with confidence [61.0] estimate is [0.9972880813734347]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [1], was [0.0] with confidence [1.0] estimate is [-0.40881741328137766]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [2], was [0.0] with confidence [1.0] estimate is [0.21360133061858677]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: Comparing preference of user [3] towards item [3], was [1.0] with confidence [101.0] estimate is [0.9955939121154892]
-2013-1-15 15:37:37 org.slf4j.impl.JCLLoggerAdapter info
-信息: RMSE: 0.3274207731374071
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [0] towards item [0], was [5.0] estimate is [4.7836844755228976]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [0] towards item [1], was [5.0] estimate is [4.98113031284158]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [0] towards item [2], was [2.0] estimate is [1.969369571348337]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [1] towards item [0], was [2.0] estimate is [1.9824085623130538]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [1] towards item [2], was [3.0] estimate is [2.8547164375902088]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [1] towards item [3], was [5.0] estimate is [4.807857648159461]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [2] towards item [1], was [5.0] estimate is [4.711731274628629]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [2] towards item [3], was [3.0] estimate is [2.937180889006492]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [3] towards item [0], was [3.0] estimate is [2.936080744372563]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Comparing preference of user [3] towards item [3], was [5.0] estimate is [4.789865154729337]
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: RMSE: 0.1554701170997093
+2013-2-18 11:41:02 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Command line arguments: {--alpha=[20.0], --endPhase=[2147483647], --implicitFeedback=[true], --input=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/prefs.txt], --lambda=[0.065], --numFeatures=[3], --numIterations=[5], --output=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/output], --startPhase=[0], --tempDir=[/var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp]}
+2013-2-18 11:41:02 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:02 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:02 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:02 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0014
+2013-2-18 11:41:02 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:41:03 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:41:03 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:41:03 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:41:03 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:41:03 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0014_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:03 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:05 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0014_m_000000_0' done.
+2013-2-18 11:41:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:05 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:41:05 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
+2013-2-18 11:41:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:05 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0014_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:05 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:05 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0014_r_000000_0 is allowed to commit now
+2013-2-18 11:41:05 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0014_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/itemRatings
+2013-2-18 11:41:06 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:08 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:41:08 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0014_r_000000_0' done.
+2013-2-18 11:41:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:41:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0014
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=275
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=21239
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=939215
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=80
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=4
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=71
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=4
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=10
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=4
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=8
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=160
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=10
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=10
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=187
+2013-2-18 11:41:09 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=4
+2013-2-18 11:41:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:09 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:09 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:09 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0015
+2013-2-18 11:41:09 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:41:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:41:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:41:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:41:10 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:41:10 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0015_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:10 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:12 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0015_m_000000_0' done.
+2013-2-18 11:41:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:41:12 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 67 bytes
+2013-2-18 11:41:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:12 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0015_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:12 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:12 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0015_r_000000_0 is allowed to commit now
+2013-2-18 11:41:12 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0015_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/output/userRatings
+2013-2-18 11:41:13 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:15 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:41:15 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0015_r_000000_0' done.
+2013-2-18 11:41:16 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:41:16 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0015
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=275
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=22457
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=1005487
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=4
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=71
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=4
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=4
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=8
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=200
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=10
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=10
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=207
+2013-2-18 11:41:16 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=4
+2013-2-18 11:41:16 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:16 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:16 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:17 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0016
+2013-2-18 11:41:17 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: io.sort.mb = 100
+2013-2-18 11:41:17 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: data buffer = 79691776/99614720
+2013-2-18 11:41:17 org.apache.hadoop.mapred.MapTask$MapOutputBuffer <init>
+锟斤拷息: record buffer = 262144/327680
+2013-2-18 11:41:17 org.apache.hadoop.mapred.MapTask$MapOutputBuffer flush
+锟斤拷息: Starting flush of map output
+2013-2-18 11:41:17 org.apache.hadoop.mapred.MapTask$MapOutputBuffer sortAndSpill
+锟斤拷息: Finished spill 0
+2013-2-18 11:41:17 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0016_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:18 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:20 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0016_m_000000_0' done.
+2013-2-18 11:41:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:20 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Merging 1 sorted segments
+2013-2-18 11:41:20 org.apache.hadoop.mapred.Merger$MergeQueue merge
+锟斤拷息: Down to the last merge-pass, with 1 segments left of total size: 42 bytes
+2013-2-18 11:41:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:20 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0016_r_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:20 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:20 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0016_r_000000_0 is allowed to commit now
+2013-2-18 11:41:20 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0016_r_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/averageRatings
+2013-2-18 11:41:21 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:23 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: reduce > reduce
+2013-2-18 11:41:23 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0016_r_000000_0' done.
+2013-2-18 11:41:24 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 100%
+2013-2-18 11:41:24 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0016
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 16
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=164
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=23650
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=1071754
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input groups=1
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output materialized bytes=46
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine output records=1
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce shuffle bytes=0
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce output records=1
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=2
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output bytes=80
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Combine input records=4
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=207
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Reduce input records=1
+2013-2-18 11:41:24 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 0/5)
+2013-2-18 11:41:24 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:24 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:24 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:24 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0017
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0017_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:24 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:24 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0017_m_000000_0 is allowed to commit now
+2013-2-18 11:41:24 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0017_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/U-0
+2013-2-18 11:41:25 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:27 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:27 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0017_m_000000_0' done.
+2013-2-18 11:41:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0017
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=12814
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=569930
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=210
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:28 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 0/5)
+2013-2-18 11:41:28 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:28 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:28 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:28 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0018
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0018_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:28 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:28 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0018_m_000000_0 is allowed to commit now
+2013-2-18 11:41:28 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0018_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/M-0
+2013-2-18 11:41:29 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:31 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:31 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0018_m_000000_0' done.
+2013-2-18 11:41:32 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:32 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0018
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=13613
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=603629
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=207
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:32 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 1/5)
+2013-2-18 11:41:32 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:32 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:32 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:32 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0019
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0019_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:32 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:32 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0019_m_000000_0 is allowed to commit now
+2013-2-18 11:41:32 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0019_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/U-1
+2013-2-18 11:41:33 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:35 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:35 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0019_m_000000_0' done.
+2013-2-18 11:41:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0019
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=14415
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=637337
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=210
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:36 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 1/5)
+2013-2-18 11:41:36 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:36 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:36 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:36 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0020
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0020_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:36 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:36 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0020_m_000000_0 is allowed to commit now
+2013-2-18 11:41:36 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0020_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/M-1
+2013-2-18 11:41:37 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:39 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:39 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0020_m_000000_0' done.
+2013-2-18 11:41:39 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:40 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0020
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=15214
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=671036
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=207
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:40 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing U (iteration 2/5)
+2013-2-18 11:41:40 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:40 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:40 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:40 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0021
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0021_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:40 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:40 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0021_m_000000_0 is allowed to commit now
+2013-2-18 11:41:40 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0021_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/U-2
+2013-2-18 11:41:41 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:43 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:43 org.apache.hadoop.mapred.Task sendDone
+锟斤拷息: Task 'attempt_local_0021_m_000000_0' done.
+2013-2-18 11:41:44 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 100% reduce 0%
+2013-2-18 11:41:44 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Job complete: job_local_0021
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息: Counters: 8
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Output Format Counters 
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Written=261
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   File Input Format Counters 
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Bytes Read=275
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   FileSystemCounters
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_READ=16016
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     FILE_BYTES_WRITTEN=704744
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:   Map-Reduce Framework
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map input records=4
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Spilled Records=0
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     SPLIT_RAW_BYTES=210
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Counters log
+锟斤拷息:     Map output records=4
+2013-2-18 11:41:44 org.slf4j.impl.JCLLoggerAdapter info
+锟斤拷息: Recomputing M (iteration 2/5)
+2013-2-18 11:41:44 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: Use GenericOptionsParser for parsing the arguments. Applications should implement Tool for the same.
+2013-2-18 11:41:44 org.apache.hadoop.mapred.JobClient copyAndConfigureFiles
+锟斤拷锟斤拷: No job jar file set.  User classes may not be found. See JobConf(Class) or JobConf#setJar(String).
+2013-2-18 11:41:44 org.apache.hadoop.mapreduce.lib.input.FileInputFormat listStatus
+锟斤拷息: Total input paths to process : 1
+2013-2-18 11:41:44 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息: Running job: job_local_0022
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Task done
+锟斤拷息: Task:attempt_local_0022_m_000000_0 is done. And is in the process of commiting
+2013-2-18 11:41:44 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate
+锟斤拷息: 
+2013-2-18 11:41:44 org.apache.hadoop.mapred.Task commit
+锟斤拷息: Task attempt_local_0022_m_000000_0 is allowed to commit now
+2013-2-18 11:41:44 org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter commitTask
+锟斤拷息: Saved output of task 'attempt_local_0022_m_000000_0' to /var/folders/ps/lb0gqrrn3770x7pk5x6_sdzr0000gn/T/mahout-ParallelALSFactorizationJobTest-2183994700553317376/tmp/M-2
+2013-2-18 11:41:45 org.apache.hadoop.mapred.JobClient monitorAndPrintJob
+锟斤拷息:  map 0% reduce 0%
+2013-2-18 11:41:47 org.apache.hadoop.mapred.LocalJobRunner$Job statusUpdate

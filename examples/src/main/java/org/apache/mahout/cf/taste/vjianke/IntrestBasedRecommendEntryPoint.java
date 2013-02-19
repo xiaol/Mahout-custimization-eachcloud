@@ -69,7 +69,9 @@ public class IntrestBasedRecommendEntryPoint {
         FastByIDMap<PreferenceArray> boardPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<String> boardIds = new ArrayList<String>();
         ArrayList<String> boardUsers = new ArrayList<String>();
-        datalayer.fetchBoardRelationsData(boardPrefsMap,boardIds,boardUsers);
+        if(bSwitch){
+            datalayer.fetchBoardRelationsData(boardPrefsMap,boardIds,boardUsers);
+        }
         DataModel genericDataModel = new GenericDataModel(prefsMap);
         ItemSimilarity itemSimilarity =
                 new LogLikelihoodSimilarity(genericDataModel);
@@ -112,6 +114,7 @@ public class IntrestBasedRecommendEntryPoint {
             if(recommendClipEntityList.isEmpty()){
                 System.out.println("no recommend clip found totally.");
             }else{
+
                 azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
             }
             recommendClipEntityList.clear();
