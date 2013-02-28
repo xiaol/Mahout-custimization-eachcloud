@@ -15,4 +15,5 @@ mvn -DskipTests install
 3.cd to examples
 mvn compile
 
-4.mvn -q exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint"
+4.then
+mvn -q exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint"
