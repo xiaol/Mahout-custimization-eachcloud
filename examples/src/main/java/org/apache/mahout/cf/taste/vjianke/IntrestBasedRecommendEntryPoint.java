@@ -135,7 +135,7 @@ public class IntrestBasedRecommendEntryPoint {
                 //System.out.println("no recommend clip found totally.");
             }else{
 
-                //azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+                azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
             }
             recommendClipEntityList.clear();
 

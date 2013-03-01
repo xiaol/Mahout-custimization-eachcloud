@@ -13,19 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper$UserEntity.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/VjiankeRecommend.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer$BoardRelated.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer$BoardRelated.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer$UserEntity.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer$UserEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/Datalayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint$1.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint$2.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.class" afterPath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution/mahout-distribution.iml" afterPath="$PROJECT_DIR$/distribution/mahout-distribution.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mahout-examples.iml" afterPath="$PROJECT_DIR$/examples/mahout-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pom.xml" afterPath="$PROJECT_DIR$/examples/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -260,10 +247,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="16" selection-start="4644" selection-end="4644" vertical-scroll-proportion="0.0">
+            <state line="137" column="16" selection-start="6808" selection-end="6808" vertical-scroll-proportion="0.7103594">
               <folding>
                 <element signature="e#3160#3187#0" expanded="true" />
               </folding>
@@ -327,10 +314,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="51" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.6215645">
+            <state line="164" column="51" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -383,8 +370,8 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/classifier/NewsgroupHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/pom.xml" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
       </list>
     </option>
   </component>
@@ -1335,19 +1322,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
+    <entry file="file://$PROJECT_DIR$/examples/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="16" selection-start="4644" selection-end="4644" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3160#3187#0" expanded="true" />
-          </folding>
+        <state line="164" column="51" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pom.xml">
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="51" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.6215645">
-          <folding />
+        <state line="137" column="16" selection-start="6808" selection-end="6808" vertical-scroll-proportion="0.7103594">
+          <folding>
+            <element signature="e#3160#3187#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
