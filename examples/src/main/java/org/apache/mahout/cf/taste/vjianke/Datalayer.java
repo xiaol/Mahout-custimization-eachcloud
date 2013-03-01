@@ -63,11 +63,6 @@ public class Datalayer {
 
         try
         {
-            // Ensure the SQL Server driver class is available.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            // Establish the connection.
-
-
             String sqlString = "SELECT * FROM PanamaUserEntity WHERE id = '" + uuid +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
@@ -83,11 +78,6 @@ public class Datalayer {
                 rowCount++;
             }
 
-        }
-        catch (ClassNotFoundException cnfe)
-        {
-
-            System.out.println("ClassNotFoundException " +cnfe.getMessage());
         }
         catch (Exception e)
         {
@@ -105,6 +95,54 @@ public class Datalayer {
             catch (SQLException sqlException) {}
         }
         return userEntity;
+    }
+
+    public List<UserEntity> QueryUsers(){
+        // The types for the following variables are
+        // defined in the java.sql library.
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<UserEntity> userEntities = new ArrayList<UserEntity>();
+        try
+        {
+            String sqlString = "SELECT * FROM PanamaUserEntity";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                UserEntity userEntity = new UserEntity();
+                userEntity.setUuid(resultSet.getString(1));
+                userEntity.setUser_screen_name(resultSet.getString(3));
+                userEntity.setProfile_image_url(resultSet.getString(17));
+                userEntities.add(userEntity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return userEntities;
     }
 
     public class UserEntity{
@@ -166,7 +204,7 @@ public class Datalayer {
                rowCount++;
            }
 
-           System.out.println("There were " + rowCount +" clips.");
+           //System.out.println("There were " + rowCount +" clips.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -211,7 +249,7 @@ public class Datalayer {
                rowCount++;
            }
 
-           System.out.println("There were " + rowCount +" subscription.");
+           //System.out.println("There were " + rowCount +" subscription.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -258,7 +296,7 @@ public class Datalayer {
                 rowCount++;
             }
 
-            System.out.println("There were " + rowCount +" subscription.");
+            //System.out.println("There were " + rowCount +" subscription.");
         }
         catch (ClassNotFoundException cnfe)
         {
@@ -301,7 +339,7 @@ public class Datalayer {
                 rowCount++;
             }
 
-            System.out.println("There were " + rowCount +" subscription.");
+            //System.out.println("There were " + rowCount +" subscription.");
         }
         catch (Exception e)
         {

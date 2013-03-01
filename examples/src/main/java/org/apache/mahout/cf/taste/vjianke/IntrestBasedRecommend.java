@@ -51,8 +51,8 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
     }
 
 
-    public List<RecommendedItem> recommend(String strUuid, FastByIDMap<FastIDSet> prefsIDSet,
-                                           ArrayList<UUID> users, int howMany, List<Long> nearestNUsers) throws TasteException {
+    public List<RecommendedItem> recommend(String strUuid,ArrayList<UUID> users,
+                                           int howMany, List<Long> nearestNUsers) throws TasteException {
 
 
         int userIndex = users.indexOf(UUID.fromString(strUuid/*"07221718-b190-4536-8191-a0410029de34")*/));
@@ -75,9 +75,9 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
             nearestNUsers.add(entity);
         }
 
-        System.out.println("user: " +users.get(userIndex));
+        //System.out.println("user: " +users.get(userIndex));
         for(RecommendedItem item : topItems ){
-            System.out.println("http://vjianke.com/"+Long.toString(item.getItemID(),36).toUpperCase()+".clip");
+            //System.out.println("http://vjianke.com/"+Long.toString(item.getItemID(),36).toUpperCase()+".clip");
         }
 
         /*System.out.println("user: " +users.get(userIndex));
