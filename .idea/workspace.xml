@@ -13,15 +13,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper$UserEntity.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/VjiankeRecommend.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution/mahout-distribution.iml" afterPath="$PROJECT_DIR$/distribution/mahout-distribution.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mahout-examples.iml" afterPath="$PROJECT_DIR$/examples/mahout-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pom.xml" afterPath="$PROJECT_DIR$/examples/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/classifier/NewsgroupHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/classifier/NewsgroupHelper.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
