@@ -132,7 +132,7 @@ public native int ICTCLAS_GetElemLength(int nIndex);
 
     /* Use static intializer */
     static {
-			System.load("/Users/liuivan/Workspace/Libraries/ICTCLAS2012-SDK-0101/Linux-64bit-JNI/libICTCLAS2011.so");
+			System.load("examples/target/libICTCLAS2011.so");
     }
 }
 
