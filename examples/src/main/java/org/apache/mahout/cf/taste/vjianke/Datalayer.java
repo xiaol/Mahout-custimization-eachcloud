@@ -516,4 +516,52 @@ public class Datalayer {
         }
         return prefsMap;
     }
+
+
+    public class ClipEntity{
+        public String id;
+        public String title;
+
+    }
+    public List<ClipEntity>  getClips(){
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
+        try
+        {
+            String sqlString = "SELECT TOP 10 Id,title FROM ClipEntity ";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                ClipEntity entity = new ClipEntity();
+                entity.id = resultSet.getString(1);
+                entity.title = resultSet.getString(2);
+                clipEntities.add(entity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return clipEntities;
+    }
 }

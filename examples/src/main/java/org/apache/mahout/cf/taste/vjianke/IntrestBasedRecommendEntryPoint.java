@@ -109,7 +109,7 @@ public class IntrestBasedRecommendEntryPoint {
                     cachedEntity.users = users;
                     cachedEntityMap.put(board,cachedEntity);
                 }else{
-                    System.out.println("hit board: "+board.replace("-","") +".clip");
+                    //System.out.println("hit board: "+board.replace("-","") +".clip");
                     prefsIDSet = cachedEntityMap.get(board).prefsIDSet;
                     users = cachedEntityMap.get(board).users;
                 }

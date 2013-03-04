@@ -118,13 +118,13 @@ public final class NewsgroupHelper {
                                  Collection<String> words,
                                  Reader in,
                                  Multiset<String> overallCounts) throws IOException {
-    TokenStream ts = analyzer.reusableTokenStream("text", in);
+    /*TokenStream ts = analyzer.reusableTokenStream("text", in);
     ts.addAttribute(CharTermAttribute.class);
     ts.reset();
     while (ts.incrementToken()) {
       String s = ts.getAttribute(CharTermAttribute.class).toString();
       words.add(s);
     }
-    overallCounts.addAll(words);
+    overallCounts.addAll(words);  */
   }
 }

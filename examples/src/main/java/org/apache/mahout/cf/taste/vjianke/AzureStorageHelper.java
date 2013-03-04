@@ -4,6 +4,10 @@ import com.microsoft.windowsazure.services.core.storage.*;
 import com.microsoft.windowsazure.services.blob.client.*;
 import com.microsoft.windowsazure.services.table.client.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,20 +24,21 @@ public class AzureStorageHelper {
                     "AccountName=eachcloudasia;" +
                     "AccountKey=mo1bmV+/AAbDTNpLFVV1F64zNEpB8v96fxX4x+HemU9tEUrF49oEp4FabUmlOVQWWramhyohjeWj70wVEQooug==";
     private CloudTableClient _tableClient;
+    private CloudBlobClient _blobClient;
+    private CloudBlobContainer _container;
+    String _clipsContainerName = "clips";
 
     public void init()
     {
         try
         {
             CloudStorageAccount account;
-            CloudBlobClient blobClient;
-            CloudBlobContainer container;
-            CloudBlockBlob blob;
+
 
             account = CloudStorageAccount.parse(storageConnectionString);
-            blobClient = account.createCloudBlobClient();
+            _blobClient = account.createCloudBlobClient();
             // Container name must be lower case.
-            //container = blobClient.getContainerReference("blobsample");
+            _container = _blobClient.getContainerReference(_clipsContainerName);
             //container.createIfNotExist();
 
             // Set anonymous access on the container.
@@ -105,6 +110,13 @@ public class AzureStorageHelper {
 
     public void deleteTable(String tableName) throws Exception {
         throw new Exception("UnSupport");
+    }
+
+    public ByteArrayOutputStream getClipBlob(String clipId) throws StorageException, URISyntaxException, IOException {
+        CloudBlockBlob blockBlob = _container.getBlockBlobReference(clipId + ".htm");
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        blockBlob.download(outputStream);
+        return outputStream;
     }
 
 
