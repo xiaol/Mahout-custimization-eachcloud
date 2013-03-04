@@ -46,7 +46,7 @@ public class TestICTCLAS2011 {
 	try{	
 		ICTCLAS2011 testICTCLAS2011 = new ICTCLAS2011();
 
-		String argu = "/root/ICTCLAS2011/LinuxJNI";
+		String argu = "examples/target/";
 		System.out.println("ICTCLAS_Init");
 		if (testICTCLAS2011.ICTCLAS_Init(argu.getBytes("GB2312"),0) == false)
 		{

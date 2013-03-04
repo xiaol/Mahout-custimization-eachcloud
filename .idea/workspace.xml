@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/findbugs-exclude.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/mahout-checkstyle-suppressions.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/mahout-checkstyle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/mahout-eclipse-checkstyle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/mahout-eclipse-pmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/buildtools/target/classes/mahout-pmd-ruleset.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/JDBCHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/VjiankeRecommend.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper$UserEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/JDBCHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/VjiankeRecommend.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -324,17 +314,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="VecTextField.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/VecTextField.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="25" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TermVectorBasedSimilarity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -351,7 +330,7 @@
       <file leaf-file-name="ICTCLASAnalyzer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASAnalyzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -390,10 +369,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestICTCLAS2011.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TestICTCLAS2011.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="29" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0">
+            <state line="54" column="10" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.57575756">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -401,10 +380,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ICTCLAS2011.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TikaIndexer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="64" selection-start="1286" selection-end="1344" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICTCLAS2011.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS2011.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="25" selection-start="4279" selection-end="4279" vertical-scroll-proportion="0.66412216">
+            <state line="134" column="25" selection-start="4279" selection-end="4279" vertical-scroll-proportion="-13.384615">
               <folding />
             </state>
           </provider>
@@ -448,7 +436,6 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentRecommend.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentCalc.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/VecTextField.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS/kevin/zhang/ICTCLAS2011.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/WordReader.java" />
@@ -456,6 +443,7 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASTokenizer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASAnalyzer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS2011.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java" />
       </list>
     </option>
@@ -870,6 +858,56 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="segment" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout-distribution-0.7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vjianke" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="segment" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TestICTCLAS2011.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1445,13 +1483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="24" selection-start="4634" selection-end="4634" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/VecTextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="25" selection-start="982" selection-end="982" vertical-scroll-proportion="0.0">
@@ -1509,9 +1540,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS2011.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="25" selection-start="4279" selection-end="4279" vertical-scroll-proportion="-13.384615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1527,19 +1565,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java">
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="29" selection-start="1442" selection-end="1442" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="36" column="64" selection-start="1286" selection-end="1344" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS2011.java">
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="25" selection-start="4279" selection-end="4279" vertical-scroll-proportion="0.66412216">
-          <folding />
+        <state line="54" column="10" selection-start="1041" selection-end="1041" vertical-scroll-proportion="0.57575756">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
