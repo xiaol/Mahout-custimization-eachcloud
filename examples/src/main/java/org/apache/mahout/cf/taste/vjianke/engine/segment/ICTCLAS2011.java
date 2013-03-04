@@ -1,6 +1,8 @@
 package org.apache.mahout.cf.taste.vjianke.engine.segment;
 
 import java.io.*;
+import java.net.URL;
+import java.net.URLClassLoader;
 
 public class ICTCLAS2011 {
     public static native boolean  ICTCLAS_Init(byte[] sDataPath,int encoding);
@@ -132,7 +134,11 @@ public native int ICTCLAS_GetElemLength(int nIndex);
 
     /* Use static intializer */
     static {
-			System.load("examples/target/libICTCLAS2011.so");
+        URL url = ((URLClassLoader) (Thread.currentThread().
+                getContextClassLoader())).getResource("");
+        String path = url.getPath();
+        //path = path.substring(0,path.length()-"classes/".length());
+		System.load(path+"../libICTCLAS2011_64.so");
     }
 }
 
