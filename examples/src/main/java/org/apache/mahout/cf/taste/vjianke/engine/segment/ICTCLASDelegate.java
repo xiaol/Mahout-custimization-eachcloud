@@ -166,7 +166,7 @@ public class ICTCLASDelegate
 		return instance;
 	}
 
-	private ICTCLAS2011 ictclas;
+	private NLPIR ictclas;
 
 	private ICTCLASDelegate()
 	{
@@ -174,18 +174,18 @@ public class ICTCLASDelegate
 
 	public boolean init()
 	{
-		ictclas = new ICTCLAS2011();
-		return ictclas.ICTCLAS_Init(getRootPath().getBytes(defaultCharset),0);
+		ictclas = new NLPIR();
+		return ictclas.NLPIR_Init(getRootPath().getBytes(defaultCharset),0);
 	}
 
 	public boolean exit()
 	{
-		return ictclas.ICTCLAS_Exit();
+		return ictclas.NLPIR_Exit();
 	}
 
 	public int importUserDictFile(String path)
 	{
-		return ictclas.ICTCLAS_ImportUserDict(
+		return ictclas.NLPIR_AddUserWord(
                 path.getBytes(defaultCharset));
 	}
 
@@ -197,7 +197,7 @@ public class ICTCLASDelegate
 
 	public String process(String source, int tagged)
 	{
-		byte[] buff = ictclas.ICTCLAS_ParagraphProcess(
+		byte[] buff = ictclas.NLPIR_ParagraphProcess(
 			source.getBytes(defaultCharset),tagged);
 		return new String(buff, 0, buff.length - 1, defaultCharset);
 	}
