@@ -28,11 +28,13 @@ public class TermVectorBasedSimilarity {
         try{
             IndexReader reader = DirectoryReader.open(
                     FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
-            int[] docIds = new int[] {0, 1, 2, 3};
+            int[] docIds = new int[] {0, 1, 2, 4};
             DocVector[] docs = new DocVector[docIds.length];
             int i = 0;
             for (int docId : docIds) {
                 Map<String,Integer> terms = getTermFrequencies(reader,docId);
+                if(terms == null)
+                    continue;
                 docs[i] = new DocVector(terms);
 
                 for (Map.Entry<String, Integer> term:terms.entrySet()){
@@ -92,6 +94,8 @@ public class TermVectorBasedSimilarity {
     static Map<String, Integer> getTermFrequencies(IndexReader reader, int docId)
             throws IOException {
         Terms vector = reader.getTermVector(docId, TikaIndexer.CONTENT_FIELD);
+        if(vector == null)
+            return null;
         TermsEnum termsEnum = null;
         termsEnum = vector.iterator(termsEnum);
         Map<String, Integer> frequencies = new HashMap<String,Integer>();
