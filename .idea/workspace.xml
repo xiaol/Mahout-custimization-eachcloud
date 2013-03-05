@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/ICTCLAS30.ctx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/ICTCLAS_First.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/userdic.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/BIG2GBK.map" afterPath="$PROJECT_DIR$/examples/target/Data/BIG2GBK.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/BIG5.pdat" afterPath="$PROJECT_DIR$/examples/target/Data/BIG5.pdat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/BIG5.wordlist" afterPath="$PROJECT_DIR$/examples/target/Data/BIG5.wordlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/GBK.pdat" afterPath="$PROJECT_DIR$/examples/target/Data/GBK.pdat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/GBK.wordlist" afterPath="$PROJECT_DIR$/examples/target/Data/GBK.wordlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/GBK2BIG.map" afterPath="$PROJECT_DIR$/examples/target/Data/GBK2BIG.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/GBK2UTF.map" afterPath="$PROJECT_DIR$/examples/target/Data/GBK2UTF.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/UTF2GBK.map" afterPath="$PROJECT_DIR$/examples/target/Data/UTF2GBK.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/UTF8.pdat" afterPath="$PROJECT_DIR$/examples/target/Data/UTF8.pdat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/UTF8.wordlist" afterPath="$PROJECT_DIR$/examples/target/Data/UTF8.wordlist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/UserDict.pdat" afterPath="$PROJECT_DIR$/examples/target/Data/UserDict.pdat" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/target/Data/charset.type" afterPath="$PROJECT_DIR$/examples/target/Data/charset.type" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" afterPath="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -359,7 +346,7 @@
       <file leaf-file-name="ICTCLASDelegate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="14" selection-start="3292" selection-end="3292" vertical-scroll-proportion="0.0">
+            <state line="44" column="43" selection-start="1074" selection-end="1085" vertical-scroll-proportion="-10.461538">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -370,7 +357,7 @@
       <file leaf-file-name="TestNLPIR.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="28" selection-start="477" selection-end="477" vertical-scroll-proportion="0.08926081">
+            <state line="82" column="98" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.66527194">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -390,7 +377,7 @@
       <file leaf-file-name="NLPIR.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="8" selection-start="4468" selection-end="4616" vertical-scroll-proportion="0.0">
+            <state line="16" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -451,8 +438,8 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/TestNLPIR.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIR.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" />
       </list>
     </option>
@@ -575,10 +562,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="mahout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1398,7 +1381,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18965517" sideWeight="0.7715356" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32327586" sideWeight="0.7715356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30962643" sideWeight="0.7715356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17977528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1528,7 +1511,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="14" selection-start="3292" selection-end="3292" vertical-scroll-proportion="0.0">
+        <state line="44" column="43" selection-start="1074" selection-end="1085" vertical-scroll-proportion="-10.461538">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1547,7 +1530,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="8" selection-start="4468" selection-end="4616" vertical-scroll-proportion="0.0">
+        <state line="16" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1556,7 +1539,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="28" selection-start="477" selection-end="477" vertical-scroll-proportion="0.08926081">
+        <state line="82" column="98" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.66527194">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

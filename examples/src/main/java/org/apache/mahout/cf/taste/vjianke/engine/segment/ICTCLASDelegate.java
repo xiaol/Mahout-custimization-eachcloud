@@ -142,13 +142,6 @@ public class ICTCLASDelegate
 		return res.toString();
 	}
 
-	static
-	{
-		if (!is64)
-			System.load(getRootPath() + "ICTCLAS50.dll");
-		else
-			System.load(getRootPath() + "ICTCLAS50_64.dll");
-	}
 	private static ICTCLASDelegate instance;
 
 	public static ICTCLASDelegate getDelegate()

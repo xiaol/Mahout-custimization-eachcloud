@@ -46,26 +46,26 @@ public class TestNLPIR {
 			byte nativeBytes[] = testNLPIR.NLPIR_ParagraphProcess(sInput.getBytes("GB2312"), 1);
 			String nativeStr = new String(nativeBytes, 0, nativeBytes.length, "GB2312");
 	
-			System.out.println("分词结果为： " + nativeStr);
+			System.out.println("分词结果为： " + new String(nativeStr.getBytes("UTF-8"),"UTF-8"));
 
 	
 			
 			//初始化分词组件
-			String argu1 = "E:/NLPIR/test/test.TXT";
-			String argu2 = "E:/NLPIR/test/test_result1.TXT";
+			//String argu1 = "E:/NLPIR/test/test.TXT";
+			//String argu2 = "E:/NLPIR/test/test_result1.TXT";
 		
-			nativeBytes  =testNLPIR.NLPIR_GetFileNewWords(argu1.getBytes("GB2312"),50,true);
+			nativeBytes  =testNLPIR.NLPIR_GetNewWords(sInput.getBytes("GB2312"),50,true);
 			//如果是处理内存，可以调用testNLPIR.NLPIR_GetNewWords
 			nativeStr = new String(nativeBytes, 0, nativeBytes.length, "GB2312");
-			System.out.println("新词识别结果为： " + nativeStr);
+			System.out.println("新词识别结果为： " + new String(nativeStr.getBytes("UTF-8"),"UTF-8"));
 			
-			nativeBytes  =testNLPIR.NLPIR_GetFileKeyWords(argu1.getBytes("GB2312"),50,true);
+			nativeBytes  =testNLPIR.NLPIR_GetKeyWords(sInput.getBytes("GB2312"),50,true);
 			//如果是处理内存，可以调用testNLPIR.NLPIR_GetKeyWords
 			nativeStr = new String(nativeBytes, 0, nativeBytes.length, "GB2312");
-			System.out.println("关键词识别结果为： " + nativeStr);
+			System.out.println("关键词识别结果为： " + new String(nativeStr.getBytes("UTF-8"),"UTF-8"));
 			
 			
-			
+			/*
 			testNLPIR.NLPIR_FileProcess(argu1.getBytes("GB2312"), argu2.getBytes("GB2312"), 1);
 	
 			testNLPIR.NLPIR_NWI_Start();
@@ -80,7 +80,7 @@ public class TestNLPIR {
 		
 			testNLPIR.NLPIR_NWI_Result2UserDict();//新词识别结果
 			argu2 = "E:/NLPIR/test/test_result2.TXT";
-			testNLPIR.NLPIR_FileProcess(argu1.getBytes("GB2312"), argu2.getBytes("GB2312"), 1);
+			testNLPIR.NLPIR_FileProcess(argu1.getBytes("GB2312"), argu2.getBytes("GB2312"), 1); */
 	
 			testNLPIR.NLPIR_Exit();
 		}
