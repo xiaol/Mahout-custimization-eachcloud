@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASAnalyzer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRAnalyzer.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRDelegate.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASTokenizer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRTokenizer.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS2011.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASAnalyzer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate$ECodeType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASTokenizer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/Result.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/classes/org/apache/mahout/cf/taste/vjianke/engine/segment/TestICTCLAS2011.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" afterPath="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -251,7 +256,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="93" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="95" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -265,6 +270,19 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
       <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentCalc.java" line="168" class="org.apache.mahout.cf.taste.vjianke.engine.ContentCalc" package="org.apache.mahout.cf.taste.vjianke.engine">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="107" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -336,19 +354,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Analyzer.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/4.1.0/lucene-core-4.1.0.jar!/org/apache/lucene/analysis/Analyzer.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="29" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="NLPIRDelegate.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRDelegate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="18" selection-start="432" selection-end="432" vertical-scroll-proportion="25.846153">
+            <state line="16" column="18" selection-start="432" selection-end="432" vertical-scroll-proportion="6.1538463">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -359,7 +368,7 @@
       <file leaf-file-name="TestNLPIR.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="55" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.7810321">
+            <state line="66" column="21" selection-start="4844" selection-end="4844" vertical-scroll-proportion="-0.8576779">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -379,7 +388,7 @@
       <file leaf-file-name="NLPIR.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
+            <state line="19" column="33" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -414,6 +423,17 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="TermVectorBasedSimilarity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="38" column="55" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#3517#3533#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -427,7 +447,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/VecTextField.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLAS/kevin/zhang/ICTCLAS2011.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/WordReader.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
@@ -442,6 +461,7 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/ICTCLASDelegate.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRDelegate.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRAnalyzer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java" />
       </list>
     </option>
@@ -972,7 +992,7 @@
       <PyConsoleSettings />
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestICTCLAS2011">
+  <component name="RunManager" selected="Application.TermVectorBasedSimilarity">
     <configuration default="false" name="BoardBasedRecommendEntryPoint" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1318,23 +1338,23 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22846442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22846442" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20848939" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32958803" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18965517" sideWeight="0.7715356" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31609195" sideWeight="0.7715356" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24281609" sideWeight="0.7715356" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17977528" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16729088" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20848939" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1423,11 +1443,6 @@
         <state line="15" column="41" selection-start="689" selection-end="689" vertical-scroll-proportion="0.4014337" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="3451" selection-end="3451" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/apache/lucene/lucene-core/4.1.0/lucene-core-4.1.0.jar!/org/apache/lucene/analysis/Analyzer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="29" selection-start="817" selection-end="817" vertical-scroll-proportion="0.0">
@@ -1435,51 +1450,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="64" selection-start="1286" selection-end="1344" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentCalc.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="37" selection-start="6907" selection-end="6907" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="13" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="34" selection-start="780" selection-end="780" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/WordReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="13" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRDelegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="18" selection-start="432" selection-end="432" vertical-scroll-proportion="25.846153">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRTokenizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1491,9 +1464,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/NLPIR.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="33" selection-start="885" selection-end="885" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="64" selection-start="1286" selection-end="1344" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentCalc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="37" selection-start="6907" selection-end="6907" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/WordReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="13" selection-start="182" selection-end="182" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="55" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3517#3533#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRTokenizer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="466" selection-end="466" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/segment/NLPIRDelegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="18" selection-start="432" selection-end="432" vertical-scroll-proportion="6.1538463">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/kevin/zhang/TestNLPIR.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="55" selection-start="1655" selection-end="1655" vertical-scroll-proportion="0.7810321">
+        <state line="66" column="21" selection-start="4844" selection-end="4844" vertical-scroll-proportion="-0.8576779">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
