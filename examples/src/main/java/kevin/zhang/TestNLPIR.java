@@ -1,6 +1,8 @@
 package kevin.zhang;
 
 
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.*;
 import java.io.*;
 
@@ -28,10 +30,13 @@ public class TestNLPIR {
 		try
 		{
 			NLPIR testNLPIR = new NLPIR();
-	
-			String argu = "../../";
+
+            URL url = ((URLClassLoader) (Thread.currentThread().
+                    getContextClassLoader())).getResource("");
+            String path = url.getPath();
+			String argu = path+"../";
 			System.out.println("NLPIR_Init");
-			if (testNLPIR.NLPIR_Init("".getBytes(),1) == false)
+			if (testNLPIR.NLPIR_Init(argu.getBytes(),1) == false)
 			{
 				System.out.println("Init Fail!");
 				return;
