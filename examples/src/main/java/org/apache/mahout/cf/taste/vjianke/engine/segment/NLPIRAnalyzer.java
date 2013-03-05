@@ -2,24 +2,27 @@ package org.apache.mahout.cf.taste.vjianke.engine.segment;
 
 import java.io.Reader;
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.Tokenizer;
 
 
-public class ICTCLASAnalyzer extends Analyzer {
+public class NLPIRAnalyzer extends Analyzer {
 
 
-	private ICTCLASDelegate ictc;
+	private NLPIRDelegate ictc;
 	private String result;
 
-	public ICTCLASAnalyzer() {
+	public NLPIRAnalyzer() {
 		this(null);
 	}
 
     @Override
     protected TokenStreamComponents createComponents(String s, Reader reader) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+
+        Tokenizer tokenizer = new NLPIRTokenizer(reader);
+        return new TokenStreamComponents(tokenizer, null);
     }
 
-    public ICTCLASAnalyzer(ICTCLASDelegate ictc) {
+    public NLPIRAnalyzer(NLPIRDelegate ictc) {
 		this.ictc = ictc;
 	}
 

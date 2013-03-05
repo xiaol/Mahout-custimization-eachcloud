@@ -15,12 +15,12 @@ import java.util.regex.Pattern;
  * Time: 下午6:05
  * To change this template use File | Settings | File Templates.
  */
-public final class ICTCLASTokenizer extends Tokenizer{
+public final class NLPIRTokenizer extends Tokenizer{
     //private TermAttribute termAttr;
     private OffsetAttribute offAttr;
     private Matcher matcher;
 
-    protected ICTCLASTokenizer(Reader input) {
+    protected NLPIRTokenizer(Reader input) {
         super(input);
     }
 

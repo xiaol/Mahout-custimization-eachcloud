@@ -14,7 +14,7 @@ import java.nio.charset.Charset;
 import java.util.HashMap;
 
 
-public class ICTCLASDelegate
+public class NLPIRDelegate
 {
 	public enum ECodeType
 	{
@@ -53,7 +53,7 @@ public class ICTCLASDelegate
 	{
 		if (ictclasPath == null)
 		{
-			ictclasPath = ICTCLASDelegate.class.getResource("/").getFile().substring(
+			ictclasPath = NLPIRDelegate.class.getResource("/").getFile().substring(
 				1)
 					+ libLocation;
 		}
@@ -142,17 +142,17 @@ public class ICTCLASDelegate
 		return res.toString();
 	}
 
-	private static ICTCLASDelegate instance;
+	private static NLPIRDelegate instance;
 
-	public static ICTCLASDelegate getDelegate()
+	public static NLPIRDelegate getDelegate()
 	{
 		if (instance == null)
 		{
-			synchronized (ICTCLASDelegate.class)
+			synchronized (NLPIRDelegate.class)
 			{
 				if (instance == null)
 				{
-					instance = new ICTCLASDelegate();
+					instance = new NLPIRDelegate();
 					instance.init();
 					instance.importUserDictFile(getRootPath() + userDict);
 				}
@@ -163,7 +163,7 @@ public class ICTCLASDelegate
 
 	private NLPIR ictclas;
 
-	private ICTCLASDelegate()
+	private NLPIRDelegate()
 	{
 	}
 
@@ -302,7 +302,7 @@ public class ICTCLASDelegate
 			PrintWriter out = new PrintWriter(new OutputStreamWriter(
 					new FileOutputStream(getRootPath() + userDict),
 					defaultCharset));
-			ICTCLASDelegate d = ICTCLASDelegate.getDelegate();
+			NLPIRDelegate d = NLPIRDelegate.getDelegate();
 			int i = 0;
 			while (in.ready())
 			{
