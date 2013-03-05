@@ -1,5 +1,7 @@
 package org.apache.mahout.cf.taste.vjianke.engine.segment;
 
+import kevin.zhang.NLPIR;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -175,7 +177,7 @@ public class ICTCLASDelegate
 	public boolean init()
 	{
 		ictclas = new NLPIR();
-		return ictclas.NLPIR_Init(getRootPath().getBytes(defaultCharset),0);
+		return ictclas.NLPIR_Init(getRootPath().getBytes(defaultCharset), 0);
 	}
 
 	public boolean exit()
@@ -198,7 +200,7 @@ public class ICTCLASDelegate
 	public String process(String source, int tagged)
 	{
 		byte[] buff = ictclas.NLPIR_ParagraphProcess(
-			source.getBytes(defaultCharset),tagged);
+                source.getBytes(defaultCharset), tagged);
 		return new String(buff, 0, buff.length - 1, defaultCharset);
 	}
 

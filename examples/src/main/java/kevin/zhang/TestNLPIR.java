@@ -1,4 +1,4 @@
-package org.apache.mahout.cf.taste.vjianke.engine.segment;
+package kevin.zhang;
 
 
 import java.util.*;
@@ -31,7 +31,7 @@ public class TestNLPIR {
 	
 			String argu = "../../";
 			System.out.println("NLPIR_Init");
-			if (testNLPIR.NLPIR_Init(argu.getBytes("GB2312"),1) == false)
+			if (testNLPIR.NLPIR_Init("".getBytes(),1) == false)
 			{
 				System.out.println("Init Fail!");
 				return;

@@ -1,4 +1,4 @@
-package org.apache.mahout.cf.taste.vjianke.engine.segment;
+package kevin.zhang;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -129,7 +129,7 @@ public native int  NLPIR_NWI_Result2UserDict();//新词识别结果转为用户�
                 getContextClassLoader())).getResource("");
         String path = url.getPath();
         //path = path.substring(0,path.length()-"classes/".length());
-        System.load(path+"../libNLPIR_JNI.so");
+        System.load(path + "../libNLPIR_JNI.so");
     }
 }
 
