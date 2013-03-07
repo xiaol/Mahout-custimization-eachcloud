@@ -6,6 +6,7 @@ import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import java.util.UUID;
 
@@ -97,14 +98,15 @@ public class Datalayer {
         return userEntity;
     }
 
-    public List<UserEntity> QueryUsers(){
+    public Hashtable<String, UserEntity> QueryUsers(){
         // The types for the following variables are
         // defined in the java.sql library.
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
 
-        List<UserEntity> userEntities = new ArrayList<UserEntity>();
+        Hashtable<String, UserEntity> userEntities =
+                new Hashtable<String, UserEntity>();
         try
         {
             String sqlString = "SELECT * FROM PanamaUserEntity";
@@ -122,7 +124,7 @@ public class Datalayer {
                 userEntity.setUuid(resultSet.getString(1));
                 userEntity.setUser_screen_name(resultSet.getString(3));
                 userEntity.setProfile_image_url(resultSet.getString(17));
-                userEntities.add(userEntity);
+                userEntities.put(userEntity.uuid,userEntity);
                 rowCount++;
             }
 
@@ -531,7 +533,7 @@ public class Datalayer {
         List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
         try
         {
-            String sqlString = "SELECT TOP 10 Id,title FROM ClipEntity ";
+            String sqlString = "SELECT TOP 1000 Id,title FROM ClipEntity ";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);

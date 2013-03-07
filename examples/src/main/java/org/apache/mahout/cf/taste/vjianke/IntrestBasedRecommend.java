@@ -56,6 +56,9 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
 
 
         int userIndex = users.indexOf(UUID.fromString(strUuid/*"07221718-b190-4536-8191-a0410029de34")*/));
+        if(userIndex == -1){   // user never click in board
+           return Collections.emptyList();
+        }
 
         long[] theNeighborhood = neighborhood.getUserNeighborhood(userIndex);
 
