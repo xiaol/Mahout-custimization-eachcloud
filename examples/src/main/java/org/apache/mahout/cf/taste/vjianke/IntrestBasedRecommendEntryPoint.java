@@ -25,8 +25,9 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class IntrestBasedRecommendEntryPoint {
-    public static List<String> version = Arrays.asList("1.0v");
+    public static List<String> version = Arrays.asList("1.1v");
     public static boolean bSwitch = false;
+    public static boolean bDebug = false;
     public static List<String> mates =
             Arrays.asList(
                     "07221718-b190-4536-8191-a0410029de34",     // ivanl
@@ -87,11 +88,12 @@ public class IntrestBasedRecommendEntryPoint {
                     new BoardBasedRecommend(genericDataModel, itemSimilarity);
         }
 
-        for(String uuid: mates){
-            List<String> boards = datalayer.querySubscription(uuid);
+        Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
+        for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
+            List<String> boards = datalayer.querySubscription(userEntity.getKey());
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
-            System.out.println("users:" + uuid + "  "+ count);
+            System.out.println("users:" + userEntity.getKey() + "  "+ count);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
             for(final String board:boards){
@@ -122,7 +124,7 @@ public class IntrestBasedRecommendEntryPoint {
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
                 RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
-                List<RecommendClipEntity> results = proceed(uuid, recommend,
+                List<RecommendClipEntity> results = proceed(userEntity.getKey(), userEntities,recommend,
                         prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"");
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
@@ -134,13 +136,14 @@ public class IntrestBasedRecommendEntryPoint {
             if(recommendClipEntityList.isEmpty()){
                 //System.out.println("no recommend clip found totally.");
             }else{
-
-                azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+                if(!bDebug)
+                    azureStorageHelper.uploadToAzureTable(
+                            "RecommendClipEntity",recommendClipEntityList);
             }
             recommendClipEntityList.clear();
 
             if(bSwitch){
-                List<String> createdBoards = datalayer.queryCreatedBoards(uuid);
+                List<String> createdBoards = datalayer.queryCreatedBoards(userEntity.getKey());
                 for(String board:createdBoards){
                     List<RecommendedItem> items = boardBasedRecommend.mostSimilarItems(boardIds.indexOf(board),1);
                     for(RecommendedItem item:items){
@@ -163,7 +166,7 @@ public class IntrestBasedRecommendEntryPoint {
                                 new NearestNUserNeighborhood(users.size(), similarity, model);
                         IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                        List<RecommendClipEntity> results = proceed(uuid, recommend,
+                        List<RecommendClipEntity> results = proceed(userEntity.getKey(),userEntities, recommend,
                                 prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix);
                         for(RecommendClipEntity entity:results){
                             recommendClipEntityList.add(entity);
@@ -176,7 +179,8 @@ public class IntrestBasedRecommendEntryPoint {
                 if(recommendClipEntityList.isEmpty()){
                     //System.out.println("no recommend clip found totally.");
                 }else{
-                    //azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+                    if(!bDebug)
+                        azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
                 }
                 recommendClipEntityList.clear();
             }
@@ -184,7 +188,7 @@ public class IntrestBasedRecommendEntryPoint {
 
     }
 
-    public static List<RecommendClipEntity> proceed(String uuid,
+    public static List<RecommendClipEntity> proceed(String uuid, Hashtable<String, Datalayer.UserEntity> userEntityHashtable,
                                IntrestBasedRecommend recommend,
                                FastByIDMap<FastIDSet> prefsIDSet,
                                ArrayList<UUID> users,
@@ -193,6 +197,9 @@ public class IntrestBasedRecommendEntryPoint {
                                Timestamp _tsEnd, int howMany, String prefix) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
+        if(bDebug && uuid.toUpperCase().equals("818D0F1A-8295-473F-91F9-A0F900546786")) {
+            System.out.println("Null PointerException");
+        }
         List<RecommendedItem> recommendedItemList =
                 recommend.recommend(uuid, users, howMany, neighborhoodUsers);
 
@@ -243,7 +250,13 @@ public class IntrestBasedRecommendEntryPoint {
                 continue;
             }
 
-            Datalayer.UserEntity userEntity = datalayer.Query(users.get((int) mate).toString());
+            Datalayer.UserEntity userEntity = userEntityHashtable.get(users.get((int) mate).toString().toUpperCase());
+            if(userEntity == null){
+                if(bDebug)
+                    System.out.println("can't find user in hashtable");
+                userEntity = datalayer.Query(users.get((int) mate).toString());
+
+            }
             clipEntity.setRecommendStrategy("user-based:log-likelyhood");
             clipEntity.setRecommendContext("feedhome");
             clipEntity.setBase36(clipId);
@@ -252,7 +265,9 @@ public class IntrestBasedRecommendEntryPoint {
 
             String strSource= prefix;
             for(int i =0; i< arraySourceUser.size();i++){
-                Datalayer.UserEntity entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
+                Datalayer.UserEntity entity = userEntityHashtable.get(users.get(arraySourceUser.get(i).intValue()).toString().toUpperCase());
+                if(entity == null)
+                    entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
                 strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
             }
             //System.out.println(strSource);

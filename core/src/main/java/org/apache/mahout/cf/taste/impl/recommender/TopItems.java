@@ -75,6 +75,8 @@ public final class TopItems {
             full = true;
             topItems.poll();
           }
+          if(topItems.isEmpty())
+              continue;
           lowestTopValue = topItems.peek().getValue();
         }
       }

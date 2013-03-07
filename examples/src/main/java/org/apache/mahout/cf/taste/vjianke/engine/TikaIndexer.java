@@ -36,6 +36,8 @@ import java.util.List;
 public class TikaIndexer {
     public static String INDEX_PATH = "examples/target/index";
     public static String CONTENT_FIELD = "contents";
+    public static String CLIP_ID = "clipId";
+    public static String CLIP_TITLE = "clipTitle";
     public TikaIndexer(){
     }
 
@@ -88,9 +90,9 @@ public class TikaIndexer {
         }
     }
 
-    static Document getDocument(String clipId,InputStream is) throws Exception {
+    static Document getDocument(Datalayer.ClipEntity entity,InputStream is) throws Exception {
         Metadata metadata = new Metadata();
-        metadata.set(Metadata.RESOURCE_NAME_KEY, clipId);
+        metadata.set(Metadata.RESOURCE_NAME_KEY, entity.id);
         Parser parser = new HtmlParser();
         ContentHandler handler = new BodyContentHandler();
         ParseContext context = new ParseContext();
@@ -106,14 +108,15 @@ public class TikaIndexer {
         // field that is indexed (i.e. searchable), but don't tokenize
         // the field into separate words and don't index term frequency
         // or positional information:
-        Field pathField = new StringField("clipId", clipId, Field.Store.YES);
+        Field pathField = new StringField(CLIP_ID, entity.id, Field.Store.YES);
         doc.add(pathField);
 
         // Add the contents of the file to a field named "contents".  Specify a Reader,
         // so that the text of the file is tokenized and indexed, but not stored.
         // Note that FileReader expects the file to be in UTF-8 encoding.
         // If that's not the case searching for special characters will fail.
-        doc.add(new VecTextField("contents", handler.toString(),Field.Store.NO));
+        doc.add(new VecTextField(CONTENT_FIELD, handler.toString(),Field.Store.NO));
+        doc.add(new VecTextField(CLIP_TITLE,entity.title, Field.Store.YES));
         return doc;
     }
 
@@ -127,7 +130,7 @@ public class TikaIndexer {
             try {
                 System.out.print(entity.id + " ");
                 ByteArrayOutputStream outputStream = helper.getClipBlob(entity.id);
-                Document doc = getDocument(entity.id, new ByteArrayInputStream(outputStream.toByteArray()));
+                Document doc = getDocument(entity, new ByteArrayInputStream(outputStream.toByteArray()));
                 writer.addDocument(doc);
             } catch (StorageException e) {
                 e.printStackTrace();
