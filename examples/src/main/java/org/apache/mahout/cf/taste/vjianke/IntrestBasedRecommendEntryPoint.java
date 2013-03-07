@@ -117,6 +117,9 @@ public class IntrestBasedRecommendEntryPoint {
                 }
                 DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
 
+                if(users.size() < 1)
+                    continue;
+
                 UserSimilarity similarity =
                         new LogLikelihoodSimilarity(model);
                 UserNeighborhood neighborhood =
@@ -157,6 +160,9 @@ public class IntrestBasedRecommendEntryPoint {
                             continue;
 
                         datalayer.fetchData(prefsMap, users, clipIds);
+                        if(users.size() < 1)
+                            continue;
+
                         prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
                         DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
 
