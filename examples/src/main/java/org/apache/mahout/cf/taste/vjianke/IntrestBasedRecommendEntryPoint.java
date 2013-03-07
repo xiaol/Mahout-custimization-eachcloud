@@ -27,7 +27,7 @@ import java.util.*;
 public class IntrestBasedRecommendEntryPoint {
     public static List<String> version = Arrays.asList("1.1v");
     public static boolean bSwitch = false;
-    public static boolean bDebug = true;
+    public static boolean bDebug = false;
     public static List<String> mates =
             Arrays.asList(
                     "07221718-b190-4536-8191-a0410029de34",     // ivanl
