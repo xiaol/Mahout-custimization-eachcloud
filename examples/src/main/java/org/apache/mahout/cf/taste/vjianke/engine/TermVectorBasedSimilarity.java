@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
+import com.google.common.collect.TreeMultimap;
 import org.apache.commons.math3.linear.OpenMapRealVector;
 import org.apache.commons.math3.linear.RealVectorFormat;
 import org.apache.commons.math3.linear.SparseRealVector;
@@ -49,15 +50,20 @@ public class TermVectorBasedSimilarity {
             for(int i =0; i < docsCount-1; i++){
                 for(int j = i+1; j < docsCount; j++) {
                     double cosim = getCosineSimilarity(docs[i], docs[j]);
-                    docs[i].vectorSim.setEntry(j,cosim);
+                    docs[i].simap.put(cosim,j);
                 }
             }
 
             for(int i=0; i< docsCount; i++){
-                int mostDoc = docs[i].vectorSim.getMaxIndex();
-                System.out.println(reader.document(i).get("clipId")+
-                        ": --> "+ reader.document(mostDoc).get("clipId") +
-                        ": "+ docs[i].vectorSim.getMaxValue());
+                int count = 0;
+                for(Map.Entry<Double, Integer> simEntity :docs[i].simap.entries()) {
+                    System.out.println(reader.document(i).get("clipId")+
+                            ": --> "+ reader.document(simEntity.getValue()).get("clipId") +
+                            ": "+ simEntity.getKey());
+                    count++;
+                    if(count == 3)
+                        break;
+                }
             }
             reader.close();
         }catch (IOException e){
@@ -74,15 +80,15 @@ public class TermVectorBasedSimilarity {
     static class DocVector {
         public Map<String,Double> terms;
         public SparseRealVector vector;
-        public SparseRealVector vectorSim;
+        public TreeMultimap<Double, Integer> simap;
 
         public DocVector(Map<String,Double> terms) {
             this.terms = terms;
+            this.simap = TreeMultimap.create();
         }
 
         public void initVec(int docsCount){
             this.vector = new OpenMapRealVector(termsTable.size());
-            this.vectorSim = new OpenMapRealVector(docsCount);
         }
 
         public void setEntry(String term) {
