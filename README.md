@@ -23,3 +23,5 @@ git add .
 git commit -m "Start using .gitignore"
 
 mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TikaIndexer"
+
+create folder examples/target/index
