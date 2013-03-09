@@ -24,4 +24,8 @@ git commit -m "Start using .gitignore"
 
 mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TikaIndexer"
 
+<<<<<<< HEAD
 create folder examples/target/index
+=======
+mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity"
+>>>>>>> eef9e6887728de037c7917c84fda6b157f4534a5
