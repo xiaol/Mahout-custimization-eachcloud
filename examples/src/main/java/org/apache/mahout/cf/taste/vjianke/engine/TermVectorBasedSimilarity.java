@@ -11,6 +11,7 @@ import org.apache.commons.math3.linear.SparseRealVector;
 import org.apache.lucene.index.*;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.BytesRef;
+import org.apache.mahout.cf.taste.vjianke.AzureStorageHelper;
 
 
 /**
@@ -23,6 +24,7 @@ import org.apache.lucene.util.BytesRef;
 public class TermVectorBasedSimilarity {
     public static Hashtable<String,Integer> termsTable =
             new Hashtable<String, Integer>();
+    public static boolean bDebug = false;
 
     public static void main(String[] args){
         try{
@@ -47,23 +49,51 @@ public class TermVectorBasedSimilarity {
                 //docVector.normalize();
             }
 
+            Date start = new Date();
             for(int i =0; i < docsCount-1; i++){
                 for(int j = i+1; j < docsCount; j++) {
                     double cosim = getCosineSimilarity(docs[i], docs[j]);
-                    docs[i].simap.put(cosim,j);
+                    if(docs[i].simap.containsKey(cosim)){
+                        docs[i].simap.get(cosim).add(j);
+                    }else{
+                        List<Integer> docsIndexs = new ArrayList<Integer>();
+                        docsIndexs.add(j);
+                        docs[i].simap.put(cosim,docsIndexs);
+                    }
+
                 }
             }
+            Date end = new Date();
+            System.out.println((end.getTime() - start.getTime())/60000 + "minutes to build rank map");
 
+            AzureStorageHelper helper = new AzureStorageHelper();
+            helper.init();
+            List<SuggestedClipEntity> suggestedClipEntities =
+                    new ArrayList<SuggestedClipEntity>();
             for(int i=0; i< docsCount; i++){
                 int count = 0;
-                for(Map.Entry<Double, Integer> simEntity :docs[i].simap.entries()) {
-                    System.out.println(reader.document(i).get("clipId")+
-                            ": --> "+ reader.document(simEntity.getValue()).get("clipId") +
-                            ": "+ simEntity.getKey());
-                    count++;
-                    if(count == 3)
+                for(Map.Entry<Double, List<Integer>> simEntity :
+                        docs[i].simap.descendingMap().entrySet()) {
+                    if(isNaN(simEntity.getKey()) || simEntity.getKey() > 0.9)
+                        continue;
+                    for(Integer docIndex:simEntity.getValue()) {
+                        //System.out.println(reader.document(i).get("clipId")+
+                                //": --> "+ reader.document(docIndex).get("clipId") +
+                                //": "+ simEntity.getKey());
+                        proceed(reader.document(i).get("clipId"),String.format("%03d",count),
+                                reader.document(docIndex).get("clipId"),simEntity.getKey(),helper,
+                                suggestedClipEntities);
+                        count++;
+                    }
+
+                    if(count >= 3)
                         break;
                 }
+                if(!bDebug)
+                    helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+                suggestedClipEntities.clear();
+                if(i%10000 == 0)
+                    System.out.println(i);
             }
             reader.close();
         }catch (IOException e){
@@ -80,11 +110,11 @@ public class TermVectorBasedSimilarity {
     static class DocVector {
         public Map<String,Double> terms;
         public SparseRealVector vector;
-        public TreeMultimap<Double, Integer> simap;
+        public TreeMap<Double, List<Integer>> simap;
 
         public DocVector(Map<String,Double> terms) {
             this.terms = terms;
-            this.simap = TreeMultimap.create();
+            this.simap = new TreeMap<Double, List<Integer>>();
         }
 
         public void initVec(int docsCount){
@@ -131,8 +161,8 @@ public class TermVectorBasedSimilarity {
             frequencies.put(term, score);
             if(!termsTable.containsKey(term))
                 termsTable.put(term, termsTable.size());
-            if(docFreq != 1)
-                System.out.print(term+": "+score+" " + docFreq +" | ");
+            //if(docFreq != 1)
+                //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
 
         vector = reader.getTermVector(docId, TikaIndexer.CLIP_TITLE);
@@ -149,9 +179,57 @@ public class TermVectorBasedSimilarity {
             frequencies.put(term, score);
             if(!termsTable.containsKey(term))
                 termsTable.put(term, termsTable.size());
-            if(docFreq != 1)
-                System.out.print(term+": "+score+" " + docFreq +" | ");
+            //if(docFreq != 1)
+                //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
         return frequencies;
+    }
+
+    public static void proceed(String clipId, String rowKey, String desClipId, Double rank,
+                            AzureStorageHelper azureStorageHelper,
+                            List<SuggestedClipEntity> suggestedClipEntities){
+
+
+        AzureStorageHelper.FeedClipEntity feedClipEntity =
+                azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
+
+        if(feedClipEntity == null){
+            //System.out.println("Can't retrieve Clip: " +clipId);
+            return ;
+        }
+        SuggestedClipEntity clipEntity = new SuggestedClipEntity(clipId,rowKey);
+        clipEntity.setBase36(desClipId);
+        clipEntity.setAction("Suggest");
+        clipEntity.setRank(Double.toString(rank));
+
+        clipEntity.setSenderComment("");
+        clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
+        clipEntity.sethasUT(feedClipEntity.gethasUT());
+        clipEntity.setcontentTitle(feedClipEntity.getcontentTitle());
+        clipEntity.setheight(feedClipEntity.getheight());
+        clipEntity.setwidth(feedClipEntity.getwidth());
+
+        clipEntity.setorigheight(feedClipEntity.getorigheight());
+        clipEntity.setorigsite(feedClipEntity.getorigheight());
+        clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        clipEntity.setorigurl(feedClipEntity.getorigurl());
+        clipEntity.setorigwidth(feedClipEntity.getorigwidth());
+        clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
+        clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
+        clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
+        clipEntity.settitlePic(feedClipEntity.gettitlePic());
+        clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
+        clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
+        clipEntity.settype(feedClipEntity.gettype());
+
+        clipEntity.setuguid(feedClipEntity.getuguid());
+        clipEntity.setuimage(feedClipEntity.getuimage());
+        clipEntity.setuname(feedClipEntity.getuname());
+
+        suggestedClipEntities.add(clipEntity);
+    }
+
+    static public boolean isNaN(double v) {
+        return (v != v);
     }
 }
