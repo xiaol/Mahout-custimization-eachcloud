@@ -24,6 +24,9 @@ import org.apache.mahout.cf.taste.vjianke.AzureStorageHelper;
 public class TermVectorBasedSimilarity {
     public static Hashtable<String,Integer> termsTable =
             new Hashtable<String, Integer>();
+    public static Hashtable<String,Integer> termsDocFreq =
+            new Hashtable<String, Integer>();
+
     public static boolean bDebug = false;
 
     public static void main(String[] args){
@@ -34,9 +37,9 @@ public class TermVectorBasedSimilarity {
             int docsCount = reader.maxDoc();
             DocVector[] docs = new DocVector[docsCount];
             for (int i =0; i < docsCount; i++) {
-                Map<String,Double> terms = getTermFrequencies(reader,i);
+                Map<String,Integer> terms = getTermFrequencies(reader,i);
                 if(terms == null){
-                    docs[i] = new DocVector(new HashMap<String, Double>());
+                    docs[i] = new DocVector(new HashMap<String, Integer>());
                     continue;
                 }
                 docs[i] = new DocVector(terms);
@@ -44,7 +47,7 @@ public class TermVectorBasedSimilarity {
             for(DocVector docVector:docs){
                 docVector.initVec(docsCount);
                 for(Map.Entry<String, Integer> term: termsTable.entrySet()){
-                    docVector.setEntry(term.getKey());
+                    docVector.setEntry(term.getKey(), docsCount);
                 }
                 //docVector.normalize();
             }
@@ -64,7 +67,7 @@ public class TermVectorBasedSimilarity {
                 }
             }
             Date end = new Date();
-            System.out.println((end.getTime() - start.getTime())/60000 + "minutes to build rank map");
+            System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
 
             AzureStorageHelper helper = new AzureStorageHelper();
             helper.init();
@@ -102,17 +105,25 @@ public class TermVectorBasedSimilarity {
 
     }
 
+    static void parallelProducer(int docId ){
+
+    }
+
+    static void parallelComparer(int docId1, int docId2){
+
+    }
+
     static double getCosineSimilarity(DocVector d1, DocVector d2) {
         return (d1.vector.dotProduct(d2.vector)) /
                 (d1.vector.getNorm() * d2.vector.getNorm()+1);
     }
 
     static class DocVector {
-        public Map<String,Double> terms;
+        public Map<String,Integer> terms;
         public SparseRealVector vector;
         public TreeMap<Double, List<Integer>> simap;
 
-        public DocVector(Map<String,Double> terms) {
+        public DocVector(Map<String,Integer> terms) {
             this.terms = terms;
             this.simap = new TreeMap<Double, List<Integer>>();
         }
@@ -121,11 +132,12 @@ public class TermVectorBasedSimilarity {
             this.vector = new OpenMapRealVector(termsTable.size());
         }
 
-        public void setEntry(String term) {
+        public void setEntry(String term, int docCounts) {
             int pos = (Integer) termsTable.get(term);
             if (terms.containsKey(term)) {
-
-                vector.setEntry(pos, (double) terms.get(term));
+                int docFreq = termsDocFreq.get(term);
+                double score = terms.get(term)*Math.log(docCounts/(double)docFreq+1);
+                vector.setEntry(pos, score );
             }else{
                 vector.setEntry(pos, 0);
             }
@@ -142,25 +154,28 @@ public class TermVectorBasedSimilarity {
         }
     }
 
-    static Map<String, Double> getTermFrequencies(IndexReader reader, int docId)
+    static Map<String, Integer> getTermFrequencies(IndexReader reader, int docId)
             throws IOException {
         Terms vector = reader.getTermVector(docId, TikaIndexer.CONTENT_FIELD);
         if(vector == null)
             return null;
         TermsEnum termsEnum = null;
         termsEnum = vector.iterator(termsEnum);
-        Map<String, Double> frequencies = new HashMap<String,Double>();
+        Map<String, Integer> frequencies = new HashMap<String,Integer>();
         BytesRef text = null;
         while ((text = termsEnum.next()) != null) {
             String term = text.utf8ToString();
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
-            int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
-            double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
-            frequencies.put(term, score);
-            if(!termsTable.containsKey(term))
+
+            frequencies.put(term, freq);
+            if(!termsTable.containsKey(term)){
                 termsTable.put(term, termsTable.size());
+                termsDocFreq.put(term, 1);
+            }else{
+                termsDocFreq.put(term, termsDocFreq.get(term)+1);
+            }
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
@@ -174,11 +189,13 @@ public class TermVectorBasedSimilarity {
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
-            int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
-            double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
-            frequencies.put(term, score);
-            if(!termsTable.containsKey(term))
+            frequencies.put(term, freq);
+            if(!termsTable.containsKey(term)){
                 termsTable.put(term, termsTable.size());
+                termsDocFreq.put(term, 1);
+            }else{
+                termsDocFreq.put(term, termsDocFreq.get(term)+1);
+            }
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
