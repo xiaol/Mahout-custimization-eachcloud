@@ -3,6 +3,7 @@ package org.apache.mahout.cf.taste.vjianke.engine;
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.FieldType;
+import org.apache.lucene.index.FieldInfo;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,12 +22,14 @@ public class VecTextField extends Field {
 
     static {
         TYPE_NOT_STORED.setIndexed(true);
+        TYPE_NOT_STORED.setIndexOptions(FieldInfo.IndexOptions.DOCS_AND_FREQS_AND_POSITIONS);
         TYPE_NOT_STORED.setTokenized(true);
         TYPE_NOT_STORED.setStoreTermVectors(true);
         TYPE_NOT_STORED.setStoreTermVectorPositions(true);
         TYPE_NOT_STORED.freeze();
 
         TYPE_STORED.setIndexed(true);
+        TYPE_STORED.setIndexOptions(FieldInfo.IndexOptions.DOCS_AND_FREQS_AND_POSITIONS);
         TYPE_STORED.setTokenized(true);
         TYPE_STORED.setStored(true);
         TYPE_STORED.setStoreTermVectors(true);

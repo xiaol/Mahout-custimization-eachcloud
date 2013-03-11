@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-import com.google.common.collect.TreeMultimap;
 import org.apache.commons.math3.linear.OpenMapRealVector;
 import org.apache.commons.math3.linear.RealVectorFormat;
 import org.apache.commons.math3.linear.SparseRealVector;
@@ -27,77 +26,25 @@ public class TermVectorBasedSimilarity {
     public static Hashtable<String,Integer> termsDocFreq =
             new Hashtable<String, Integer>();
 
-    public static boolean bDebug = false;
+    public static boolean bDebug = true;
 
     public static void main(String[] args){
         try{
             IndexReader reader = DirectoryReader.open(
                     FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
-
-            int docsCount = reader.maxDoc();
-            DocVector[] docs = new DocVector[docsCount];
-            for (int i =0; i < docsCount; i++) {
-                Map<String,Integer> terms = getTermFrequencies(reader,i);
-                if(terms == null){
-                    docs[i] = new DocVector(new HashMap<String, Integer>());
-                    continue;
-                }
-                docs[i] = new DocVector(terms);
-            }
-            for(DocVector docVector:docs){
-                docVector.initVec(docsCount);
-                for(Map.Entry<String, Integer> term: termsTable.entrySet()){
-                    docVector.setEntry(term.getKey(), docsCount);
-                }
-                //docVector.normalize();
-            }
-
-            Date start = new Date();
-            for(int i =0; i < docsCount-1; i++){
-                for(int j = i+1; j < docsCount; j++) {
-                    double cosim = getCosineSimilarity(docs[i], docs[j]);
-                    if(docs[i].simap.containsKey(cosim)){
-                        docs[i].simap.get(cosim).add(j);
-                    }else{
-                        List<Integer> docsIndexs = new ArrayList<Integer>();
-                        docsIndexs.add(j);
-                        docs[i].simap.put(cosim,docsIndexs);
-                    }
-
-                }
-            }
-            Date end = new Date();
-            System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
-
             AzureStorageHelper helper = new AzureStorageHelper();
             helper.init();
             List<SuggestedClipEntity> suggestedClipEntities =
                     new ArrayList<SuggestedClipEntity>();
-            for(int i=0; i< docsCount; i++){
-                int count = 0;
-                for(Map.Entry<Double, List<Integer>> simEntity :
-                        docs[i].simap.descendingMap().entrySet()) {
-                    if(isNaN(simEntity.getKey()) || simEntity.getKey() > 0.9)
-                        continue;
-                    for(Integer docIndex:simEntity.getValue()) {
-                        //System.out.println(reader.document(i).get("clipId")+
-                                //": --> "+ reader.document(docIndex).get("clipId") +
-                                //": "+ simEntity.getKey());
-                        proceed(reader.document(i).get("clipId"),String.format("%03d",count),
-                                reader.document(docIndex).get("clipId"),simEntity.getKey(),helper,
-                                suggestedClipEntities);
-                        count++;
-                    }
 
-                    if(count >= 3)
-                        break;
-                }
-                if(!bDebug)
-                    helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
-                suggestedClipEntities.clear();
-                if(i%10000 == 0)
-                    System.out.println(i);
+            int docsCount = reader.maxDoc();
+            for (int i =0; i < docsCount; i++) {
+                Date start = new Date();
+                parallelProducer(i,reader,suggestedClipEntities,helper);
+                Date end = new Date();
+                System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
             }
+
             reader.close();
         }catch (IOException e){
             e.printStackTrace();
@@ -105,11 +52,116 @@ public class TermVectorBasedSimilarity {
 
     }
 
-    static void parallelProducer(int docId ){
+    static void prepare(){
 
     }
 
-    static void parallelComparer(int docId1, int docId2){
+
+    static void parallelProducer(int docId, IndexReader reader,
+                                 List<SuggestedClipEntity> suggestedClipEntities,
+                                 AzureStorageHelper helper){
+
+        Map<String,Double> terms = null;
+        double sim = 0.0d;
+        int docsCount = reader.maxDoc();
+        TreeMap<Double, List<Integer>> simap =
+                new TreeMap<Double, List<Integer>>();
+        try {
+            terms = getTermRank(reader, docId);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        DocVector doc;
+        if(terms == null){
+            return;
+        }else{
+            doc = new DocVector(terms);
+        }
+
+        for (int i =0; i < docsCount; i++) {
+            termsTable.clear();
+            if(docId == i)
+                continue;
+            Map<String,Double> termsDest = null;
+            try {
+                termsDest = getTermRank(reader, i);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            DocVector docDest;
+            sim = 0.0d;
+            if(termsDest == null){
+                if(simap.containsKey(sim)){
+                    simap.get(sim).add(i);
+                }else{
+                    List<Integer> docsIndexs = new ArrayList<Integer>();
+                    docsIndexs.add(i);
+                    simap.put(sim,docsIndexs);
+                }
+                continue;
+            }else{
+                docDest = new DocVector(termsDest);
+            }
+
+            for(Map.Entry<String, Double> term:terms.entrySet()){
+                if(!termsTable.containsKey(term.getKey()))
+                    termsTable.put(term.getKey(), termsTable.size());
+            }
+
+            for(Map.Entry<String, Double> term:termsDest.entrySet()){
+                if(!termsTable.containsKey(term.getKey()))
+                    termsTable.put(term.getKey(), termsTable.size());
+            }
+
+            doc.initVec();
+            for(Map.Entry<String, Integer> term: termsTable.entrySet()){
+                doc.setEntry(term.getKey());
+            }
+
+            docDest.initVec();
+            for(Map.Entry<String, Integer> term: termsTable.entrySet()){
+                docDest.setEntry(term.getKey());
+            }
+
+            sim = getCosineSimilarity(doc,docDest);
+            if(simap.containsKey(sim)){
+                simap.get(sim).add(i);
+            }else{
+                List<Integer> docsIndexs = new ArrayList<Integer>();
+                docsIndexs.add(i);
+                simap.put(sim,docsIndexs);
+            }
+        }
+
+        int count = 0;
+        for(Map.Entry<Double, List<Integer>> simEntity :
+                simap.descendingMap().entrySet()) {
+            if(isNaN(simEntity.getKey()) || simEntity.getKey() > 0.9 || simEntity.getKey() == 0.0)
+                continue;
+            for(Integer docIndex:simEntity.getValue()) {
+                try {
+                    System.out.println(reader.document(docId).get("clipId")+
+                            ": --> "+ reader.document(docIndex).get("clipId") +
+                            ": "+ simEntity.getKey());
+
+                    //proceed(reader.document(docId).get("clipId"),String.format("%03d",count),
+                            //reader.document(docIndex).get("clipId"),simEntity.getKey(),helper,
+                            //suggestedClipEntities);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                count++;
+            }
+
+            if(count >= 3)
+                break;
+        }
+        if(!bDebug)
+            helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+        suggestedClipEntities.clear();
+        if(docId%10000 == 0)
+            System.out.println(docId);
 
     }
 
@@ -119,25 +171,23 @@ public class TermVectorBasedSimilarity {
     }
 
     static class DocVector {
-        public Map<String,Integer> terms;
+        public Map<String,Double> terms;
         public SparseRealVector vector;
         public TreeMap<Double, List<Integer>> simap;
 
-        public DocVector(Map<String,Integer> terms) {
+        public DocVector(Map<String,Double> terms) {
             this.terms = terms;
             this.simap = new TreeMap<Double, List<Integer>>();
         }
 
-        public void initVec(int docsCount){
+        public void initVec(){
             this.vector = new OpenMapRealVector(termsTable.size());
         }
 
-        public void setEntry(String term, int docCounts) {
+        public void setEntry(String term) {
             int pos = (Integer) termsTable.get(term);
             if (terms.containsKey(term)) {
-                int docFreq = termsDocFreq.get(term);
-                double score = terms.get(term)*Math.log(docCounts/(double)docFreq+1);
-                vector.setEntry(pos, score );
+                vector.setEntry(pos, terms.get(term));
             }else{
                 vector.setEntry(pos, 0);
             }
@@ -154,28 +204,26 @@ public class TermVectorBasedSimilarity {
         }
     }
 
-    static Map<String, Integer> getTermFrequencies(IndexReader reader, int docId)
+    static Map<String, Double> getTermRank(IndexReader reader, int docId)
             throws IOException {
         Terms vector = reader.getTermVector(docId, TikaIndexer.CONTENT_FIELD);
         if(vector == null)
             return null;
         TermsEnum termsEnum = null;
         termsEnum = vector.iterator(termsEnum);
-        Map<String, Integer> frequencies = new HashMap<String,Integer>();
+        Map<String, Double> frequencies = new HashMap<String,Double>();
         BytesRef text = null;
         while ((text = termsEnum.next()) != null) {
             String term = text.utf8ToString();
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
-
-            frequencies.put(term, freq);
-            if(!termsTable.containsKey(term)){
+            int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
+            double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
+            frequencies.put(term, score);
+            if(!termsTable.containsKey(term))
                 termsTable.put(term, termsTable.size());
-                termsDocFreq.put(term, 1);
-            }else{
-                termsDocFreq.put(term, termsDocFreq.get(term)+1);
-            }
+
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
@@ -189,13 +237,11 @@ public class TermVectorBasedSimilarity {
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
-            frequencies.put(term, freq);
-            if(!termsTable.containsKey(term)){
+            int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
+            double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
+            frequencies.put(term, score);
+            if(!termsTable.containsKey(term))
                 termsTable.put(term, termsTable.size());
-                termsDocFreq.put(term, 1);
-            }else{
-                termsDocFreq.put(term, termsDocFreq.get(term)+1);
-            }
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }

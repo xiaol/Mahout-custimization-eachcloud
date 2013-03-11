@@ -533,7 +533,7 @@ public class Datalayer {
         List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
         try
         {
-            String sqlString = "SELECT Id,title FROM ClipEntity ";
+            String sqlString = "SELECT Top 1000 Id,title FROM ClipEntity ";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
