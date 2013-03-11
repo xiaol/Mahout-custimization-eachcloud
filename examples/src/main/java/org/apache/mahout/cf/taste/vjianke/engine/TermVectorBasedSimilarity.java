@@ -29,6 +29,8 @@ public class TermVectorBasedSimilarity {
     public static boolean bDebug = true;
 
     public static void main(String[] args){
+
+        System.out.println("1.0v --->");
         try{
             IndexReader reader = DirectoryReader.open(
                     FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
