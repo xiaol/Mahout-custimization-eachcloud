@@ -247,7 +247,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="244" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="245" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -331,13 +331,13 @@
       <file leaf-file-name="TermVectorBasedSimilarity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="224" column="56" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.47157896">
+            <state line="247" column="41" selection-start="8839" selection-end="8839" vertical-scroll-proportion="4.345263">
               <folding>
                 <element signature="docComment;class#TermVectorBasedSimilarity#0" expanded="false" />
                 <element signature="e#1337#1358#0" expanded="true" />
                 <element signature="e#2327#2350#0" expanded="true" />
-                <element signature="e#3277#3286#0" expanded="true" />
-                <element signature="e#4464#4473#0" expanded="true" />
+                <element signature="e#3398#3407#0" expanded="true" />
+                <element signature="e#4585#4594#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1454,13 +1454,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="224" column="56" selection-start="7712" selection-end="7712" vertical-scroll-proportion="0.47157896">
+        <state line="247" column="41" selection-start="8839" selection-end="8839" vertical-scroll-proportion="4.345263">
           <folding>
             <element signature="docComment;class#TermVectorBasedSimilarity#0" expanded="false" />
             <element signature="e#1337#1358#0" expanded="true" />
             <element signature="e#2327#2350#0" expanded="true" />
-            <element signature="e#3277#3286#0" expanded="true" />
-            <element signature="e#4464#4473#0" expanded="true" />
+            <element signature="e#3398#3407#0" expanded="true" />
+            <element signature="e#4585#4594#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -70,7 +70,7 @@ public class TermVectorBasedSimilarity {
         TreeMap<Double, List<Integer>> simap =
                 new TreeMap<Double, List<Integer>>();
         try {
-            System.out.println("Get term rank");
+            System.out.println("Get term "+ docId+" rank");
             terms = getTermRank(reader, docId);
         } catch (IOException e) {
             e.printStackTrace();
@@ -88,11 +88,13 @@ public class TermVectorBasedSimilarity {
                 continue;
             Map<String,Double> termsDest = null;
             try {
+                System.out.println("Get term "+ i+" rank");
                 termsDest = getTermRank(reader, i);
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
+            System.out.println("Start ranking ");
             DocVector docDest;
             sim = 0.0d;
             if(termsDest == null){
@@ -213,6 +215,7 @@ public class TermVectorBasedSimilarity {
         Terms vector = reader.getTermVector(docId, TikaIndexer.CONTENT_FIELD);
         if(vector == null)
             return null;
+        System.out.println("Vector size:" + vector.size());
         TermsEnum termsEnum = null;
         termsEnum = vector.iterator(termsEnum);
         Map<String, Double> frequencies = new HashMap<String,Double>();
@@ -222,12 +225,10 @@ public class TermVectorBasedSimilarity {
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
-            System.out.println("Get doc freq from reader");
+            //System.out.println("Get doc freq from reader");
             int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
             double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
             frequencies.put(term, score);
-            if(!termsTable.containsKey(term))
-                termsTable.put(term, termsTable.size());
 
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
@@ -245,8 +246,6 @@ public class TermVectorBasedSimilarity {
             int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
             double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
             frequencies.put(term, score);
-            if(!termsTable.containsKey(term))
-                termsTable.put(term, termsTable.size());
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
