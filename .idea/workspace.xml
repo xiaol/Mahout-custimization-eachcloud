@@ -247,7 +247,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="245" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java" line="246" class="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity" package="org.apache.mahout.cf.taste.vjianke.engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -331,7 +331,7 @@
       <file leaf-file-name="TermVectorBasedSimilarity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="247" column="41" selection-start="8839" selection-end="8839" vertical-scroll-proportion="4.345263">
+            <state line="141" column="0" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.7747368">
               <folding>
                 <element signature="docComment;class#TermVectorBasedSimilarity#0" expanded="false" />
                 <element signature="e#1337#1358#0" expanded="true" />
@@ -1454,7 +1454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TermVectorBasedSimilarity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="41" selection-start="8839" selection-end="8839" vertical-scroll-proportion="4.345263">
+        <state line="141" column="0" selection-start="4741" selection-end="4741" vertical-scroll-proportion="0.7747368">
           <folding>
             <element signature="docComment;class#TermVectorBasedSimilarity#0" expanded="false" />
             <element signature="e#1337#1358#0" expanded="true" />

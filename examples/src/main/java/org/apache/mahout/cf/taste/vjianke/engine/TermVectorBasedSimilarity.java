@@ -138,6 +138,7 @@ public class TermVectorBasedSimilarity {
                 docsIndexs.add(i);
                 simap.put(sim,docsIndexs);
             }
+            System.out.println("ranking: " + sim);
         }
 
         int count = 0;
