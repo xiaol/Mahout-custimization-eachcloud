@@ -41,6 +41,7 @@ public class TermVectorBasedSimilarity {
 
             int docsCount = reader.maxDoc();
             for (int i =0; i < docsCount; i++) {
+                System.out.println("Document id: " +i);
                 Date start = new Date();
                 parallelProducer(i,reader,suggestedClipEntities,helper);
                 Date end = new Date();
@@ -69,6 +70,7 @@ public class TermVectorBasedSimilarity {
         TreeMap<Double, List<Integer>> simap =
                 new TreeMap<Double, List<Integer>>();
         try {
+            System.out.println("Get term rank");
             terms = getTermRank(reader, docId);
         } catch (IOException e) {
             e.printStackTrace();
@@ -220,6 +222,7 @@ public class TermVectorBasedSimilarity {
             if(term.length() < 2)
                 continue;
             int freq = (int) termsEnum.totalTermFreq();
+            System.out.println("Get doc freq from reader");
             int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
             double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
             frequencies.put(term, score);
