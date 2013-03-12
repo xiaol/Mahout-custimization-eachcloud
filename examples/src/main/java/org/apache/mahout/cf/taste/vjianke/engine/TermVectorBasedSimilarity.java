@@ -71,7 +71,7 @@ public class TermVectorBasedSimilarity {
                 new TreeMap<Double, List<Integer>>();
         try {
             System.out.println("Get term "+ docId+" rank");
-            terms = getTermRank(reader, docId);
+            terms = getTermRank(reader, docId,TikaIndexer.CONTENT_FIELD);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -89,7 +89,7 @@ public class TermVectorBasedSimilarity {
             Map<String,Double> termsDest = null;
             try {
                 System.out.println("Get term "+ i+" rank");
-                termsDest = getTermRank(reader, i);
+                termsDest = getTermRank(reader, i,TikaIndexer.CONTENT_FIELD);
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -152,7 +152,7 @@ public class TermVectorBasedSimilarity {
                             ": --> "+ reader.document(docIndex).get("clipId") +
                             ": "+ simEntity.getKey());
 
-                    //proceed(reader.document(docId).get("clipId"),String.format("%03d",count),
+                    //process(reader.document(docId).get("clipId"),String.format("%03d",count),
                             //reader.document(docIndex).get("clipId"),simEntity.getKey(),helper,
                             //suggestedClipEntities);
                 } catch (IOException e) {
@@ -211,12 +211,11 @@ public class TermVectorBasedSimilarity {
         }
     }
 
-    static Map<String, Double> getTermRank(IndexReader reader, int docId)
+    static Map<String, Double> getTermRank(IndexReader reader, int docId, String fieldName)
             throws IOException {
-        Terms vector = reader.getTermVector(docId, TikaIndexer.CONTENT_FIELD);
+        Terms vector = reader.getTermVector(docId, fieldName);
         if(vector == null)
             return null;
-        System.out.println("Vector size:" + vector.size());
         TermsEnum termsEnum = null;
         termsEnum = vector.iterator(termsEnum);
         Map<String, Double> frequencies = new HashMap<String,Double>();
@@ -234,28 +233,12 @@ public class TermVectorBasedSimilarity {
             //if(docFreq != 1)
                 //System.out.print(term+": "+score+" " + docFreq +" | ");
         }
-
-        vector = reader.getTermVector(docId, TikaIndexer.CLIP_TITLE);
-        if(vector == null)
-            return frequencies;
-        termsEnum = vector.iterator(termsEnum);
-        while ((text = termsEnum.next()) != null) {
-            String term = text.utf8ToString();
-            if(term.length() < 2)
-                continue;
-            int freq = (int) termsEnum.totalTermFreq();
-            int docFreq = reader.docFreq(new Term(TikaIndexer.CONTENT_FIELD,termsEnum.term()));
-            double score = freq*Math.log(reader.numDocs()/(double)docFreq+1);
-            frequencies.put(term, score);
-            //if(docFreq != 1)
-                //System.out.print(term+": "+score+" " + docFreq +" | ");
-        }
         return frequencies;
     }
 
-    public static void proceed(String clipId, String rowKey, String desClipId, Double rank,
-                            AzureStorageHelper azureStorageHelper,
-                            List<SuggestedClipEntity> suggestedClipEntities){
+    public static void process(String clipId, String rowKey, String desClipId, Double rank,
+                               AzureStorageHelper azureStorageHelper,
+                               List<SuggestedClipEntity> suggestedClipEntities){
 
 
         AzureStorageHelper.FeedClipEntity feedClipEntity =
