@@ -28,7 +28,7 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
-    static boolean bDebug = true;
+    static boolean bDebug = false;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -136,26 +136,30 @@ public class ContentBasedRecommender {
 
         TopDocs matches;
         try {
-            matches = searcher.search(query,100);
-            System.out.println(matches.totalHits);
+            matches = searcher.search(query,20);
+            //System.out.println(matches.totalHits);
+            int recommendCount = 5;
+            HashSet<String> cachedIds = new HashSet<String>(recommendCount);
             int count = 0;
             for(ScoreDoc scoreDoc:matches.scoreDocs){
-                if(count > 5 )
+                if(count >= recommendCount)
                     break;
                 if(scoreDoc.doc == 2147483647)
                     continue;
 
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
-                if(srcId.equals(destId))
+                if(srcId.equals(destId) || cachedIds.contains(destId))
                     continue;
-
-                System.out.println(destId + ": " + scoreDoc.score);
+                cachedIds.add(destId);
+                //System.out.println(destId + ": " + scoreDoc.score);
                 TermVectorBasedSimilarity.process(srcId,String.format("%03d",count),
                         destId,(double)scoreDoc.score,helper,
                         suggestedClipEntities);
                 count++;
             }
+            if(suggestedClipEntities.isEmpty())
+                return;
             if(!bDebug)
                 helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
             suggestedClipEntities.clear();
