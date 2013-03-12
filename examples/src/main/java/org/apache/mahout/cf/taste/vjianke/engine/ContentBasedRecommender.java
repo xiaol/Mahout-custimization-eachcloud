@@ -28,6 +28,8 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
+    static boolean bDebug = true;
+
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
                 FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
@@ -43,7 +45,8 @@ public class ContentBasedRecommender {
             Date start = new Date();
             parallelProducer(i, reader, suggestedClipEntities, helper);
             Date end = new Date();
-            System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
+            if(i%1000 == 0)
+                System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
         }
 
         reader.close();
@@ -74,7 +77,7 @@ public class ContentBasedRecommender {
         //phraseQuery(terms,searcher);
         //moreLikeThisQuery(terms,searcher,analyzer);
         //termQuery(terms,searcher);
-        booleanQuery(docId,reader,searcher);
+        booleanQuery(docId,reader,searcher,helper,suggestedClipEntities);
     }
 
     static void phraseQuery(Map<String,Double> terms, IndexSearcher searcher){
@@ -92,16 +95,18 @@ public class ContentBasedRecommender {
         }
     }
 
-    static void booleanQuery(int docId, IndexReader reader, IndexSearcher searcher){
+    static void booleanQuery(int docId, IndexReader reader,
+                             IndexSearcher searcher,
+                             AzureStorageHelper helper,
+                             List<SuggestedClipEntity> suggestedClipEntities){
         Map<String,Double> terms = null;
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
         BooleanQuery.setMaxClauseCount(65536);
+        String srcId = "";
         try {
-            System.out.println("Get clip "+ reader.document(docId).get(TikaIndexer.CLIP_ID) + " rank");
-            if(reader.document(docId).get(TikaIndexer.CLIP_ID).equals("YVTH6")){
-                System.out.println("Sth happenned");
-            }
+            srcId = reader.document(docId).get(TikaIndexer.CLIP_ID);
+            System.out.println("Get clip "+ srcId + " rank");
             terms = getTermRank(reader, docId, TikaIndexer.CONTENT_FIELD);
             if(terms == null){
 
@@ -135,16 +140,25 @@ public class ContentBasedRecommender {
             System.out.println(matches.totalHits);
             int count = 0;
             for(ScoreDoc scoreDoc:matches.scoreDocs){
-                if(count > 4 )
+                if(count > 5 )
                     break;
-                if(scoreDoc.doc == 2147483647) {
-                    count++;
+                if(scoreDoc.doc == 2147483647)
                     continue;
-                }
-                System.out.println(reader.document(
-                        scoreDoc.doc).get(TikaIndexer.CLIP_ID) + ": " + scoreDoc.score);
+
+                String destId =  reader.document(
+                        scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+                if(srcId.equals(destId))
+                    continue;
+
+                System.out.println(destId + ": " + scoreDoc.score);
+                TermVectorBasedSimilarity.process(srcId,String.format("%03d",count),
+                        destId,(double)scoreDoc.score,helper,
+                        suggestedClipEntities);
                 count++;
             }
+            if(!bDebug)
+                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+            suggestedClipEntities.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
