@@ -75,7 +75,7 @@ public class AzureStorageHelper {
         } catch (StorageException e) {
             System.out.print("StorageException encountered: ");
             System.out.println(e.getMessage());
-            System.exit(-1);
+            //System.exit(-1);
         }
     }
 
