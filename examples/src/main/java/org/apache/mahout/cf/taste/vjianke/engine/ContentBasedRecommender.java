@@ -29,7 +29,7 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
-    static boolean bDebug = true;
+    static boolean bDebug = false;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -167,7 +167,7 @@ public class ContentBasedRecommender {
             if(suggestedClipEntities.isEmpty())
                 return;
             if(!bDebug)
-                //helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
             suggestedClipEntities.clear();
         } catch (IOException e) {
             e.printStackTrace();
@@ -228,9 +228,11 @@ public class ContentBasedRecommender {
         String firstBoardId = feedClipEntity.getBoards();
         firstBoardId = firstBoardId.substring(1,firstBoardId.length()-1);
         String[] boards = firstBoardId.split(",");
-        clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
-        String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
-        clipEntity.setFirstBoardName(firstBoardName);
+        if(boards[0].length() > 4){
+            clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
+            String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
+            clipEntity.setFirstBoardName(firstBoardName);
+        }
 
         clipEntity.setSenderComment("");
         clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
