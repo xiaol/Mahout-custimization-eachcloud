@@ -143,6 +143,7 @@ public class ContentBasedRecommender {
             //System.out.println(matches.totalHits);
             int recommendCount = 5;
             HashSet<String> cachedIds = new HashSet<String>(recommendCount);
+            HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
             int count = 0;
             for(ScoreDoc scoreDoc:matches.scoreDocs){
                 if(count >= recommendCount)
@@ -152,19 +153,21 @@ public class ContentBasedRecommender {
 
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
-                if(srcId.equals(destId) || cachedIds.contains(destId))
+                if(srcId.equals(destId) || cachedIds.contains(destId)
+                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0))
                     continue;
                 cachedIds.add(destId);
+                cachedScore.add(scoreDoc.score);
                 //System.out.println(destId + ": " + scoreDoc.score);
-                process(srcId,String.format("%03d",count),
-                        destId,(double)scoreDoc.score,helper,layer,
+                process(srcId, String.format("%03d", count),
+                        destId, (double) scoreDoc.score, helper, layer,
                         suggestedClipEntities);
                 count++;
             }
             if(suggestedClipEntities.isEmpty())
                 return;
             if(!bDebug)
-                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+                //helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
             suggestedClipEntities.clear();
         } catch (IOException e) {
             e.printStackTrace();
