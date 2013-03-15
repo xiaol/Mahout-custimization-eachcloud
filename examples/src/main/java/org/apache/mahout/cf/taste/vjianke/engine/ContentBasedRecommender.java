@@ -226,12 +226,14 @@ public class ContentBasedRecommender {
         clipEntity.setAction("Suggest");
         clipEntity.setRank(Double.toString(rank));
         String firstBoardId = feedClipEntity.getBoards();
-        firstBoardId = firstBoardId.substring(1,firstBoardId.length()-1);
-        String[] boards = firstBoardId.split(",");
-        if(boards[0].length() > 4){
-            clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
-            String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
-            clipEntity.setFirstBoardName(firstBoardName);
+        if(firstBoardId != null) {
+            firstBoardId = firstBoardId.substring(1,firstBoardId.length()-1);
+            String[] boards = firstBoardId.split(",");
+            if(boards[0].length() > 4){
+                clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
+                String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
+                clipEntity.setFirstBoardName(firstBoardName);
+            }
         }
 
         clipEntity.setSenderComment("");

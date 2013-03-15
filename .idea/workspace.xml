@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -341,7 +340,7 @@
       <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="33" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-4.3818183">
+            <state line="234" column="31" selection-start="9421" selection-end="9421" vertical-scroll-proportion="0.4909091">
               <folding>
                 <element signature="e#5542#5550#0" expanded="true" />
                 <element signature="e#5620#5627#0" expanded="true" />
@@ -1469,7 +1468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-4.3818183">
+        <state line="234" column="31" selection-start="9421" selection-end="9421" vertical-scroll-proportion="0.4909091">
           <folding>
             <element signature="e#5542#5550#0" expanded="true" />
             <element signature="e#5620#5627#0" expanded="true" />
