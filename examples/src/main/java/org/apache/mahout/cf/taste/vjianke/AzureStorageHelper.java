@@ -368,7 +368,15 @@ public class AzureStorageHelper {
         public List<String> Cats = new ArrayList<String>();
 //        public string FeedTime { get; set; }//分享Feed的时间
 
+        public String getBoards() {
+            return boards;
+        }
 
+        public void setBoards(String boards) {
+            this.boards = boards;
+        }
+
+        public String boards;
 
         //以下属性都是小写开头。是来自原来的ClipEntity 表的内容复制过来的。
         public String uguid;

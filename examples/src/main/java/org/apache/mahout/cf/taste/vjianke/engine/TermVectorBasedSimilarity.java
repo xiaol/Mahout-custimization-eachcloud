@@ -11,6 +11,7 @@ import org.apache.lucene.index.*;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.BytesRef;
 import org.apache.mahout.cf.taste.vjianke.AzureStorageHelper;
+import org.apache.mahout.cf.taste.vjianke.Datalayer;
 
 
 /**
@@ -237,7 +238,7 @@ public class TermVectorBasedSimilarity {
     }
 
     public static void process(String clipId, String rowKey, String desClipId, Double rank,
-                               AzureStorageHelper azureStorageHelper,
+                               AzureStorageHelper azureStorageHelper, Datalayer layer,
                                List<SuggestedClipEntity> suggestedClipEntities){
 
 
@@ -252,6 +253,12 @@ public class TermVectorBasedSimilarity {
         clipEntity.setBase36(desClipId);
         clipEntity.setAction("Suggest");
         clipEntity.setRank(Double.toString(rank));
+        String firstBoardId = feedClipEntity.getBoards();
+        firstBoardId = firstBoardId.substring(1,firstBoardId.length()-1);
+        String[] boards = firstBoardId.split(",");
+        clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
+        String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
+        clipEntity.setFirstBoardName(firstBoardName);
 
         clipEntity.setSenderComment("");
         clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());

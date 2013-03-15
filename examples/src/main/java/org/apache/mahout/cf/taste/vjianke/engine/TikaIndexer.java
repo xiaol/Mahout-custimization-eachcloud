@@ -43,7 +43,7 @@ public class TikaIndexer {
 
     public static void main(String[] args){
 
-        boolean create = false;
+        boolean create = true;
         Date start = new Date();
         try {
             System.out.println("Indexing to directory '" + INDEX_PATH + "'...");
@@ -53,11 +53,10 @@ public class TikaIndexer {
             IndexWriterConfig iwc = new IndexWriterConfig(Version.LUCENE_40, analyzer);
 
             if (create) {
-                // Create a new index in the directory, removing any
-                // previously indexed documents:
+                //Creates a new index or overwrites an existing one.
                 iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
             } else {
-                // Add new documents to an existing index:
+                //Creates a new index if one does not exist, otherwise it opens the index and documents will be appended.
                 iwc.setOpenMode(IndexWriterConfig.OpenMode.CREATE_OR_APPEND);
             }
 

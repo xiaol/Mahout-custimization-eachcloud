@@ -13,6 +13,7 @@ import org.apache.lucene.search.similarities.DefaultSimilarity;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.util.Version;
 import org.apache.mahout.cf.taste.vjianke.AzureStorageHelper;
+import org.apache.mahout.cf.taste.vjianke.Datalayer;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +29,7 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
-    static boolean bDebug = false;
+    static boolean bDebug = true;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -36,6 +37,7 @@ public class ContentBasedRecommender {
 
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
+        Datalayer layer = new Datalayer();
         List<SuggestedClipEntity> suggestedClipEntities =
                 new ArrayList<SuggestedClipEntity>();
 
@@ -43,7 +45,7 @@ public class ContentBasedRecommender {
         for (int i =0; i < docsCount; i++) {
             System.out.println("Document id: " +i);
             Date start = new Date();
-            parallelProducer(i, reader, suggestedClipEntities, helper);
+            parallelProducer(i, reader, suggestedClipEntities, helper,layer);
             Date end = new Date();
             if(i%1000 == 0)
                 System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
@@ -58,7 +60,7 @@ public class ContentBasedRecommender {
 
     static void parallelProducer(int docId, IndexReader reader,
                                  List<SuggestedClipEntity> suggestedClipEntities,
-                                 AzureStorageHelper helper){
+                                 AzureStorageHelper helper,Datalayer layer){
 
         Map<String,Double> terms = null;
         double sim = 0.0d;
@@ -77,7 +79,7 @@ public class ContentBasedRecommender {
         //phraseQuery(terms,searcher);
         //moreLikeThisQuery(terms,searcher,analyzer);
         //termQuery(terms,searcher);
-        booleanQuery(docId,reader,searcher,helper,suggestedClipEntities);
+        booleanQuery(docId,reader,searcher,helper,layer,suggestedClipEntities);
     }
 
     static void phraseQuery(Map<String,Double> terms, IndexSearcher searcher){
@@ -98,6 +100,7 @@ public class ContentBasedRecommender {
     static void booleanQuery(int docId, IndexReader reader,
                              IndexSearcher searcher,
                              AzureStorageHelper helper,
+                             Datalayer layer,
                              List<SuggestedClipEntity> suggestedClipEntities){
         Map<String,Double> terms = null;
         float factor = 1.0f;
@@ -153,8 +156,8 @@ public class ContentBasedRecommender {
                     continue;
                 cachedIds.add(destId);
                 //System.out.println(destId + ": " + scoreDoc.score);
-                TermVectorBasedSimilarity.process(srcId,String.format("%03d",count),
-                        destId,(double)scoreDoc.score,helper,
+                process(srcId,String.format("%03d",count),
+                        destId,(double)scoreDoc.score,helper,layer,
                         suggestedClipEntities);
                 count++;
             }
@@ -201,5 +204,55 @@ public class ContentBasedRecommender {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void process(String clipId, String rowKey, String desClipId, Double rank,
+                               AzureStorageHelper azureStorageHelper, Datalayer layer,
+                               List<SuggestedClipEntity> suggestedClipEntities){
+
+        //获取的是被推荐剪报的内容
+        AzureStorageHelper.FeedClipEntity feedClipEntity =
+                azureStorageHelper.retrieveFeedClipEntity(desClipId, "-","ClipEntity");
+
+        if(feedClipEntity == null){
+            //System.out.println("Can't retrieve Clip: " +clipId);
+            return ;
+        }
+        SuggestedClipEntity clipEntity = new SuggestedClipEntity(clipId,rowKey);
+        clipEntity.setBase36(desClipId);
+        clipEntity.setAction("Suggest");
+        clipEntity.setRank(Double.toString(rank));
+        String firstBoardId = feedClipEntity.getBoards();
+        firstBoardId = firstBoardId.substring(1,firstBoardId.length()-1);
+        String[] boards = firstBoardId.split(",");
+        clipEntity.setFirstBoardId(boards[0].substring(1,boards[0].length()-1));
+        String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
+        clipEntity.setFirstBoardName(firstBoardName);
+
+        clipEntity.setSenderComment("");
+        clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
+        clipEntity.sethasUT(feedClipEntity.gethasUT());
+        clipEntity.setcontentTitle(feedClipEntity.getcontentTitle());
+        clipEntity.setheight(feedClipEntity.getheight());
+        clipEntity.setwidth(feedClipEntity.getwidth());
+
+        clipEntity.setorigheight(feedClipEntity.getorigheight());
+        clipEntity.setorigsite(feedClipEntity.getorigheight());
+        clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        clipEntity.setorigurl(feedClipEntity.getorigurl());
+        clipEntity.setorigwidth(feedClipEntity.getorigwidth());
+        clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
+        clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
+        clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
+        clipEntity.settitlePic(feedClipEntity.gettitlePic());
+        clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
+        clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
+        clipEntity.settype(feedClipEntity.gettype());
+
+        clipEntity.setuguid(feedClipEntity.getuguid());
+        clipEntity.setuimage(feedClipEntity.getuimage());
+        clipEntity.setuname(feedClipEntity.getuname());
+
+        suggestedClipEntities.add(clipEntity);
     }
 }

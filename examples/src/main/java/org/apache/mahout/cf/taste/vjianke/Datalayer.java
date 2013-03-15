@@ -98,6 +98,50 @@ public class Datalayer {
         return userEntity;
     }
 
+
+    public String queryBoard(String boardId){
+        // The types for the following variables are
+        // defined in the java.sql library.
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        UserEntity userEntity = new UserEntity();
+
+        String uuid = boardId.substring(0,8)+"-"+boardId.substring(8,12)+"-"+
+                boardId.substring(12,16)+"-"+boardId.substring(16,20) +"-"+boardId.substring(20,boardId.length());
+        try
+        {
+            String sqlString = "SELECT board_name FROM BoardEntity WHERE id = '" + uuid +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                return resultSet.getString(1);
+
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return "";
+    }
+
     public Hashtable<String, UserEntity> QueryUsers(){
         // The types for the following variables are
         // defined in the java.sql library.
@@ -533,7 +577,7 @@ public class Datalayer {
         List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
         try
         {
-            String sqlString = "SELECT Top 1000 Id,title FROM ClipEntity ";
+            String sqlString = "SELECT Id,title FROM ClipEntity ";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);

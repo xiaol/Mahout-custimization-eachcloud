@@ -21,6 +21,26 @@ public class SuggestedClipEntity extends TableServiceEntity {
     public String Base36;
     public String SenderComment;
 
+    public String getFirstBoardId() {
+        return FirstBoardId;
+    }
+
+    public void setFirstBoardId(String firstBoardId) {
+        FirstBoardId = firstBoardId;
+    }
+
+    public String getFirstBoardName() {
+        return FirstBoardName;
+    }
+
+    public void setFirstBoardName(String firstBoardName) {
+        FirstBoardName = firstBoardName;
+    }
+
+    public String FirstBoardId;
+    public String FirstBoardName;
+
+
     public String getRank() {
         return Rank;
     }
