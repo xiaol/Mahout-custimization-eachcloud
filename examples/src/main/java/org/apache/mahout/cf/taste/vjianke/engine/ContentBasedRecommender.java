@@ -154,7 +154,8 @@ public class ContentBasedRecommender {
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
                 if(srcId.equals(destId) || cachedIds.contains(destId)
-                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0))
+                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
+                        || Float.compare(scoreDoc.score, 2.0f)> 0)
                     continue;
                 cachedIds.add(destId);
                 cachedScore.add(scoreDoc.score);
@@ -234,8 +235,12 @@ public class ContentBasedRecommender {
                 String firstBoardName = layer.queryBoard(clipEntity.getFirstBoardId());
                 clipEntity.setFirstBoardName(firstBoardName);
             }
+        }else{
+            return;
         }
 
+        Date feedTime = new Date();
+        clipEntity.setFeedTime(Long.toString(feedTime.getTime()));
         clipEntity.setSenderComment("");
         clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
         clipEntity.sethasUT(feedClipEntity.gethasUT());
@@ -245,7 +250,11 @@ public class ContentBasedRecommender {
 
         clipEntity.setorigheight(feedClipEntity.getorigheight());
         clipEntity.setorigsite(feedClipEntity.getorigheight());
-        clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        if(feedClipEntity.getorigtitle() == null || feedClipEntity.getorigtitle().equals("")){
+            clipEntity.setorigtitle(feedClipEntity.gettitle());
+        }else{
+            clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        }
         clipEntity.setorigurl(feedClipEntity.getorigurl());
         clipEntity.setorigwidth(feedClipEntity.getorigwidth());
         clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());

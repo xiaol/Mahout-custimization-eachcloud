@@ -392,6 +392,16 @@ public class AzureStorageHelper {
         public String origsite;
         public String contentTitle;
         public String contentBrief;
+        public String title;
+
+        public String gettitle(){
+            return title;
+        }
+
+        public void settitle(String title){
+            this.title = title;
+        }
+
         public String titlePic;
         public String titlePicWidth;
         public String titlePicHeight;
