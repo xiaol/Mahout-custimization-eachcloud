@@ -288,7 +288,7 @@ public class IntrestBasedRecommendEntryPoint {
             clipEntity.setwidth(feedClipEntity.getwidth());
 
             clipEntity.setorigheight(feedClipEntity.getorigheight());
-            clipEntity.setorigsite(feedClipEntity.getorigheight());
+            clipEntity.setorigsite(feedClipEntity.getorigsite());
             clipEntity.setorigtitle(feedClipEntity.getorigtitle());
             clipEntity.setorigurl(feedClipEntity.getorigurl());
             clipEntity.setorigwidth(feedClipEntity.getorigwidth());

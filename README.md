@@ -27,3 +27,5 @@ mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TikaI
 create folder examples/target/index
 
 mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity"
+
+export MAVEN_OPTS=-Xss2m

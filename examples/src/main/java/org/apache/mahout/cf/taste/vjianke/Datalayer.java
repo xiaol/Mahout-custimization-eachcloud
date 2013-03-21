@@ -569,7 +569,7 @@ public class Datalayer {
         public String title;
 
     }
-    public List<ClipEntity>  getClips(){
+    public List<ClipEntity>  getClips(String count,boolean limited){
         Statement statement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -577,7 +577,10 @@ public class Datalayer {
         List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
         try
         {
-            String sqlString = "SELECT Id,title FROM ClipEntity ";
+            String sqlString = "SELECT ";
+            if(limited)
+                sqlString += "TOP "+ count +" ";
+            sqlString += "Id,title FROM ClipEntity";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
