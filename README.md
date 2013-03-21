@@ -28,4 +28,8 @@ create folder examples/target/index
 
 mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity"
 
+<<<<<<< HEAD
 357643
+=======
+export MAVEN_OPTS=-Xss2m
+>>>>>>> 8bd55e9543b476e723fa920743dd2ecf58f2a9ae

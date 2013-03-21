@@ -93,7 +93,7 @@ public class TikaIndexer {
         Metadata metadata = new Metadata();
         metadata.set(Metadata.RESOURCE_NAME_KEY, entity.id);
         Parser parser = new HtmlParser();
-        ContentHandler handler = new BodyContentHandler();
+        ContentHandler handler = new BodyContentHandler(10*1024*1024);
         ParseContext context = new ParseContext();
         context.set(Parser.class, parser);
         try {
@@ -123,7 +123,8 @@ public class TikaIndexer {
         Datalayer layer = new Datalayer();
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
-        List<Datalayer.ClipEntity> clipEntityList = layer.getClips();
+        List<Datalayer.ClipEntity> clipEntityList =
+                layer.getClips(Integer.toString(700),ContentBasedRecommender.bDebug);
 
         for(Datalayer.ClipEntity entity:clipEntityList){
             try {

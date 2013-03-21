@@ -29,7 +29,7 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
-    static boolean bDebug = false;
+    static boolean bDebug = true;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -54,7 +54,77 @@ public class ContentBasedRecommender {
         reader.close();
     }
 
-    static void process(IndexSearcher searcher, Query query){
+    public void process(IndexSearcher searcher, Query query){
+
+    }
+
+    public void recommendByTerms(Map<String, Double> terms,
+                                 String userId,
+                                 List<SuggestedClipEntity> suggestedClipEntities ,
+                                 String indexPath
+                                 ) {
+        IndexReader reader = null;
+        try {
+            reader = DirectoryReader.open(
+                    FSDirectory.open(new File(indexPath)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        IndexSearcher searcher = new IndexSearcher(reader);
+        AzureStorageHelper helper = new AzureStorageHelper();
+        helper.init();
+        Datalayer layer = new Datalayer();
+
+        float factor = 1.0f;
+        BooleanQuery query = new BooleanQuery();
+        if(terms == null){
+
+        }else{
+            for(Map.Entry<String, Double> word:terms.entrySet()){
+                TermQuery tq = new TermQuery(new Term(
+                        TikaIndexer.CLIP_TITLE,word.getKey()));
+                tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
+                query.add(tq, BooleanClause.Occur.SHOULD);
+            }
+        }
+
+        TopDocs matches;
+        try {
+            matches = searcher.search(query,20);
+            //System.out.println(matches.totalHits);
+            int recommendCount = 5;
+            HashSet<String> cachedIds = new HashSet<String>(recommendCount);
+            HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
+            int count = 0;
+            for(ScoreDoc scoreDoc:matches.scoreDocs){
+                if(count >= recommendCount)
+                    break;
+                if(scoreDoc.doc == 2147483647)
+                    continue;
+
+                String destId =  reader.document(
+                        scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+                if(cachedIds.contains(destId)
+                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
+                        || Float.compare(scoreDoc.score, 2.0f)> 0)
+                    continue;
+                cachedIds.add(destId);
+                cachedScore.add(scoreDoc.score);
+                //System.out.println(destId + ": " + scoreDoc.score);
+                //process(srcId, String.format("%03d", count),
+                        //destId, (double) scoreDoc.score, helper, layer,
+                        //suggestedClipEntities);
+                count++;
+            }
+            if(suggestedClipEntities.isEmpty())
+                return;
+            if(!bDebug)
+                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+            suggestedClipEntities.clear();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
