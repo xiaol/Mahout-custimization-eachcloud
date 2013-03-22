@@ -33,6 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 357643;
+    static int nextIdStamp = 0;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -45,6 +46,7 @@ public class ContentBasedRecommender {
                 new ArrayList<SuggestedClipEntity>();
 
         int docsCount = reader.maxDoc();
+        System.out.println("MaxDoc: "+ reader.maxDoc()+ " NumDoc:" + reader.numDocs());
         int startDocId =0;
         if(bIncrement)
             startDocId = idStamp;
