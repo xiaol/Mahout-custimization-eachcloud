@@ -651,7 +651,7 @@ public class Datalayer {
                 sqlString += "TOP "+ count +" ";
             sqlString += "Id,title FROM ClipEntity";
             if(increment)
-                sqlString += " where add_time > "+ baseTimestamp;
+                sqlString += " where add_time > '"+ baseTimestamp+"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
