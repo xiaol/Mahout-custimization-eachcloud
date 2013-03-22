@@ -606,7 +606,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" line="282" class="org.apache.mahout.cf.taste.vjianke.engine.ContentBasedRecommender" package="org.apache.mahout.cf.taste.vjianke.engine">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" line="284" class="org.apache.mahout.cf.taste.vjianke.engine.ContentBasedRecommender" package="org.apache.mahout.cf.taste.vjianke.engine">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -676,7 +676,7 @@
       <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="13" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.45119306">
+            <state line="48" column="85" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.4164859">
               <folding />
             </state>
           </provider>
@@ -1805,7 +1805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="13" selection-start="1793" selection-end="1793" vertical-scroll-proportion="0.45119306">
+        <state line="48" column="85" selection-start="1813" selection-end="1813" vertical-scroll-proportion="0.4164859">
           <folding />
         </state>
       </provider>
