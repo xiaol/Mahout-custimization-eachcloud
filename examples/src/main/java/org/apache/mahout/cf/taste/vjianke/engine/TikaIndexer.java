@@ -124,7 +124,9 @@ public class TikaIndexer {
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
         List<Datalayer.ClipEntity> clipEntityList =
-                layer.getClips(Integer.toString(700),ContentBasedRecommender.bDebug);
+                layer.getClips(
+                        Integer.toString(700),ContentBasedRecommender.bDebug,
+                        ContentBasedRecommender.bIncrement);
 
         for(Datalayer.ClipEntity entity:clipEntityList){
             try {

@@ -29,7 +29,10 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  * To change this template use File | Settings | File Templates.
  */
 public class ContentBasedRecommender {
-    static boolean bDebug = true;
+    static boolean bDebug = false;
+    static boolean bIncrement = true;
+
+    static int idStamp = 357643;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -42,10 +45,13 @@ public class ContentBasedRecommender {
                 new ArrayList<SuggestedClipEntity>();
 
         int docsCount = reader.maxDoc();
-        for (int i =0; i < docsCount; i++) {
-            System.out.println("Document id: " +i);
+        int startDocId =0;
+        if(bIncrement)
+            startDocId = idStamp;
+        for (startDocId =0; startDocId < docsCount; startDocId++) {
+            System.out.println("Document id: " +startDocId);
             Date start = new Date();
-            parallelProducer(i, reader, suggestedClipEntities, helper,layer);
+            parallelProducer(startDocId, reader, suggestedClipEntities, helper,layer);
             Date end = new Date();
             if(i%1000 == 0)
                 System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
