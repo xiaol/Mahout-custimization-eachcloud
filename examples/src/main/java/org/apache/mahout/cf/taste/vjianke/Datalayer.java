@@ -24,6 +24,9 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
+    private final String baseTimestamp = "2013-03-15";
+    private final String upTimestamp = "2013-03-21";
+
     public Datalayer(){
     }
 
@@ -627,7 +630,8 @@ public class Datalayer {
         public String title;
 
     }
-    public List<ClipEntity>  getClips(String count,boolean limited){
+    public List<ClipEntity>  getClips(
+            String count, boolean limited, boolean increment){
         Statement statement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -646,6 +650,8 @@ public class Datalayer {
             if(limited)
                 sqlString += "TOP "+ count +" ";
             sqlString += "Id,title FROM ClipEntity";
+            if(increment)
+                sqlString += " where add_time > "+ baseTimestamp;
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
