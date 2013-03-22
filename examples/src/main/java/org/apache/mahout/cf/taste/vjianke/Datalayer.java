@@ -24,14 +24,7 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    private  Connection connection = null;
-
     public Datalayer(){
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     public Timestamp get_ts() {
@@ -61,6 +54,13 @@ public class Datalayer {
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
         UserEntity userEntity = new UserEntity();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return userEntity;
+        }
 
         try
         {
@@ -107,6 +107,14 @@ public class Datalayer {
         int rowCount = 0;
         UserEntity userEntity = new UserEntity();
 
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "";
+        }
+
         String uuid = boardId.substring(0,8)+"-"+boardId.substring(8,12)+"-"+
                 boardId.substring(12,16)+"-"+boardId.substring(16,20) +"-"+boardId.substring(20,boardId.length());
         try
@@ -151,6 +159,13 @@ public class Datalayer {
 
         Hashtable<String, UserEntity> userEntities =
                 new Hashtable<String, UserEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return userEntities;
+        }
         try
         {
             String sqlString = "SELECT * FROM PanamaUserEntity";
@@ -235,6 +250,14 @@ public class Datalayer {
            sqlString = sqlString +"' OR " + boards.get(i) + "'";
        }
 
+       Connection connection;
+       try {
+           connection = DriverManager.getConnection(_connectionString);
+       } catch (SQLException e) {
+           e.printStackTrace();
+           return clipIds;
+       }
+
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -278,6 +301,13 @@ public class Datalayer {
        ResultSet resultSet = null;
        int rowCount = 0;
        List<String> boardIds = new ArrayList<String>();
+       Connection connection;
+       try {
+           connection = DriverManager.getConnection(_connectionString);
+       } catch (SQLException e) {
+           e.printStackTrace();
+           return boardIds;
+       }
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -324,6 +354,13 @@ public class Datalayer {
         ResultSet resultSet = null;
         int rowCount = 0;
         List<BoardRelated> listBoardRelated = new ArrayList<BoardRelated>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return listBoardRelated;
+        }
         try
         {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -371,6 +408,13 @@ public class Datalayer {
         ResultSet resultSet = null;
         int rowCount = 0;
         List<String> boardIds = new ArrayList<String>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return boardIds;
+        }
         try
         {
             String sqlString = "SELECT TOP 3 id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
@@ -431,6 +475,13 @@ public class Datalayer {
 
         }
         sqlString = sqlString + " ORDER BY user_id";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
 
         try
         {
@@ -502,6 +553,13 @@ public class Datalayer {
         String sqlString = "SELECT * FROM BoardFollowerEntity LEFT JOIN BoardEntity ON BoardFollowerEntity.board_id = BoardEntity.id";
         sqlString = sqlString + " ORDER BY follower_id ";
 
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
         try
         {
             preparedStatement = connection.prepareStatement(sqlString);
@@ -575,6 +633,13 @@ public class Datalayer {
         int rowCount = 0;
 
         List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return clipEntities;
+        }
         try
         {
             String sqlString = "SELECT ";
