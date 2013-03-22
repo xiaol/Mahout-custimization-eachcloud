@@ -400,9 +400,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -678,7 +676,7 @@
       <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="28" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.31236443">
+            <state line="55" column="25" selection-start="2093" selection-end="2093" vertical-scroll-proportion="0.86767894">
               <folding />
             </state>
           </provider>
@@ -1807,7 +1805,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="28" selection-start="1745" selection-end="1745" vertical-scroll-proportion="0.31236443">
+        <state line="55" column="25" selection-start="2093" selection-end="2093" vertical-scroll-proportion="0.86767894">
           <folding />
         </state>
       </provider>
