@@ -53,7 +53,7 @@ public class ContentBasedRecommender {
             Date start = new Date();
             parallelProducer(startDocId, reader, suggestedClipEntities, helper,layer);
             Date end = new Date();
-            if(i%1000 == 0)
+            if(startDocId%1000 == 0)
                 System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
         }
 
