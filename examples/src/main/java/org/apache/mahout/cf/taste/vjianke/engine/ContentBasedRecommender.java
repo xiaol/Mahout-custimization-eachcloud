@@ -48,7 +48,7 @@ public class ContentBasedRecommender {
         int startDocId =0;
         if(bIncrement)
             startDocId = idStamp;
-        for (startDocId =0; startDocId < docsCount; startDocId++) {
+        for (; startDocId < docsCount; startDocId++) {
             System.out.println("Document id: " +startDocId);
             Date start = new Date();
             parallelProducer(startDocId, reader, suggestedClipEntities, helper,layer);
