@@ -229,7 +229,7 @@ public class IntrestBasedRecommendEntryPoint {
         for(Map.Entry<String, Float> result:recommendResult.entrySet()){
             Date date = new Date();
             long time =  date.getTime();
-            String rowKey = version.get(version.size()-1) +"|"+ time + "|i|"+ count;
+            String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ count;
             String strSource = tagsTable.toString();
 
             String clipId = result.getKey();
