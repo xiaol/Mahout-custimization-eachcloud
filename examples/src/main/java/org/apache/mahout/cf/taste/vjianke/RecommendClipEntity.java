@@ -12,7 +12,9 @@ import java.util.List;
  * Time: 上午11:16
  * To change this template use File | Settings | File Templates.
  */
-public class RecommendClipEntity extends TableServiceEntity {
+public  class RecommendClipEntity extends TableServiceEntity {
+    public RecommendClipEntity(){}
+
     public RecommendClipEntity(String uuid, String timeStamp){
         this.partitionKey = uuid;
         this.rowKey = timeStamp;

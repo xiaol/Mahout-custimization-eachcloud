@@ -1,14 +1,12 @@
 package org.apache.mahout.cf.taste.vjianke;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.*;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Hashtable;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -171,7 +169,7 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT * FROM PanamaUserEntity";
+            String sqlString = "SELECT TOP 1 * FROM PanamaUserEntity";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
 
             preparedStatement = connection.prepareStatement(sqlString);
@@ -630,6 +628,7 @@ public class Datalayer {
         public String title;
 
     }
+
     public List<ClipEntity>  getClips(
             String count, boolean limited, boolean increment){
         Statement statement = null;    // For the SQL statement
@@ -684,4 +683,129 @@ public class Datalayer {
         }
         return clipEntities;
     }
+
+    public List<String> getReadHistory(String uuid){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT clip_id FROM ClickEntity " +
+                "WHERE ";
+        sqlString = sqlString + "user_id = '" + uuid +"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
+
+        List<String> clipIds = new ArrayList<String>();
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                clipIds.add(resultSet.getString(1));
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return clipIds;
+    }
+
+    public List<WeiboTag> getWeiboTag(String uuid){
+        uuid = uuid.toUpperCase();
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT user_tag,user_fav_tag FROM UserMicroBlogEntity " +
+                "WHERE ";
+        sqlString = sqlString + "Id = '" + uuid +"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
+
+        List<WeiboTag> weiboTags = new ArrayList<WeiboTag>();
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                WeiboTag weiboTag = new WeiboTag();
+                weiboTag.userTag = resultSet.getString(1);
+                weiboTag.userFavTag = resultSet.getString(2);
+                weiboTags.add(weiboTag);
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return weiboTags;
+    }
+
+
+    public class WeiboTag{
+        String userTag;
+        String userFavTag;
+
+        public String getUserTag() {
+            return userTag;
+        }
+
+        public void setUserTag(String userTag) {
+            this.userTag = userTag;
+        }
+
+        public String getUserFavTag() {
+            return userFavTag;
+        }
+
+        public void setUserFavTag(String userFavTag) {
+            this.userFavTag = userFavTag;
+        }
+    }
+
 }

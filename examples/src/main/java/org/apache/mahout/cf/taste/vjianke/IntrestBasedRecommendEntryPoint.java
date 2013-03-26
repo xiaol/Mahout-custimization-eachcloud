@@ -12,6 +12,9 @@ import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
 import org.apache.mahout.cf.taste.similarity.ItemSimilarity;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+import org.apache.mahout.cf.taste.vjianke.engine.ContentBasedRecommender;
+import org.apache.mahout.cf.taste.vjianke.engine.IntrestGenerator;
+import org.apache.mahout.cf.taste.vjianke.engine.TikaIndexer;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
@@ -33,6 +36,7 @@ public class IntrestBasedRecommendEntryPoint {
                     "07221718-b190-4536-8191-a0410029de34",     // ivanl
                     "8b6257c9-5055-48fe-babc-9eec005a94d2",     // kevin
                     "a544a317-2359-4ae5-a716-9eea002c0db1",     // nick
+                    "8d81322a-d2f3-4ffa-b782-9f2b0169672e",
                     "da6b1949-d998-4344-a0f6-a08a008ab49b",     // vera
                     "178676e2-c21d-4a95-b234-38c0b01c00d1",     // bertony
                     "08295a93-ac97-44db-a107-9fc000630d7c",     // farstar1
@@ -90,13 +94,14 @@ public class IntrestBasedRecommendEntryPoint {
 
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
-            List<String> boards = datalayer.querySubscription(userEntity.getKey());
+            String userId = userEntity.getKey();
+            List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
-            System.out.println("users:" + userEntity.getKey() + "  "+ count);
+            System.out.println("users:" + userId + "  "+ count);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
-            for(final String board:boards){
+            /*for(final String board:boards){
                 //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
                 if(!cachedEntityMap.containsKey(board)){
                     prefsMap =  new FastByIDMap<PreferenceArray>();
@@ -127,21 +132,37 @@ public class IntrestBasedRecommendEntryPoint {
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
                 RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
-                List<RecommendClipEntity> results = proceed(userEntity.getKey(), userEntities,recommend,
+                List<RecommendClipEntity> results = proceed(userId, userEntities,recommend,
                         prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"");
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
                 }
+            }  */
 
-
+            IntrestGenerator intrestGenerator = new IntrestGenerator();
+            Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
+                    IntrestBasedRecommendEntryPoint.mates.get(3),datalayer);
+            ContentBasedRecommender recommender = new ContentBasedRecommender();
+            for(Map.Entry<String, Integer> weiboTag:weiboTagsTable.entrySet()){
+                weiboTag.getKey();
+                Hashtable<String,Double> maps = new Hashtable<String, Double>();
+                maps.put(weiboTag.getKey(),1.0d);
+                List<RecommendClipEntity> entities =
+                        proceed( userEntity.getValue(), maps, recommender, azureStorageHelper, datalayer);
+                for(RecommendClipEntity recommendClipEntity:entities){
+                    recommendClipEntityList.add(recommendClipEntity);
+                }
             }
 
             if(recommendClipEntityList.isEmpty()){
                 //System.out.println("no recommend clip found totally.");
             }else{
-                if(!bDebug)
+                if(!bDebug){
+                    azureStorageHelper.deleteByPartitionKey(
+                            "RecommendClipEntity",userId.replace("-",""));
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
+                }
             }
             recommendClipEntityList.clear();
 
@@ -194,6 +215,36 @@ public class IntrestBasedRecommendEntryPoint {
 
     }
 
+    public static List<RecommendClipEntity> proceed(Datalayer.UserEntity userEntity,
+                                                    Hashtable<String,Double> tagsTable,
+                                                    ContentBasedRecommender recommender,
+                                                    AzureStorageHelper helper,
+                                                    Datalayer layer){
+        List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
+        Hashtable<String,Float> recommendResult = recommender.recommendByTerms(
+                tagsTable, userEntity.getUuid(), TikaIndexer.INDEX_PATH);
+        String uuidWithoutDash = userEntity.getUuid().replace("-", "");
+
+        int count = 0;
+        for(Map.Entry<String, Float> result:recommendResult.entrySet()){
+            Date date = new Date();
+            long time =  date.getTime();
+            String rowKey = version.get(version.size()-1) +"|"+ time + "|i|"+ count;
+            String strSource = tagsTable.toString();
+
+            String clipId = result.getKey();
+            RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, helper,
+                    clipId, userEntity, strSource,"content-based:vsm","feedhome");
+            if(clipEntity == null) {
+                continue;
+            }
+            recommendClipEntityList.add(clipEntity);
+            count++;
+        }
+
+        return recommendClipEntityList;
+    }
+
     public static List<RecommendClipEntity> proceed(String uuid, Hashtable<String, Datalayer.UserEntity> userEntityHashtable,
                                IntrestBasedRecommend recommend,
                                FastByIDMap<FastIDSet> prefsIDSet,
@@ -239,23 +290,10 @@ public class IntrestBasedRecommendEntryPoint {
                 throw new Exception("No Way");
 
             mate = arraySourceUser.get(0);
-            Date date = new Date();
 
+            Date date = new Date();
             long time =  date.getTime();
             String rowKey = version.get(version.size()-1) +"|"+ time + "|i|"+ recommendedItemList.indexOf(item);
-
-            RecommendClipEntity clipEntity = new RecommendClipEntity(
-                    uuidWithoutDash,
-                    rowKey);
-
-            AzureStorageHelper.FeedClipEntity feedClipEntity =
-                    azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
-
-            if(feedClipEntity == null){
-                //System.out.println("Can't retrieve Clip: " +clipId);
-                continue;
-            }
-
             Datalayer.UserEntity userEntity = userEntityHashtable.get(users.get((int) mate).toString().toUpperCase());
             if(userEntity == null){
                 if(bDebug)
@@ -263,12 +301,6 @@ public class IntrestBasedRecommendEntryPoint {
                 userEntity = datalayer.Query(users.get((int) mate).toString());
 
             }
-            clipEntity.setRecommendStrategy("user-based:log-likelyhood");
-            clipEntity.setRecommendContext("feedhome");
-            clipEntity.setBase36(clipId);
-            clipEntity.setAction("");
-            clipEntity.setSender(uuidWithoutDash);
-
             String strSource= prefix;
             for(int i =0; i< arraySourceUser.size();i++){
                 Datalayer.UserEntity entity = userEntityHashtable.get(users.get(arraySourceUser.get(i).intValue()).toString().toUpperCase());
@@ -276,37 +308,16 @@ public class IntrestBasedRecommendEntryPoint {
                     entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
                 strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
             }
-            //System.out.println(strSource);
-            clipEntity.setSenderName(strSource);
-            clipEntity.setSenderImage(userEntity.getProfile_image_url());
-            clipEntity.setSenderLink("/home/" + uuidWithoutDash + ".clip");
-            clipEntity.setSenderComment("");
-            clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
-            clipEntity.sethasUT(feedClipEntity.gethasUT());
-            clipEntity.setcontentTitle(feedClipEntity.getcontentTitle());
-            clipEntity.setheight(feedClipEntity.getheight());
-            clipEntity.setwidth(feedClipEntity.getwidth());
 
-            clipEntity.setorigheight(feedClipEntity.getorigheight());
-            clipEntity.setorigsite(feedClipEntity.getorigsite());
-            clipEntity.setorigtitle(feedClipEntity.getorigtitle());
-            clipEntity.setorigurl(feedClipEntity.getorigurl());
-            clipEntity.setorigwidth(feedClipEntity.getorigwidth());
-            clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
-            clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
-            clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
-            clipEntity.settitlePic(feedClipEntity.gettitlePic());
-            clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
-            clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
-            clipEntity.settype(feedClipEntity.gettype());
-
-            clipEntity.setuguid(feedClipEntity.getuguid());
-            clipEntity.setuimage(feedClipEntity.getuimage());
-            clipEntity.setuname(feedClipEntity.getuname());
-
+            RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash,
+                    rowKey,azureStorageHelper,clipId,userEntity,strSource,
+                    "user-based:log-likelyhood","feedhome");
+            if(clipEntity == null) {
+                arraySourceUser.clear();
+                mapSourceUserInfluence.clear();
+                continue;
+            }
             recommendClipEntityList.add(clipEntity);
-            arraySourceUser.clear();
-            mapSourceUserInfluence.clear();
         }
 
         if(recommendClipEntityList.isEmpty()){
@@ -315,5 +326,64 @@ public class IntrestBasedRecommendEntryPoint {
         }else{
             return recommendClipEntityList;
         }
+    }
+
+    public static RecommendClipEntity generateClipEntity(String uuidWithoutDash,
+                                                          String rowKey,
+                                                          AzureStorageHelper azureStorageHelper,
+                                                          String clipId,
+                                                          Datalayer.UserEntity userEntity,
+                                                          String strSource,
+                                                          String recommendStrategy,
+                                                          String recommendContext
+                                                          ){
+        RecommendClipEntity clipEntity = new RecommendClipEntity(
+                uuidWithoutDash,
+                rowKey);
+
+        AzureStorageHelper.FeedClipEntity feedClipEntity =
+                azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
+
+        if(feedClipEntity == null){
+            //System.out.println("Can't retrieve Clip: " +clipId);
+            return null;
+        }
+
+        clipEntity.setRecommendStrategy(recommendStrategy);
+        clipEntity.setRecommendContext(recommendContext);
+        clipEntity.setBase36(clipId);
+        clipEntity.setAction("");
+        clipEntity.setSender(uuidWithoutDash);
+
+
+        //System.out.println(strSource);
+        clipEntity.setSenderName(strSource);
+        clipEntity.setSenderImage(userEntity.getProfile_image_url());
+        clipEntity.setSenderLink("/home/" + uuidWithoutDash + ".clip");
+        clipEntity.setSenderComment("");
+        clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
+        clipEntity.sethasUT(feedClipEntity.gethasUT());
+        clipEntity.setcontentTitle(feedClipEntity.getcontentTitle());
+        clipEntity.setheight(feedClipEntity.getheight());
+        clipEntity.setwidth(feedClipEntity.getwidth());
+
+        clipEntity.setorigheight(feedClipEntity.getorigheight());
+        clipEntity.setorigsite(feedClipEntity.getorigsite());
+        clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        clipEntity.setorigurl(feedClipEntity.getorigurl());
+        clipEntity.setorigwidth(feedClipEntity.getorigwidth());
+        clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
+        clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
+        clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
+        clipEntity.settitlePic(feedClipEntity.gettitlePic());
+        clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
+        clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
+        clipEntity.settype(feedClipEntity.gettype());
+
+        clipEntity.setuguid(feedClipEntity.getuguid());
+        clipEntity.setuimage(feedClipEntity.getuimage());
+        clipEntity.setuname(feedClipEntity.getuname());
+
+        return clipEntity;
     }
 }

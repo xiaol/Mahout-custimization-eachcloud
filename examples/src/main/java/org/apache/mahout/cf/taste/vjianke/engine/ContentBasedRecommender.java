@@ -66,11 +66,10 @@ public class ContentBasedRecommender {
 
     }
 
-    public void recommendByTerms(Map<String, Double> terms,
-                                 String userId,
-                                 List<SuggestedClipEntity> suggestedClipEntities ,
-                                 String indexPath
-                                 ) {
+    public Hashtable<String, Float> recommendByTerms(Map<String, Double> terms,
+                                                     String userId,
+                                                     String indexPath
+    ) {
         IndexReader reader = null;
         try {
             reader = DirectoryReader.open(
@@ -83,6 +82,7 @@ public class ContentBasedRecommender {
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
         Datalayer layer = new Datalayer();
+        Hashtable<String, Float> resultTable = new Hashtable<String, Float>();
 
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
@@ -92,7 +92,7 @@ public class ContentBasedRecommender {
             for(Map.Entry<String, Double> word:terms.entrySet()){
                 TermQuery tq = new TermQuery(new Term(
                         TikaIndexer.CLIP_TITLE,word.getKey()));
-                tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
+                //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
                 query.add(tq, BooleanClause.Occur.SHOULD);
             }
         }
@@ -119,21 +119,17 @@ public class ContentBasedRecommender {
                     continue;
                 cachedIds.add(destId);
                 cachedScore.add(scoreDoc.score);
+                resultTable.put(destId,scoreDoc.score);
                 //System.out.println(destId + ": " + scoreDoc.score);
                 //process(srcId, String.format("%03d", count),
                         //destId, (double) scoreDoc.score, helper, layer,
                         //suggestedClipEntities);
                 count++;
             }
-            if(suggestedClipEntities.isEmpty())
-                return;
-            if(!bDebug)
-                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
-            suggestedClipEntities.clear();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        return resultTable;
     }
 
     static void parallelProducer(int docId, IndexReader reader,
