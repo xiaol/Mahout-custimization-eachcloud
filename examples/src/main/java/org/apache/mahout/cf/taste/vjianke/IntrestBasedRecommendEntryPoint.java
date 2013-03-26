@@ -101,7 +101,7 @@ public class IntrestBasedRecommendEntryPoint {
             System.out.println("users:" + userId + "  "+ count);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
-            /*for(final String board:boards){
+            for(final String board:boards){
                 //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
                 if(!cachedEntityMap.containsKey(board)){
                     prefsMap =  new FastByIDMap<PreferenceArray>();
@@ -137,11 +137,11 @@ public class IntrestBasedRecommendEntryPoint {
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
                 }
-            }  */
+            }
 
             IntrestGenerator intrestGenerator = new IntrestGenerator();
             Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
-                    IntrestBasedRecommendEntryPoint.mates.get(3),datalayer);
+                    userId,datalayer);
             ContentBasedRecommender recommender = new ContentBasedRecommender();
             for(Map.Entry<String, Integer> weiboTag:weiboTagsTable.entrySet()){
                 weiboTag.getKey();
