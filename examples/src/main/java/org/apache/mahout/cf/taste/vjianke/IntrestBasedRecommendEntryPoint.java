@@ -369,7 +369,11 @@ public class IntrestBasedRecommendEntryPoint {
 
         clipEntity.setorigheight(feedClipEntity.getorigheight());
         clipEntity.setorigsite(feedClipEntity.getorigsite());
-        clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        if(feedClipEntity.getorigtitle() == null || feedClipEntity.getorigtitle().equals("")){
+            clipEntity.setorigtitle(feedClipEntity.gettitle());
+        }else{
+            clipEntity.setorigtitle(feedClipEntity.getorigtitle());
+        }
         clipEntity.setorigurl(feedClipEntity.getorigurl());
         clipEntity.setorigwidth(feedClipEntity.getorigwidth());
         clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
