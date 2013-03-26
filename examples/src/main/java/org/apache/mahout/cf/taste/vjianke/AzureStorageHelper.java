@@ -79,6 +79,42 @@ public class AzureStorageHelper {
         }
     }
 
+    public void deleteByPartitionKey(String tableName, String partitinKey){
+        // Create a filter condition where the partition key is "Smith".
+        String partitionFilter = TableQuery.generateFilterCondition(
+                TableConstants.PARTITION_KEY,
+                TableQuery.QueryComparisons.EQUAL,
+                partitinKey);
+
+
+        String rowFilter = TableQuery.generateFilterCondition(
+                TableConstants.ROW_KEY,
+                TableQuery.QueryComparisons.GREATER_THAN_OR_EQUAL,
+                0);
+
+        // Combine the two conditions into a filter expression.
+        String combinedFilter = TableQuery.combineFilters(partitionFilter,
+                TableQuery.Operators.AND, rowFilter);
+
+        TableQuery<RecommendClipEntity> rangeQuery =
+                TableQuery.from(tableName, RecommendClipEntity.class)
+                        .where(partitionFilter);
+
+
+        for (RecommendClipEntity entity : _tableClient.execute(rangeQuery)) {
+            // Create an operation to delete the entity.
+            TableOperation deleteSmithJeff = TableOperation.delete(entity);
+
+
+            try {
+                _tableClient.execute(tableName, deleteSmithJeff);
+            } catch (StorageException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     public FeedClipEntity retrieveFeedClipEntity(String clipId, String tableName){
 
         String filter = TableQuery.generateFilterCondition(
@@ -103,7 +139,23 @@ public class AzureStorageHelper {
                     _tableClient.execute(tableName, to).getResultAsType();
             return  specificEntity;
         } catch (StorageException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public TagEntity retrieveTagEntity(String partitionKey, String rowKey, String tableName){
+
+        TableOperation to =
+                TableOperation.retrieve(partitionKey, rowKey, TagEntity.class);
+
+// Submit the operation to the table service and get the specific entity.
+        try {
+            TagEntity specificEntity =
+                    _tableClient.execute(tableName, to).getResultAsType();
+            return  specificEntity;
+        } catch (StorageException e) {
+            e.printStackTrace();
         }
         return null;
     }
@@ -119,6 +171,19 @@ public class AzureStorageHelper {
         return outputStream;
     }
 
+    public static class TagEntity extends TableServiceEntity{
+        public TagEntity(){}
+
+        public String getTags() {
+            return Tags;
+        }
+
+        public void setTags(String tags) {
+            Tags = tags;
+        }
+
+        public String Tags;
+    }
 
     public static class FeedClipEntity extends TableServiceEntity {
 
