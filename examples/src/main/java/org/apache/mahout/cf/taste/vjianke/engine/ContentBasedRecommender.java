@@ -30,7 +30,7 @@ import static org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarit
  */
 public class ContentBasedRecommender {
     static boolean bDebug = false;
-    static boolean bIncrement = false;
+    static boolean bIncrement = true;
 
     static int idStamp = 357643;
     static int nextIdStamp = 0;
