@@ -400,9 +400,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -784,19 +782,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="33" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-5.8461537">
+            <state line="34" column="31" selection-start="1228" selection-end="1228" vertical-scroll-proportion="-9.363238">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TikaIndexer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="TikaIndexer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-0.41489363">
+            <state line="128" column="25" selection-start="5384" selection-end="5384" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="docComment;class#TikaIndexer#0" expanded="false" />
               </folding>
@@ -825,7 +823,7 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="654" column="0" selection-start="22298" selection-end="22298" vertical-scroll-proportion="-17.384615">
+            <state line="652" column="16" selection-start="22116" selection-end="22116" vertical-scroll-proportion="-90.61539">
               <folding>
                 <element signature="docComment;class#Datalayer#0" expanded="false" />
               </folding>
@@ -1883,9 +1881,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="25" selection-start="5384" selection-end="5384" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#TikaIndexer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="654" column="0" selection-start="22298" selection-end="22298" vertical-scroll-proportion="-17.384615">
+        <state line="652" column="16" selection-start="22116" selection-end="22116" vertical-scroll-proportion="-90.61539">
           <folding>
             <element signature="docComment;class#Datalayer#0" expanded="false" />
           </folding>
@@ -1894,17 +1901,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="33" selection-start="1156" selection-end="1156" vertical-scroll-proportion="-5.8461537">
+        <state line="34" column="31" selection-start="1228" selection-end="1228" vertical-scroll-proportion="-9.363238">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="-0.41489363">
-          <folding>
-            <element signature="docComment;class#TikaIndexer#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
