@@ -23,7 +23,7 @@ public class RecommendBalancer {
 
     public BalanceResult balance(int remainSubscription, Datalayer.BoardRelated relatedBoard){
         BalanceResult result = new BalanceResult();
-        if(subscriptionCount > MAXCOUNT){
+        if(subscriptionCount >= MAXCOUNT){
             result.howMany = 1;
         }
         if(subscriptionCount < MAXCOUNT){
