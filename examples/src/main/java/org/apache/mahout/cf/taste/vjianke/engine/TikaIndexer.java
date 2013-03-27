@@ -43,7 +43,7 @@ public class TikaIndexer {
 
     public static void main(String[] args){
 
-        boolean create = true;
+        boolean create = false;
         Date start = new Date();
         try {
             System.out.println("Indexing to directory '" + INDEX_PATH + "'...");
@@ -68,6 +68,7 @@ public class TikaIndexer {
             // iwc.setRAMBufferSizeMB(256.0);
 
             IndexWriter writer = new IndexWriter(dir, iwc);
+            int startDocCount = writer.maxDoc();
             indexDocs(writer);
 
             // NOTE: if you want to maximize search performance,
@@ -77,11 +78,12 @@ public class TikaIndexer {
             // you're done adding documents to it):
             //
             // writer.forceMerge(1);
-
+            int endDocCount = writer.maxDoc();
             writer.close();
 
             Date end = new Date();
             System.out.println(end.getTime() - start.getTime() + " total milliseconds");
+            System.out.println("StartDocCount:" + startDocCount +" | EndDocCount:"+endDocCount);
 
         } catch (IOException e) {
             System.out.println(" caught a " + e.getClass() +
@@ -125,7 +127,7 @@ public class TikaIndexer {
         helper.init();
         List<Datalayer.ClipEntity> clipEntityList =
                 layer.getClips(
-                        Integer.toString(700),ContentBasedRecommender.bDebug,
+                        Integer.toString(50),ContentBasedRecommender.bDebug,
                         ContentBasedRecommender.bIncrement);
 
         for(Datalayer.ClipEntity entity:clipEntityList){

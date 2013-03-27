@@ -22,8 +22,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    private final String baseTimestamp = "2013-03-15";
-    private final String upTimestamp = "2013-03-21";
+    private final String baseTimestamp = "2013-03-22";
+    private final String upTimestamp = "2013-03-26";       //morning 10:00
 
     public Datalayer(){
     }
@@ -650,7 +650,7 @@ public class Datalayer {
                 sqlString += "TOP "+ count +" ";
             sqlString += "Id,title FROM ClipEntity";
             if(increment)
-                sqlString += " where add_time > '"+ baseTimestamp+"'";
+                sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
