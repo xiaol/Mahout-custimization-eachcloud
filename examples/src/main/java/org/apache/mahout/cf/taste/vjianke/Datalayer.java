@@ -22,8 +22,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    private final String baseTimestamp = "2013-03-22";
-    private final String upTimestamp = "2013-03-26";       //morning 10:00
+    private final String baseTimestamp = "2013-03-26";
+    private final String upTimestamp = "2013-03-27";       //morning 10:00
 
     public Datalayer(){
     }
@@ -169,7 +169,7 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT TOP 1 * FROM PanamaUserEntity";
+            String sqlString = "SELECT * FROM PanamaUserEntity";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
 
             preparedStatement = connection.prepareStatement(sqlString);
