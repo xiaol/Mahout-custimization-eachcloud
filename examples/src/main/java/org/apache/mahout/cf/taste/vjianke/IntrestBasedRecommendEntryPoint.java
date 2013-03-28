@@ -66,8 +66,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2011-12-03 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-01 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-03-27 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -75,6 +75,7 @@ public class IntrestBasedRecommendEntryPoint {
         FastByIDMap<PreferenceArray> prefsMap = null;
         ArrayList<UUID> users = null;
         FastByIDMap<FastIDSet> prefsIDSet;
+
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
         azureStorageHelper.init();
         Datalayer datalayer = new Datalayer();
@@ -91,6 +92,22 @@ public class IntrestBasedRecommendEntryPoint {
             boardBasedRecommend =
                     new BoardBasedRecommend(genericDataModel, itemSimilarity);
         }
+
+        FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
+        ArrayList<UUID> localUsers = new ArrayList<UUID>();
+        FastByIDMap<FastIDSet> localprefsIDSet;
+
+        UserBasedRecommend userBasedRecommender = new UserBasedRecommend();
+        userBasedRecommender.init(localPrefsMap, localUsers, _ts, _tsEnd);
+        localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
+        DataModel localModel = new GenericBooleanPrefDataModel(localprefsIDSet);
+
+        UserSimilarity localSimilarity =
+                new LogLikelihoodSimilarity(localModel);
+        UserNeighborhood localNeighborhood =
+                new NearestNUserNeighborhood(localUsers.size(), localSimilarity, localModel);
+        IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
+                localModel, localNeighborhood, localSimilarity);
 
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
@@ -155,6 +172,13 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
+
+            List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
+                    localprefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 12, "");
+            for(RecommendClipEntity entity:userBasedResults){
+                recommendClipEntityList.add(entity);
+            }
+
             if(recommendClipEntityList.isEmpty()){
                 //System.out.println("no recommend clip found totally.");
             }else{
@@ -188,13 +212,13 @@ public class IntrestBasedRecommendEntryPoint {
                         prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
                         DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
 
-                        UserSimilarity similarity =
-                                new LogLikelihoodSimilarity(model);
-                        UserNeighborhood neighborhood =
+                        UserSimilarity similarity = new LogLikelihoodSimilarity(model);
+                        NearestNUserNeighborhood neighborhood =
                                 new NearestNUserNeighborhood(users.size(), similarity, model);
-                        IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
+                        IntrestBasedRecommend intrestBasedRecommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                        List<RecommendClipEntity> results = proceed(userEntity.getKey(),userEntities, recommend,
+                        List<RecommendClipEntity> results = proceed(
+                                userEntity.getKey(),userEntities, intrestBasedRecommend,
                                 prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix);
                         for(RecommendClipEntity entity:results){
                             recommendClipEntityList.add(entity);

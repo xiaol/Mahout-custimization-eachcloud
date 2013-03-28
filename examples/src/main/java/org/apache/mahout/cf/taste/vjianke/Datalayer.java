@@ -169,7 +169,7 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT * FROM PanamaUserEntity";
+            String sqlString = "SELECT TOP 1 * FROM PanamaUserEntity";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
 
             preparedStatement = connection.prepareStatement(sqlString);
