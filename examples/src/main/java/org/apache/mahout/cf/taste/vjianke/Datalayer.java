@@ -23,7 +23,7 @@ public class Datalayer {
                     "password=IONisgreat!";
 
     private final String baseTimestamp = "2013-03-26";
-    private final String upTimestamp = "2013-03-27";       //morning 10:00
+    private final String upTimestamp = "2013-03-28";       //morning 10:00
 
     public Datalayer(){
     }
@@ -626,7 +626,7 @@ public class Datalayer {
     public class ClipEntity{
         public String id;
         public String title;
-
+        public String user_id;
     }
 
     public List<ClipEntity>  getClips(
@@ -648,7 +648,7 @@ public class Datalayer {
             String sqlString = "SELECT ";
             if(limited)
                 sqlString += "TOP "+ count +" ";
-            sqlString += "Id,title FROM ClipEntity";
+            sqlString += "Id,title,user_guid FROM ClipEntity";
             if(increment)
                 sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
@@ -661,6 +661,7 @@ public class Datalayer {
                 ClipEntity entity = new ClipEntity();
                 entity.id = resultSet.getString(1);
                 entity.title = resultSet.getString(2);
+                entity.user_id = resultSet.getString(3);
                 clipEntities.add(entity);
                 rowCount++;
             }
@@ -786,6 +787,58 @@ public class Datalayer {
         return weiboTags;
     }
 
+    public void addClipTagIndex(List<ConvertAutoTagToIndex.ClipTagEntity> entityList){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "INSERT INTO ClipTagEntity(ClipId,Tag,OwnerGuid,BoardId,Weight,Timestamp) "
+                + "VALUES (?, ?, ?, ?, ?,?)";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            System.out.println(e);
+            return;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            for(ConvertAutoTagToIndex.ClipTagEntity entity:entityList){
+                preparedStatement.setString(1, "John");
+                preparedStatement.setString(2,"Doe");
+                preparedStatement.addBatch();
+                preparedStatement.clearParameters();
+            }
+            int[] results = preparedStatement.executeBatch();
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+    }
 
     public class WeiboTag{
         String userTag;

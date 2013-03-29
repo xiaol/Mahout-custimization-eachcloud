@@ -119,6 +119,13 @@ public class IntrestBasedRecommendEntryPoint {
             System.out.println("users:" + userId + "  "+ count);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
+
+            List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 12, "Fullscope ");
+            for(RecommendClipEntity entity:userBasedResults){
+                recommendClipEntityList.add(entity);
+            }
+
             for(final String board:boards){
                 //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
                 if(!cachedEntityMap.containsKey(board)){
@@ -172,19 +179,36 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
-
-            List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 12, "Fullscope ");
-            for(RecommendClipEntity entity:userBasedResults){
-                recommendClipEntityList.add(entity);
-            }
-
             if(recommendClipEntityList.isEmpty()){
                 //System.out.println("no recommend clip found totally.");
             }else{
                 if(!bDebug){
-                    azureStorageHelper.deleteByPartitionKey(
+                    List<RecommendClipEntity> deletedRecommendClipEntity =
+                            azureStorageHelper.deleteByPartitionKey(
                             "RecommendClipEntity",userId.replace("-",""));
+
+                    List<RecommendClipEntity> newRecommendClipEntities =
+                            new ArrayList<RecommendClipEntity>();
+                    List<RecommendClipEntity> oldRecommendClipEntities =
+                            new ArrayList<RecommendClipEntity>();
+                    for(RecommendClipEntity entity:recommendClipEntityList){
+                        String clipId = entity.getRowKey();
+                        if(deletedRecommendClipEntity.contains(clipId)){
+                            oldRecommendClipEntities.add(entity);
+                        }
+                        else{
+                            newRecommendClipEntities.add(entity);
+                        }
+                    }
+
+                    recommendClipEntityList.clear();
+                    for(RecommendClipEntity entity:newRecommendClipEntities){
+                        recommendClipEntityList.add(entity);
+                    }
+                    for(RecommendClipEntity entity:oldRecommendClipEntities){
+                        recommendClipEntityList.add(entity);
+                    }
+
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
                 }
