@@ -171,7 +171,7 @@ public class IntrestGenerator {
         }
     }
 
-    class Tag{
+    public class Tag{
         String Key;
         Float Value;
 

@@ -79,7 +79,7 @@ public class AzureStorageHelper {
         }
     }
 
-    public void deleteByPartitionKey(String tableName, String partitinKey){
+    public List<RecommendClipEntity> deleteByPartitionKey(String tableName, String partitinKey){
         // Create a filter condition where the partition key is "Smith".
         String partitionFilter = TableQuery.generateFilterCondition(
                 TableConstants.PARTITION_KEY,
@@ -100,11 +100,12 @@ public class AzureStorageHelper {
                 TableQuery.from(tableName, RecommendClipEntity.class)
                         .where(partitionFilter);
 
-
+        List<RecommendClipEntity> recommendClipEntities =
+                new ArrayList<RecommendClipEntity>();
         for (RecommendClipEntity entity : _tableClient.execute(rangeQuery)) {
             // Create an operation to delete the entity.
             TableOperation deleteSmithJeff = TableOperation.delete(entity);
-
+            recommendClipEntities.add(entity);
 
             try {
                 _tableClient.execute(tableName, deleteSmithJeff);
@@ -112,7 +113,7 @@ public class AzureStorageHelper {
                 e.printStackTrace();
             }
         }
-
+        return recommendClipEntities;
     }
 
     public FeedClipEntity retrieveFeedClipEntity(String clipId, String tableName){
@@ -156,6 +157,25 @@ public class AzureStorageHelper {
             return  specificEntity;
         } catch (StorageException e) {
             e.printStackTrace();
+        }
+        return null;
+    }
+
+    public List<TagEntity> retrieveAllEntities(String tableName){
+// Create a filter condition where the partition key is "Smith".
+        String partitionFilter = TableQuery.generateFilterCondition(
+                TableConstants.PARTITION_KEY,
+                TableQuery.QueryComparisons.EQUAL,
+                "Smith");
+
+// Specify a partition query, using "Smith" as the partition key filter.
+        TableQuery<TagEntity> partitionQuery =
+                TableQuery.from("people", TagEntity.class)
+                        .where(partitionFilter);
+
+// Loop through the results, displaying information about the entity.
+        for (TagEntity entity : _tableClient.execute(partitionQuery)) {
+
         }
         return null;
     }
