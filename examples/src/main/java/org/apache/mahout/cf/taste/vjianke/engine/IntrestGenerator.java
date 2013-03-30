@@ -98,7 +98,6 @@ public class IntrestGenerator {
     }
 
 
-
     class WeiboTag{
         String name;
         String weight;

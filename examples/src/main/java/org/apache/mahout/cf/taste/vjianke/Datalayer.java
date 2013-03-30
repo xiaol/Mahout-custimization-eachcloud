@@ -3,6 +3,7 @@ package org.apache.mahout.cf.taste.vjianke;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.*;
+import org.apache.mahout.cf.taste.model.Preference;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
@@ -22,8 +23,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    private final String baseTimestamp = "2013-03-26";
-    private final String upTimestamp = "2013-03-28";       //morning 10:00
+    public final String baseTimestamp = "2013-03-26";
+    public  final String upTimestamp = "2013-03-28";       //morning 10:00
 
     public Datalayer(){
     }
@@ -459,8 +460,8 @@ public class Datalayer {
         }
     }
 
-    public FastByIDMap<PreferenceArray> fetchData(
-            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
+    public FastByIDMap<PreferenceArray> getPreferenceByClick(
+            FastByIDMap<PreferenceArray> prefsMap, ArrayList<UUID> users, List<String> clipIds){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -542,6 +543,85 @@ public class Datalayer {
         return prefsMap;
     }
 
+    public FastByIDMap<PreferenceArray> getPreferenceByUserClip(
+            FastByIDMap<PreferenceArray> prefsMap, String strUserId,
+            ArrayList<UUID> users, List<String> clipIds){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+        if(clipIds.isEmpty())
+            return null;
+
+        String sqlString = "SELECT * FROM ClipEntity " +
+                "WHERE ";
+        sqlString = sqlString + "(id = '" +clipIds.get(0) +"'";
+        for(int i=1; i< clipIds.size(); i++){
+            sqlString = sqlString + " OR id = '" + clipIds.get(i) + "'";
+
+        }
+        sqlString = sqlString + ") AND user_guid = '" + strUserId +"'";
+
+        UUID uuid = UUID.fromString(strUserId);
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            BooleanUserPreferenceArray prefs;
+            if(!users.contains(uuid)){
+               users.add(uuid);
+                prefs = new BooleanUserPreferenceArray(0);
+            }else{
+                 prefs =
+                        (BooleanUserPreferenceArray) prefsMap.get(users.indexOf(uuid));
+            }
+
+            ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
+            while (resultSet.next())
+            {
+               BooleanPreference booleanPreference = new BooleanPreference(
+                       users.indexOf(uuid), Long.parseLong(resultSet.getString(1),36));
+               userPrefs.add(booleanPreference);
+               rowCount++;
+            }
+
+            Iterator it = prefs.iterator();
+            while (it.hasNext()){
+                Preference pref = (Preference) it.next();
+                BooleanPreference booleanPreference = new BooleanPreference(
+                        users.indexOf(uuid), pref.getItemID());
+                userPrefs.add(booleanPreference);
+            }
+            prefsMap.put(users.indexOf(uuid), new BooleanUserPreferenceArray(userPrefs));
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
+    }
 
     public FastByIDMap<PreferenceArray> fetchBoardRelationsData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<String> boards, ArrayList<String> users){
@@ -732,6 +812,60 @@ public class Datalayer {
             catch (SQLException sqlException){}
         }
         return clipIds;
+    }
+
+
+    public List<ClipEntity> getRecentClipByUser(String strUserId, int count, String upTimestamp){
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return clipEntities;
+        }
+        try
+        {
+            String sqlString = "SELECT ";
+            sqlString += "TOP "+ count +" ";
+            sqlString += "Id,title,user_guid FROM ClipEntity";
+            sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                ClipEntity entity = new ClipEntity();
+                entity.id = resultSet.getString(1);
+                entity.title = resultSet.getString(2);
+                entity.user_id = resultSet.getString(3);
+                clipEntities.add(entity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return clipEntities;
     }
 
     public List<WeiboTag> getWeiboTag(String uuid){
