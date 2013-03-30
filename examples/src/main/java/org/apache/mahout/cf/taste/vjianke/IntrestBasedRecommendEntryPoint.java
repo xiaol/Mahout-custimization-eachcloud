@@ -1,5 +1,6 @@
 package org.apache.mahout.cf.taste.vjianke;
 
+import org.apache.mahout.cf.taste.hadoop.pseudo.UserIDsMapper;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
@@ -66,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-01 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-03-27 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-15 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-03-29 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -109,6 +110,7 @@ public class IntrestBasedRecommendEntryPoint {
         IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                 localModel, localNeighborhood, localSimilarity);
 
+        ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
             String userId = userEntity.getKey();
@@ -121,9 +123,30 @@ public class IntrestBasedRecommendEntryPoint {
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 12, "Fullscope ");
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 3, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
+            }
+
+            List<Datalayer.ClipEntity> recentClipByUser =
+                    datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
+            for(Datalayer.ClipEntity recentClipEntity:recentClipByUser){
+                List<ContentBasedRecommender.RelativeClipInfo> relativeClipInfoList =
+                        contentBasedRecommender.recomendByClip(recentClipEntity.id);
+                for(ContentBasedRecommender.RelativeClipInfo relativeClipInfo:relativeClipInfoList){
+                    Date date = new Date();
+                    long time =  date.getTime();
+                    String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ relativeClipInfo.index;
+                    String uuidWithoutDash = userId.replace("-","");
+                    String strSource = relativeClipInfo.srcId;
+                    RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
+                            relativeClipInfo.destId, userEntity.getValue(), strSource,"content-based:vsm","recentClip");
+                    if(clipEntity == null) {
+                        continue;
+                    }
+                    recommendClipEntityList.add(clipEntity);
+                }
+
             }
 
             for(final String board:boards){
@@ -134,7 +157,8 @@ public class IntrestBasedRecommendEntryPoint {
                     List<String> clipIds = datalayer.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
                     if(clipIds.isEmpty())
                         continue;
-                    datalayer.fetchData(prefsMap, users, clipIds);
+                    datalayer.getPreferenceByClick(prefsMap, users, clipIds);
+                    datalayer.getPreferenceByUserClip(prefsMap,userId,users,clipIds);
                     BoardCachedEntity cachedEntity = new BoardCachedEntity();
                     prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
                     cachedEntity.prefsIDSet = prefsIDSet;
@@ -229,7 +253,7 @@ public class IntrestBasedRecommendEntryPoint {
                         if(clipIds.isEmpty())
                             continue;
 
-                        datalayer.fetchData(prefsMap, users, clipIds);
+                        datalayer.getPreferenceByClick(prefsMap, users, clipIds);
                         if(users.size() < 1)
                             continue;
 

@@ -54,6 +54,7 @@ public class ContentBasedRecommender {
             System.out.println("Document id: " +startDocId);
             Date start = new Date();
             parallelProducer(startDocId, reader, suggestedClipEntities, helper,layer);
+
             Date end = new Date();
             if(startDocId%1000 == 0)
                 System.out.println((end.getTime() - start.getTime())/60000.0d + " mins to build rank map");
@@ -64,6 +65,50 @@ public class ContentBasedRecommender {
 
     public void process(IndexSearcher searcher, Query query){
 
+    }
+
+    public int getClipFromId(String clipId, IndexReader reader){
+        IndexSearcher searcher = new IndexSearcher(reader);
+        TopDocs matches;
+        int destId = -1;
+        TermQuery query = new TermQuery(
+                new Term(TikaIndexer.CLIP_ID,clipId));
+        try {
+            matches = searcher.search(query,5);
+            System.out.println(matches.totalHits);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return destId;
+        }
+
+        int count = 0;
+        for(ScoreDoc scoreDoc:matches.scoreDocs){
+            if(scoreDoc.doc == 2147483647)
+                continue;
+
+            destId = scoreDoc.doc;
+            count++;
+        }
+        return destId;
+    }
+
+    public List<RelativeClipInfo> recomendByClip(String clipId){
+        try {
+            IndexReader reader = DirectoryReader.open(
+                    FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
+            int docId = getClipFromId(clipId,reader);
+            if(docId == -1)
+                return Collections.emptyList();
+            IndexSearcher searcher = new IndexSearcher(reader);
+            List<RelativeClipInfo> relativeClipInfoList =
+                    booleanQuery(docId,reader,searcher,1);
+            return relativeClipInfoList;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return Collections.emptyList();
     }
 
     public Hashtable<String, Float> recommendByTerms(Map<String, Double> terms,
@@ -153,7 +198,22 @@ public class ContentBasedRecommender {
         //phraseQuery(terms,searcher);
         //moreLikeThisQuery(terms,searcher,analyzer);
         //termQuery(terms,searcher);
-        booleanQuery(docId,reader,searcher,helper,layer,suggestedClipEntities);
+        List<RelativeClipInfo> relativeClipInfoList =
+                booleanQuery(docId,reader,searcher,6);
+
+        for(RelativeClipInfo relativeClipInfo:relativeClipInfoList){
+            process(relativeClipInfo.srcId, String.format("%03d", relativeClipInfo.index),
+                    relativeClipInfo.destId, (double) relativeClipInfo.score, helper, layer,
+                    suggestedClipEntities);
+        }
+
+        if(suggestedClipEntities.isEmpty())
+            return;
+        if(!bDebug)
+            helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+        suggestedClipEntities.clear();
+
+
     }
 
     static void phraseQuery(Map<String,Double> terms, IndexSearcher searcher){
@@ -171,11 +231,9 @@ public class ContentBasedRecommender {
         }
     }
 
-    static void booleanQuery(int docId, IndexReader reader,
-                             IndexSearcher searcher,
-                             AzureStorageHelper helper,
-                             Datalayer layer,
-                             List<SuggestedClipEntity> suggestedClipEntities){
+    static List<RelativeClipInfo> booleanQuery(int docId, IndexReader reader,
+                                               IndexSearcher searcher,
+                                               int recommendCount){
         Map<String,Double> terms = null;
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
@@ -212,10 +270,10 @@ public class ContentBasedRecommender {
         }
 
         TopDocs matches;
+        List<RelativeClipInfo> relativeClipInfoList = new ArrayList<RelativeClipInfo>();
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
-            int recommendCount = 5;
             HashSet<String> cachedIds = new HashSet<String>(recommendCount);
             HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
             int count = 0;
@@ -224,29 +282,41 @@ public class ContentBasedRecommender {
                     break;
                 if(scoreDoc.doc == 2147483647)
                     continue;
-
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+                if(Float.compare(scoreDoc.score,1.6f) > 0){
+                    cachedIds.add(destId);
+                    cachedScore.add(scoreDoc.score);
+                    continue;
+                }
+
                 if(srcId.equals(destId) || cachedIds.contains(destId)
                         || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
                         || Float.compare(scoreDoc.score, 2.0f)> 0)
                     continue;
-                cachedIds.add(destId);
-                cachedScore.add(scoreDoc.score);
+
                 //System.out.println(destId + ": " + scoreDoc.score);
-                process(srcId, String.format("%03d", count),
-                        destId, (double) scoreDoc.score, helper, layer,
-                        suggestedClipEntities);
+                RelativeClipInfo relativeClipInfo = new RelativeClipInfo();
+                relativeClipInfo.destId = destId;
+                relativeClipInfo.srcId = srcId;
+                relativeClipInfo.score = scoreDoc.score;
+                relativeClipInfo.index = count;
+                relativeClipInfoList.add(relativeClipInfo);
+
                 count++;
             }
-            if(suggestedClipEntities.isEmpty())
-                return;
-            if(!bDebug)
-                helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
-            suggestedClipEntities.clear();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return relativeClipInfoList;
+    }
+
+    public static class RelativeClipInfo{
+        public String srcId;
+        public String destId;
+        public float score;
+        public int index;
     }
 
     static void termQuery(Map<String,Double> terms, IndexSearcher searcher){
