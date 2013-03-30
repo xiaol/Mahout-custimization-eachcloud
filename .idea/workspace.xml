@@ -401,10 +401,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -729,10 +726,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="113" column="79" selection-start="5591" selection-end="5591" vertical-scroll-proportion="-0.4834437">
+            <state line="144" column="5" selection-start="7692" selection-end="7692" vertical-scroll-proportion="-10.653846">
               <folding>
                 <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
                 <element signature="e#4603#4620#0" expanded="true" />
@@ -761,20 +758,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="318" column="15" selection-start="12115" selection-end="12115" vertical-scroll-proportion="-30.961538">
+            <state line="35" column="0" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-0.4790287">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ContentBasedRecommender#0" expanded="false" />
-                <element signature="e#1661#1682#0" expanded="true" />
-                <element signature="e#4550#4565#0" expanded="true" />
-                <element signature="e#5272#5280#0" expanded="true" />
-                <element signature="e#5350#5357#0" expanded="true" />
-                <element signature="e#10283#10301#0" expanded="true" />
-                <element signature="e#10472#10480#0" expanded="true" />
-                <element signature="e#10550#10557#0" expanded="true" />
+                <element signature="e#1666#1687#0" expanded="true" />
+                <element signature="e#4555#4570#0" expanded="true" />
+                <element signature="e#5277#5285#0" expanded="true" />
+                <element signature="e#5355#5362#0" expanded="true" />
+                <element signature="e#10288#10306#0" expanded="true" />
+                <element signature="e#10477#10485#0" expanded="true" />
+                <element signature="e#10555#10562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -783,7 +780,7 @@
       <file leaf-file-name="TikaIndexer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="83" column="93" selection-start="3301" selection-end="3301" vertical-scroll-proportion="0.0">
+            <state line="128" column="26" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -792,7 +789,7 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="39" selection-start="5541" selection-end="5541" vertical-scroll-proportion="-8.884615">
+            <state line="746" column="13" selection-start="26007" selection-end="26007" vertical-scroll-proportion="-13.807693">
               <folding>
                 <element signature="e#16046#16065#0" expanded="true" />
                 <element signature="e#19940#19959#0" expanded="true" />
@@ -874,9 +871,9 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
       </list>
     </option>
   </component>
@@ -1875,43 +1872,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="318" column="15" selection-start="12115" selection-end="12115" vertical-scroll-proportion="-30.961538">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#ContentBasedRecommender#0" expanded="false" />
-            <element signature="e#1661#1682#0" expanded="true" />
-            <element signature="e#4550#4565#0" expanded="true" />
-            <element signature="e#5272#5280#0" expanded="true" />
-            <element signature="e#5350#5357#0" expanded="true" />
-            <element signature="e#10283#10301#0" expanded="true" />
-            <element signature="e#10472#10480#0" expanded="true" />
-            <element signature="e#10550#10557#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="93" selection-start="3301" selection-end="3301" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="39" selection-start="5541" selection-end="5541" vertical-scroll-proportion="-8.884615">
-          <folding>
-            <element signature="e#16046#16065#0" expanded="true" />
-            <element signature="e#19940#19959#0" expanded="true" />
-            <element signature="e#24777#24789#0" expanded="true" />
-            <element signature="e#28422#28434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="113" column="79" selection-start="5591" selection-end="5591" vertical-scroll-proportion="-0.4834437">
+        <state line="144" column="5" selection-start="7692" selection-end="7692" vertical-scroll-proportion="-10.653846">
           <folding>
             <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
             <element signature="e#4603#4620#0" expanded="true" />
@@ -1926,6 +1889,42 @@
             <element signature="e#17745#17751#0" expanded="true" />
             <element signature="e#17816#17830#0" expanded="true" />
             <element signature="e#17895#17903#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="746" column="13" selection-start="26007" selection-end="26007" vertical-scroll-proportion="-13.807693">
+          <folding>
+            <element signature="e#16046#16065#0" expanded="true" />
+            <element signature="e#19940#19959#0" expanded="true" />
+            <element signature="e#24777#24789#0" expanded="true" />
+            <element signature="e#28422#28434#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="26" selection-start="5385" selection-end="5385" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="0" selection-start="1230" selection-end="1230" vertical-scroll-proportion="-0.4790287">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#ContentBasedRecommender#0" expanded="false" />
+            <element signature="e#1666#1687#0" expanded="true" />
+            <element signature="e#4555#4570#0" expanded="true" />
+            <element signature="e#5277#5285#0" expanded="true" />
+            <element signature="e#5355#5362#0" expanded="true" />
+            <element signature="e#10288#10306#0" expanded="true" />
+            <element signature="e#10477#10485#0" expanded="true" />
+            <element signature="e#10555#10562#0" expanded="true" />
           </folding>
         </state>
       </provider>

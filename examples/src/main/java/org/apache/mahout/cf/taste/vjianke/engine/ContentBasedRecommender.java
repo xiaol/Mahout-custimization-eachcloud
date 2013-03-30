@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 364697;
-    static int nextIdStamp = 0;
+    static int nextIdStamp = 368150;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -284,7 +284,7 @@ public class ContentBasedRecommender {
                     continue;
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
-                if(Float.compare(scoreDoc.score,1.6f) > 0){
+                if(Float.compare(scoreDoc.score,1.6f) > 0 && count ==0){
                     cachedIds.add(destId);
                     cachedScore.add(scoreDoc.score);
                     continue;
