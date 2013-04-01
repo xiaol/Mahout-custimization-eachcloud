@@ -868,6 +868,56 @@ public class Datalayer {
         return clipEntities;
     }
 
+    public boolean isClipRead(String clipId, String uuid){
+        boolean result = false;
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT clip_id FROM ClickEntity " +
+                "WHERE ";
+        sqlString = sqlString + "user_id = '" + uuid +"' and clip_id = '"+clipId+"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                result = true;
+                return result;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return result;
+    }
+
     public List<WeiboTag> getWeiboTag(String uuid){
         uuid = uuid.toUpperCase();
         PreparedStatement preparedStatement = null;    // For the SQL statement
