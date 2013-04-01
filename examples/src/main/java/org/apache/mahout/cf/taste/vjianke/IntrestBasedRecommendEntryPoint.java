@@ -67,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-15 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-03-29 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-16 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-03-31 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -130,9 +130,12 @@ public class IntrestBasedRecommendEntryPoint {
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
+            int recentCount = 1;
+            if(boards.size() < 2)
+                recentCount =3;
             for(Datalayer.ClipEntity recentClipEntity:recentClipByUser){
                 List<ContentBasedRecommender.RelativeClipInfo> relativeClipInfoList =
-                        contentBasedRecommender.recomendByClip(recentClipEntity.id);
+                        contentBasedRecommender.recomendByClip(recentClipEntity.id,recentCount);
                 for(ContentBasedRecommender.RelativeClipInfo relativeClipInfo:relativeClipInfoList){
                     Date date = new Date();
                     long time =  date.getTime();
