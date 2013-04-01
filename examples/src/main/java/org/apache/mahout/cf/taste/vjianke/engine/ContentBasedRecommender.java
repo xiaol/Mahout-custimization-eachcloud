@@ -92,7 +92,7 @@ public class ContentBasedRecommender {
         return destId;
     }
 
-    public List<RelativeClipInfo> recomendByClip(String clipId){
+    public List<RelativeClipInfo> recomendByClip(String clipId, int count){
         try {
             IndexReader reader = DirectoryReader.open(
                     FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
@@ -101,7 +101,7 @@ public class ContentBasedRecommender {
                 return Collections.emptyList();
             IndexSearcher searcher = new IndexSearcher(reader);
             List<RelativeClipInfo> relativeClipInfoList =
-                    booleanQuery(docId,reader,searcher,1);
+                    booleanQuery(docId,reader,searcher,count);
             return relativeClipInfoList;
 
         } catch (IOException e) {
