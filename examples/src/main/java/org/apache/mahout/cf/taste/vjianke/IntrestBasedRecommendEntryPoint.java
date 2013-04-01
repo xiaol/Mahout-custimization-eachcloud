@@ -130,13 +130,24 @@ public class IntrestBasedRecommendEntryPoint {
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
-            int recentCount = 1;
-            if(boards.size() < 2)
-                recentCount =3;
+            int recentCount = 5;
+            int recommendRecentCount = 1;
+            if(boards.size() < 2){
+                recommendRecentCount = 3;
+                recentCount =8;
+            }
+
             for(Datalayer.ClipEntity recentClipEntity:recentClipByUser){
+                int recommendedCountByClip = 0;
                 List<ContentBasedRecommender.RelativeClipInfo> relativeClipInfoList =
                         contentBasedRecommender.recomendByClip(recentClipEntity.id,recentCount);
                 for(ContentBasedRecommender.RelativeClipInfo relativeClipInfo:relativeClipInfoList){
+                    boolean isRead = datalayer.isClipRead(relativeClipInfo.destId,userId);
+                    if(isRead){
+                        System.out.println("is Read");
+                        continue;
+                    }
+
                     Date date = new Date();
                     long time =  date.getTime();
                     String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ relativeClipInfo.index;
@@ -147,7 +158,12 @@ public class IntrestBasedRecommendEntryPoint {
                     if(clipEntity == null) {
                         continue;
                     }
+
                     recommendClipEntityList.add(clipEntity);
+                    recommendedCountByClip++;
+                    if(recommendedCountByClip >= recommendRecentCount){
+                        break;
+                    }
                 }
 
             }
