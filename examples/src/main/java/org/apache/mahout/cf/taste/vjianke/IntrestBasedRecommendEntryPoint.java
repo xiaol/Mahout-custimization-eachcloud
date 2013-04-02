@@ -114,7 +114,7 @@ public class IntrestBasedRecommendEntryPoint {
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
             //String userId = userEntity.getKey();
-            String userId = IntrestBasedRecommendEntryPoint.mates.get(1);
+            String userId = IntrestBasedRecommendEntryPoint.mates.get(1).toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -275,7 +275,7 @@ public class IntrestBasedRecommendEntryPoint {
                     System.out.println("new: "+newRecommendClipEntities.size() +
                             " | old: "+oldRecommendClipEntities.size());
                     for(RecommendClipEntity recommendClip:recommendClipEntityList){
-                        System.out.println("RowKey: "+ recommendClip.getRowKey());
+                        System.out.println("PartitionKey: "+recommendClip.getPartitionKey()+" RowKey: "+ recommendClip.getRowKey());
                     }
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
