@@ -274,7 +274,6 @@ public class Datalayer {
                clipIds.add(clipId);
                rowCount++;
            }
-
            //System.out.println("There were " + rowCount +" clips.");
        }
        catch (ClassNotFoundException cnfe)
