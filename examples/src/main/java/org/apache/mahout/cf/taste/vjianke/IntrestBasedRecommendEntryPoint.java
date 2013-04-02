@@ -67,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-16 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-03-31 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-17 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-01 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -240,9 +240,9 @@ public class IntrestBasedRecommendEntryPoint {
                         String clipId = entity.getBase36();
                         boolean bDeleted = false;
                         for(RecommendClipEntity deletedClipEntity:deletedRecommendClipEntity){
-                            System.out.println("Deleted:" + deletedClipEntity.getBase36() +
-                                              "  Clip:" + clipId);
                             if(deletedClipEntity.getBase36().equals(clipId)){
+                                //System.out.println("Deleted:" + deletedClipEntity.getBase36() +
+                                        //"  Clip:" + clipId);
                                 bDeleted = true;
                                 break;
                             }
@@ -274,6 +274,9 @@ public class IntrestBasedRecommendEntryPoint {
                     }
                     System.out.println("new: "+newRecommendClipEntities.size() +
                             " | old: "+oldRecommendClipEntities.size());
+                    for(RecommendClipEntity recommendClip:recommendClipEntityList){
+                        System.out.println("RowKey: "+ recommendClip.getRowKey());
+                    }
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
                 }

@@ -580,7 +580,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="373" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="376" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -728,7 +728,7 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="243" column="49" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.5520995">
+            <state line="132" column="67" selection-start="6756" selection-end="6756" vertical-scroll-proportion="0.6967341">
               <folding>
                 <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
                 <element signature="e#4603#4620#0" expanded="true" />
@@ -736,11 +736,11 @@
                 <element signature="e#6222#6243#0" expanded="true" />
                 <element signature="e#12165#12186#0" expanded="true" />
                 <element signature="e#12304#12325#0" expanded="true" />
-                <element signature="e#17660#17681#0" expanded="true" />
-                <element signature="e#19232#19238#0" expanded="true" />
-                <element signature="e#19603#19624#0" expanded="true" />
-                <element signature="e#19727#19733#0" expanded="true" />
-                <element signature="e#19877#19885#0" expanded="true" />
+                <element signature="e#17851#17872#0" expanded="true" />
+                <element signature="e#19423#19429#0" expanded="true" />
+                <element signature="e#19794#19815#0" expanded="true" />
+                <element signature="e#19918#19924#0" expanded="true" />
+                <element signature="e#20068#20076#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -798,15 +798,6 @@
               <folding>
                 <element signature="e#27149#27157#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BooleanUserPreferenceArray.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/model/BooleanUserPreferenceArray.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="29" selection-start="1762" selection-end="1762" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1787,11 +1778,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedRecommend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="38" selection-start="2768" selection-end="2768" vertical-scroll-proportion="-1.3846154" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="22" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0" />
@@ -1878,9 +1864,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/windowsazure/microsoft-windowsazure-api/0.4.0/microsoft-windowsazure-api-0.4.0.jar!/com/microsoft/windowsazure/services/table/client/TableServiceEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="29" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.621118">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="243" column="49" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.5520995">
+        <state line="132" column="67" selection-start="6756" selection-end="6756" vertical-scroll-proportion="0.6967341">
           <folding>
             <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
             <element signature="e#4603#4620#0" expanded="true" />
@@ -1888,11 +1881,11 @@
             <element signature="e#6222#6243#0" expanded="true" />
             <element signature="e#12165#12186#0" expanded="true" />
             <element signature="e#12304#12325#0" expanded="true" />
-            <element signature="e#17660#17681#0" expanded="true" />
-            <element signature="e#19232#19238#0" expanded="true" />
-            <element signature="e#19603#19624#0" expanded="true" />
-            <element signature="e#19727#19733#0" expanded="true" />
-            <element signature="e#19877#19885#0" expanded="true" />
+            <element signature="e#17851#17872#0" expanded="true" />
+            <element signature="e#19423#19429#0" expanded="true" />
+            <element signature="e#19794#19815#0" expanded="true" />
+            <element signature="e#19918#19924#0" expanded="true" />
+            <element signature="e#20068#20076#0" expanded="true" />
           </folding>
         </state>
       </provider>
