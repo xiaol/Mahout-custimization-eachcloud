@@ -230,6 +230,8 @@ public class IntrestBasedRecommendEntryPoint {
                             azureStorageHelper.deleteByPartitionKey(
                             "RecommendClipEntity",userId.replace("-",""));
 
+                    System.out.println("deleted clip: "+ deletedRecommendClipEntity.size());
+
                     List<RecommendClipEntity> newRecommendClipEntities =
                             new ArrayList<RecommendClipEntity>();
                     List<RecommendClipEntity> oldRecommendClipEntities =
@@ -238,6 +240,8 @@ public class IntrestBasedRecommendEntryPoint {
                         String clipId = entity.getBase36();
                         boolean bDeleted = false;
                         for(RecommendClipEntity deletedClipEntity:deletedRecommendClipEntity){
+                            System.out.println("Deleted:" + deletedClipEntity.getBase36() +
+                                              "  Clip:" + clipId);
                             if(deletedClipEntity.getBase36().equals(clipId)){
                                 bDeleted = true;
                                 break;

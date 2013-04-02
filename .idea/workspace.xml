@@ -580,7 +580,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="369" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="373" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -728,19 +728,19 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="271" column="28" selection-start="14055" selection-end="14055" vertical-scroll-proportion="0.5272162">
+            <state line="243" column="49" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.5520995">
               <folding>
                 <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
                 <element signature="e#4603#4620#0" expanded="true" />
                 <element signature="e#4674#4680#0" expanded="true" />
                 <element signature="e#6222#6243#0" expanded="true" />
-                <element signature="e#12071#12092#0" expanded="true" />
-                <element signature="e#12210#12231#0" expanded="true" />
-                <element signature="e#17407#17428#0" expanded="true" />
-                <element signature="e#18979#18985#0" expanded="true" />
-                <element signature="e#19350#19371#0" expanded="true" />
-                <element signature="e#19474#19480#0" expanded="true" />
-                <element signature="e#19624#19632#0" expanded="true" />
+                <element signature="e#12165#12186#0" expanded="true" />
+                <element signature="e#12304#12325#0" expanded="true" />
+                <element signature="e#17660#17681#0" expanded="true" />
+                <element signature="e#19232#19238#0" expanded="true" />
+                <element signature="e#19603#19624#0" expanded="true" />
+                <element signature="e#19727#19733#0" expanded="true" />
+                <element signature="e#19877#19885#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -749,7 +749,16 @@
       <file leaf-file-name="AzureStorageHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="40" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
+            <state line="92" column="37" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SuggestedClipEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/SuggestedClipEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -789,15 +798,6 @@
               <folding>
                 <element signature="e#27149#27157#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FastByIDMap.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/common/FastByIDMap.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="17" selection-start="5828" selection-end="5828" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -1787,11 +1787,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="20" selection-start="3180" selection-end="3180" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedRecommend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="38" selection-start="2768" selection-end="2768" vertical-scroll-proportion="-1.3846154" />
@@ -1871,26 +1866,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="40" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
+        <state line="92" column="37" selection-start="3315" selection-end="3315" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/SuggestedClipEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="271" column="28" selection-start="14055" selection-end="14055" vertical-scroll-proportion="0.5272162">
+        <state line="243" column="49" selection-start="12752" selection-end="12752" vertical-scroll-proportion="0.5520995">
           <folding>
             <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
             <element signature="e#4603#4620#0" expanded="true" />
             <element signature="e#4674#4680#0" expanded="true" />
             <element signature="e#6222#6243#0" expanded="true" />
-            <element signature="e#12071#12092#0" expanded="true" />
-            <element signature="e#12210#12231#0" expanded="true" />
-            <element signature="e#17407#17428#0" expanded="true" />
-            <element signature="e#18979#18985#0" expanded="true" />
-            <element signature="e#19350#19371#0" expanded="true" />
-            <element signature="e#19474#19480#0" expanded="true" />
-            <element signature="e#19624#19632#0" expanded="true" />
+            <element signature="e#12165#12186#0" expanded="true" />
+            <element signature="e#12304#12325#0" expanded="true" />
+            <element signature="e#17660#17681#0" expanded="true" />
+            <element signature="e#19232#19238#0" expanded="true" />
+            <element signature="e#19603#19624#0" expanded="true" />
+            <element signature="e#19727#19733#0" expanded="true" />
+            <element signature="e#19877#19885#0" expanded="true" />
           </folding>
         </state>
       </provider>
