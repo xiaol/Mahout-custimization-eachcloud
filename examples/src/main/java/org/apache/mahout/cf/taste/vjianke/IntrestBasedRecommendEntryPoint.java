@@ -252,13 +252,24 @@ public class IntrestBasedRecommendEntryPoint {
                     }
 
                     recommendClipEntityList.clear();
+                    Date date = new Date();
+                    long time =  date.getTime();
+
                     for(RecommendClipEntity entity:newRecommendClipEntities){
-                        recommendClipEntityList.add(entity);
-                    }
-                    for(RecommendClipEntity entity:oldRecommendClipEntities){
+                        String rowKey = version.get(version.size()-1) +"|"+ time +
+                                "|i|"+ newRecommendClipEntities.indexOf(entity);
+                        entity.setRowKey(rowKey);
                         recommendClipEntityList.add(entity);
                     }
 
+                    for(RecommendClipEntity entity:oldRecommendClipEntities){
+                        String rowKey = version.get(version.size()-1) +"|"+ time +
+                                "|i|"+ (newRecommendClipEntities.size()+oldRecommendClipEntities.indexOf(entity));
+                        entity.setRowKey(rowKey);
+                        recommendClipEntityList.add(entity);
+                    }
+                    System.out.println("new: "+newRecommendClipEntities.size() +
+                            " | old: "+oldRecommendClipEntities.size());
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
                 }
