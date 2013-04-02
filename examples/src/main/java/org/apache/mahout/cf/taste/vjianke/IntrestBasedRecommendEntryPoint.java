@@ -113,8 +113,8 @@ public class IntrestBasedRecommendEntryPoint {
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
-            String userId = userEntity.getKey();
-            //String userId = IntrestBasedRecommendEntryPoint.mates.get(2);
+            //String userId = userEntity.getKey();
+            String userId = IntrestBasedRecommendEntryPoint.mates.get(1);
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -235,8 +235,15 @@ public class IntrestBasedRecommendEntryPoint {
                     List<RecommendClipEntity> oldRecommendClipEntities =
                             new ArrayList<RecommendClipEntity>();
                     for(RecommendClipEntity entity:recommendClipEntityList){
-                        String clipId = entity.getRowKey();
-                        if(deletedRecommendClipEntity.contains(clipId)){
+                        String clipId = entity.getBase36();
+                        boolean bDeleted = false;
+                        for(RecommendClipEntity deletedClipEntity:deletedRecommendClipEntity){
+                            if(deletedClipEntity.getBase36().equals(clipId)){
+                                bDeleted = true;
+                                break;
+                            }
+                        }
+                        if(bDeleted){
                             oldRecommendClipEntities.add(entity);
                         }
                         else{
@@ -303,6 +310,8 @@ public class IntrestBasedRecommendEntryPoint {
                 }
                 recommendClipEntityList.clear();
             }
+
+            return;
         }
 
     }
