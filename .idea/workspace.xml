@@ -400,7 +400,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -581,7 +580,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="376" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="375" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -729,7 +728,7 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="12" selection-start="5701" selection-end="5701" vertical-scroll-proportion="2.2395024">
+            <state line="330" column="0" selection-start="17400" selection-end="17400" vertical-scroll-proportion="1.7169518">
               <folding>
                 <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
                 <element signature="e#4603#4620#0" expanded="true" />
@@ -737,11 +736,11 @@
                 <element signature="e#6236#6257#0" expanded="true" />
                 <element signature="e#12181#12202#0" expanded="true" />
                 <element signature="e#12320#12341#0" expanded="true" />
-                <element signature="e#17923#17944#0" expanded="true" />
-                <element signature="e#19495#19501#0" expanded="true" />
-                <element signature="e#19866#19887#0" expanded="true" />
-                <element signature="e#19990#19996#0" expanded="true" />
-                <element signature="e#20140#20148#0" expanded="true" />
+                <element signature="e#17903#17924#0" expanded="true" />
+                <element signature="e#19475#19481#0" expanded="true" />
+                <element signature="e#19846#19867#0" expanded="true" />
+                <element signature="e#19970#19976#0" expanded="true" />
+                <element signature="e#20120#20128#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1874,7 +1873,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="12" selection-start="5701" selection-end="5701" vertical-scroll-proportion="2.2395024">
+        <state line="330" column="0" selection-start="17400" selection-end="17400" vertical-scroll-proportion="1.7169518">
           <folding>
             <element signature="docComment;class#IntrestBasedRecommendEntryPoint#0" expanded="false" />
             <element signature="e#4603#4620#0" expanded="true" />
@@ -1882,11 +1881,11 @@
             <element signature="e#6236#6257#0" expanded="true" />
             <element signature="e#12181#12202#0" expanded="true" />
             <element signature="e#12320#12341#0" expanded="true" />
-            <element signature="e#17923#17944#0" expanded="true" />
-            <element signature="e#19495#19501#0" expanded="true" />
-            <element signature="e#19866#19887#0" expanded="true" />
-            <element signature="e#19990#19996#0" expanded="true" />
-            <element signature="e#20140#20148#0" expanded="true" />
+            <element signature="e#17903#17924#0" expanded="true" />
+            <element signature="e#19475#19481#0" expanded="true" />
+            <element signature="e#19846#19867#0" expanded="true" />
+            <element signature="e#19970#19976#0" expanded="true" />
+            <element signature="e#20120#20128#0" expanded="true" />
           </folding>
         </state>
       </provider>

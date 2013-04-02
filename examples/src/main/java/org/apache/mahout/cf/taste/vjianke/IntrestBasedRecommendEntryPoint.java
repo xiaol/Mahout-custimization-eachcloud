@@ -329,7 +329,6 @@ public class IntrestBasedRecommendEntryPoint {
                 recommendClipEntityList.clear();
             }
 
-            return;
         }
 
     }
