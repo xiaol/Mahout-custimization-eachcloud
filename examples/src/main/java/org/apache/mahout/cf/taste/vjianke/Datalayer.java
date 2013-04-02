@@ -1003,11 +1003,6 @@ public class Datalayer {
             }
             int[] results = preparedStatement.executeBatch();
 
-            while (resultSet.next())
-            {
-
-                rowCount++;
-            }
         }
         catch (Exception e)
         {
