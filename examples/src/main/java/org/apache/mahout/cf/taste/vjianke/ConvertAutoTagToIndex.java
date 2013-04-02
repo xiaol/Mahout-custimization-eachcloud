@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import org.apache.mahout.cf.taste.vjianke.engine.IntrestGenerator;
 
 import java.lang.reflect.Type;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
@@ -18,12 +19,16 @@ import java.util.List;
  */
 public class ConvertAutoTagToIndex {
     public static void main(String[] args) throws Exception{
-
+        Datalayer layer = new Datalayer();
+        AzureStorageHelper helper = new AzureStorageHelper();
+        helper.init();
+        ConvertAutoTagToIndex converter = new ConvertAutoTagToIndex();
+        converter.convert(layer,helper);
     }
 
     public void convert(Datalayer layer, AzureStorageHelper helper){
             List<Datalayer.ClipEntity> clipEntities =
-                    layer.getClips(Integer.toString(50), false, false);
+                    layer.getClips(Integer.toString(1), false, false);
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
             for(Datalayer.ClipEntity entity:clipEntities){
                 AzureStorageHelper.TagEntity tagEntity =
@@ -33,22 +38,27 @@ public class ConvertAutoTagToIndex {
                 if(tagEntity == null)
                     continue;
                 List<IntrestGenerator.Tag> tags = gs.fromJson(tagEntity.getTags(), listType);
+                java.util.Date utilDate = new java.util.Date();
+                Date date = new Date(utilDate.getTime());
                 for(IntrestGenerator.Tag tag:tags){
                     ClipTagEntity clipTagEntity = new ClipTagEntity();
                     clipTagEntity.ClipId = entity.id;
                     clipTagEntity.Tag = tag.getKey();
                     clipTagEntity.OwnerGuid = entity.user_id;
+                    clipTagEntity.BoardId = layer.getBoardByClip(clipTagEntity.ClipId);
+                    clipTagEntity.Weight = tag.getValue();
+                    clipTagEntity.Timestamp = date;
+                    clipTagEntities.add(clipTagEntity);
                 }
             }
-
+        layer.addClipTagIndex(clipTagEntities);
     }
-
     public class ClipTagEntity{
         String ClipId;
         String Tag;
         String OwnerGuid;
         String BoardId;
         Float Weight;
-        String Timestamp;
+        Date Timestamp;
     }
 }

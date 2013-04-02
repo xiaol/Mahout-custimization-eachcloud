@@ -975,7 +975,7 @@ public class Datalayer {
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
 
-        String sqlString = "INSERT INTO ClipTagEntity(ClipId,Tag,OwnerGuid,BoardId,Weight,Timestamp) "
+        String sqlString = "INSERT INTO ClipTagEntity(ClipId,Tag,OwnerGuid,BoradId,Weight,Timestamp) "
                 + "VALUES (?, ?, ?, ?, ?,?)";
         Connection connection;
         try {
@@ -992,13 +992,16 @@ public class Datalayer {
             //preparedStatement.setTimestamp(2, _tsEnd);
             preparedStatement.setQueryTimeout(0);
             for(ConvertAutoTagToIndex.ClipTagEntity entity:entityList){
-                preparedStatement.setString(1, "John");
-                preparedStatement.setString(2,"Doe");
+                preparedStatement.setString(1, entity.ClipId);
+                preparedStatement.setString(2,entity.Tag);
+                preparedStatement.setString(3,entity.OwnerGuid);
+                preparedStatement.setString(4,entity.BoardId);
+                preparedStatement.setFloat(5, entity.Weight);
+                preparedStatement.setDate(6,entity.Timestamp);
                 preparedStatement.addBatch();
                 preparedStatement.clearParameters();
             }
             int[] results = preparedStatement.executeBatch();
-            resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next())
             {
@@ -1023,8 +1026,58 @@ public class Datalayer {
         }
     }
 
-    public void getBoardByClip(String clipId){
+    public String getBoardByClip(String clipId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
 
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
+
+        sqlString = sqlString + "clip_id = '" + clipId +"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "";
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(2);
+                return boardId;
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return "";
     }
 
     public class WeiboTag{
