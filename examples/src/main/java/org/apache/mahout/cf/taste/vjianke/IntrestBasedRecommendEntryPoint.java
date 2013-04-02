@@ -113,8 +113,8 @@ public class IntrestBasedRecommendEntryPoint {
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
-            //String userId = userEntity.getKey();
-            String userId = IntrestBasedRecommendEntryPoint.mates.get(1).toUpperCase();
+            String userId = userEntity.getKey();
+            //String userId = IntrestBasedRecommendEntryPoint.mates.get(1).toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -230,7 +230,7 @@ public class IntrestBasedRecommendEntryPoint {
                             azureStorageHelper.deleteByPartitionKey(
                             "RecommendClipEntity",userId.replace("-",""));
 
-                    System.out.println("deleted clip: "+ deletedRecommendClipEntity.size());
+                    //System.out.println("deleted clip: "+ deletedRecommendClipEntity.size());
 
                     List<RecommendClipEntity> newRecommendClipEntities =
                             new ArrayList<RecommendClipEntity>();
@@ -274,9 +274,9 @@ public class IntrestBasedRecommendEntryPoint {
                     }
                     System.out.println("new: "+newRecommendClipEntities.size() +
                             " | old: "+oldRecommendClipEntities.size());
-                    for(RecommendClipEntity recommendClip:recommendClipEntityList){
-                        System.out.println("PartitionKey: "+recommendClip.getPartitionKey()+" RowKey: "+ recommendClip.getRowKey());
-                    }
+                    //for(RecommendClipEntity recommendClip:recommendClipEntityList){
+                        //System.out.println("PartitionKey: "+recommendClip.getPartitionKey()+" RowKey: "+ recommendClip.getRowKey());
+                    //}
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
                 }
