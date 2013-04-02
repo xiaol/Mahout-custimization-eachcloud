@@ -39,8 +39,7 @@ public class ConvertAutoTagToIndex {
                 if(tagEntity == null)
                     continue;
                 List<IntrestGenerator.Tag> tags = gs.fromJson(tagEntity.getTags(), listType);
-                java.util.Date utilDate = new java.util.Date();
-                Date date = new Date(utilDate.getTime());
+                Date date = new Date(tagEntity.getTimestamp().getTime());
                 String boardId = layer.getBoardByClip(entity.id);
                 for(IntrestGenerator.Tag tag:tags){
                     ClipTagEntity clipTagEntity = new ClipTagEntity();

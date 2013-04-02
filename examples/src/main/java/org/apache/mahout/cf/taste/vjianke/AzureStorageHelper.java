@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.URISyntaxException;
+import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -203,6 +204,7 @@ public class AzureStorageHelper {
         }
 
         public String Tags;
+
     }
 
     public static class FeedClipEntity extends TableServiceEntity {

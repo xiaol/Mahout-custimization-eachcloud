@@ -400,7 +400,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -489,7 +491,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" line="123" class="org.apache.mahout.cf.taste.vjianke.AzureStorageHelper" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" line="124" class="org.apache.mahout.cf.taste.vjianke.AzureStorageHelper" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -697,6 +699,19 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java" line="31" class="org.apache.mahout.cf.taste.vjianke.ConvertAutoTagToIndex" package="org.apache.mahout.cf.taste.vjianke">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
@@ -762,7 +777,18 @@
       <file leaf-file-name="AzureStorageHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="31" selection-start="5696" selection-end="5696" vertical-scroll-proportion="0.0">
+            <state line="206" column="0" selection-start="7453" selection-end="7453" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableServiceEntity.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/windowsazure/microsoft-windowsazure-api/0.4.0/microsoft-windowsazure-api-0.4.0.jar!/com/microsoft/windowsazure/services/table/client/TableServiceEntity.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="32" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-8.96">
               <folding />
             </state>
           </provider>
@@ -780,12 +806,21 @@
       <file leaf-file-name="ConvertAutoTagToIndex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="52" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.56589144">
+            <state line="30" column="61" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.18604651">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ConvertAutoTagToIndex#0" expanded="false" />
                 <element signature="e#1073#1088#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntrestGenerator.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="180" column="30" selection-start="5386" selection-end="5386" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -808,19 +843,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="61" selection-start="3437" selection-end="3437" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1045" column="22" selection-start="36121" selection-end="36121" vertical-scroll-proportion="-11.653846">
+            <state line="708" column="20" selection-start="24452" selection-end="24452" vertical-scroll-proportion="-8.576923">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5227#5247#0" expanded="true" />
@@ -835,17 +861,8 @@
                 <element signature="e#27149#27157#0" expanded="true" />
                 <element signature="e#28421#28433#0" expanded="true" />
                 <element signature="e#32383#32393#0" expanded="true" />
-                <element signature="e#35760#35768#0" expanded="true" />
+                <element signature="e#35666#35674#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Statement.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/sql/Statement.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="34" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -882,11 +899,11 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBalancer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/EntryPoint.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java" />
       </list>
     </option>
@@ -1851,20 +1868,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/windowsazure/microsoft-windowsazure-api/0.4.0/microsoft-windowsazure-api-0.4.0.jar!/com/microsoft/windowsazure/services/table/client/TableServiceEntity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="29" selection-start="1839" selection-end="1839" vertical-scroll-proportion="0.621118">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="17" selection-start="5241" selection-end="5241" vertical-scroll-proportion="0.3328446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/SuggestedClipEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
@@ -1910,16 +1913,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="31" selection-start="5696" selection-end="5696" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1045" column="22" selection-start="36121" selection-end="36121" vertical-scroll-proportion="-11.653846">
+        <state line="708" column="20" selection-start="24452" selection-end="24452" vertical-scroll-proportion="-8.576923">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5227#5247#0" expanded="true" />
@@ -1934,14 +1930,37 @@
             <element signature="e#27149#27157#0" expanded="true" />
             <element signature="e#28421#28433#0" expanded="true" />
             <element signature="e#32383#32393#0" expanded="true" />
-            <element signature="e#35760#35768#0" expanded="true" />
+            <element signature="e#35666#35674#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/IntrestGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="30" selection-start="5386" selection-end="5386" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/windowsazure/microsoft-windowsazure-api/0.4.0/microsoft-windowsazure-api-0.4.0.jar!/com/microsoft/windowsazure/services/table/client/TableServiceEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="32" selection-start="1340" selection-end="1340" vertical-scroll-proportion="-8.96">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="206" column="0" selection-start="7453" selection-end="7453" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="52" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.56589144">
+        <state line="30" column="61" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.18604651">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ConvertAutoTagToIndex#0" expanded="false" />
