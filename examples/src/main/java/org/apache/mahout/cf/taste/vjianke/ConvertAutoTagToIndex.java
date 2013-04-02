@@ -30,6 +30,7 @@ public class ConvertAutoTagToIndex {
             List<Datalayer.ClipEntity> clipEntities =
                     layer.getClips(Integer.toString(1), false, false);
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
+        int count = 0;
             for(Datalayer.ClipEntity entity:clipEntities){
                 AzureStorageHelper.TagEntity tagEntity =
                         helper.retrieveTagEntity(entity.id, "-", "AutoTag");
@@ -50,6 +51,12 @@ public class ConvertAutoTagToIndex {
                     clipTagEntity.Timestamp = date;
                     clipTagEntities.add(clipTagEntity);
                 }
+                if(count % 400 == 0 && count != 0){
+                    layer.addClipTagIndex(clipTagEntities);
+                    System.out.println("Count: "+ count);
+                    clipTagEntities.clear();
+                }
+                count++;
             }
         layer.addClipTagIndex(clipTagEntities);
     }
