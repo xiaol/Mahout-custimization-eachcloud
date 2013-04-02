@@ -780,7 +780,7 @@
       <file leaf-file-name="ConvertAutoTagToIndex.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="55" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.7131783">
+            <state line="49" column="52" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.56589144">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#ConvertAutoTagToIndex#0" expanded="false" />
@@ -820,7 +820,7 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1004" column="0" selection-start="35016" selection-end="35016" vertical-scroll-proportion="-11.692307">
+            <state line="1045" column="22" selection-start="36121" selection-end="36121" vertical-scroll-proportion="-11.653846">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5227#5247#0" expanded="true" />
@@ -1910,9 +1910,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="31" selection-start="5696" selection-end="5696" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1004" column="0" selection-start="35016" selection-end="35016" vertical-scroll-proportion="-11.692307">
+        <state line="1045" column="22" selection-start="36121" selection-end="36121" vertical-scroll-proportion="-11.653846">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5227#5247#0" expanded="true" />
@@ -1932,16 +1939,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="31" selection-start="5696" selection-end="5696" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="55" selection-start="2453" selection-end="2453" vertical-scroll-proportion="0.7131783">
+        <state line="49" column="52" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.56589144">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;class#ConvertAutoTagToIndex#0" expanded="false" />
