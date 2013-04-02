@@ -1023,6 +1023,10 @@ public class Datalayer {
         }
     }
 
+    public void getBoardByClip(String clipId){
+
+    }
+
     public class WeiboTag{
         String userTag;
         String userFavTag;

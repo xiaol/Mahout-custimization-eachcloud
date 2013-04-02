@@ -259,6 +259,7 @@ public class IntrestBasedRecommendEntryPoint {
                     Date date = new Date();
                     long time =  date.getTime();
 
+
                     for(RecommendClipEntity entity:newRecommendClipEntities){
                         String rowKey = version.get(version.size()-1) +"|"+ time +
                                 "|i|"+ newRecommendClipEntities.indexOf(entity);
@@ -277,8 +278,13 @@ public class IntrestBasedRecommendEntryPoint {
                     //for(RecommendClipEntity recommendClip:recommendClipEntityList){
                         //System.out.println("PartitionKey: "+recommendClip.getPartitionKey()+" RowKey: "+ recommendClip.getRowKey());
                     //}
-                    azureStorageHelper.uploadToAzureTable(
+                    if(newRecommendClipEntities.isEmpty()){
+                        System.out.println("No news.");
+                        continue;
+                    }else{
+                        azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
+                    }
                 }
             }
             recommendClipEntityList.clear();
