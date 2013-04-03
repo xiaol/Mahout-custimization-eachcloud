@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 368150;
-    static int nextIdStamp = 368150;
+    static int nextIdStamp = 374191;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
