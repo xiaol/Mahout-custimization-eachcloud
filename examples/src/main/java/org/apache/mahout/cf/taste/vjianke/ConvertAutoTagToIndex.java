@@ -32,7 +32,7 @@ public class ConvertAutoTagToIndex {
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
         int count = 0;
             for(Datalayer.ClipEntity entity:clipEntities){
-                if(layer.isInTable(entity.id,"ClipTagEntity","clip_id")){
+                if(layer.isInTable(entity.id,"ClipTagEntity","ClipId")){
                     continue;
                 }
                 AzureStorageHelper.TagEntity tagEntity =
