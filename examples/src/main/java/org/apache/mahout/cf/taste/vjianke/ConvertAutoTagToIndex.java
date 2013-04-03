@@ -32,6 +32,9 @@ public class ConvertAutoTagToIndex {
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
         int count = 0;
             for(Datalayer.ClipEntity entity:clipEntities){
+                if(layer.isInTable(entity.id,"ClipTagEntity","clip_id")){
+                    continue;
+                }
                 AzureStorageHelper.TagEntity tagEntity =
                         helper.retrieveTagEntity(entity.id, "-", "AutoTag");
                 Gson gs = new Gson();
