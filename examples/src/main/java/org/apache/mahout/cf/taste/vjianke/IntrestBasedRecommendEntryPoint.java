@@ -123,7 +123,7 @@ public class IntrestBasedRecommendEntryPoint {
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 3, "Fullscope ");
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }

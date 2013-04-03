@@ -23,8 +23,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    public final String baseTimestamp = "2013-03-26";
-    public  final String upTimestamp = "2013-03-28";       //morning 10:00
+    public final String baseTimestamp = "2013-03-28";
+    public  final String upTimestamp = "2013-04-02";       //morning 10:00
 
     public Datalayer(){
     }
@@ -1073,6 +1073,59 @@ public class Datalayer {
             catch (SQLException sqlException){}
         }
         return "";
+    }
+
+    public boolean isInTable(String key,String tableName,String columnId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT * FROM "+tableName+" WHERE ";
+
+        sqlString = sqlString + columnId+" = '" + key +"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                return true;
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return false;
     }
 
     public class WeiboTag{
