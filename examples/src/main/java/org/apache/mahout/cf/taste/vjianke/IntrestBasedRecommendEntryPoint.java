@@ -147,6 +147,11 @@ public class IntrestBasedRecommendEntryPoint {
                         System.out.println("is Read");
                         continue;
                     }
+                    boolean isOwen = datalayer.isOwenClip(relativeClipInfo.destId,userId);
+                    if(isOwen){
+                        System.out.println("is Owen");
+                        continue;
+                    }
 
                     Date date = new Date();
                     long time =  date.getTime();

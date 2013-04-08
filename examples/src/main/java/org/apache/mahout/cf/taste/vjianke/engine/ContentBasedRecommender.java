@@ -32,7 +32,7 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 368150;
+    static int idStamp = 374191;//368150;
     static int nextIdStamp = 374191;
 
     public static void main(String[] args) throws Exception {
@@ -64,7 +64,7 @@ public class ContentBasedRecommender {
     }
 
     public void process(IndexSearcher searcher, Query query){
-
+        return;
     }
 
     public int getClipFromId(String clipId, IndexReader reader){
@@ -239,7 +239,9 @@ public class ContentBasedRecommender {
         BooleanQuery query = new BooleanQuery();
         BooleanQuery.setMaxClauseCount(65536);
         String srcId = "";
+        String srcTitle = "";
         try {
+            srcTitle = reader.document(docId).get(TikaIndexer.CLIP_TITLE);
             srcId = reader.document(docId).get(TikaIndexer.CLIP_ID);
             System.out.println("Get clip "+ srcId + " rank");
             terms = getTermRank(reader, docId, TikaIndexer.CONTENT_FIELD);
@@ -271,6 +273,8 @@ public class ContentBasedRecommender {
 
         TopDocs matches;
         List<RelativeClipInfo> relativeClipInfoList = new ArrayList<RelativeClipInfo>();
+
+
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
@@ -282,8 +286,12 @@ public class ContentBasedRecommender {
                     break;
                 if(scoreDoc.doc == 2147483647)
                     continue;
+                String destTitle = reader.document(
+                        scoreDoc.doc).get(TikaIndexer.CLIP_TITLE);
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+                if(destTitle.equals(srcTitle))
+                    continue;
                 if(Float.compare(scoreDoc.score,1.6f) > 0 && count ==0){
                     cachedIds.add(destId);
                     cachedScore.add(scoreDoc.score);

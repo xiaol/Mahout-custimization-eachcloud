@@ -23,8 +23,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    public final String baseTimestamp = "2013-03-28";
-    public  final String upTimestamp = "2013-04-02";       //morning 10:00
+    public final String baseTimestamp = "2013-04-02";
+    public  final String upTimestamp = "2013-04-05";       //morning 10:00
 
     public Datalayer(){
     }
@@ -876,6 +876,58 @@ public class Datalayer {
         String sqlString = "SELECT clip_id FROM ClickEntity " +
                 "WHERE ";
         sqlString = sqlString + "user_id = '" + uuid +"' and clip_id = '"+clipId+"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                result = true;
+                return result;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return result;
+    }
+
+    public boolean isOwenClip(String clipId, String uuid){
+        boolean result = false;
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT * FROM ClipEntity " +
+                "WHERE ";
+        sqlString = sqlString + "(id = '" +clipId+"'";
+
+        sqlString = sqlString + ") AND user_guid = '" + uuid +"'";
         Connection connection;
         try {
             connection = DriverManager.getConnection(_connectionString);
