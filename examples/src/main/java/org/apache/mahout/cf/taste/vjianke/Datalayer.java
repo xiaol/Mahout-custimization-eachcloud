@@ -1,13 +1,13 @@
 package org.apache.mahout.cf.taste.vjianke;
 
-import org.apache.commons.collections.CollectionUtils;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.*;
-import org.apache.mahout.cf.taste.model.Preference;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,10 +23,14 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    public final String baseTimestamp = "2013-03-28";
-    public  final String upTimestamp = "2013-04-02";       //morning 10:00
+    private  Connection connection = null;
 
     public Datalayer(){
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public Timestamp get_ts() {
@@ -56,16 +60,14 @@ public class Datalayer {
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
         UserEntity userEntity = new UserEntity();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return userEntity;
-        }
 
         try
         {
+            // Ensure the SQL Server driver class is available.
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            // Establish the connection.
+
+
             String sqlString = "SELECT * FROM PanamaUserEntity WHERE id = '" + uuid +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
@@ -81,6 +83,11 @@ public class Datalayer {
                 rowCount++;
             }
 
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+
+            System.out.println("ClassNotFoundException " +cnfe.getMessage());
         }
         catch (Exception e)
         {
@@ -98,114 +105,6 @@ public class Datalayer {
             catch (SQLException sqlException) {}
         }
         return userEntity;
-    }
-
-
-    public String queryBoard(String boardId){
-        // The types for the following variables are
-        // defined in the java.sql library.
-        Statement statement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-        UserEntity userEntity = new UserEntity();
-
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return "";
-        }
-
-        String uuid = boardId.substring(0,8)+"-"+boardId.substring(8,12)+"-"+
-                boardId.substring(12,16)+"-"+boardId.substring(16,20) +"-"+boardId.substring(20,boardId.length());
-        try
-        {
-            String sqlString = "SELECT board_name FROM BoardEntity WHERE id = '" + uuid +"'";
-            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-            // Print out the returned number of rows.
-            while (resultSet.next())
-            {
-                return resultSet.getString(1);
-
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException) {}
-        }
-        return "";
-    }
-
-    public Hashtable<String, UserEntity> QueryUsers(){
-        // The types for the following variables are
-        // defined in the java.sql library.
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        Hashtable<String, UserEntity> userEntities =
-                new Hashtable<String, UserEntity>();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return userEntities;
-        }
-        try
-        {
-            String sqlString = "SELECT * FROM PanamaUserEntity";
-            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            resultSet = preparedStatement.executeQuery();
-            // Print out the returned number of rows.
-            while (resultSet.next())
-            {
-                UserEntity userEntity = new UserEntity();
-                userEntity.setUuid(resultSet.getString(1));
-                userEntity.setUser_screen_name(resultSet.getString(3));
-                userEntity.setProfile_image_url(resultSet.getString(17));
-                userEntities.put(userEntity.uuid,userEntity);
-                rowCount++;
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException) {}
-        }
-        return userEntities;
     }
 
     public class UserEntity{
@@ -252,14 +151,6 @@ public class Datalayer {
            sqlString = sqlString +"' OR " + boards.get(i) + "'";
        }
 
-       Connection connection;
-       try {
-           connection = DriverManager.getConnection(_connectionString);
-       } catch (SQLException e) {
-           e.printStackTrace();
-           return clipIds;
-       }
-
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -274,7 +165,8 @@ public class Datalayer {
                clipIds.add(clipId);
                rowCount++;
            }
-           //System.out.println("There were " + rowCount +" clips.");
+
+           System.out.println("There were " + rowCount +" clips.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -302,13 +194,6 @@ public class Datalayer {
        ResultSet resultSet = null;
        int rowCount = 0;
        List<String> boardIds = new ArrayList<String>();
-       Connection connection;
-       try {
-           connection = DriverManager.getConnection(_connectionString);
-       } catch (SQLException e) {
-           e.printStackTrace();
-           return boardIds;
-       }
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -326,7 +211,7 @@ public class Datalayer {
                rowCount++;
            }
 
-           //System.out.println("There were " + rowCount +" subscription.");
+           System.out.println("There were " + rowCount +" subscription.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -355,13 +240,6 @@ public class Datalayer {
         ResultSet resultSet = null;
         int rowCount = 0;
         List<BoardRelated> listBoardRelated = new ArrayList<BoardRelated>();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return listBoardRelated;
-        }
         try
         {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -380,7 +258,7 @@ public class Datalayer {
                 rowCount++;
             }
 
-            //System.out.println("There were " + rowCount +" subscription.");
+            System.out.println("There were " + rowCount +" subscription.");
         }
         catch (ClassNotFoundException cnfe)
         {
@@ -404,52 +282,6 @@ public class Datalayer {
         return listBoardRelated;
     }
 
-    public List<String> queryCreatedBoards(String userId){
-        Statement statement = null;
-        ResultSet resultSet = null;
-        int rowCount = 0;
-        List<String> boardIds = new ArrayList<String>();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return boardIds;
-        }
-        try
-        {
-            String sqlString = "SELECT TOP 3 id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-
-            while (resultSet.next())
-            {
-                String boardId = resultSet.getString(1);
-                boardIds.add(boardId);
-                rowCount++;
-            }
-
-            //System.out.println("There were " + rowCount +" subscription.");
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-
-        return boardIds;
-    }
-
     protected class BoardRelated{
         String board;
         String source;
@@ -459,8 +291,8 @@ public class Datalayer {
         }
     }
 
-    public FastByIDMap<PreferenceArray> getPreferenceByClick(
-            FastByIDMap<PreferenceArray> prefsMap, ArrayList<UUID> users, List<String> clipIds){
+    public FastByIDMap<PreferenceArray> fetchData(
+            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -476,13 +308,6 @@ public class Datalayer {
 
         }
         sqlString = sqlString + " ORDER BY user_id";
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return prefsMap;
-        }
 
         try
         {
@@ -542,85 +367,6 @@ public class Datalayer {
         return prefsMap;
     }
 
-    public FastByIDMap<PreferenceArray> getPreferenceByUserClip(
-            FastByIDMap<PreferenceArray> prefsMap, String strUserId,
-            ArrayList<UUID> users, List<String> clipIds){
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-        PreferenceArray preferenceArray = null;
-        if(clipIds.isEmpty())
-            return null;
-
-        String sqlString = "SELECT * FROM ClipEntity " +
-                "WHERE ";
-        sqlString = sqlString + "(id = '" +clipIds.get(0) +"'";
-        for(int i=1; i< clipIds.size(); i++){
-            sqlString = sqlString + " OR id = '" + clipIds.get(i) + "'";
-
-        }
-        sqlString = sqlString + ") AND user_guid = '" + strUserId +"'";
-
-        UUID uuid = UUID.fromString(strUserId);
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return prefsMap;
-        }
-
-        try
-        {
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            resultSet = preparedStatement.executeQuery();
-            BooleanUserPreferenceArray prefs;
-            if(!users.contains(uuid)){
-               users.add(uuid);
-                prefs = new BooleanUserPreferenceArray(0);
-            }else{
-                 prefs =
-                        (BooleanUserPreferenceArray) prefsMap.get(users.indexOf(uuid));
-            }
-
-            ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
-            while (resultSet.next())
-            {
-               BooleanPreference booleanPreference = new BooleanPreference(
-                       users.indexOf(uuid), Long.parseLong(resultSet.getString(1),36));
-               userPrefs.add(booleanPreference);
-               rowCount++;
-            }
-
-            Iterator it = prefs.iterator();
-            while (it.hasNext()){
-                Preference pref = (Preference) it.next();
-                BooleanPreference booleanPreference = new BooleanPreference(
-                        users.indexOf(uuid), pref.getItemID());
-                userPrefs.add(booleanPreference);
-            }
-            prefsMap.put(users.indexOf(uuid), new BooleanUserPreferenceArray(userPrefs));
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-        return prefsMap;
-    }
 
     public FastByIDMap<PreferenceArray> fetchBoardRelationsData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<String> boards, ArrayList<String> users){
@@ -633,13 +379,6 @@ public class Datalayer {
         String sqlString = "SELECT * FROM BoardFollowerEntity LEFT JOIN BoardEntity ON BoardFollowerEntity.board_id = BoardEntity.id";
         sqlString = sqlString + " ORDER BY follower_id ";
 
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return prefsMap;
-        }
         try
         {
             preparedStatement = connection.prepareStatement(sqlString);
@@ -700,453 +439,4 @@ public class Datalayer {
         }
         return prefsMap;
     }
-
-
-    public class ClipEntity{
-        public String id;
-        public String title;
-        public String user_id;
-    }
-
-    public List<ClipEntity>  getClips(
-            String count, boolean limited, boolean increment){
-        Statement statement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return clipEntities;
-        }
-        try
-        {
-            String sqlString = "SELECT ";
-            if(limited)
-                sqlString += "TOP "+ count +" ";
-            sqlString += "Id,title,user_guid FROM ClipEntity";
-            if(increment)
-                sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
-            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-            // Print out the returned number of rows.
-            while (resultSet.next())
-            {
-                ClipEntity entity = new ClipEntity();
-                entity.id = resultSet.getString(1);
-                entity.title = resultSet.getString(2);
-                entity.user_id = resultSet.getString(3);
-                clipEntities.add(entity);
-                rowCount++;
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException) {}
-        }
-        return clipEntities;
-    }
-
-    public List<String> getReadHistory(String uuid){
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        String sqlString = "SELECT clip_id FROM ClickEntity " +
-                "WHERE ";
-        sqlString = sqlString + "user_id = '" + uuid +"'";
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return Collections.emptyList();
-        }
-
-        List<String> clipIds = new ArrayList<String>();
-        try
-        {
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next())
-            {
-                clipIds.add(resultSet.getString(1));
-                rowCount++;
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-        return clipIds;
-    }
-
-
-    public List<ClipEntity> getRecentClipByUser(String strUserId, int count, String upTimestamp){
-        Statement statement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return clipEntities;
-        }
-        try
-        {
-            String sqlString = "SELECT ";
-            sqlString += "TOP "+ count +" ";
-            sqlString += "Id,title,user_guid FROM ClipEntity";
-            sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
-            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-            // Print out the returned number of rows.
-            while (resultSet.next())
-            {
-                ClipEntity entity = new ClipEntity();
-                entity.id = resultSet.getString(1);
-                entity.title = resultSet.getString(2);
-                entity.user_id = resultSet.getString(3);
-                clipEntities.add(entity);
-                rowCount++;
-            }
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException) {}
-        }
-        return clipEntities;
-    }
-
-    public boolean isClipRead(String clipId, String uuid){
-        boolean result = false;
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        String sqlString = "SELECT clip_id FROM ClickEntity " +
-                "WHERE ";
-        sqlString = sqlString + "user_id = '" + uuid +"' and clip_id = '"+clipId+"'";
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        try
-        {
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next())
-            {
-                result = true;
-                return result;
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-
-        return result;
-    }
-
-    public List<WeiboTag> getWeiboTag(String uuid){
-        uuid = uuid.toUpperCase();
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        String sqlString = "SELECT user_tag,user_fav_tag FROM UserMicroBlogEntity " +
-                "WHERE ";
-        sqlString = sqlString + "Id = '" + uuid +"'";
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return Collections.emptyList();
-        }
-
-        List<WeiboTag> weiboTags = new ArrayList<WeiboTag>();
-        try
-        {
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next())
-            {
-                WeiboTag weiboTag = new WeiboTag();
-                weiboTag.userTag = resultSet.getString(1);
-                weiboTag.userFavTag = resultSet.getString(2);
-                weiboTags.add(weiboTag);
-                rowCount++;
-            }
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-        return weiboTags;
-    }
-
-    public void addClipTagIndex(List<ConvertAutoTagToIndex.ClipTagEntity> entityList){
-        PreparedStatement preparedStatement = null;    // For the SQL statement
-        ResultSet resultSet = null;    // For the result set, if applicable
-        int rowCount = 0;
-
-        String sqlString = "INSERT INTO ClipTagEntity(ClipId,Tag,OwnerGuid,BoradId,Weight,Timestamp) "
-                + "VALUES (?, ?, ?, ?, ?,?)";
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            System.out.println(e);
-            return;
-        }
-
-        try
-        {
-            preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
-            preparedStatement.setQueryTimeout(0);
-            for(ConvertAutoTagToIndex.ClipTagEntity entity:entityList){
-                preparedStatement.setString(1, entity.ClipId);
-                preparedStatement.setString(2,entity.Tag);
-                preparedStatement.setString(3,entity.OwnerGuid);
-                preparedStatement.setString(4,entity.BoardId);
-                preparedStatement.setFloat(5, entity.Weight);
-                preparedStatement.setDate(6,entity.Timestamp);
-                preparedStatement.addBatch();
-                preparedStatement.clearParameters();
-            }
-            int[] results = preparedStatement.executeBatch();
-
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                // Close resources.
-                if (null != preparedStatement) preparedStatement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-    }
-
-    public String getBoardByClip(String clipId){
-        Statement statement = null;
-        ResultSet resultSet = null;
-        int rowCount = 0;
-
-        List<String> clipIds = new ArrayList<String>();
-        String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
-
-        sqlString = sqlString + "clip_id = '" + clipId +"'";
-
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return "";
-        }
-
-        try
-        {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-
-            while (resultSet.next())
-            {
-                String boardId = resultSet.getString(2);
-                return boardId;
-            }
-            //System.out.println("There were " + rowCount +" clips.");
-        }
-        catch (ClassNotFoundException cnfe)
-        {
-            System.out.println("ClassNotFoundException " + cnfe.getMessage());
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-        return "";
-    }
-
-    public boolean isInTable(String key,String tableName,String columnId){
-        Statement statement = null;
-        ResultSet resultSet = null;
-        int rowCount = 0;
-
-        List<String> clipIds = new ArrayList<String>();
-        String sqlString = "SELECT * FROM "+tableName+" WHERE ";
-
-        sqlString = sqlString + columnId+" = '" + key +"'";
-
-        Connection connection;
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-
-        try
-        {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
-            statement = connection.createStatement();
-            statement.setQueryTimeout(0);
-            resultSet = statement.executeQuery(sqlString);
-
-            while (resultSet.next())
-            {
-                return true;
-            }
-            //System.out.println("There were " + rowCount +" clips.");
-        }
-        catch (ClassNotFoundException cnfe)
-        {
-            System.out.println("ClassNotFoundException " + cnfe.getMessage());
-        }
-        catch (Exception e)
-        {
-            System.out.println("Exception " + e.getMessage());
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                if (null != statement) statement.close();
-                if (null != resultSet) resultSet.close();
-            }
-            catch (SQLException sqlException){}
-        }
-        return false;
-    }
-
-    public class WeiboTag{
-        String userTag;
-        String userFavTag;
-
-        public String getUserTag() {
-            return userTag;
-        }
-
-        public void setUserTag(String userTag) {
-            this.userTag = userTag;
-        }
-
-        public String getUserFavTag() {
-            return userFavTag;
-        }
-
-        public void setUserFavTag(String userFavTag) {
-            this.userFavTag = userFavTag;
-        }
-    }
-
 }
