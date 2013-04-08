@@ -1,13 +1,13 @@
 package org.apache.mahout.cf.taste.vjianke;
 
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.*;
+import org.apache.mahout.cf.taste.model.Preference;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -23,16 +23,10 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    private  Connection connection = null;
     public final String baseTimestamp = "2013-04-02";
     public  final String upTimestamp = "2013-04-05";       //morning 10:00
 
     public Datalayer(){
-        try {
-            connection = DriverManager.getConnection(_connectionString);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
     }
 
     public Timestamp get_ts() {
@@ -62,14 +56,16 @@ public class Datalayer {
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
         UserEntity userEntity = new UserEntity();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return userEntity;
+        }
 
         try
         {
-            // Ensure the SQL Server driver class is available.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            // Establish the connection.
-
-
             String sqlString = "SELECT * FROM PanamaUserEntity WHERE id = '" + uuid +"'";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
@@ -85,11 +81,6 @@ public class Datalayer {
                 rowCount++;
             }
 
-        }
-        catch (ClassNotFoundException cnfe)
-        {
-
-            System.out.println("ClassNotFoundException " +cnfe.getMessage());
         }
         catch (Exception e)
         {
@@ -107,6 +98,114 @@ public class Datalayer {
             catch (SQLException sqlException) {}
         }
         return userEntity;
+    }
+
+
+    public String queryBoard(String boardId){
+        // The types for the following variables are
+        // defined in the java.sql library.
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        UserEntity userEntity = new UserEntity();
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "";
+        }
+
+        String uuid = boardId.substring(0,8)+"-"+boardId.substring(8,12)+"-"+
+                boardId.substring(12,16)+"-"+boardId.substring(16,20) +"-"+boardId.substring(20,boardId.length());
+        try
+        {
+            String sqlString = "SELECT board_name FROM BoardEntity WHERE id = '" + uuid +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                return resultSet.getString(1);
+
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return "";
+    }
+
+    public Hashtable<String, UserEntity> QueryUsers(){
+        // The types for the following variables are
+        // defined in the java.sql library.
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        Hashtable<String, UserEntity> userEntities =
+                new Hashtable<String, UserEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return userEntities;
+        }
+        try
+        {
+            String sqlString = "SELECT * FROM PanamaUserEntity";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                UserEntity userEntity = new UserEntity();
+                userEntity.setUuid(resultSet.getString(1));
+                userEntity.setUser_screen_name(resultSet.getString(3));
+                userEntity.setProfile_image_url(resultSet.getString(17));
+                userEntities.put(userEntity.uuid,userEntity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return userEntities;
     }
 
     public class UserEntity{
@@ -153,6 +252,14 @@ public class Datalayer {
            sqlString = sqlString +"' OR " + boards.get(i) + "'";
        }
 
+       Connection connection;
+       try {
+           connection = DriverManager.getConnection(_connectionString);
+       } catch (SQLException e) {
+           e.printStackTrace();
+           return clipIds;
+       }
+
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -167,8 +274,7 @@ public class Datalayer {
                clipIds.add(clipId);
                rowCount++;
            }
-
-           System.out.println("There were " + rowCount +" clips.");
+           //System.out.println("There were " + rowCount +" clips.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -196,6 +302,13 @@ public class Datalayer {
        ResultSet resultSet = null;
        int rowCount = 0;
        List<String> boardIds = new ArrayList<String>();
+       Connection connection;
+       try {
+           connection = DriverManager.getConnection(_connectionString);
+       } catch (SQLException e) {
+           e.printStackTrace();
+           return boardIds;
+       }
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -213,7 +326,7 @@ public class Datalayer {
                rowCount++;
            }
 
-           System.out.println("There were " + rowCount +" subscription.");
+           //System.out.println("There were " + rowCount +" subscription.");
        }
        catch (ClassNotFoundException cnfe)
        {
@@ -242,6 +355,13 @@ public class Datalayer {
         ResultSet resultSet = null;
         int rowCount = 0;
         List<BoardRelated> listBoardRelated = new ArrayList<BoardRelated>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return listBoardRelated;
+        }
         try
         {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
@@ -260,7 +380,7 @@ public class Datalayer {
                 rowCount++;
             }
 
-            System.out.println("There were " + rowCount +" subscription.");
+            //System.out.println("There were " + rowCount +" subscription.");
         }
         catch (ClassNotFoundException cnfe)
         {
@@ -284,6 +404,52 @@ public class Datalayer {
         return listBoardRelated;
     }
 
+    public List<String> queryCreatedBoards(String userId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+        List<String> boardIds = new ArrayList<String>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return boardIds;
+        }
+        try
+        {
+            String sqlString = "SELECT TOP 3 id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(1);
+                boardIds.add(boardId);
+                rowCount++;
+            }
+
+            //System.out.println("There were " + rowCount +" subscription.");
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return boardIds;
+    }
+
     protected class BoardRelated{
         String board;
         String source;
@@ -293,8 +459,8 @@ public class Datalayer {
         }
     }
 
-    public FastByIDMap<PreferenceArray> fetchData(
-            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, List<String> clipIds){
+    public FastByIDMap<PreferenceArray> getPreferenceByClick(
+            FastByIDMap<PreferenceArray> prefsMap, ArrayList<UUID> users, List<String> clipIds){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -310,6 +476,13 @@ public class Datalayer {
 
         }
         sqlString = sqlString + " ORDER BY user_id";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
 
         try
         {
@@ -369,6 +542,85 @@ public class Datalayer {
         return prefsMap;
     }
 
+    public FastByIDMap<PreferenceArray> getPreferenceByUserClip(
+            FastByIDMap<PreferenceArray> prefsMap, String strUserId,
+            ArrayList<UUID> users, List<String> clipIds){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+        if(clipIds.isEmpty())
+            return null;
+
+        String sqlString = "SELECT * FROM ClipEntity " +
+                "WHERE ";
+        sqlString = sqlString + "(id = '" +clipIds.get(0) +"'";
+        for(int i=1; i< clipIds.size(); i++){
+            sqlString = sqlString + " OR id = '" + clipIds.get(i) + "'";
+
+        }
+        sqlString = sqlString + ") AND user_guid = '" + strUserId +"'";
+
+        UUID uuid = UUID.fromString(strUserId);
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            BooleanUserPreferenceArray prefs;
+            if(!users.contains(uuid)){
+               users.add(uuid);
+                prefs = new BooleanUserPreferenceArray(0);
+            }else{
+                 prefs =
+                        (BooleanUserPreferenceArray) prefsMap.get(users.indexOf(uuid));
+            }
+
+            ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
+            while (resultSet.next())
+            {
+               BooleanPreference booleanPreference = new BooleanPreference(
+                       users.indexOf(uuid), Long.parseLong(resultSet.getString(1),36));
+               userPrefs.add(booleanPreference);
+               rowCount++;
+            }
+
+            Iterator it = prefs.iterator();
+            while (it.hasNext()){
+                Preference pref = (Preference) it.next();
+                BooleanPreference booleanPreference = new BooleanPreference(
+                        users.indexOf(uuid), pref.getItemID());
+                userPrefs.add(booleanPreference);
+            }
+            prefsMap.put(users.indexOf(uuid), new BooleanUserPreferenceArray(userPrefs));
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
+    }
 
     public FastByIDMap<PreferenceArray> fetchBoardRelationsData(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<String> boards, ArrayList<String> users){
@@ -381,6 +633,13 @@ public class Datalayer {
         String sqlString = "SELECT * FROM BoardFollowerEntity LEFT JOIN BoardEntity ON BoardFollowerEntity.board_id = BoardEntity.id";
         sqlString = sqlString + " ORDER BY follower_id ";
 
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
         try
         {
             preparedStatement = connection.prepareStatement(sqlString);
@@ -441,6 +700,7 @@ public class Datalayer {
         }
         return prefsMap;
     }
+
 
     public class ClipEntity{
         public String id;
@@ -941,5 +1201,4 @@ public class Datalayer {
         }
     }
 
->>>>>>> 968fa509253c7196fe76d97decf16df0ae91c2a4
 }
