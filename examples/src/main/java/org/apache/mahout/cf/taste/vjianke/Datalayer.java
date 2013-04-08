@@ -24,6 +24,8 @@ public class Datalayer {
                     "password=IONisgreat!";
 
     private  Connection connection = null;
+    public final String baseTimestamp = "2013-04-02";
+    public  final String upTimestamp = "2013-04-05";       //morning 10:00
 
     public Datalayer(){
         try {
@@ -439,4 +441,505 @@ public class Datalayer {
         }
         return prefsMap;
     }
+
+    public class ClipEntity{
+        public String id;
+        public String title;
+        public String user_id;
+    }
+
+    public List<ClipEntity>  getClips(
+            String count, boolean limited, boolean increment){
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return clipEntities;
+        }
+        try
+        {
+            String sqlString = "SELECT ";
+            if(limited)
+                sqlString += "TOP "+ count +" ";
+            sqlString += "Id,title,user_guid FROM ClipEntity";
+            if(increment)
+                sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                ClipEntity entity = new ClipEntity();
+                entity.id = resultSet.getString(1);
+                entity.title = resultSet.getString(2);
+                entity.user_id = resultSet.getString(3);
+                clipEntities.add(entity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return clipEntities;
+    }
+
+    public List<String> getReadHistory(String uuid){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT clip_id FROM ClickEntity " +
+                "WHERE ";
+        sqlString = sqlString + "user_id = '" + uuid +"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
+
+        List<String> clipIds = new ArrayList<String>();
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                clipIds.add(resultSet.getString(1));
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return clipIds;
+    }
+
+
+    public List<ClipEntity> getRecentClipByUser(String strUserId, int count, String upTimestamp){
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<ClipEntity> clipEntities = new ArrayList<ClipEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return clipEntities;
+        }
+        try
+        {
+            String sqlString = "SELECT ";
+            sqlString += "TOP "+ count +" ";
+            sqlString += "Id,title,user_guid FROM ClipEntity";
+            sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                ClipEntity entity = new ClipEntity();
+                entity.id = resultSet.getString(1);
+                entity.title = resultSet.getString(2);
+                entity.user_id = resultSet.getString(3);
+                clipEntities.add(entity);
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return clipEntities;
+    }
+
+    public boolean isClipRead(String clipId, String uuid){
+        boolean result = false;
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT clip_id FROM ClickEntity " +
+                "WHERE ";
+        sqlString = sqlString + "user_id = '" + uuid +"' and clip_id = '"+clipId+"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                result = true;
+                return result;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return result;
+    }
+
+    public boolean isOwenClip(String clipId, String uuid){
+        boolean result = false;
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT * FROM ClipEntity " +
+                "WHERE ";
+        sqlString = sqlString + "(id = '" +clipId+"'";
+
+        sqlString = sqlString + ") AND user_guid = '" + uuid +"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                result = true;
+                return result;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return result;
+    }
+
+    public List<WeiboTag> getWeiboTag(String uuid){
+        uuid = uuid.toUpperCase();
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT user_tag,user_fav_tag FROM UserMicroBlogEntity " +
+                "WHERE ";
+        sqlString = sqlString + "Id = '" + uuid +"'";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.emptyList();
+        }
+
+        List<WeiboTag> weiboTags = new ArrayList<WeiboTag>();
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                WeiboTag weiboTag = new WeiboTag();
+                weiboTag.userTag = resultSet.getString(1);
+                weiboTag.userFavTag = resultSet.getString(2);
+                weiboTags.add(weiboTag);
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return weiboTags;
+    }
+
+    public void addClipTagIndex(List<ConvertAutoTagToIndex.ClipTagEntity> entityList){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "INSERT INTO ClipTagEntity(ClipId,Tag,OwnerGuid,BoradId,Weight,Timestamp) "
+                + "VALUES (?, ?, ?, ?, ?,?)";
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            System.out.println(e);
+            return;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            for(ConvertAutoTagToIndex.ClipTagEntity entity:entityList){
+                preparedStatement.setString(1, entity.ClipId);
+                preparedStatement.setString(2,entity.Tag);
+                preparedStatement.setString(3,entity.OwnerGuid);
+                preparedStatement.setString(4,entity.BoardId);
+                preparedStatement.setFloat(5, entity.Weight);
+                preparedStatement.setDate(6,entity.Timestamp);
+                preparedStatement.addBatch();
+                preparedStatement.clearParameters();
+            }
+            int[] results = preparedStatement.executeBatch();
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+    }
+
+    public String getBoardByClip(String clipId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
+
+        sqlString = sqlString + "clip_id = '" + clipId +"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "";
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(2);
+                return boardId;
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return "";
+    }
+
+    public boolean isInTable(String key,String tableName,String columnId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT * FROM "+tableName+" WHERE ";
+
+        sqlString = sqlString + columnId+" = '" + key +"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                return true;
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return false;
+    }
+
+    public class WeiboTag{
+        String userTag;
+        String userFavTag;
+
+        public String getUserTag() {
+            return userTag;
+        }
+
+        public void setUserTag(String userTag) {
+            this.userTag = userTag;
+        }
+
+        public String getUserFavTag() {
+            return userFavTag;
+        }
+
+        public void setUserFavTag(String userFavTag) {
+            this.userFavTag = userFavTag;
+        }
+    }
+
+>>>>>>> 968fa509253c7196fe76d97decf16df0ae91c2a4
 }
