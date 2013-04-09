@@ -114,7 +114,7 @@ public class IntrestBasedRecommendEntryPoint {
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
             String userId = userEntity.getKey();
-            //String userId = IntrestBasedRecommendEntryPoint.mates.get(1).toUpperCase();
+            //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -285,11 +285,9 @@ public class IntrestBasedRecommendEntryPoint {
                     //}
                     if(newRecommendClipEntities.isEmpty()){
                         System.out.println("No news.");
-                        continue;
-                    }else{
-                        azureStorageHelper.uploadToAzureTable(
-                            "RecommendClipEntity",recommendClipEntityList);
                     }
+                    azureStorageHelper.uploadToAzureTable(
+                            "RecommendClipEntity",recommendClipEntityList);
                 }
             }
             recommendClipEntityList.clear();

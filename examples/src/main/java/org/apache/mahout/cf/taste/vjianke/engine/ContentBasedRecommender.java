@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 374191;//368150;
-    static int nextIdStamp = 374191;
+    static int nextIdStamp = 378145;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -209,8 +209,10 @@ public class ContentBasedRecommender {
 
         if(suggestedClipEntities.isEmpty())
             return;
-        if(!bDebug)
+        if(!bDebug){
+            helper.deleteByPartitionKey("SuggestedClipByContent", suggestedClipEntities.get(0).getPartitionKey());
             helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
+        }
         suggestedClipEntities.clear();
 
 
