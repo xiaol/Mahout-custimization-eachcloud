@@ -67,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-25 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-04-02 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-26 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-03 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -149,7 +149,7 @@ public class IntrestBasedRecommendEntryPoint {
                     }
                     boolean isOwen = datalayer.isOwenClip(relativeClipInfo.destId,userId);
                     if(isOwen){
-                        System.out.println("is Owen");
+                        System.out.println("is Own");
                         continue;
                     }
 
