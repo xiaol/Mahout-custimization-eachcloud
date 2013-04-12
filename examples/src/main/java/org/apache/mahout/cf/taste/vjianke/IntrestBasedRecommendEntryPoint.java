@@ -67,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-26 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-04-03 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-27 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-04 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -123,7 +123,7 @@ public class IntrestBasedRecommendEntryPoint {
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ");
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 10, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
@@ -131,7 +131,7 @@ public class IntrestBasedRecommendEntryPoint {
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
             int recentCount = 5;
-            int recommendRecentCount = 1;
+            int recommendRecentCount = 2;
             if(boards.size() < 2){
                 recommendRecentCount = 3;
                 recentCount =8;
@@ -354,14 +354,25 @@ public class IntrestBasedRecommendEntryPoint {
 
         int count = 0;
         for(Map.Entry<String, Float> result:recommendResult.entrySet()){
+            String clipId = result.getKey();
+            boolean isRead = layer.isClipRead(clipId,userEntity.getUuid());
+            if(isRead){
+                System.out.println("is Read");
+                continue;
+            }
+            boolean isOwen = layer.isOwenClip(clipId,userEntity.getUuid());
+            if(isOwen){
+                System.out.println("is Own");
+                continue;
+            }
             Date date = new Date();
             long time =  date.getTime();
             String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ count;
             String strSource = tagsTable.toString();
 
-            String clipId = result.getKey();
+
             RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, helper,
-                    clipId, userEntity, strSource,"content-based:vsm","feedhome");
+                    clipId, userEntity, strSource,"content-based:vsm","sina");
             if(clipEntity == null) {
                 continue;
             }

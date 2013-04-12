@@ -126,7 +126,6 @@ public class ContentBasedRecommender {
         IndexSearcher searcher = new IndexSearcher(reader);
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
-        Datalayer layer = new Datalayer();
         Hashtable<String, Float> resultTable = new Hashtable<String, Float>();
 
         float factor = 1.0f;
@@ -138,10 +137,9 @@ public class ContentBasedRecommender {
                 TermQuery tq = new TermQuery(new Term(
                         TikaIndexer.CLIP_TITLE,word.getKey()));
                 //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
-                query.add(tq, BooleanClause.Occur.SHOULD);
+                query.add(tq, BooleanClause.Occur.MUST);
             }
         }
-
         TopDocs matches;
         try {
             matches = searcher.search(query,20);
