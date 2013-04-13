@@ -20,7 +20,7 @@ public class DumpData {
             BufferedWriter bw = new BufferedWriter(new FileWriter(new File(
                     "dataset.dat"), true));
 
-            LDADataset.writeDataSet(bw,);
+            LDADataset.writeDataSet(bw,null);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -28,7 +28,7 @@ public class DumpData {
     }
 
     public ArrayList<String> loadData(){
-
+        return null;
     }
 
 }

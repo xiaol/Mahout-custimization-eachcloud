@@ -400,9 +400,7 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mahout-examples.iml" afterPath="$PROJECT_DIR$/examples/mahout-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java" afterPath="$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -784,10 +782,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DumpData.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DumpData.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="8" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
+            <state line="34" column="10" selection-start="745" selection-end="745" vertical-scroll-proportion="0.6363636">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;class#DumpData#0" expanded="false" />
@@ -805,10 +803,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="53" selection-start="3355" selection-end="3355" vertical-scroll-proportion="0.3936324">
+            <state line="77" column="4" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -877,8 +875,8 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/jgibblda/LDA.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/jgibblda/LDADataset.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java" />
       </list>
     </option>
   </component>
@@ -1881,16 +1879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="8" selection-start="711" selection-end="711" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="docComment;class#DumpData#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="158" column="37" selection-start="5754" selection-end="5754" vertical-scroll-proportion="0.0">
@@ -1900,8 +1888,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="53" selection-start="3355" selection-end="3355" vertical-scroll-proportion="0.3936324">
+        <state line="77" column="4" selection-start="3656" selection-end="3656" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/jgibblda/DumpData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="10" selection-start="745" selection-end="745" vertical-scroll-proportion="0.6363636">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#DumpData#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
