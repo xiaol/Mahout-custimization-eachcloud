@@ -28,6 +28,7 @@
 
 package jgibblda;
 
+import org.apache.mahout.cf.taste.vjianke.engine.TikaIndexer;
 import org.kohsuke.args4j.*;
 
 public class LDA {
@@ -44,7 +45,7 @@ public class LDA {
 			}
 			
 			parser.parseArgument(args);
-			
+
 			if (option.est || option.estc){
 				Estimator estimator = new Estimator();
 				estimator.init(option);

@@ -28,8 +28,6 @@ create folder examples/target/index
 
 mvn  exec:java -Dexec.mainClass="org.apache.mahout.cf.taste.vjianke.engine.TermVectorBasedSimilarity"
 
-<<<<<<< HEAD
-357643
-=======
 export MAVEN_OPTS=-Xss2m
->>>>>>> 8bd55e9543b476e723fa920743dd2ecf58f2a9ae
+
+mvn -e exec:java -Dexec.mainClass="jgibblda.LDA" -Dexec.args="-est -dir /Users/liuivan/Workspace/Libraries/mahout-distribution-0.7/examples/target/index -dfile dataset.words"

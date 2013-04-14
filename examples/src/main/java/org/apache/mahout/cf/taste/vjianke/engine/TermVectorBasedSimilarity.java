@@ -212,7 +212,7 @@ public class TermVectorBasedSimilarity {
         }
     }
 
-    static Map<String, Double> getTermRank(IndexReader reader, int docId, String fieldName)
+    public static Map<String, Double> getTermRank(IndexReader reader, int docId, String fieldName)
             throws IOException {
         Terms vector = reader.getTermVector(docId, fieldName);
         if(vector == null)
