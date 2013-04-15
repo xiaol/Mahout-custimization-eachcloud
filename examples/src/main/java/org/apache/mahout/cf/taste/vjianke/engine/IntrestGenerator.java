@@ -66,6 +66,8 @@ public class IntrestGenerator {
         Type listType = new TypeToken<List<WeiboTag>>() {}.getType();
         for(Datalayer.WeiboTag weiboTag:weiboTags){
             try {
+                if(weiboTag.getUserTag() == null || weiboTag.getUserTag().equals(""))
+                    continue;
                 JSONArray ja = new JSONArray(weiboTag.getUserTag());
                 for(int i = 0; i< ja.length();i++){
                     JSONObject jojo = ja.getJSONObject(i);

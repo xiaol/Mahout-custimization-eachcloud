@@ -138,6 +138,10 @@ public class ContentBasedRecommender {
                         TikaIndexer.CLIP_TITLE,word.getKey()));
                 //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
                 query.add(tq, BooleanClause.Occur.MUST);
+
+                TermQuery tqNew = new TermQuery(new Term(
+                        TikaIndexer.CONTENT_FIELD,word.getKey()));
+                query.add(tqNew, BooleanClause.Occur.SHOULD);
             }
         }
         TopDocs matches;
