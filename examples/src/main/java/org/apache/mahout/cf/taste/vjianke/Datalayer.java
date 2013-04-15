@@ -989,7 +989,7 @@ public class Datalayer {
 
         String sqlString = "SELECT user_tag,user_fav_tag FROM UserMicroBlogEntity " +
                 "WHERE ";
-        sqlString = sqlString + "Id = '" + uuid +"'";
+        sqlString = sqlString + "user_id = '" + uuid +"'";
         Connection connection;
         try {
             connection = DriverManager.getConnection(_connectionString);
@@ -1212,9 +1212,9 @@ public class Datalayer {
 
             String output;
             JSONObject jo = null;
-            System.out.println("Output from Server .... \n");
+            //System.out.println("Output from Server .... \n");
             while ((output = br.readLine()) != null) {
-                System.out.println(output);
+                //System.out.println(output);
                 jo = (JSONObject)JSONValue.parse(output);
             }
             httpClient.getConnectionManager().shutdown();

@@ -117,8 +117,9 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
-            sb.insert(9,"-").insert(14,"-").insert(19,"-").insert(25,"-");
+            sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
             String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //String userId = "6AF0F808-DACF-4FAC-ADBA-9E8500FAF11C";
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -226,6 +227,7 @@ public class IntrestBasedRecommendEntryPoint {
                 maps.put(weiboTag.getKey(),1.0d);
                 List<RecommendClipEntity> entities =
                         proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
+                System.out.println("sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
                     recommendClipEntityList.add(recommendClipEntity);
                 }
@@ -353,22 +355,14 @@ public class IntrestBasedRecommendEntryPoint {
                                                     Datalayer layer){
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
         Hashtable<String,Float> recommendResult = recommender.recommendByTerms(
-                tagsTable, userEntity.getUuid(), TikaIndexer.INDEX_PATH);
+                tagsTable, userEntity.getUuid(),layer, TikaIndexer.INDEX_PATH);
         String uuidWithoutDash = userEntity.getUuid().replace("-", "");
 
         int count = 0;
         for(Map.Entry<String, Float> result:recommendResult.entrySet()){
             String clipId = result.getKey();
-            boolean isRead = layer.isClipRead(clipId,userEntity.getUuid());
-            if(isRead){
-                System.out.println("is Read");
-                continue;
-            }
-            boolean isOwen = layer.isOwenClip(clipId,userEntity.getUuid());
-            if(isOwen){
-                System.out.println("is Own");
-                continue;
-            }
+
+
             Date date = new Date();
             long time =  date.getTime();
             String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ count;

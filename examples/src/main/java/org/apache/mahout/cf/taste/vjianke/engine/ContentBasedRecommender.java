@@ -112,7 +112,7 @@ public class ContentBasedRecommender {
     }
 
     public Hashtable<String, Float> recommendByTerms(Map<String, Double> terms,
-                                                     String userId,
+                                                     String userId, Datalayer layer,
                                                      String indexPath
     ) {
         IndexReader reader = null;
@@ -144,7 +144,7 @@ public class ContentBasedRecommender {
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
-            int recommendCount = 5;
+            int recommendCount = 3;
             HashSet<String> cachedIds = new HashSet<String>(recommendCount);
             HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
             int count = 0;
@@ -156,6 +156,17 @@ public class ContentBasedRecommender {
 
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+
+                boolean isRead = layer.isClipRead(destId,userId);
+                if(isRead){
+                    System.out.println("is Read");
+                    continue;
+                }
+                boolean isOwen = layer.isOwenClip(destId,userId);
+                if(isOwen){
+                    System.out.println("is Own");
+                    continue;
+                }
                 if(cachedIds.contains(destId)
                         || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
                         || Float.compare(scoreDoc.score, 2.0f)> 0)
