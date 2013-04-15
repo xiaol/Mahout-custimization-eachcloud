@@ -118,8 +118,8 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
-            String userId = "0002ACB8-CC41-447F-9F55-A1740119D940";
+            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //String userId = "0002ACB8-CC41-447F-9F55-A1740119D940";
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -127,7 +127,7 @@ public class IntrestBasedRecommendEntryPoint {
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
-            /*List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
+            List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
                     localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 10, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
@@ -175,7 +175,6 @@ public class IntrestBasedRecommendEntryPoint {
                         break;
                     }
                 }
-
             }
 
             for(final String board:boards){
@@ -215,7 +214,7 @@ public class IntrestBasedRecommendEntryPoint {
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
                 }
-            } */
+            }
 
             IntrestGenerator intrestGenerator = new IntrestGenerator();
             Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
@@ -227,8 +226,9 @@ public class IntrestBasedRecommendEntryPoint {
                 maps.put(weiboTag.getKey(),1.0d);
                 List<RecommendClipEntity> entities =
                         proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
-                System.out.println("Sina recommended: " + entities.size());
+                System.out.println(weiboTag.getKey() + " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
+                    System.out.print(recommendClipEntity.getPartitionKey());
                     recommendClipEntityList.add(recommendClipEntity);
                 }
             }
