@@ -16,6 +16,7 @@ import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 import org.apache.mahout.cf.taste.vjianke.engine.ContentBasedRecommender;
 import org.apache.mahout.cf.taste.vjianke.engine.IntrestGenerator;
 import org.apache.mahout.cf.taste.vjianke.engine.TikaIndexer;
+import org.json.simple.JSONArray;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
@@ -67,12 +68,11 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-04-01 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-04-08 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-04-03 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-10 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
-
         FastByIDMap<PreferenceArray> prefsMap = null;
         ArrayList<UUID> users = null;
         FastByIDMap<FastIDSet> prefsIDSet;
@@ -112,9 +112,13 @@ public class IntrestBasedRecommendEntryPoint {
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        for(Map.Entry<String, Datalayer.UserEntity> userEntity: userEntities.entrySet()){
-            String userId = userEntity.getKey();
+        JSONArray activeUsers = datalayer.getActiveUsers(30);
+        for(Object actvieUser:activeUsers){
+            //String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
+            StringBuilder sb = new StringBuilder((String)actvieUser);
+            sb.insert(9,"-").insert(14,"-").insert(19,"-").insert(25,"-");
+            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -159,7 +163,7 @@ public class IntrestBasedRecommendEntryPoint {
                     String uuidWithoutDash = userId.replace("-","");
                     String strSource = relativeClipInfo.srcId;
                     RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
-                            relativeClipInfo.destId, userEntity.getValue(), strSource,"content-based:vsm","recentClip");
+                            relativeClipInfo.destId, userEntities.get(userId), strSource,"content-based:vsm","recentClip");
                     if(clipEntity == null) {
                         continue;
                     }
@@ -221,7 +225,7 @@ public class IntrestBasedRecommendEntryPoint {
                 Hashtable<String,Double> maps = new Hashtable<String, Double>();
                 maps.put(weiboTag.getKey(),1.0d);
                 List<RecommendClipEntity> entities =
-                        proceed( userEntity.getValue(), maps, recommender, azureStorageHelper, datalayer);
+                        proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
                 for(RecommendClipEntity recommendClipEntity:entities){
                     recommendClipEntityList.add(recommendClipEntity);
                 }
@@ -293,7 +297,7 @@ public class IntrestBasedRecommendEntryPoint {
             recommendClipEntityList.clear();
 
             if(bSwitch){
-                List<String> createdBoards = datalayer.queryCreatedBoards(userEntity.getKey());
+                List<String> createdBoards = datalayer.queryCreatedBoards(userId);
                 for(String board:createdBoards){
                     List<RecommendedItem> items = boardBasedRecommend.mostSimilarItems(boardIds.indexOf(board),1);
                     for(RecommendedItem item:items){
@@ -319,7 +323,7 @@ public class IntrestBasedRecommendEntryPoint {
                         IntrestBasedRecommend intrestBasedRecommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
                         List<RecommendClipEntity> results = proceed(
-                                userEntity.getKey(),userEntities, intrestBasedRecommend,
+                                userId,userEntities, intrestBasedRecommend,
                                 prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix);
                         for(RecommendClipEntity entity:results){
                             recommendClipEntityList.add(entity);
