@@ -137,7 +137,7 @@ public class ContentBasedRecommender {
                 TermQuery tq = new TermQuery(new Term(
                         TikaIndexer.CLIP_TITLE,word.getKey()));
                 //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
-                query.add(tq, BooleanClause.Occur.SHOULD);
+                query.add(tq, BooleanClause.Occur.MUST);
 
                 TermQuery tqNew = new TermQuery(new Term(
                         TikaIndexer.CONTENT_FIELD,word.getKey()));
@@ -153,8 +153,6 @@ public class ContentBasedRecommender {
             HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
             int count = 0;
             for(ScoreDoc scoreDoc:matches.scoreDocs){
-
-
                 if(count >= recommendCount)
                     break;
                 if(scoreDoc.doc == 2147483647)
@@ -173,10 +171,9 @@ public class ContentBasedRecommender {
                     System.out.println("is Own");
                     continue;
                 }
-                System.out.println("have 1: " + destId +" "+scoreDoc.score);
+                //System.out.println("have 1: " + destId +" "+scoreDoc.score);
                 if(cachedIds.contains(destId)
-                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
-                        || Float.compare(scoreDoc.score, 2.0f)> 0)
+                        || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0))
                     continue;
                 cachedIds.add(destId);
                 cachedScore.add(scoreDoc.score);
