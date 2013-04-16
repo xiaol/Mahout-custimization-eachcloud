@@ -67,8 +67,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-04-05 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-04-12 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-03-17 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-17 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -98,6 +98,7 @@ public class IntrestBasedRecommendEntryPoint {
 
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
         userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
+        FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
@@ -116,12 +117,16 @@ public class IntrestBasedRecommendEntryPoint {
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
-            FastByIDMap<PreferenceArray> tempLocalPrefsMap = new FastByIDMap<PreferenceArray>();
-            for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
-                tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
-            }
-            userBasedAnalyzer.getPreferenceByReadHistory(tempLocalPrefsMap, userId, localUsers);
-            FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(tempLocalPrefsMap);
+            //FastByIDMap<PreferenceArray> tempLocalPrefsMap = new FastByIDMap<PreferenceArray>();
+            //for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
+                //tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
+            //}
+
+            FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
+            UUID currentUUID = UUID.fromString(userId);
+            int userIndex = localUsers.indexOf(currentUUID);
+            FastIDSet swapItemId = localprefsIDSet.get(userIndex);
+            localprefsIDSet.put(userIndex,itemsId);
             DataModel localModel = new GenericBooleanPrefDataModel(localprefsIDSet);
 
             UserSimilarity localSimilarity = new LogLikelihoodSimilarity(localModel);
@@ -134,6 +139,7 @@ public class IntrestBasedRecommendEntryPoint {
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
+            localprefsIDSet.put(userIndex,swapItemId);
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
@@ -199,7 +205,7 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
-            System.out.println("Start Weibo Recommend");
+            //System.out.println("Start Weibo Recommend");
             IntrestGenerator intrestGenerator = new IntrestGenerator();
             Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
                     userId,datalayer);

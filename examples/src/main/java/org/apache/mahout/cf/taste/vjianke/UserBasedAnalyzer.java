@@ -152,8 +152,8 @@ public class UserBasedAnalyzer {
         return prefsMap;
     }
 
-    public FastByIDMap<PreferenceArray> getPreferenceByReadHistory(
-            FastByIDMap<PreferenceArray> prefsMap, String strUserId,
+    public FastIDSet getPreferenceByReadHistory(
+            String strUserId,
             ArrayList<UUID> users){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
@@ -161,15 +161,16 @@ public class UserBasedAnalyzer {
         PreferenceArray preferenceArray = null;
 
         String sqlString = "SELECT TOP 40 * FROM ClickEntity " +
-                "WHERE user_id = '"+strUserId+"' ORDER BY add_time DEC";
+                "WHERE user_id = '"+strUserId+"' ORDER BY add_time DESC";
 
         UUID uuid = UUID.fromString(strUserId);
+        FastByIDMap<FastIDSet> prefsIDset = new FastByIDMap<FastIDSet>();
         Connection connection;
         try {
             connection = DriverManager.getConnection(_connectionString);
         } catch (SQLException e) {
             e.printStackTrace();
-            return prefsMap;
+            return new FastIDSet(0);
         }
 
         try
@@ -179,32 +180,26 @@ public class UserBasedAnalyzer {
             //preparedStatement.setTimestamp(2, end);
             preparedStatement.setQueryTimeout(0);
             resultSet = preparedStatement.executeQuery();
-            BooleanUserPreferenceArray prefs;
             if(!users.contains(uuid)){
                 users.add(uuid);
-                prefs = new BooleanUserPreferenceArray(0);
-            }else{
-                prefs =
-                        (BooleanUserPreferenceArray) prefsMap.get(users.indexOf(uuid));
             }
 
             ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
             while (resultSet.next())
             {
                 BooleanPreference booleanPreference = new BooleanPreference(
-                        users.indexOf(uuid), Long.parseLong(resultSet.getString(1),36));
+                        users.indexOf(uuid), Long.parseLong(resultSet.getString(2),36));
                 userPrefs.add(booleanPreference);
+
+
                 rowCount++;
             }
-
-            Iterator it = prefs.iterator();
-            while (it.hasNext()){
-                Preference pref = (Preference) it.next();
-                BooleanPreference booleanPreference = new BooleanPreference(
-                        users.indexOf(uuid), pref.getItemID());
-                userPrefs.add(booleanPreference);
+            FastIDSet itemIDs = new FastIDSet(userPrefs.size());
+            for(BooleanPreference userPref:userPrefs){
+                itemIDs.add(userPref.getItemID());
             }
-            prefsMap.put(users.indexOf(uuid), new BooleanUserPreferenceArray(userPrefs));
+            return itemIDs;
+
         }
         catch (Exception e)
         {
@@ -221,7 +216,7 @@ public class UserBasedAnalyzer {
             }
             catch (SQLException sqlException){}
         }
-        return prefsMap;
+        return new FastIDSet(0);
     }
 
     public void init(
