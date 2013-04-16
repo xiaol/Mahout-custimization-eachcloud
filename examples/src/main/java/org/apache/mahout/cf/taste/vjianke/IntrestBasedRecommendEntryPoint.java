@@ -139,7 +139,12 @@ public class IntrestBasedRecommendEntryPoint {
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
-            localprefsIDSet.put(userIndex,swapItemId);
+            if(swapItemId == null) {
+                localprefsIDSet.remove(userIndex);
+            }else{
+                localprefsIDSet.put(userIndex,swapItemId);
+            }
+
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
