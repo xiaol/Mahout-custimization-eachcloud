@@ -1,6 +1,5 @@
 package org.apache.mahout.cf.taste.vjianke;
 
-import org.apache.mahout.cf.taste.hadoop.pseudo.UserIDsMapper;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
@@ -96,23 +95,13 @@ public class IntrestBasedRecommendEntryPoint {
 
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
-        FastByIDMap<FastIDSet> localprefsIDSet;
 
-        UserBasedRecommend userBasedRecommender = new UserBasedRecommend();
-        userBasedRecommender.init(localPrefsMap, localUsers, _ts, _tsEnd);
-        localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
-        DataModel localModel = new GenericBooleanPrefDataModel(localprefsIDSet);
-
-        UserSimilarity localSimilarity =
-                new LogLikelihoodSimilarity(localModel);
-        UserNeighborhood localNeighborhood =
-                new NearestNUserNeighborhood(localUsers.size(), localSimilarity, localModel);
-        IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
-                localModel, localNeighborhood, localSimilarity);
+        UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
+        userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        JSONArray activeUsers = datalayer.getActiveUsers(30);
+        JSONArray activeUsers = datalayer.getActiveUsers(21);
         for(Object actvieUser:activeUsers){
             //String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
@@ -127,6 +116,19 @@ public class IntrestBasedRecommendEntryPoint {
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
+            FastByIDMap<PreferenceArray> tempLocalPrefsMap = new FastByIDMap<PreferenceArray>();
+            for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
+                tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
+            }
+            userBasedAnalyzer.getPreferenceByReadHistory(tempLocalPrefsMap, userId, localUsers);
+            FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(tempLocalPrefsMap);
+            DataModel localModel = new GenericBooleanPrefDataModel(localprefsIDSet);
+
+            UserSimilarity localSimilarity = new LogLikelihoodSimilarity(localModel);
+            UserNeighborhood localNeighborhood =
+                    new NearestNUserNeighborhood(localUsers.size(), localSimilarity, localModel);
+            IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
+                    localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
                     localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 10, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
@@ -135,29 +137,15 @@ public class IntrestBasedRecommendEntryPoint {
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
-            int recentCount = 5;
             int recommendRecentCount = 2;
             if(boards.size() < 2){
                 recommendRecentCount = 3;
-                recentCount =8;
             }
 
             for(Datalayer.ClipEntity recentClipEntity:recentClipByUser){
-                int recommendedCountByClip = 0;
                 List<ContentBasedRecommender.RelativeClipInfo> relativeClipInfoList =
-                        contentBasedRecommender.recomendByClip(recentClipEntity.id,recentCount);
+                        contentBasedRecommender.recomendByClip(recentClipEntity.id,recommendRecentCount,datalayer,userId);
                 for(ContentBasedRecommender.RelativeClipInfo relativeClipInfo:relativeClipInfoList){
-                    boolean isRead = datalayer.isClipRead(relativeClipInfo.destId,userId);
-                    if(isRead){
-                        System.out.println("is Read");
-                        continue;
-                    }
-                    boolean isOwen = datalayer.isOwenClip(relativeClipInfo.destId,userId);
-                    if(isOwen){
-                        System.out.println("is Own");
-                        continue;
-                    }
-
                     Date date = new Date();
                     long time =  date.getTime();
                     String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ relativeClipInfo.index;
@@ -168,12 +156,7 @@ public class IntrestBasedRecommendEntryPoint {
                     if(clipEntity == null) {
                         continue;
                     }
-
                     recommendClipEntityList.add(clipEntity);
-                    recommendedCountByClip++;
-                    if(recommendedCountByClip >= recommendRecentCount){
-                        break;
-                    }
                 }
             }
 

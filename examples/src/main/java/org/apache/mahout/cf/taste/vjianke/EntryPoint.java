@@ -47,23 +47,23 @@ public class EntryPoint {
     public static void main(String[] args) throws Exception{
         Timestamp _ts = Timestamp.valueOf("2011-12-01 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
-        UserBasedRecommend recommend = new UserBasedRecommend();
+        UserBasedAnalyzer analyzer = new UserBasedAnalyzer();
         FastByIDMap<PreferenceArray> prefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> users = new ArrayList<UUID>();
-        recommend.init(prefsMap, users, _ts, _tsEnd);
+        analyzer.init(prefsMap, users, _ts, _tsEnd);
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
         FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
 
         azureStorageHelper.init();
 
           for(String uuid: mates2){
-              proceed(uuid, recommend, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
+              proceed(uuid, analyzer, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
           }
 
     }
 
     public static void proceed(String uuid,
-                               UserBasedRecommend recommend,
+                               UserBasedAnalyzer analyzer,
                                FastByIDMap<FastIDSet> prefsIDSet,
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
@@ -72,7 +72,7 @@ public class EntryPoint {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
         List<RecommendedItem> recommendedItemList =
-                recommend.recommend(uuid, prefsIDSet, users, 12, neighborhoodUsers);
+                analyzer.recommend(uuid, prefsIDSet, users, 12, neighborhoodUsers);
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 

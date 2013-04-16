@@ -32,7 +32,7 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 374191;//368150;
+    static int idStamp = 378145;//368150;
     static int nextIdStamp = 378145;
 
     public static void main(String[] args) throws Exception {
@@ -92,7 +92,8 @@ public class ContentBasedRecommender {
         return destId;
     }
 
-    public List<RelativeClipInfo> recomendByClip(String clipId, int count){
+    public List<RelativeClipInfo> recomendByClip(String clipId, int count,
+                                                 Datalayer layer,String userId){
         try {
             IndexReader reader = DirectoryReader.open(
                     FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
@@ -101,7 +102,7 @@ public class ContentBasedRecommender {
                 return Collections.emptyList();
             IndexSearcher searcher = new IndexSearcher(reader);
             List<RelativeClipInfo> relativeClipInfoList =
-                    booleanQuery(docId,reader,searcher,count);
+                    booleanQuery(docId,reader,searcher,count,layer,userId,true);
             return relativeClipInfoList;
 
         } catch (IOException e) {
@@ -212,7 +213,7 @@ public class ContentBasedRecommender {
         //moreLikeThisQuery(terms,searcher,analyzer);
         //termQuery(terms,searcher);
         List<RelativeClipInfo> relativeClipInfoList =
-                booleanQuery(docId,reader,searcher,6);
+                booleanQuery(docId,reader,searcher,6,layer,"",false);
 
         for(RelativeClipInfo relativeClipInfo:relativeClipInfoList){
             process(relativeClipInfo.srcId, String.format("%03d", relativeClipInfo.index),
@@ -248,7 +249,8 @@ public class ContentBasedRecommender {
 
     static List<RelativeClipInfo> booleanQuery(int docId, IndexReader reader,
                                                IndexSearcher searcher,
-                                               int recommendCount){
+                                               int recommendCount,
+                                               Datalayer layer,String userId,boolean bUser){
         Map<String,Double> terms = null;
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
@@ -289,7 +291,6 @@ public class ContentBasedRecommender {
         TopDocs matches;
         List<RelativeClipInfo> relativeClipInfoList = new ArrayList<RelativeClipInfo>();
 
-
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
@@ -313,12 +314,25 @@ public class ContentBasedRecommender {
                     continue;
                 }
 
+                if(bUser){
+                    boolean isRead = layer.isClipRead(destId,userId);
+                    if(isRead){
+                        System.out.println("is Read");
+                        continue;
+                    }
+                    boolean isOwen = layer.isOwenClip(destId,userId);
+                    if(isOwen){
+                        System.out.println("is Own");
+                        continue;
+                    }
+                }
+
                 if(srcId.equals(destId) || cachedIds.contains(destId)
                         || (cachedScore.contains(scoreDoc.score) && Float.compare(0.0f,scoreDoc.score) != 0)
                         || Float.compare(scoreDoc.score, 2.0f)> 0)
                     continue;
 
-                //System.out.println(destId + ": " + scoreDoc.score);
+                System.out.print(destId + ": " + scoreDoc.score+" ");
                 RelativeClipInfo relativeClipInfo = new RelativeClipInfo();
                 relativeClipInfo.destId = destId;
                 relativeClipInfo.srcId = srcId;

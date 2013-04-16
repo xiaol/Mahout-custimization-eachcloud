@@ -1,7 +1,5 @@
 package org.apache.mahout.cf.taste.vjianke;
 
-import org.apache.commons.lang.ArrayUtils;
-import org.apache.lucene.util.ArrayUtil;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.common.FastIDSet;
@@ -12,6 +10,7 @@ import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
 import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
+import org.apache.mahout.cf.taste.model.Preference;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
@@ -30,7 +29,7 @@ import java.sql.*;
  * Time: 下午5:13
  * To change this template use File | Settings | File Templates.
  */
-public class UserBasedRecommend {
+public class UserBasedAnalyzer {
 
     private final String _connectionString =
             "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
@@ -58,8 +57,8 @@ public class UserBasedRecommend {
 
     private Timestamp _tsEnd;
 
-    private FastByIDMap<PreferenceArray> fetchData(
-            FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users){
+    private FastByIDMap<PreferenceArray> getPreferences(
+            FastByIDMap<PreferenceArray> prefsMap, ArrayList<UUID> users){
         // The types for the following variables are
         // defined in the java.sql library.
         Connection connection = null;  // For making the connection
@@ -153,11 +152,83 @@ public class UserBasedRecommend {
         return prefsMap;
     }
 
+    public FastByIDMap<PreferenceArray> getPreferenceByReadHistory(
+            FastByIDMap<PreferenceArray> prefsMap, String strUserId,
+            ArrayList<UUID> users){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+
+        String sqlString = "SELECT TOP 40 * FROM ClickEntity " +
+                "WHERE user_id = '"+strUserId+"' ORDER BY add_time DEC";
+
+        UUID uuid = UUID.fromString(strUserId);
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, start);
+            //preparedStatement.setTimestamp(2, end);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            BooleanUserPreferenceArray prefs;
+            if(!users.contains(uuid)){
+                users.add(uuid);
+                prefs = new BooleanUserPreferenceArray(0);
+            }else{
+                prefs =
+                        (BooleanUserPreferenceArray) prefsMap.get(users.indexOf(uuid));
+            }
+
+            ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
+            while (resultSet.next())
+            {
+                BooleanPreference booleanPreference = new BooleanPreference(
+                        users.indexOf(uuid), Long.parseLong(resultSet.getString(1),36));
+                userPrefs.add(booleanPreference);
+                rowCount++;
+            }
+
+            Iterator it = prefs.iterator();
+            while (it.hasNext()){
+                Preference pref = (Preference) it.next();
+                BooleanPreference booleanPreference = new BooleanPreference(
+                        users.indexOf(uuid), pref.getItemID());
+                userPrefs.add(booleanPreference);
+            }
+            prefsMap.put(users.indexOf(uuid), new BooleanUserPreferenceArray(userPrefs));
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
+    }
+
     public void init(
             FastByIDMap<PreferenceArray> prefsMap,ArrayList<UUID> users, Timestamp ts, Timestamp tsEnd){
         set_ts(ts);
         set_tsEnd(tsEnd);
-        fetchData(prefsMap,users);
+        getPreferences(prefsMap, users);
     }
 
     public List<RecommendedItem> recommend(String strUuid, FastByIDMap<FastIDSet> prefsIDSet,
