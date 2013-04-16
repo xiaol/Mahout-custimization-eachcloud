@@ -68,8 +68,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-04-03 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-04-10 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-04-05 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-04-12 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
@@ -216,6 +216,7 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
+            System.out.println("Start Weibo Recommend");
             IntrestGenerator intrestGenerator = new IntrestGenerator();
             Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
                     userId,datalayer);
@@ -228,7 +229,7 @@ public class IntrestBasedRecommendEntryPoint {
                         proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
                 System.out.println(weiboTag.getKey() + " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
-                    System.out.print(recommendClipEntity.getPartitionKey());
+                    System.out.print(recommendClipEntity.getBase36());
                     recommendClipEntityList.add(recommendClipEntity);
                 }
             }

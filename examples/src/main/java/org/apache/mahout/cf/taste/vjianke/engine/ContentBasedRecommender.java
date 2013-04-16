@@ -137,7 +137,7 @@ public class ContentBasedRecommender {
                 TermQuery tq = new TermQuery(new Term(
                         TikaIndexer.CLIP_TITLE,word.getKey()));
                 //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
-                query.add(tq, BooleanClause.Occur.MUST);
+                query.add(tq, BooleanClause.Occur.SHOULD);
 
                 TermQuery tqNew = new TermQuery(new Term(
                         TikaIndexer.CONTENT_FIELD,word.getKey()));
