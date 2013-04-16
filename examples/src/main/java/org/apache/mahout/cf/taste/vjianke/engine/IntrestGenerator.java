@@ -3,11 +3,10 @@ package org.apache.mahout.cf.taste.vjianke.engine;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.apache.commons.lang3.tuple.ImmutablePair;
-import org.apache.commons.lang3.tuple.Pair;
 import org.apache.mahout.cf.taste.vjianke.AzureStorageHelper;
 import org.apache.mahout.cf.taste.vjianke.Datalayer;
 import org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint;
+import org.apache.mahout.cf.taste.vjianke.Utils;
 import org.codehaus.jettison.json.JSONArray;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
@@ -29,12 +28,43 @@ public class IntrestGenerator {
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
         IntrestGenerator generator = new IntrestGenerator();
-        generator.getTagFromWeibo(IntrestBasedRecommendEntryPoint.mates.get(2),layer);
+        //generator.getTagFromWeibo(IntrestBasedRecommendEntryPoint.mates.get(2),layer);
+        org.json.simple.JSONArray activeUsers = layer.getActiveUsers(1);
+        List<ChannelEntity> channelEntities = new ArrayList<ChannelEntity>();
+        int count = 0;
+        for(Object actvieUser:activeUsers){
+            StringBuilder sb = new StringBuilder((String)actvieUser);
+
+            sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
+            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            System.out.println(userId+": "+count);
+            Map<Integer,Integer> channelMaps = generator.getClipChannelFreq(layer,userId);
+            ArrayList<String> channels = new ArrayList<String>();
+            ArrayList<String> readCounts = new ArrayList<String>();
+
+            for(Map.Entry<Integer, Integer> channelEntry:channelMaps.entrySet()){
+                channels.add(Integer.toString(channelEntry.getKey()));
+                readCounts.add(Integer.toString(channelEntry.getValue()));
+            }
+
+            String strChannels =  Utils.arrayToString(channels.toArray(new String[]{}),",");
+            String strReadCounts = Utils.arrayToString(readCounts.toArray(new String[]{}),",");
+            Date date = new Date();
+            ChannelEntity channelEntity = new ChannelEntity(userId,date.toString());
+            channelEntity.setChannels(strChannels.toString());
+            channelEntity.setChannelReadCounts(strReadCounts);
+            channelEntities.add(channelEntity);
+            helper.deleteByPartitionKey("ChannelEntity",userId);
+            helper.uploadToAzureTable("ChannelEntity",channelEntities);
+            channelEntities.clear();
+            count++;
+        }
+
     }
 
     public void getTagFromReadHistory(Datalayer layer, AzureStorageHelper helper){
         for(String uuid:IntrestBasedRecommendEntryPoint.mates){
-            List<String> clipIds = layer.getReadHistory(uuid);
+            List<String> clipIds = layer.getReadHistory(uuid,false,"","");
             Hashtable<String,Float> tagsMap = new Hashtable<String, Float>();
             for(String clipId:clipIds){
                 AzureStorageHelper.TagEntity tagEntity =
@@ -55,6 +85,13 @@ public class IntrestGenerator {
             //sortValue(tagsMap);
             tagsMap.clear();
         }
+    }
+
+    public Map<Integer, Integer> getClipChannelFreq(Datalayer layer, String userId){
+        List<String> clipIds = layer.getReadHistory(userId,false,"","");
+        Map<Integer,Integer> channelMaps = layer.getChannelByClips(clipIds);
+        Map<Integer,Integer> sortedMap = Utils.sortMapByValueInt(channelMaps);
+        return sortedMap;
     }
 
     public Hashtable<String,Integer> getTagFromWeibo(String userId,Datalayer layer){

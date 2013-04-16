@@ -776,7 +776,8 @@ public class Datalayer {
         return clipEntities;
     }
 
-    public List<String> getReadHistory(String uuid){
+    public List<String> getReadHistory(String uuid,
+                                       boolean limited, String startTime, String endTime){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -784,6 +785,9 @@ public class Datalayer {
         String sqlString = "SELECT clip_id FROM ClickEntity " +
                 "WHERE ";
         sqlString = sqlString + "user_id = '" + uuid +"'";
+        if(limited){
+            sqlString += " and add_time > '"+ startTime+"' and add_time < '"+ endTime +"'";
+        }
         Connection connection;
         try {
             connection = DriverManager.getConnection(_connectionString);
@@ -1012,6 +1016,8 @@ public class Datalayer {
                 WeiboTag weiboTag = new WeiboTag();
                 weiboTag.userTag = resultSet.getString(1);
                 weiboTag.userFavTag = resultSet.getString(2);
+                if(weiboTag.userFavTag == null && weiboTag.userTag == null)
+                    continue;
                 weiboTags.add(weiboTag);
                 rowCount++;
             }
@@ -1233,6 +1239,69 @@ public class Datalayer {
         }
         return null;
     }
+
+    public Map<Integer,Integer> getChannelByClips(List<String> clipIds){
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+        if(clipIds.isEmpty())
+            return Collections.EMPTY_MAP;
+
+        String sqlString = "SELECT channel_id FROM ClipEntity " +
+                "WHERE ";
+        sqlString = sqlString + "id = '" +clipIds.get(0) +"'";
+        for(int i=1; i< clipIds.size(); i++){
+            sqlString = sqlString + " OR id = '" + clipIds.get(i) + "'";
+
+        }
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.EMPTY_MAP;
+        }
+        Map<Integer,Integer> channelMaps = new Hashtable<Integer, Integer>();
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                int channelId = resultSet.getInt(1);
+                if(channelMaps.containsKey(channelId)){
+                    int channelCount = channelMaps.get(channelId);
+                    channelMaps.put(channelId,channelCount+1);
+                }else{
+                    channelMaps.put(channelId,1);
+                }
+                rowCount++;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return channelMaps;
+    }
+
 
     public class WeiboTag{
         String userTag;

@@ -229,7 +229,7 @@ public class IntrestBasedRecommendEntryPoint {
                         proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
                 System.out.println(weiboTag.getKey() + " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
-                    System.out.print(recommendClipEntity.getBase36());
+                    System.out.print(recommendClipEntity.getBase36()+" ");
                     recommendClipEntityList.add(recommendClipEntity);
                 }
             }
