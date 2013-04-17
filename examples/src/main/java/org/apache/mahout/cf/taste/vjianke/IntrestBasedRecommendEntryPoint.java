@@ -108,8 +108,8 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
-            String userId = "07221718-B190-4536-8191-A0410029DE34";
+            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //String userId = "07221718-B190-4536-8191-A0410029DE34";
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
