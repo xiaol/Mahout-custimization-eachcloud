@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 378145;//368150;
-    static int nextIdStamp = 378145;
+    static int nextIdStamp = 389793;
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -147,6 +147,7 @@ public class ContentBasedRecommender {
                     titleQuery = titleParser.parse(word.getKey());
                 } catch (ParseException e) {
                     e.printStackTrace();
+                    return new Hashtable<String, Float>();
                 }
                 query.add(contentQuery, BooleanClause.Occur.SHOULD);
                 query.add(titleQuery, BooleanClause.Occur.SHOULD);
