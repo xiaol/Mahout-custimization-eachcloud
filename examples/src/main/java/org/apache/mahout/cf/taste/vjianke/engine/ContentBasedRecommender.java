@@ -129,20 +129,27 @@ public class ContentBasedRecommender {
         helper.init();
         Hashtable<String, Float> resultTable = new Hashtable<String, Float>();
 
+        Analyzer analyzer = new SmartChineseAnalyzer(Version.LUCENE_41);
+        QueryParser contentParser = new QueryParser
+                (Version.LUCENE_40, TikaIndexer.CONTENT_FIELD, analyzer);
+        QueryParser titleParser = new QueryParser
+                (Version.LUCENE_40, TikaIndexer.CLIP_TITLE, analyzer);
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
         if(terms == null){
 
         }else{
             for(Map.Entry<String, Double> word:terms.entrySet()){
-                TermQuery tq = new TermQuery(new Term(
-                        TikaIndexer.CLIP_TITLE,word.getKey()));
-                //tq.setBoost(Float.parseFloat(word.getValue().toString())*factor);
-                query.add(tq, BooleanClause.Occur.SHOULD);
-
-                TermQuery tqNew = new TermQuery(new Term(
-                        TikaIndexer.CONTENT_FIELD,word.getKey()));
-                query.add(tqNew, BooleanClause.Occur.SHOULD);
+                Query contentQuery = null;
+                Query titleQuery = null;
+                try {
+                    contentQuery = contentParser.parse(word.getKey());
+                    titleQuery = titleParser.parse(word.getKey());
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                query.add(contentQuery, BooleanClause.Occur.SHOULD);
+                query.add(titleQuery, BooleanClause.Occur.SHOULD);
             }
         }
         TopDocs matches;
@@ -332,7 +339,7 @@ public class ContentBasedRecommender {
                         || Float.compare(scoreDoc.score, 2.0f)> 0)
                     continue;
 
-                System.out.print(destId + ": " + scoreDoc.score+" ");
+                System.out.print(destId + ": " + scoreDoc.score + " ");
                 RelativeClipInfo relativeClipInfo = new RelativeClipInfo();
                 relativeClipInfo.destId = destId;
                 relativeClipInfo.srcId = srcId;

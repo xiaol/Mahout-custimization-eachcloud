@@ -356,7 +356,6 @@ public class IntrestBasedRecommendEntryPoint {
         int count = 0;
         for(Map.Entry<String, Float> result:recommendResult.entrySet()){
             String clipId = result.getKey();
-
             Date date = new Date();
             long time =  date.getTime();
             String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ count;
