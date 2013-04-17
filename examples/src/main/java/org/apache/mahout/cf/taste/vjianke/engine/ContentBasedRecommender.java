@@ -149,7 +149,7 @@ public class ContentBasedRecommender {
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
-            int recommendCount = 3;
+            int recommendCount = 1;
             HashSet<String> cachedIds = new HashSet<String>(recommendCount);
             HashSet<Float> cachedScore = new HashSet<Float>(recommendCount);
             int count = 0;

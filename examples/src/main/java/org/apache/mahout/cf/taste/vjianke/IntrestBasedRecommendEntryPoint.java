@@ -67,7 +67,7 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-03-17 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-04-01 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-04-17 23:23:23");
         int count = 0;
 
@@ -102,14 +102,14 @@ public class IntrestBasedRecommendEntryPoint {
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        JSONArray activeUsers = datalayer.getActiveUsers(21);
+        JSONArray activeUsers = datalayer.getActiveUsers(15);
         for(Object actvieUser:activeUsers){
             //String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
-            //String userId = "0002ACB8-CC41-447F-9F55-A1740119D940";
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            String userId = "07221718-B190-4536-8191-A0410029DE34";
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -135,7 +135,7 @@ public class IntrestBasedRecommendEntryPoint {
             IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                     localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 10, "Fullscope ");
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ");
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
