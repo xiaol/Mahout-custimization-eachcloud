@@ -56,6 +56,14 @@ public class IntrestBasedRecommendEntryPoint {
                     "96c04d86-c4a4-487a-ba6d-a0e400299937"      // paul
             );
 
+    public static String RECOMMEND_BY_USER = "你的好友阅读过的";
+    public static String RECOMMEND_BY_SUBSCRIPTION = "在订阅中遗失的";
+    public static String RECOMMEND_BY_SINA = "和你的微博喜好相关";
+    public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";
+    public static String RECOMMEND_BY_BEHAVIOR_SUFFIX = "过同类剪报";
+    public static String RECOMMEND_BY_BOARD_PREFIX = "和你的订阅专辑";
+    public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
+
     public static List<String> mates2 =
             Arrays.asList(
 
@@ -135,7 +143,7 @@ public class IntrestBasedRecommendEntryPoint {
             IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                     localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ");
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ",RECOMMEND_BY_USER);
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
@@ -163,7 +171,8 @@ public class IntrestBasedRecommendEntryPoint {
                     String uuidWithoutDash = userId.replace("-","");
                     String strSource = relativeClipInfo.srcId;
                     RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
-                            relativeClipInfo.destId, userEntities.get(userId), strSource,"content-based:vsm","recentClip");
+                            relativeClipInfo.destId, userEntities.get(userId), strSource,"content-based:vsm","recentClip",
+                            RECOMMEND_BY_BEHAVIOR_PREFIX+"发布"+RECOMMEND_BY_BEHAVIOR_SUFFIX);
                     if(clipEntity == null) {
                         continue;
                     }
@@ -204,7 +213,7 @@ public class IntrestBasedRecommendEntryPoint {
 
                 RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
                 List<RecommendClipEntity> results = proceed(userId, userEntities,recommend,
-                        prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"");
+                        prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"",RECOMMEND_BY_SUBSCRIPTION);
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
                 }
@@ -321,7 +330,7 @@ public class IntrestBasedRecommendEntryPoint {
 
                         List<RecommendClipEntity> results = proceed(
                                 userId,userEntities, intrestBasedRecommend,
-                                prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix);
+                                prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix,RECOMMEND_BY_BOARD_PREFIX);
                         for(RecommendClipEntity entity:results){
                             recommendClipEntityList.add(entity);
                         }
@@ -363,7 +372,7 @@ public class IntrestBasedRecommendEntryPoint {
 
 
             RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, helper,
-                    clipId, userEntity, strSource,"content-based:vsm","sina");
+                    clipId, userEntity, strSource,"content-based:vsm","sina",RECOMMEND_BY_SINA);
             if(clipEntity == null) {
                 System.out.println("Sina Generate clip failed");
                 continue;
@@ -381,7 +390,8 @@ public class IntrestBasedRecommendEntryPoint {
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
                                Timestamp _ts,
-                               Timestamp _tsEnd, int howMany, String prefix) throws Exception {
+                               Timestamp _tsEnd, int howMany, String prefix,
+                               String recommendReason) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
         if(bDebug && uuid.toUpperCase().equals("818D0F1A-8295-473F-91F9-A0F900546786")) {
@@ -441,7 +451,7 @@ public class IntrestBasedRecommendEntryPoint {
 
             RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash,
                     rowKey,azureStorageHelper,clipId,userEntity,strSource,
-                    "user-based:log-likelyhood","feedhome");
+                    "user-based:log-likelyhood","feedhome",recommendReason);
             if(clipEntity == null) {
                 arraySourceUser.clear();
                 mapSourceUserInfluence.clear();
@@ -465,7 +475,8 @@ public class IntrestBasedRecommendEntryPoint {
                                                           Datalayer.UserEntity userEntity,
                                                           String strSource,
                                                           String recommendStrategy,
-                                                          String recommendContext
+                                                          String recommendContext,
+                                                          String recommendReason
                                                           ){
         RecommendClipEntity clipEntity = new RecommendClipEntity(
                 uuidWithoutDash,
@@ -517,6 +528,8 @@ public class IntrestBasedRecommendEntryPoint {
         clipEntity.setuguid(feedClipEntity.getuguid());
         clipEntity.setuimage(feedClipEntity.getuimage());
         clipEntity.setuname(feedClipEntity.getuname());
+
+        clipEntity.setRecommendReason(recommendReason);
 
         return clipEntity;
     }

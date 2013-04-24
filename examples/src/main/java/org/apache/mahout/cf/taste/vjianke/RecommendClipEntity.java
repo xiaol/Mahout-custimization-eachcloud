@@ -287,5 +287,14 @@ public  class RecommendClipEntity extends TableServiceEntity {
 
     String RecommendContext;
 
+    public String getRecommendReason() {
+        return RecommendReason;
+    }
+
+    public void setRecommendReason(String recommendReason) {
+        RecommendReason = recommendReason;
+    }
+
+    String RecommendReason;
 
 }
