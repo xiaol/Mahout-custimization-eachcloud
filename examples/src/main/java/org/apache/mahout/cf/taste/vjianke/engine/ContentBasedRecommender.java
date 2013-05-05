@@ -32,7 +32,7 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 389793;//378145;
+    static int idStamp = 398051;//378145;
     static int nextIdStamp = 398051;
 
     public static void main(String[] args) throws Exception {
