@@ -2,548 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/BIG2GBK.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/BIG5.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/BIG5.wordlist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/BiWord.big" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/Configure.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/CoreDict.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/CoreDict.pos" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/CoreDict.unig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/FieldDict.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/FieldDict.pos" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBK.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBK.wordlist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBK2BIG.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBK2GBKC.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBK2UTF.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKA.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKA.wordlist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKA2UTF.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKC.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKC.wordlist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GBKC2GBK.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GranDict.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/GranDict.pos" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/ICTPOS.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/NLPIR.ctx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/NLPIR.user" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/NLPIR_First.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/NewWord.lst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/PKU.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/PKU_First.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/UTF2GBK.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/UTF2GBKA.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/UTF8.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/UTF8.wordlist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/UserDict.pdat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/charset.type" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/nr.ctx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/nr.fsa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/Data/nr.role" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/checkstyle-cachefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/checkstyle-checker.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/checkstyle-header.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/checkstyle-result.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/cpd.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/activation-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/antlr-2.7.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/antlr-3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/antlr-runtime-3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/apache-mime4j-core-0.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/apache-mime4j-dom-0.7.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/asm-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/aspectjrt-1.6.11.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/avro-1.4.0-cassandra-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/bcmail-jdk15-1.45.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/bcprov-jdk15-1.45.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/boilerpipe-1.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/bson-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/cassandra-all-0.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/cassandra-thrift-0.8.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/cglib-nodep-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-beanutils-1.7.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-beanutils-core-1.8.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-cli-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-cli-2.0-mahout.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-codec-1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-collections-3.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-compress-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-configuration-1.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-dbcp-1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-digester-1.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-httpclient-3.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-io-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-lang-2.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-lang3-3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-logging-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-math-2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-math3-3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/commons-pool-1.5.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/concurrentlinkedhashmap-lru-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/dom4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/easymock-3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/fontbox-1.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/geronimo-stax-api_1.0_spec-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/gson-1.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/guava-r09.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/hadoop-core-0.20.204.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/hector-core-0.8.0-2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/high-scale-lib-1.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/httpclient-4.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/httpcore-4.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/icu4j-4.8.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/isoparser-1.0-RC-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jackson-core-asl-1.8.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jackson-jaxrs-1.9.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jackson-mapper-asl-1.8.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jackson-xc-1.9.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jakarta-regexp-1.4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jamm-0.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/javax.inject-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jaxb-api-2.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jaxb-impl-2.2.3-1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jcommon-1.0.12.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jdom-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jempbox-1.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jersey-client-1.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jersey-core-1.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jersey-json-1.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jettison-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jetty-6.1.22.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jetty-util-6.1.22.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jline-0.9.94.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/json-simple-1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/jul-to-slf4j-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/junit-4.8.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/juniversalchardet-1.0.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/libthrift-0.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/log4j-1.2.16.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-analyzers-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-analyzers-common-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-analyzers-smartcn-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-benchmark-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-core-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-core-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-facet-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-highlighter-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-memory-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-queries-3.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-queries-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-queryparser-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/lucene-sandbox-4.1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mahout-core-0.7-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mahout-core-0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mahout-integration-0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mahout-math-0.7-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mahout-math-0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mail-1.4.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/metadata-extractor-2.6.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/microsoft-windowsazure-api-0.4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/mongo-java-driver-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/netcdf-4.2-min.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/objenesis-1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/pdfbox-1.7.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/poi-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/poi-ooxml-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/poi-ooxml-schemas-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/poi-scratchpad-3.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/rome-0.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/servlet-api-2.5-20081211.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/servlet-api-2.5.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/slf4j-api-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/slf4j-jcl-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/slf4j-log4j12-1.5.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/slf4j-log4j12-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/snakeyaml-1.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/solr-commons-csv-3.5.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/speed4j-0.9.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/sqljdbc4-4.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/stax-api-1.0-2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/stax-api-1.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/stringtemplate-3.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/tagsoup-1.2.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/tika-app-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/tika-core-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/tika-parsers-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/tika-xmp-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/uncommons-maths-1.2.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/uuid-3.2.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/vorbis-java-core-0.1-tests.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/vorbis-java-core-0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/vorbis-java-tika-0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xercesImpl-2.9.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xml-apis-1.3.04.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xmlbeans-2.3.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xmpcore-5.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xpp3_min-1.1.4c.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/dependency/xstream-1.3.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/findbugs-exclude.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/findbugs/findbugs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/findbugsXml.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/javadoc-bundle-options/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/jira-results.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/libNLPIR_JNI.so" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/mahout-examples-0.7-job.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/mahout-examples-0.7-sources.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/mahout-examples-0.7.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/mahout-pmd-ruleset.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/pmd.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/index-all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/TasteOptionParser.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingBooleanRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingBooleanRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/BookCrossingRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/class-use/BookCrossingBooleanRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/class-use/BookCrossingBooleanRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/class-use/BookCrossingDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/class-use/BookCrossingRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/class-use/BookCrossingRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/bookcrossing/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/class-use/TasteOptionParser.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/EmailUtility.Counters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/EmailUtility.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/FromEmailToDictionaryMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MailToDictionaryReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MailToPrefsDriver.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MailToRecMapper.Counters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MailToRecMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MailToRecReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/MsgIdToDictionaryMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/EmailUtility.Counters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/EmailUtility.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/FromEmailToDictionaryMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MailToDictionaryReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MailToPrefsDriver.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MailToRecMapper.Counters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MailToRecMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MailToRecReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/class-use/MsgIdToDictionaryMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/email/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/GroupLensDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/GroupLensRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/GroupLensRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/class-use/GroupLensDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/class-use/GroupLensRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/class-use/GroupLensRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/grouplens/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/JesterDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/JesterRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/JesterRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/class-use/JesterDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/class-use/JesterRecommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/class-use/JesterRecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/jester/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/DataFileIterable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/DataFileIterator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/KDDCupDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/ToCSV.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/class-use/DataFileIterable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/class-use/DataFileIterator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/class-use/KDDCupDataModel.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/class-use/ToCSV.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/EstimateConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/Track1Recommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/Track1RecommenderEvaluator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/Track1RecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/Track1Runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/class-use/EstimateConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/class-use/Track1Recommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/class-use/Track1RecommenderEvaluator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/class-use/Track1RecommenderEvaluatorRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/class-use/Track1Runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/DataModelFactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/FactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/KDDCupFactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/ParallelArraysSGDFactorizer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/Track1SVDRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/class-use/DataModelFactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/class-use/FactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/class-use/KDDCupFactorizablePreferences.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/class-use/ParallelArraysSGDFactorizer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/class-use/Track1SVDRunner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track1/svd/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/Track2Recommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/Track2Runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/class-use/Track2Recommender.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/class-use/Track2Runner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/kddcup/track2/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/example/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/NetflixDatasetConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/class-use/NetflixDatasetConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/cf/taste/hadoop/example/als/netflix/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/NewsgroupHelper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/class-use/NewsgroupHelper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/BreimanExample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/class-use/BreimanExample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/BuildForest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/TestForest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/class-use/BuildForest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/class-use/TestForest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/mapreduce/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/df/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/PrepEmailMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/PrepEmailReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/PrepEmailVectorsDriver.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/class-use/PrepEmailMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/class-use/PrepEmailReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/class-use/PrepEmailVectorsDriver.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/email/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/PosTagger.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/class-use/PosTagger.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sequencelearning/hmm/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/AdaptiveLogisticModelParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/LogisticModelParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/PrintResourceOrFile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/RunAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/RunLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/SGDHelper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/SimpleCsvExamples.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TestASFEmail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TestNewsGroups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TrainASFEmail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TrainAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TrainLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/TrainNewsGroups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/ValidateAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/AdaptiveLogisticModelParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/LogisticModelParameters.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/PrintResourceOrFile.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/RunAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/RunLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/SGDHelper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/SimpleCsvExamples.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TestASFEmail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TestNewsGroups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TrainASFEmail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TrainAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TrainLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/TrainNewsGroups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/class-use/ValidateAdaptiveLogistic.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/classifier/sgd/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayCanopy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayClustering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayDirichlet.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayFuzzyKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayMeanShift.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayMinHash.PlotType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplayMinHash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/DisplaySpectralKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayCanopy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayClustering.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayDirichlet.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayFuzzyKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayMeanShift.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayMinHash.PlotType.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplayMinHash.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/class-use/DisplaySpectralKMeans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/display/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/LastfmClusterEvaluator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/LastfmDataConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/class-use/LastfmClusterEvaluator.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/class-use/LastfmDataConverter.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/minhash/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/class-use/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/canopy/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/class-use/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/dirichlet/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/class-use/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/fuzzykmeans/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/class-use/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/kmeans/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/class-use/Job.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/clustering/syntheticcontrol/meanshift/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/DeliciousTagsExample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/class-use/DeliciousTagsExample.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleCombiner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleGrouper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/KeyBasedStringTupleReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/class-use/KeyBasedStringTupleCombiner.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/class-use/KeyBasedStringTupleGrouper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/class-use/KeyBasedStringTupleMapper.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/class-use/KeyBasedStringTupleReducer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/dataset/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/org/apache/mahout/fpm/pfpgrowth/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/resources/inherit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/serialized-form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/apidocs/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/checkstyle.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/checkstyle.rss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/cpd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/cpd.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/css/maven-base.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/css/maven-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/css/print.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/css/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/dependencies.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/dependency-management.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/findbugs.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/close.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/collapsed.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/expanded.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/external.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/icon_error_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/icon_info_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/icon_success_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/icon_warning_sml.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/logos/build-by-maven-black.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/logos/build-by-maven-white.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/logos/maven-feather.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/newwindow.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/images/rss.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/jira-report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/pmd.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/pmd.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/project-info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/project-reports.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/surefire-report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/taglist.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/index-all.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/ModelDissectorTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/TrainLogisticTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/class-use/ModelDissectorTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/class-use/TrainLogisticTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/classifier/sgd/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/ClustersFilterTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/class-use/ClustersFilterTest.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/clustering/display/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/MahoutTestCase.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/class-use/MahoutTestCase.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/org/apache/mahout/examples/package-use.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/overview-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/overview-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/resources/inherit.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/site/testapidocs/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/TEST-org.apache.mahout.classifier.sgd.ModelDissectorTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/TEST-org.apache.mahout.classifier.sgd.TrainLogisticTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/TEST-org.apache.mahout.clustering.display.ClustersFilterTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.classifier.sgd.ModelDissectorTest-output.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.classifier.sgd.ModelDissectorTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.classifier.sgd.TrainLogisticTest-output.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.classifier.sgd.TrainLogisticTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.clustering.display.ClustersFilterTest-output.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/surefire-reports/org.apache.mahout.clustering.display.ClustersFilterTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/examples/target/taglist/taglist.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -607,10 +67,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="65" selection-start="3703" selection-end="3703" vertical-scroll-proportion="0.0">
+            <state line="78" column="53" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.46309695">
               <folding />
             </state>
           </provider>
@@ -619,16 +79,34 @@
       <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="31" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0">
+            <state line="56" column="27" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Datalayer.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntrestBasedRecommend.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="0" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="50" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.42636746">
+            <state line="38" column="50" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TikaIndexer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="13" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -669,9 +147,9 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Evaluator.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
       </list>
     </option>
   </component>
@@ -1158,14 +636,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -1372,6 +850,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1398,24 +894,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1618,11 +1096,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="0" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEvaluatorRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" />
@@ -1663,11 +1136,6 @@
         <state line="142" column="0" selection-start="5350" selection-end="5350" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="13" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="165" column="43" selection-start="6373" selection-end="6373" vertical-scroll-proportion="0.0" />
@@ -1678,28 +1146,36 @@
         <state line="86" column="69" selection-start="3234" selection-end="3239" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="294" column="9" selection-start="6257" selection-end="6257" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="65" selection-start="3703" selection-end="3703" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="31" selection-start="1228" selection-end="1228" vertical-scroll-proportion="0.0">
+        <state line="56" column="27" selection-start="2154" selection-end="2154" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="50" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.42636746">
+        <state line="38" column="50" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/TikaIndexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="13" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="294" column="9" selection-start="6257" selection-end="6257" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="0" selection-start="2837" selection-end="2837" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="53" selection-start="3823" selection-end="3823" vertical-scroll-proportion="0.46309695">
           <folding />
         </state>
       </provider>

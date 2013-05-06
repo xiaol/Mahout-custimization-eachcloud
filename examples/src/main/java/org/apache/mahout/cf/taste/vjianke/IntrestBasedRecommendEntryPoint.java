@@ -75,8 +75,8 @@ public class IntrestBasedRecommendEntryPoint {
     }
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-04-01 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-05-01 23:23:23");
+        Timestamp _ts = Timestamp.valueOf("2013-04-16 23:23:23");
+        Timestamp _tsEnd = Timestamp.valueOf("2013-06-01 23:23:23");
         int count = 0;
 
         Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
