@@ -110,13 +110,15 @@ public class IntrestBasedRecommendEntryPoint {
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        JSONArray activeUsers = datalayer.getActiveUsers(15);
-        for(Object actvieUser:activeUsers){
-            //String userId = userEntity.getKey();
+        //JSONArray activeUsers = datalayer.getActiveUsers(15);
+        //for(Object actvieUser:activeUsers){
+        for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
+
+            String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
-            StringBuilder sb = new StringBuilder((String)actvieUser);
-            sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //StringBuilder sb = new StringBuilder((String)actvieUser);
+            //sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
             List<String> boards = datalayer.querySubscription(userId);
             count++;
