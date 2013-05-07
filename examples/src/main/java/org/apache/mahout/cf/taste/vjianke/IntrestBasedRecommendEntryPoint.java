@@ -60,7 +60,7 @@ public class IntrestBasedRecommendEntryPoint {
             );
 
     public static String RECOMMEND_BY_USER = "你的好友看过同类剪报";
-    public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的来自";
+    public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的订阅剪报";//"你错过的来自";
     public static String RECOMMEND_BY_SUBSCRIPTION_SUFFIX = "的剪报";
     public static String RECOMMEND_BY_SINA = "和你在微博的喜好相关";
     public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";

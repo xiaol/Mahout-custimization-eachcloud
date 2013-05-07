@@ -135,7 +135,7 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="8" selection-start="5589" selection-end="5589" vertical-scroll-proportion="0.4989605">
+            <state line="62" column="60" selection-start="3133" selection-end="3133" vertical-scroll-proportion="-0.33264032">
               <folding />
             </state>
           </provider>
@@ -1188,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="8" selection-start="5589" selection-end="5589" vertical-scroll-proportion="0.4989605">
+        <state line="62" column="60" selection-start="3133" selection-end="3133" vertical-scroll-proportion="-0.33264032">
           <folding />
         </state>
       </provider>
