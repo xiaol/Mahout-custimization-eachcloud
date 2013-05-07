@@ -59,9 +59,10 @@ public class IntrestBasedRecommendEntryPoint {
                     "96c04d86-c4a4-487a-ba6d-a0e400299937"      // paul
             );
 
-    public static String RECOMMEND_BY_USER = "你的好友阅读过的";
-    public static String RECOMMEND_BY_SUBSCRIPTION = "在订阅中遗失的";
-    public static String RECOMMEND_BY_SINA = "和你的微博喜好相关";
+    public static String RECOMMEND_BY_USER = "你的好友看过同类剪报";
+    public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的来自";
+    public static String RECOMMEND_BY_SUBSCRIPTION_SUFFIX = "的剪报";
+    public static String RECOMMEND_BY_SINA = "和你在微博的喜好相关";
     public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";
     public static String RECOMMEND_BY_BEHAVIOR_SUFFIX = "过同类剪报";
     public static String RECOMMEND_BY_BOARD_PREFIX = "和你的订阅专辑";
@@ -113,15 +114,15 @@ public class IntrestBasedRecommendEntryPoint {
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        //JSONArray activeUsers = datalayer.getActiveUsers(15);
-        //for(Object actvieUser:activeUsers){
-        for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
+        JSONArray activeUsers = datalayer.getActiveUsers(15);
+        for(Object actvieUser:activeUsers){
+        //for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
         //for(String mate:mates){
-            String userId = userEntity.getKey();
+            //String userId = userEntity.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(18).toUpperCase();
-            //StringBuilder sb = new StringBuilder((String)actvieUser);
-            //sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            StringBuilder sb = new StringBuilder((String)actvieUser);
+            sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
+            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
             //String userId = mate.toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
