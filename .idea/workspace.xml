@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_microsoft_windowsazure_microsoft_windowsazure_api_0_4_0.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution/mahout-distribution.iml" afterPath="$PROJECT_DIR$/distribution/mahout-distribution.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mahout-examples.iml" afterPath="$PROJECT_DIR$/examples/mahout-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pom.xml" afterPath="$PROJECT_DIR$/examples/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -142,7 +135,7 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="47" selection-start="6240" selection-end="6240" vertical-scroll-proportion="0.26611227">
+            <state line="119" column="12" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.5654886">
               <folding />
             </state>
           </provider>
@@ -1195,7 +1188,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="47" selection-start="6240" selection-end="6240" vertical-scroll-proportion="0.26611227">
+        <state line="119" column="12" selection-start="5757" selection-end="5757" vertical-scroll-proportion="0.5654886">
           <folding />
         </state>
       </provider>
