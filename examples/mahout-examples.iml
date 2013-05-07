@@ -91,7 +91,7 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.objenesis:objenesis:1.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.slf4j:slf4j-jcl:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: com.microsoft.sqlserver:sqljdbc4:4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.windowsazure:microsoft-windowsazure-api:0.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.microsoft.windowsazure:microsoft-windowsazure-api:0.4.2" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.13" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-core:1.13" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />

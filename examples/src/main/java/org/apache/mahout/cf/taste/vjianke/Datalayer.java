@@ -30,9 +30,9 @@ import java.util.*;
  */
 public class Datalayer {
     private final String _connectionString =
-            "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
+            "jdbc:sqlserver://qm05uctv57.database.chinacloudapi.cn" + ";" +
                     "database=demo1" + ";" +
-                    "user=eachcloud@llwko2tjlq" + ";" +
+                    "user=eachcloud@qm05uctv57" + ";" +
                     "password=IONisgreat!";
 
     public final String baseTimestamp = "2013-04-20";

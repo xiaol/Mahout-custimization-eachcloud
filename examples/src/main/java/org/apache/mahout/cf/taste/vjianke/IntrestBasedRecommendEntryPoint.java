@@ -40,16 +40,19 @@ public class IntrestBasedRecommendEntryPoint {
                     "8d81322a-d2f3-4ffa-b782-9f2b0169672e",
                     "da6b1949-d998-4344-a0f6-a08a008ab49b",     // vera
                     "178676e2-c21d-4a95-b234-38c0b01c00d1",     // bertony
+
                     "08295a93-ac97-44db-a107-9fc000630d7c",     // farstar1
                     "6af0f808-dacf-4fac-adba-9e8500faf11c",     // farstar2
                     "80d47b58-7b97-4b36-9d3b-9fd20059d711",     // joy
                     "3bdd4051-9a3c-49f5-bdc4-a144001d420c",     // wilson
                     "80c0161a-34a4-4363-b9b7-9c513020e083",     // bruce
+
                     "fad2cc24-c259-4d81-ac60-e4bf18606378",     // zilong
                     "7de3bb1e-13aa-44ae-ab1e-a0d100995f63",     // michael
                     "b30bb7e0-0722-4bca-85c2-a146006abf0a",     // aoliw
                     "27e6b768-de93-446a-8637-a12a00dfcb89",     // monica
                     "a90c77a2-767c-47fc-b7d9-a101005d58ba",     // vivi
+
                     "9d293f0f-2bb1-43b7-80cd-b3caed577e1e",     // chris
                     "a6490629-e92f-4edd-9aa0-9f7f007b4f46",     // jacky
                     "b5d3b26b-876b-4827-a904-d68130639d82",     // abely
@@ -112,14 +115,15 @@ public class IntrestBasedRecommendEntryPoint {
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         //JSONArray activeUsers = datalayer.getActiveUsers(15);
         //for(Object actvieUser:activeUsers){
-        for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
-
-            String userId = userEntity.getKey();
-            //String userId = IntrestBasedRecommendEntryPoint.mates.get(17).toUpperCase();
+        //for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
+        for(String mate:mates){
+            //String userId = userEntity.getKey();
+            //String userId = IntrestBasedRecommendEntryPoint.mates.get(18).toUpperCase();
             //StringBuilder sb = new StringBuilder((String)actvieUser);
             //sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
             //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
+            String userId = mate.toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
