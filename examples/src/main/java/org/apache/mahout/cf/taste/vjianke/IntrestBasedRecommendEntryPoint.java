@@ -249,7 +249,7 @@ public class IntrestBasedRecommendEntryPoint {
             }else{
                 if(!bDebug){
                     List<RecommendClipEntity> deletedRecommendClipEntity =
-                            Collections.EMPTY_LIST;//azureStorageHelper.deleteByPartitionKey("RecommendClipEntity",userId.replace("-",""));
+                            azureStorageHelper.deleteByPartitionKey("RecommendClipEntity",userId.replace("-",""));
 
                     //System.out.println("deleted clip: "+ deletedRecommendClipEntity.size());
 

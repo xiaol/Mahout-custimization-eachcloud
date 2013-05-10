@@ -106,15 +106,21 @@ public class AzureStorageHelper {
                 new ArrayList<RecommendClipEntity>();
         for (RecommendClipEntity entity : _tableClient.execute(rangeQuery)) {
             // Create an operation to delete the entity.
-            TableOperation deleteSmithJeff = TableOperation.delete(entity);
             recommendClipEntities.add(entity);
-
-            try {
-                _tableClient.execute(tableName, deleteSmithJeff);
-            } catch (StorageException e) {
-                e.printStackTrace();
-            }
         }
+        TableBatchOperation batchOperation = new TableBatchOperation();
+
+        for(RecommendClipEntity entity:recommendClipEntities){
+            TableOperation deleteSmithJeff = TableOperation.delete(entity);
+            batchOperation.add(deleteSmithJeff);
+
+        }
+        try {
+            _tableClient.execute(tableName, batchOperation);
+        } catch (StorageException e) {
+            e.printStackTrace();
+        }
+
         return recommendClipEntities;
     }
 
