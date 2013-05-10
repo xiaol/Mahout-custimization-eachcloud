@@ -114,7 +114,7 @@ public class IntrestBasedRecommendEntryPoint {
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        JSONArray activeUsers = datalayer.getActiveUsers(15);
+        JSONArray activeUsers = datalayer.getActiveUsers(14);
         for(Object actvieUser:activeUsers){
         //for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
         //for(String mate:mates){
@@ -249,8 +249,7 @@ public class IntrestBasedRecommendEntryPoint {
             }else{
                 if(!bDebug){
                     List<RecommendClipEntity> deletedRecommendClipEntity =
-                            azureStorageHelper.deleteByPartitionKey(
-                            "RecommendClipEntity",userId.replace("-",""));
+                            Collections.EMPTY_LIST;//azureStorageHelper.deleteByPartitionKey("RecommendClipEntity",userId.replace("-",""));
 
                     //System.out.println("deleted clip: "+ deletedRecommendClipEntity.size());
 
