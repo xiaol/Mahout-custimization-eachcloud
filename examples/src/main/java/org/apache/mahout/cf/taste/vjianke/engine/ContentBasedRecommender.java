@@ -47,7 +47,7 @@ public class ContentBasedRecommender {
         }
     }
 
-    protected void finalize(){
+    protected  void finalize(){
         try {
             super.finalize();
 
@@ -55,11 +55,11 @@ public class ContentBasedRecommender {
             throwable.printStackTrace();
         }
 
-        try {
+        /*try {
             _reader.close();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        } */
     }
 
     public static void main(String[] args) throws Exception {
@@ -121,23 +121,14 @@ public class ContentBasedRecommender {
 
     public List<RelativeClipInfo> recomendByClip(String clipId, int count,
                                                  Datalayer layer,String userId){
-        try {
-            IndexReader reader = DirectoryReader.open(
-                    FSDirectory.open(new File(TikaIndexer.INDEX_PATH)));
-            int docId = getClipFromId(clipId,reader);
-            if(docId == -1)
-                return Collections.emptyList();
-            IndexSearcher searcher = new IndexSearcher(reader);
-            List<RelativeClipInfo> relativeClipInfoList =
-                    booleanQuery(docId,reader,searcher,count,layer,userId,true);
-            reader.close();
-            return relativeClipInfoList;
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return Collections.emptyList();
+        initIfNeeded(TikaIndexer.INDEX_PATH);
+        int docId = getClipFromId(clipId,_reader);
+        if(docId == -1)
+            return Collections.emptyList();
+        IndexSearcher searcher = new IndexSearcher(_reader);
+        List<RelativeClipInfo> relativeClipInfoList =
+            booleanQuery(docId,_reader,searcher,count,layer,userId,true);
+        return relativeClipInfoList;
     }
 
     public Hashtable<String, Float> recommendByTerms(Map<String, Double> terms,
