@@ -34,6 +34,33 @@ public class ContentBasedRecommender {
 
     static int idStamp = 398051;//378145;
     static int nextIdStamp = 410272;
+    static IndexReader _reader = null;
+
+    public void initIfNeeded(String indexPath){
+        if(_reader == null){
+            try {
+                _reader = DirectoryReader.open(
+                        FSDirectory.open(new File(indexPath)));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    protected void finalize(){
+        try {
+            super.finalize();
+
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
+
+        try {
+            _reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void main(String[] args) throws Exception {
         IndexReader reader = DirectoryReader.open(
@@ -103,6 +130,7 @@ public class ContentBasedRecommender {
             IndexSearcher searcher = new IndexSearcher(reader);
             List<RelativeClipInfo> relativeClipInfoList =
                     booleanQuery(docId,reader,searcher,count,layer,userId,true);
+            reader.close();
             return relativeClipInfoList;
 
         } catch (IOException e) {
@@ -116,15 +144,9 @@ public class ContentBasedRecommender {
                                                      String userId, Datalayer layer,
                                                      String indexPath
     ) {
-        IndexReader reader = null;
-        try {
-            reader = DirectoryReader.open(
-                    FSDirectory.open(new File(indexPath)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        initIfNeeded(indexPath);
 
-        IndexSearcher searcher = new IndexSearcher(reader);
+        IndexSearcher searcher = new IndexSearcher(_reader);
         AzureStorageHelper helper = new AzureStorageHelper();
         helper.init();
         Hashtable<String, Float> resultTable = new Hashtable<String, Float>();
@@ -167,7 +189,7 @@ public class ContentBasedRecommender {
                 if(scoreDoc.doc == 2147483647)
                     continue;
 
-                String destId =  reader.document(
+                String destId =  _reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
 
                 boolean isRead = layer.isClipRead(destId,userId);
