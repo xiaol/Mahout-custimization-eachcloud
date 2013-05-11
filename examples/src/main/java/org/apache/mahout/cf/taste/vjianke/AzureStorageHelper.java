@@ -115,8 +115,10 @@ public class AzureStorageHelper {
             batchOperation.add(deleteSmithJeff);
 
         }
+
         try {
-            _tableClient.execute(tableName, batchOperation);
+            if(!batchOperation.isEmpty())
+                _tableClient.execute(tableName, batchOperation);
         } catch (StorageException e) {
             e.printStackTrace();
         }
