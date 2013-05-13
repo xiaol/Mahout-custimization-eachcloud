@@ -162,6 +162,38 @@ public class AzureStorageHelper {
         return recommendClipEntities;
     }
 
+    public List<RecommendBoardEntity> retrieveBoardByPartitionKey(
+            String tableName, String partitinKey){
+        // Create a filter condition where the partition key is "Smith".
+        String partitionFilter = TableQuery.generateFilterCondition(
+                TableConstants.PARTITION_KEY,
+                TableQuery.QueryComparisons.EQUAL,
+                partitinKey);
+
+
+        String rowFilter = TableQuery.generateFilterCondition(
+                TableConstants.ROW_KEY,
+                TableQuery.QueryComparisons.GREATER_THAN_OR_EQUAL,
+                0);
+
+        // Combine the two conditions into a filter expression.
+        String combinedFilter = TableQuery.combineFilters(partitionFilter,
+                TableQuery.Operators.AND, rowFilter);
+
+        TableQuery<RecommendBoardEntity> rangeQuery =
+                TableQuery.from(tableName, RecommendBoardEntity.class)
+                        .where(partitionFilter);
+
+        List<RecommendBoardEntity> recommendBoardEntities =
+                new ArrayList<RecommendBoardEntity>();
+        for (RecommendBoardEntity entity : _tableClient.execute(rangeQuery)) {
+            // Create an operation to delete the entity.
+            recommendBoardEntities.add(entity);
+        }
+        return recommendBoardEntities;
+    }
+
+
     public FeedClipEntity retrieveFeedClipEntity(String clipId, String tableName){
 
         String filter = TableQuery.generateFilterCondition(

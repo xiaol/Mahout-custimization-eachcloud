@@ -96,14 +96,6 @@ public class IntrestBasedRecommendEntryPoint {
         ArrayList<String> boardIds = new ArrayList<String>();
         ArrayList<String> boardUsers = new ArrayList<String>();
         BoardBasedRecommend boardBasedRecommend = null;
-        if(bSwitch){
-            datalayer.getBoardRelationsByUser(boardPrefsMap, boardIds, boardUsers);
-            DataModel genericDataModel = new GenericDataModel(prefsMap);
-            ItemSimilarity itemSimilarity =
-                    new LogLikelihoodSimilarity(genericDataModel);
-            boardBasedRecommend =
-                    new BoardBasedRecommend(genericDataModel, itemSimilarity);
-        }
 
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
@@ -244,6 +236,28 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
+            List<String> createdBoards = datalayer.queryCreatedBoards(userId);
+            String uuidWithoutDash = userEntities.get(userId).getUuid().replace("-", "");
+            for(String board:createdBoards){
+                List<RecommendBoardEntity> recommendBoardEntities =
+                        azureStorageHelper.retrieveBoardByPartitionKey("RecommendBoardEntity",board);
+
+                for(RecommendBoardEntity recommendBoardEntity:recommendBoardEntities){
+                    List<String> relatedBoardClipIds =
+                            datalayer.getClipByBoard(recommendBoardEntity.getPartitionKey(),true,userId);
+                    for(String relatedBoardClipId:relatedBoardClipIds){
+                        Date date = new Date();
+                        long time =  date.getTime();
+                        String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ count;
+                        RecommendClipEntity recommendClipEntity = generateClipEntity(uuidWithoutDash,
+                                rowKey,azureStorageHelper,relatedBoardClipId,userEntities.get(userId),"",
+                                "item-based:log-likelyhood","board",RECOMMEND_BY_BOARD_PREFIX+
+                                "《"+recommendBoardEntity.getName() +"》"+RECOMMEND_BY_BOARD_SUFFIX);
+                        recommendClipEntityList.add(recommendClipEntity);
+                    }
+                }
+            }
+
             if(recommendClipEntityList.isEmpty()){
                 //System.out.println("no recommend clip found totally.");
             }else{
@@ -318,6 +332,8 @@ public class IntrestBasedRecommendEntryPoint {
                     if(newRecommendClipEntities.isEmpty()){
                         System.out.println("No news.");
                     }
+
+
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
                 }
@@ -325,49 +341,7 @@ public class IntrestBasedRecommendEntryPoint {
             recommendClipEntityList.clear();
 
             if(bSwitch){
-                List<String> createdBoards = datalayer.queryCreatedBoards(userId);
-                for(String board:createdBoards){
-                    List<RecommendedItem> items = boardBasedRecommend.mostSimilarItems(boardIds.indexOf(board),1);
-                    for(RecommendedItem item:items){
-                        final String recommendBoard = boardIds.get((int)item.getItemID());
-                        //System.out.println("Because: "+board+
-                                //" recommend "+recommendBoard +" :"+ item.getValue());
-                        String prefix =  "Because: "+board+
-                                " recommend "+recommendBoard +" :"+ item.getValue()+" ";
-                        List<String> clipIds = datalayer.queryClipByBoard(new ArrayList<String>(){{ add(recommendBoard); }});
-                        if(clipIds.isEmpty())
-                            continue;
 
-                        datalayer.getPreferenceByClick(prefsMap, users, clipIds);
-                        if(users.size() < 1)
-                            continue;
-
-                        prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
-                        DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
-
-                        UserSimilarity similarity = new LogLikelihoodSimilarity(model);
-                        NearestNUserNeighborhood neighborhood =
-                                new NearestNUserNeighborhood(users.size(), similarity, model);
-                        IntrestBasedRecommend intrestBasedRecommend = new IntrestBasedRecommend(model, neighborhood, similarity);
-
-                        List<RecommendClipEntity> results = proceed(
-                                userId,userEntities, intrestBasedRecommend,
-                                prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1, prefix,RECOMMEND_BY_BOARD_PREFIX);
-                        for(RecommendClipEntity entity:results){
-                            recommendClipEntityList.add(entity);
-                        }
-                        prefsMap.clear();
-                        users.clear();
-                    }
-
-                }
-                if(recommendClipEntityList.isEmpty()){
-                    //System.out.println("no recommend clip found totally.");
-                }else{
-                    if(!bDebug)
-                        azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
-                }
-                recommendClipEntityList.clear();
             }
 
         }
@@ -391,7 +365,6 @@ public class IntrestBasedRecommendEntryPoint {
             long time =  date.getTime();
             String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ count;
             String strSource = tagsTable.toString();
-
 
             RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, helper,
                     clipId, userEntity, strSource,"content-based:vsm","sina",RECOMMEND_BY_SINA);

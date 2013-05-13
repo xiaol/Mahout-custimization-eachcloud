@@ -25,5 +25,26 @@ public class RecommendBoardEntity extends TableServiceEntity {
     public String Rank;
 
 
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public boolean isIsPrivate() {
+        return IsPrivate;
+    }
+
+    public void setIsPrivate(boolean isPrivate) {
+        IsPrivate = isPrivate;
+    }
+
+    public boolean IsPrivate;
+
+
+    public String Name;
+
 
 }

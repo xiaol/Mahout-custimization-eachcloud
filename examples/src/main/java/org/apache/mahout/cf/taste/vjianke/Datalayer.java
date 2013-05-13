@@ -164,6 +164,8 @@ public class Datalayer {
         return "";
     }
 
+
+
     public Hashtable<String, UserEntity> QueryUsers(){
         // The types for the following variables are
         // defined in the java.sql library.
@@ -430,7 +432,7 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT TOP 3 id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+            String sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
             resultSet = statement.executeQuery(sqlString);
@@ -753,7 +755,7 @@ public class Datalayer {
                     GenericPreference pref = new GenericPreference(
                             clipIds.indexOf(clipId),boards.indexOf(boardId),value);
                     if(rowCount != 0){
-                        prefsMap.put(clipId.indexOf(clipId)-1,new GenericUserPreferenceArray(prefs));
+                        prefsMap.put(clipIds.indexOf(clipId)-1,new GenericUserPreferenceArray(prefs));
                         prefs = new ArrayList<GenericPreference>();
                     }
                     prefs.add(pref);
@@ -792,6 +794,14 @@ public class Datalayer {
         public String id;
         public String title;
         public String user_id;
+
+    }
+
+    public class BoardEntity{
+        public String id;
+        public String name;
+        public String ownerId;
+        public boolean isPrivate;
     }
 
     public List<ClipEntity>  getClips(
@@ -848,6 +858,64 @@ public class Datalayer {
             catch (SQLException sqlException) {}
         }
         return clipEntities;
+    }
+
+    public Hashtable<String,BoardEntity>  getBoards(
+            String count, boolean limited, boolean increment){
+        Statement statement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        Hashtable<String,BoardEntity> boardMap = new Hashtable<String, BoardEntity>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return boardMap;
+        }
+        try
+        {
+            String sqlString = "SELECT ";
+            if(limited)
+                sqlString += "TOP "+ count +" ";
+            sqlString += "Id,board_name,owner_id,isPrivate FROM BoardEntity";
+            if(increment)
+                sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                BoardEntity entity = new BoardEntity();
+                entity.id = resultSet.getString(1);
+                entity.name = resultSet.getString(2);
+                entity.ownerId = resultSet.getString(3);
+                entity.isPrivate = resultSet.getBoolean(4);
+                boardMap.put(entity.id,entity);
+
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return boardMap;
     }
 
     public List<String> getReadHistory(String uuid,
@@ -1369,6 +1437,65 @@ public class Datalayer {
         return clipIds;
     }
 
+    public List<String> getClipByBoard(String boardId, boolean isLimited, String userId){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT TOP 2 * FROM BoardClipEntity WHERE ";
+
+        sqlString = sqlString + "board_id = '" + boardId + "'";
+        sqlString = sqlString +"' AND clip_id NOT IN " +
+                "(SELECT id FROM ClipEntity WHERE user_guid = '" + userId + "')";
+        sqlString = sqlString +"' AND clip_id NOT IN " +
+                "(SELECT clip_id FROM ClickEntity WHERE user_id = '" +userId +"')";
+
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return clipIds;
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+            while (resultSet.next())
+            {
+                String clipId = resultSet.getString(3);
+                clipIds.add(clipId);
+                rowCount++;
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return clipIds;
+    }
+
     public Map<Integer,Integer> getChannelByClips(List<String> clipIds){
         PreparedStatement preparedStatement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
@@ -1429,6 +1556,60 @@ public class Datalayer {
             catch (SQLException sqlException){}
         }
         return channelMaps;
+    }
+
+    public boolean isPrivateBoard(String boardId){
+        boolean result = false;
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        String sqlString = "SELECT isPrivate FROM BoardEntity " +
+                "WHERE ";
+        sqlString = sqlString + "id = '" +boardId+"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next())
+            {
+                int isPrivate = resultSet.getByte(1);
+                if(isPrivate ==1) {
+                    result = true;
+                }
+                return result;
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+
+        return result;
     }
 
 

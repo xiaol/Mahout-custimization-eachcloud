@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_5_6.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/distribution/mahout-distribution.iml" afterPath="$PROJECT_DIR$/distribution/mahout-distribution.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/mahout-examples.iml" afterPath="$PROJECT_DIR$/examples/mahout-examples.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/pom.xml" afterPath="$PROJECT_DIR$/examples/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,7 +30,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="297" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="311" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -48,7 +43,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" line="59" class="org.apache.mahout.cf.taste.vjianke.BoardBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" line="54" class="org.apache.mahout.cf.taste.vjianke.BoardBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -61,7 +56,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" line="41" class="org.apache.mahout.cf.taste.vjianke.BoardBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" line="44" class="org.apache.mahout.cf.taste.vjianke.BoardBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -118,61 +113,45 @@
       <file leaf-file-name="BoardBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="54" selection-start="3344" selection-end="3344" vertical-scroll-proportion="1.664">
+            <state line="47" column="49" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.5416667">
               <folding>
                 <element signature="docComment;class#BoardBasedRecommendEntryPoint#0" expanded="false" />
-                <element signature="e#1423#1440#0" expanded="true" />
-                <element signature="e#1494#1502#0" expanded="true" />
-                <element signature="e#1555#1563#0" expanded="true" />
-                <element signature="e#2807#2829#0" expanded="true" />
-                <element signature="e#4883#4900#0" expanded="true" />
-                <element signature="e#4954#4962#0" expanded="true" />
-                <element signature="e#5013#5021#0" expanded="true" />
+                <element signature="e#1552#1569#0" expanded="true" />
+                <element signature="e#1623#1631#0" expanded="true" />
+                <element signature="e#1684#1692#0" expanded="true" />
+                <element signature="e#2694#2716#0" expanded="true" />
+                <element signature="e#4600#4617#0" expanded="true" />
+                <element signature="e#4671#4679#0" expanded="true" />
+                <element signature="e#4730#4738#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericUserPreferenceArray.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/model/GenericUserPreferenceArray.java">
+      <file leaf-file-name="RecommendedItem.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/recommender/RecommendedItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0">
+            <state line="36" column="9" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLServerResultSet.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/sqlserver/sqljdbc4/4.0/sqljdbc4-4.0.jar!/com/microsoft/sqlserver/jdbc/SQLServerResultSet.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="283" column="28" selection-start="16339" selection-end="16339" vertical-scroll-proportion="-4.92">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenericUserBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/recommender/GenericUserBasedRecommender.java">
+      <file leaf-file-name="IntrestBasedRecommendEvaluatorRunner.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEvaluatorRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="34" selection-start="7970" selection-end="7970" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TopItems.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/recommender/TopItems.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="214" column="30" selection-start="8367" selection-end="8367" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardBasedRecommend.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="27" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AzureStorageHelper.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="0" selection-start="1919" selection-end="1919" vertical-scroll-proportion="122.46154">
+            <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -181,16 +160,7 @@
       <file leaf-file-name="RecommendBoardEntity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="75" selection-start="5912" selection-end="5912" vertical-scroll-proportion="-5.3076925">
+            <state line="40" column="29" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,9 +169,38 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="12" selection-start="7549" selection-end="7683" vertical-scroll-proportion="0.0">
+            <state line="92" column="9" selection-start="4300" selection-end="4300" vertical-scroll-proportion="-0.88461536">
               <folding>
-                <element signature="e#15983#16004#0" expanded="true" />
+                <element signature="e#14803#14824#0" expanded="true" />
+                <element signature="e#14942#14963#0" expanded="true" />
+                <element signature="e#17006#17027#0" expanded="true" />
+                <element signature="e#19075#19096#0" expanded="true" />
+                <element signature="e#20787#20793#0" expanded="true" />
+                <element signature="e#21158#21179#0" expanded="true" />
+                <element signature="e#21282#21288#0" expanded="true" />
+                <element signature="e#21353#21367#0" expanded="true" />
+                <element signature="e#21432#21440#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContentBasedRecommender.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="141" column="47" selection-start="4819" selection-end="4819" vertical-scroll-proportion="18.692308">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AzureStorageHelper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="0" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#5901#5922#0" expanded="true" />
+                <element signature="e#7201#7223#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,13 +209,38 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="724" column="50" selection-start="25316" selection-end="25316" vertical-scroll-proportion="3.9615386">
+            <state line="867" column="52" selection-start="30235" selection-end="30235" vertical-scroll-proportion="18.461538">
               <folding>
-                <element signature="e#22847#22866#0" expanded="true" />
-                <element signature="e#25921#25940#0" expanded="true" />
-                <element signature="e#40935#40943#0" expanded="true" />
-                <element signature="e#45608#45616#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#5702#5722#0" expanded="true" />
+                <element signature="e#8375#8383#0" expanded="true" />
+                <element signature="e#10104#10112#0" expanded="true" />
+                <element signature="e#11828#11842#0" expanded="true" />
+                <element signature="e#13659#13667#0" expanded="true" />
+                <element signature="e#16514#16533#0" expanded="true" />
+                <element signature="e#20408#20427#0" expanded="true" />
+                <element signature="e#22843#22862#0" expanded="true" />
+                <element signature="e#25917#25936#0" expanded="true" />
+                <element signature="e#28250#28262#0" expanded="true" />
+                <element signature="e#30298#30319#0" expanded="true" />
+                <element signature="e#32968#32976#0" expanded="true" />
+                <element signature="e#34240#34252#0" expanded="true" />
+                <element signature="e#39832#39842#0" expanded="true" />
+                <element signature="e#43221#43229#0" expanded="true" />
+                <element signature="e#44847#44855#0" expanded="true" />
+                <element signature="e#47894#47902#0" expanded="true" />
+                <element signature="e#49569#49577#0" expanded="true" />
+                <element signature="e#52264#52282#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IntrestBasedRecommend.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="13" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -245,11 +269,11 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java" />
         <option value="$PROJECT_DIR$/examples/pom.xml" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" />
       </list>
     </option>
   </component>
@@ -1117,14 +1141,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20717132" sideWeight="0.920977" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16069058" sideWeight="0.94037354" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31474105" sideWeight="0.94037354" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2244356" sideWeight="0.07686782" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1134,13 +1159,12 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3173971" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23706897" sideWeight="0.312085" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21839081" sideWeight="0.83930945" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21839081" sideWeight="0.685259" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22341955" sideWeight="0.83930945" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20545977" sideWeight="0.685259" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17928287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20798898" sideWeight="0.920977" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73306775" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1204,80 +1228,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/util/ArrayList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="19" selection-start="1602" selection-end="1602" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/model/GenericDataModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-log4j12/1.5.6/slf4j-log4j12-1.5.6.jar!/org/slf4j/impl/Log4jLoggerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="3577" selection-end="3577" vertical-scroll-proportion="-19.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="34" selection-start="424" selection-end="426" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/SuggestedClipEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="13" selection-start="295" selection-end="295" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="0" selection-start="1919" selection-end="1919" vertical-scroll-proportion="122.46154">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="75" selection-start="5912" selection-end="5912" vertical-scroll-proportion="-5.3076925">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="495" selection-end="495" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="12" selection-start="7549" selection-end="7683" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#15983#16004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/recommender/TopItems.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="214" column="30" selection-start="8367" selection-end="8367" vertical-scroll-proportion="0.0">
@@ -1292,13 +1242,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="27" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/model/GenericUserPreferenceArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0">
@@ -1306,30 +1249,138 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/EntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="572" selection-end="572" vertical-scroll-proportion="-0.49019608">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="27" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/SocketInputStream.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="23" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="141" column="47" selection-start="4819" selection-end="4819" vertical-scroll-proportion="18.692308">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEvaluatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/microsoft/sqlserver/sqljdbc4/4.0/sqljdbc4-4.0.jar!/com/microsoft/sqlserver/jdbc/SQLServerResultSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="283" column="28" selection-start="16339" selection-end="16339" vertical-scroll-proportion="-4.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="29" selection-start="918" selection-end="918" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/recommender/RecommendedItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="9" selection-start="1380" selection-end="1380" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="724" column="50" selection-start="25316" selection-end="25316" vertical-scroll-proportion="3.9615386">
+        <state line="867" column="52" selection-start="30235" selection-end="30235" vertical-scroll-proportion="18.461538">
           <folding>
-            <element signature="e#22847#22866#0" expanded="true" />
-            <element signature="e#25921#25940#0" expanded="true" />
-            <element signature="e#40935#40943#0" expanded="true" />
-            <element signature="e#45608#45616#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5702#5722#0" expanded="true" />
+            <element signature="e#8375#8383#0" expanded="true" />
+            <element signature="e#10104#10112#0" expanded="true" />
+            <element signature="e#11828#11842#0" expanded="true" />
+            <element signature="e#13659#13667#0" expanded="true" />
+            <element signature="e#16514#16533#0" expanded="true" />
+            <element signature="e#20408#20427#0" expanded="true" />
+            <element signature="e#22843#22862#0" expanded="true" />
+            <element signature="e#25917#25936#0" expanded="true" />
+            <element signature="e#28250#28262#0" expanded="true" />
+            <element signature="e#30298#30319#0" expanded="true" />
+            <element signature="e#32968#32976#0" expanded="true" />
+            <element signature="e#34240#34252#0" expanded="true" />
+            <element signature="e#39832#39842#0" expanded="true" />
+            <element signature="e#43221#43229#0" expanded="true" />
+            <element signature="e#44847#44855#0" expanded="true" />
+            <element signature="e#47894#47902#0" expanded="true" />
+            <element signature="e#49569#49577#0" expanded="true" />
+            <element signature="e#52264#52282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="13" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#5901#5922#0" expanded="true" />
+            <element signature="e#7201#7223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="9" selection-start="4300" selection-end="4300" vertical-scroll-proportion="-0.88461536">
+          <folding>
+            <element signature="e#14803#14824#0" expanded="true" />
+            <element signature="e#14942#14963#0" expanded="true" />
+            <element signature="e#17006#17027#0" expanded="true" />
+            <element signature="e#19075#19096#0" expanded="true" />
+            <element signature="e#20787#20793#0" expanded="true" />
+            <element signature="e#21158#21179#0" expanded="true" />
+            <element signature="e#21282#21288#0" expanded="true" />
+            <element signature="e#21353#21367#0" expanded="true" />
+            <element signature="e#21432#21440#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="54" selection-start="3344" selection-end="3344" vertical-scroll-proportion="1.664">
+        <state line="47" column="49" selection-start="2110" selection-end="2110" vertical-scroll-proportion="0.5416667">
           <folding>
             <element signature="docComment;class#BoardBasedRecommendEntryPoint#0" expanded="false" />
-            <element signature="e#1423#1440#0" expanded="true" />
-            <element signature="e#1494#1502#0" expanded="true" />
-            <element signature="e#1555#1563#0" expanded="true" />
-            <element signature="e#2807#2829#0" expanded="true" />
-            <element signature="e#4883#4900#0" expanded="true" />
-            <element signature="e#4954#4962#0" expanded="true" />
-            <element signature="e#5013#5021#0" expanded="true" />
+            <element signature="e#1552#1569#0" expanded="true" />
+            <element signature="e#1623#1631#0" expanded="true" />
+            <element signature="e#1684#1692#0" expanded="true" />
+            <element signature="e#2694#2716#0" expanded="true" />
+            <element signature="e#4600#4617#0" expanded="true" />
+            <element signature="e#4671#4679#0" expanded="true" />
+            <element signature="e#4730#4738#0" expanded="true" />
           </folding>
         </state>
       </provider>

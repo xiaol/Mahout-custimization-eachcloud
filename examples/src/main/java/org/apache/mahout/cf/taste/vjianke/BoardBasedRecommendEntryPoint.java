@@ -5,6 +5,7 @@ import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.model.GenericDataModel;
 import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
 import org.apache.mahout.cf.taste.impl.recommender.GenericUserBasedRecommender;
+import org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarity;
 import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
@@ -15,7 +16,9 @@ import org.apache.mahout.cf.taste.similarity.ItemSimilarity;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created with IntelliJ IDEA.
@@ -42,62 +45,53 @@ public class BoardBasedRecommendEntryPoint {
         DataModel model = new GenericDataModel(prefsMap);
         BoardBasedRecommend recommend = null;
         BoardBasedRecommend recommend1 = null;
-        try {
-            ItemSimilarity similarity =
-                new LogLikelihoodSimilarity(model);
-            recommend = new BoardBasedRecommend(model,similarity);
-            ItemSimilarity similarity1 = new PearsonCorrelationSimilarity(model);
-            recommend1 = new BoardBasedRecommend(model,similarity1);
-        } catch (TasteException e) {
-            e.printStackTrace();
-        }
+        ItemSimilarity similarity =
+            new LogLikelihoodSimilarity(model);
+        recommend = new BoardBasedRecommend(model,similarity);
         if(recommend == null){
             System.out.println("Recommender init failed.");
             return;
         }
-        for(String uuid: IntrestBasedRecommendEntryPoint.mates){
-
-            List<String> itsboards = datalayer.queryCreatedBoards(uuid);
-            System.out.println("user: "+ uuid);
-            for(String because: itsboards){
-                List<RecommendBoardEntity> recommendBoardEntities
-                        = new ArrayList<RecommendBoardEntity>();
-                List<RecommendedItem> items = null;
-                try {
-                    items = recommend.mostSimilarItems(boardIds.indexOf(because), 2);
-                } catch (TasteException e) {
-                    e.printStackTrace();
-                }
-                for(RecommendedItem item:items){
-                    String recommendBoardId = boardIds.get((int) item.getItemID());
-                    System.out.println("Because: "+because+
-                            " recommend "+ recommendBoardId+" :"+ item.getValue());
-                    RecommendBoardEntity recommendBoardEntity = new RecommendBoardEntity(because,recommendBoardId);
-                    recommendBoardEntities.add(recommendBoardEntity);
-                }
-                if(items.isEmpty()){
-                    System.out.println("Because: "+because+ " but not at all");
-                }
-
-                List<RecommendedItem> items1 = null;
-                try {
-                    items1 = recommend.mostSimilarItems(boardIds.indexOf(because), 2);
-                } catch (TasteException e) {
-                    e.printStackTrace();
-                }
-                for(RecommendedItem item:items1){
-                    String recommendBoardId = boardIds.get((int) item.getItemID());
-                    System.out.println("Because: "+because+
-                            " recommend1 "+ recommendBoardId+" :"+ item.getValue());
-                    RecommendBoardEntity recommendBoardEntity = new RecommendBoardEntity(because,recommendBoardId);
-                    recommendBoardEntities.add(recommendBoardEntity);
-                }
-                if(items1.isEmpty()){
-                    System.out.println("Because: "+because+ " but not at all");
-                }
-                //azureStorageHelper.uploadToAzureTable("RecommendBoardEntity",recommendBoardEntities);
+        Hashtable<String, Datalayer.BoardEntity> boardMap = datalayer.getBoards("", false, false);
+        for (Map.Entry<String, Datalayer.BoardEntity> because : boardMap.entrySet()) {
+            Datalayer.BoardEntity boardEntity = because.getValue();
+            List<RecommendBoardEntity> recommendBoardEntities
+                    = new ArrayList<RecommendBoardEntity>();
+            List<RecommendedItem> items = null;
+            try {
+                if(!boardIds.contains(because.getKey()))
+                    continue;
+                items = recommend.mostSimilarItems(boardIds.indexOf(because.getKey()), 7);
+            } catch (TasteException e) {
+                e.printStackTrace();
+                continue;
             }
+            for (RecommendedItem item : items) {
+                if(item == null)
+                    continue;
+                String recommendBoardId = boardIds.get((int) item.getItemID());
+                Datalayer.BoardEntity recommendEntity = boardMap.get(recommendBoardId);
+                if(recommendEntity == null)
+                    continue;
+                boolean isPrivate = recommendEntity.isPrivate;
+                if (isPrivate)
+                    continue;
+                System.out.println("Because: " + because.getKey() +
+                        " recommend " + recommendBoardId + " :" + item.getValue());
+                RecommendBoardEntity recommendBoardEntity = new RecommendBoardEntity(because.getKey(), recommendBoardId);
+                recommendBoardEntity.setName(boardEntity.name);
+                recommendBoardEntity.setRank(String.valueOf(item.getValue()));
+                recommendBoardEntity.setIsPrivate(recommendEntity.isPrivate);
+                recommendBoardEntities.add(recommendBoardEntity);
+            }
+            if (items.isEmpty() || recommendBoardEntities.isEmpty()) {
+                System.out.println("Because: " + because.getKey() + " but not at all");
+                continue;
+            }
+
+            azureStorageHelper.uploadToAzureTable("RecommendBoardEntity",recommendBoardEntities);
         }
+
         prefsMap.clear();
         boardIds.clear();
     }
