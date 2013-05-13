@@ -31,11 +31,6 @@ import java.sql.*;
  */
 public class UserBasedAnalyzer {
 
-    private final String _connectionString =
-            "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
-            "database=demo1" + ";" +
-            "user=eachcloud@llwko2tjlq" + ";" +
-            "password=IONisgreat!";
 
     public Timestamp get_ts() {
         return _ts;
@@ -73,7 +68,7 @@ public class UserBasedAnalyzer {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
             // Establish the connection.
-            connection = DriverManager.getConnection(_connectionString);
+            connection = DriverManager.getConnection(Datalayer._connectionString);
 
             // Define the SQL string.
             String sqlString = "SELECT * FROM ClickEntity " +
@@ -167,7 +162,7 @@ public class UserBasedAnalyzer {
         FastByIDMap<FastIDSet> prefsIDset = new FastByIDMap<FastIDSet>();
         Connection connection;
         try {
-            connection = DriverManager.getConnection(_connectionString);
+            connection = DriverManager.getConnection(Datalayer._connectionString);
         } catch (SQLException e) {
             e.printStackTrace();
             return new FastIDSet(0);

@@ -29,7 +29,7 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class Datalayer {
-    private final String _connectionString =
+    public static final String _connectionString =
             "jdbc:sqlserver://qm05uctv57.database.chinacloudapi.cn" + ";" +
                     "database=demo1" + ";" +
                     "user=eachcloud@qm05uctv57" + ";" +
@@ -634,8 +634,8 @@ public class Datalayer {
         return prefsMap;
     }
 
-    public FastByIDMap<PreferenceArray> fetchBoardRelationsData(
-            FastByIDMap<PreferenceArray> prefsMap,ArrayList<String> boards, ArrayList<String> users){
+    public FastByIDMap<PreferenceArray> getBoardRelationsByUser(
+            FastByIDMap<PreferenceArray> prefsMap, ArrayList<String> boards, ArrayList<String> users){
 
         PreparedStatement preparedStatement= null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
@@ -712,6 +712,80 @@ public class Datalayer {
         }
         return prefsMap;
     }
+
+    public FastByIDMap<PreferenceArray> getBoardRelationByClips(
+            FastByIDMap<PreferenceArray> prefsMap, ArrayList<String> boards, ArrayList<String> clipIds){
+
+        PreparedStatement preparedStatement= null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+        PreferenceArray preferenceArray = null;
+
+        String sqlString = "SELECT * FROM BoardClipEntity";
+        sqlString = sqlString + " ORDER BY clip_id ";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return prefsMap;
+        }
+        try
+        {
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            ArrayList<GenericPreference> prefs = new ArrayList<GenericPreference>();
+
+            while (resultSet.next())
+            {
+                String boardId = resultSet.getString(2);
+                String clipId = resultSet.getString(3);
+                if(!boards.contains(boardId)){
+                    boards.add(boardId);
+                }
+                float value = 1.0f;
+                if(!clipIds.contains(clipId))  {
+                    clipIds.add(clipId);
+                    GenericPreference pref = new GenericPreference(
+                            clipIds.indexOf(clipId),boards.indexOf(boardId),value);
+                    if(rowCount != 0){
+                        prefsMap.put(clipId.indexOf(clipId)-1,new GenericUserPreferenceArray(prefs));
+                        prefs = new ArrayList<GenericPreference>();
+                    }
+                    prefs.add(pref);
+                }else{
+                    GenericPreference pref = new GenericPreference(
+                            clipIds.indexOf(clipId),boards.indexOf(boardId),value);
+                    prefs.add(pref);
+                }
+                rowCount++;
+            }
+            //Add last one
+            if(prefs.size() != 0){
+                prefsMap.put(prefs.get(0).getUserID(), new GenericUserPreferenceArray(prefs));
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return prefsMap;
+    }
+
 
 
     public class ClipEntity{
@@ -1203,7 +1277,7 @@ public class Datalayer {
 
             DefaultHttpClient httpClient = new DefaultHttpClient();// http://vjiankebuildcn.chinacloudapp.cn/User/ActiveUsers?days=2
             HttpGet getRequest = new HttpGet(
-                    "http://vjiankebuildcn.chinacloudapp.cn/User/ActiveUsers?days="+countDays);
+                    "http://vjiankeyoda.cloudapp.net/User/ActiveUsers?days="+countDays);
             getRequest.addHeader("accept", "application/json");
 
             HttpResponse response = httpClient.execute(getRequest);
@@ -1238,6 +1312,61 @@ public class Datalayer {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<String> getUnlikeClip(String uuid){
+        Statement statement = null;
+        ResultSet resultSet = null;
+        int rowCount = 0;
+
+        List<String> clipIds = new ArrayList<String>();
+        String sqlString = "SELECT clip_id FROM UnLikeClipEntity WHERE ";
+
+        sqlString = sqlString + "user_id = '" + uuid +"'";
+
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.EMPTY_LIST;
+        }
+
+        try
+        {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+
+            statement = connection.createStatement();
+            statement.setQueryTimeout(0);
+            resultSet = statement.executeQuery(sqlString);
+
+
+            while (resultSet.next())
+            {
+                String clipId = resultSet.getString(1);
+                clipIds.add(clipId);
+            }
+            //System.out.println("There were " + rowCount +" clips.");
+        }
+        catch (ClassNotFoundException cnfe)
+        {
+            System.out.println("ClassNotFoundException " + cnfe.getMessage());
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                if (null != statement) statement.close();
+                if (null != resultSet) resultSet.close();
+            }
+            catch (SQLException sqlException){}
+        }
+        return clipIds;
     }
 
     public Map<Integer,Integer> getChannelByClips(List<String> clipIds){

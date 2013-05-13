@@ -49,6 +49,7 @@ public class AzureStorageHelper {
 
             _tableClient = account.createCloudTableClient();
 
+
             // Upload an image file.
             //blob = container.getBlockBlobReference("image1.jpg");
             //File fileReference = new File ("c:\\myimages\\image1.jpg");

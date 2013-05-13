@@ -97,7 +97,7 @@ public class IntrestBasedRecommendEntryPoint {
         ArrayList<String> boardUsers = new ArrayList<String>();
         BoardBasedRecommend boardBasedRecommend = null;
         if(bSwitch){
-            datalayer.fetchBoardRelationsData(boardPrefsMap,boardIds,boardUsers);
+            datalayer.getBoardRelationsByUser(boardPrefsMap, boardIds, boardUsers);
             DataModel genericDataModel = new GenericDataModel(prefsMap);
             ItemSimilarity itemSimilarity =
                     new LogLikelihoodSimilarity(genericDataModel);
@@ -294,8 +294,24 @@ public class IntrestBasedRecommendEntryPoint {
                         entity.setRowKey(rowKey);
                         recommendClipEntityList.add(entity);
                     }
+
+                    List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
+                    List<RecommendClipEntity> unLikeClipInRecommend = new ArrayList<RecommendClipEntity>();
+                    for(String unLikeClipId:unLikeClipIds){
+                        for(RecommendClipEntity restRecommendClipEntity:recommendClipEntityList){
+                            if(restRecommendClipEntity.getBase36().equals(unLikeClipId)){
+                                unLikeClipInRecommend.add(restRecommendClipEntity);
+                            }
+                        }
+                    }
+                    for(RecommendClipEntity needRemoveEntity:unLikeClipInRecommend){
+                        recommendClipEntityList.remove(needRemoveEntity);
+                    }
+
                     System.out.println("new: "+newRecommendClipEntities.size() +
-                            " | old: "+oldRecommendClipEntities.size());
+                            " | old: "+oldRecommendClipEntities.size() +
+                            " | unlike total: "+ unLikeClipIds.size()+
+                            " | unlike in recommend: "+unLikeClipInRecommend.size());
                     //for(RecommendClipEntity recommendClip:recommendClipEntityList){
                         //System.out.println("PartitionKey: "+recommendClip.getPartitionKey()+" RowKey: "+ recommendClip.getRowKey());
                     //}
@@ -313,7 +329,7 @@ public class IntrestBasedRecommendEntryPoint {
                 for(String board:createdBoards){
                     List<RecommendedItem> items = boardBasedRecommend.mostSimilarItems(boardIds.indexOf(board),1);
                     for(RecommendedItem item:items){
-                        final String recommendBoard =  boardIds.get((int)item.getItemID());
+                        final String recommendBoard = boardIds.get((int)item.getItemID());
                         //System.out.println("Because: "+board+
                                 //" recommend "+recommendBoard +" :"+ item.getValue());
                         String prefix =  "Because: "+board+
