@@ -10,6 +10,8 @@ import com.microsoft.windowsazure.services.table.client.TableServiceEntity;
  * To change this template use File | Settings | File Templates.
  */
 public class RecommendBoardEntity extends TableServiceEntity {
+    public RecommendBoardEntity(){}
+
     public RecommendBoardEntity(String boardId, String recommendBoardId){
         this.partitionKey = boardId;
         this.rowKey = recommendBoardId;

@@ -66,6 +66,7 @@ public class IntrestBasedRecommendEntryPoint {
     public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";
     public static String RECOMMEND_BY_BEHAVIOR_SUFFIX = "过同类剪报";
     public static String RECOMMEND_BY_BOARD_PREFIX = "和你的订阅专辑";
+    public static String RECOMMEND_BY_CREATED_BOARD_PREFIX= "和你的创建专辑";
     public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
 
     public static List<String> mates2 =
@@ -179,6 +180,7 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
+            int boardRecount = 0;
             for(final String board:boards){
                 //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
                 if(!cachedEntityMap.containsKey(board)){
@@ -215,7 +217,10 @@ public class IntrestBasedRecommendEntryPoint {
                         prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"",RECOMMEND_BY_SUBSCRIPTION);
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
+                    boardRecount++;
                 }
+                if(boardRecount > 20)
+                    break;
             }
 
             //System.out.println("Start Weibo Recommend");
@@ -244,14 +249,14 @@ public class IntrestBasedRecommendEntryPoint {
 
                 for(RecommendBoardEntity recommendBoardEntity:recommendBoardEntities){
                     List<String> relatedBoardClipIds =
-                            datalayer.getClipByBoard(recommendBoardEntity.getPartitionKey(),true,userId);
+                            datalayer.getClipByBoard(recommendBoardEntity.getRowKey(),true,userId);
                     for(String relatedBoardClipId:relatedBoardClipIds){
                         Date date = new Date();
                         long time =  date.getTime();
                         String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ count;
                         RecommendClipEntity recommendClipEntity = generateClipEntity(uuidWithoutDash,
                                 rowKey,azureStorageHelper,relatedBoardClipId,userEntities.get(userId),"",
-                                "item-based:log-likelyhood","board",RECOMMEND_BY_BOARD_PREFIX+
+                                "item-based:log-likelyhood","board",RECOMMEND_BY_CREATED_BOARD_PREFIX+
                                 "《"+recommendBoardEntity.getName() +"》"+RECOMMEND_BY_BOARD_SUFFIX);
                         recommendClipEntityList.add(recommendClipEntity);
                     }

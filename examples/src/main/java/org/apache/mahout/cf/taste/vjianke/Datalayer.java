@@ -29,10 +29,16 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class Datalayer {
-    public static final String _connectionString =
+    public static final String _connectionStringBeijing =
             "jdbc:sqlserver://qm05uctv57.database.chinacloudapi.cn" + ";" +
                     "database=demo1" + ";" +
                     "user=eachcloud@qm05uctv57" + ";" +
+                    "password=IONisgreat!";
+
+    private final String _connectionString =
+            "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
+                    "database=demo1" + ";" +
+                    "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
     public final String baseTimestamp = "2013-04-20";
@@ -1445,9 +1451,9 @@ public class Datalayer {
         String sqlString = "SELECT TOP 2 * FROM BoardClipEntity WHERE ";
 
         sqlString = sqlString + "board_id = '" + boardId + "'";
-        sqlString = sqlString +"' AND clip_id NOT IN " +
+        sqlString = sqlString +" AND clip_id NOT IN " +
                 "(SELECT id FROM ClipEntity WHERE user_guid = '" + userId + "')";
-        sqlString = sqlString +"' AND clip_id NOT IN " +
+        sqlString = sqlString +" AND clip_id NOT IN " +
                 "(SELECT clip_id FROM ClickEntity WHERE user_id = '" +userId +"')";
 
 
