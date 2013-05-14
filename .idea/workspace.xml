@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,28 +221,28 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="58" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.53543305">
+            <state line="37" column="17" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.40944883">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5971#5991#0" expanded="true" />
-                <element signature="e#8644#8652#0" expanded="true" />
-                <element signature="e#10373#10381#0" expanded="true" />
-                <element signature="e#12097#12111#0" expanded="true" />
-                <element signature="e#13928#13936#0" expanded="true" />
-                <element signature="e#16783#16802#0" expanded="true" />
-                <element signature="e#20677#20696#0" expanded="true" />
-                <element signature="e#23112#23131#0" expanded="true" />
-                <element signature="e#26186#26205#0" expanded="true" />
-                <element signature="e#28519#28531#0" expanded="true" />
-                <element signature="e#30567#30588#0" expanded="true" />
-                <element signature="e#33237#33245#0" expanded="true" />
-                <element signature="e#34509#34521#0" expanded="true" />
-                <element signature="e#40101#40111#0" expanded="true" />
-                <element signature="e#43490#43498#0" expanded="true" />
-                <element signature="e#45116#45124#0" expanded="true" />
-                <element signature="e#48163#48171#0" expanded="true" />
-                <element signature="e#49838#49846#0" expanded="true" />
-                <element signature="e#52531#52549#0" expanded="true" />
+                <element signature="e#5977#5997#0" expanded="true" />
+                <element signature="e#8650#8658#0" expanded="true" />
+                <element signature="e#10379#10387#0" expanded="true" />
+                <element signature="e#12103#12117#0" expanded="true" />
+                <element signature="e#13934#13942#0" expanded="true" />
+                <element signature="e#16789#16808#0" expanded="true" />
+                <element signature="e#20683#20702#0" expanded="true" />
+                <element signature="e#23118#23137#0" expanded="true" />
+                <element signature="e#26192#26211#0" expanded="true" />
+                <element signature="e#28525#28537#0" expanded="true" />
+                <element signature="e#30573#30594#0" expanded="true" />
+                <element signature="e#33243#33251#0" expanded="true" />
+                <element signature="e#34515#34527#0" expanded="true" />
+                <element signature="e#40107#40117#0" expanded="true" />
+                <element signature="e#43496#43504#0" expanded="true" />
+                <element signature="e#45122#45130#0" expanded="true" />
+                <element signature="e#48169#48177#0" expanded="true" />
+                <element signature="e#49844#49852#0" expanded="true" />
+                <element signature="e#52537#52555#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1374,28 +1372,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="58" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.53543305">
+        <state line="37" column="17" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.40944883">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5971#5991#0" expanded="true" />
-            <element signature="e#8644#8652#0" expanded="true" />
-            <element signature="e#10373#10381#0" expanded="true" />
-            <element signature="e#12097#12111#0" expanded="true" />
-            <element signature="e#13928#13936#0" expanded="true" />
-            <element signature="e#16783#16802#0" expanded="true" />
-            <element signature="e#20677#20696#0" expanded="true" />
-            <element signature="e#23112#23131#0" expanded="true" />
-            <element signature="e#26186#26205#0" expanded="true" />
-            <element signature="e#28519#28531#0" expanded="true" />
-            <element signature="e#30567#30588#0" expanded="true" />
-            <element signature="e#33237#33245#0" expanded="true" />
-            <element signature="e#34509#34521#0" expanded="true" />
-            <element signature="e#40101#40111#0" expanded="true" />
-            <element signature="e#43490#43498#0" expanded="true" />
-            <element signature="e#45116#45124#0" expanded="true" />
-            <element signature="e#48163#48171#0" expanded="true" />
-            <element signature="e#49838#49846#0" expanded="true" />
-            <element signature="e#52531#52549#0" expanded="true" />
+            <element signature="e#5977#5997#0" expanded="true" />
+            <element signature="e#8650#8658#0" expanded="true" />
+            <element signature="e#10379#10387#0" expanded="true" />
+            <element signature="e#12103#12117#0" expanded="true" />
+            <element signature="e#13934#13942#0" expanded="true" />
+            <element signature="e#16789#16808#0" expanded="true" />
+            <element signature="e#20683#20702#0" expanded="true" />
+            <element signature="e#23118#23137#0" expanded="true" />
+            <element signature="e#26192#26211#0" expanded="true" />
+            <element signature="e#28525#28537#0" expanded="true" />
+            <element signature="e#30573#30594#0" expanded="true" />
+            <element signature="e#33243#33251#0" expanded="true" />
+            <element signature="e#34515#34527#0" expanded="true" />
+            <element signature="e#40107#40117#0" expanded="true" />
+            <element signature="e#43496#43504#0" expanded="true" />
+            <element signature="e#45122#45130#0" expanded="true" />
+            <element signature="e#48169#48177#0" expanded="true" />
+            <element signature="e#49844#49852#0" expanded="true" />
+            <element signature="e#52537#52555#0" expanded="true" />
           </folding>
         </state>
       </provider>

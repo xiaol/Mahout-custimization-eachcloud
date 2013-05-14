@@ -35,7 +35,7 @@ public class Datalayer {
                     "user=eachcloud@qm05uctv57" + ";" +
                     "password=IONisgreat!";
 
-    private final String _connectionString =
+    public static final String _connectionString =
             "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
                     "database=demo1" + ";" +
                     "user=eachcloud@llwko2tjlq" + ";" +
