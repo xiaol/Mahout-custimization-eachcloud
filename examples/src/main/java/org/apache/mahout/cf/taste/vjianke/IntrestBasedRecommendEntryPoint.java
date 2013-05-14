@@ -258,8 +258,11 @@ public class IntrestBasedRecommendEntryPoint {
                                 rowKey,azureStorageHelper,relatedBoardClipId,userEntities.get(userId),"",
                                 "item-based:log-likelyhood","board",RECOMMEND_BY_CREATED_BOARD_PREFIX+
                                 "《"+recommendBoardEntity.getName() +"》"+RECOMMEND_BY_BOARD_SUFFIX);
+                        if(recommendClipEntity ==null)
+                            continue;
                         recommendClipEntityList.add(recommendClipEntity);
                     }
+                    System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
                 }
             }
 
