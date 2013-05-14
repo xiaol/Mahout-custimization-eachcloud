@@ -118,7 +118,7 @@ public class IntrestBasedRecommendEntryPoint {
             String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             Datalayer.UserEntity userEntity = userEntities.get(userId);
             if(userEntity == null){
-                System.out.println("lost user.");
+                System.out.println("lost user "+ userId);
                 continue;
             }
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
@@ -250,6 +250,7 @@ public class IntrestBasedRecommendEntryPoint {
 
             List<String> createdBoards = datalayer.queryCreatedBoards(userId);
             String uuidWithoutDash = userId.replace("-", "");
+            int createdBoardRecount = 0;
             for(String board:createdBoards){
                 List<RecommendBoardEntity> recommendBoardEntities =
                         azureStorageHelper.retrieveBoardByPartitionKey("RecommendBoardEntity",board);
@@ -257,6 +258,7 @@ public class IntrestBasedRecommendEntryPoint {
                 for(RecommendBoardEntity recommendBoardEntity:recommendBoardEntities){
                     List<String> relatedBoardClipIds =
                             datalayer.getClipByBoard(recommendBoardEntity.getRowKey(),true,userId);
+                    int relatedRecommendCount = 1;
                     for(String relatedBoardClipId:relatedBoardClipIds){
                         Date date = new Date();
                         long time =  date.getTime();
@@ -268,9 +270,17 @@ public class IntrestBasedRecommendEntryPoint {
                         if(recommendClipEntity ==null)
                             continue;
                         recommendClipEntityList.add(recommendClipEntity);
+                        createdBoardRecount++;
+
                     }
+                    relatedRecommendCount++;
+                    if(relatedRecommendCount >2)
+                        break;
+
                     System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
                 }
+                if(createdBoardRecount > 20)
+                    break;
             }
 
             if(recommendClipEntityList.isEmpty()){
