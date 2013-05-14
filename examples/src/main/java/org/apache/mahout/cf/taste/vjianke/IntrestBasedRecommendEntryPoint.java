@@ -116,6 +116,11 @@ public class IntrestBasedRecommendEntryPoint {
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
             String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            Datalayer.UserEntity userEntity = userEntities.get(userId);
+            if(userEntity == null){
+                System.out.println("lost user.");
+                continue;
+            }
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
             //String userId = mate.toUpperCase();
             List<String> boards = datalayer.querySubscription(userId);
@@ -129,6 +134,8 @@ public class IntrestBasedRecommendEntryPoint {
             //for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
                 //tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
             //}
+
+
 
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
             UUID currentUUID = UUID.fromString(userId);
@@ -171,7 +178,7 @@ public class IntrestBasedRecommendEntryPoint {
                     String uuidWithoutDash = userId.replace("-","");
                     String strSource = relativeClipInfo.srcId;
                     RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
-                            relativeClipInfo.destId, userEntities.get(userId), strSource,"content-based:vsm","recentClip",
+                            relativeClipInfo.destId, userEntity, strSource,"content-based:vsm","recentClip",
                             RECOMMEND_BY_BEHAVIOR_PREFIX+"发布"+RECOMMEND_BY_BEHAVIOR_SUFFIX);
                     if(clipEntity == null) {
                         continue;
@@ -233,7 +240,7 @@ public class IntrestBasedRecommendEntryPoint {
                 Hashtable<String,Double> maps = new Hashtable<String, Double>();
                 maps.put(weiboTag.getKey(),1.0d);
                 List<RecommendClipEntity> entities =
-                        proceed( userEntities.get(userId), maps, recommender, azureStorageHelper, datalayer);
+                        proceed( userEntity, maps, recommender, azureStorageHelper, datalayer);
                 System.out.println(weiboTag.getKey() + " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
                     System.out.print(recommendClipEntity.getBase36()+" ");
@@ -242,7 +249,7 @@ public class IntrestBasedRecommendEntryPoint {
             }
 
             List<String> createdBoards = datalayer.queryCreatedBoards(userId);
-            String uuidWithoutDash = userEntities.get(userId).getUuid().replace("-", "");
+            String uuidWithoutDash = userId.replace("-", "");
             for(String board:createdBoards){
                 List<RecommendBoardEntity> recommendBoardEntities =
                         azureStorageHelper.retrieveBoardByPartitionKey("RecommendBoardEntity",board);
@@ -255,7 +262,7 @@ public class IntrestBasedRecommendEntryPoint {
                         long time =  date.getTime();
                         String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ count;
                         RecommendClipEntity recommendClipEntity = generateClipEntity(uuidWithoutDash,
-                                rowKey,azureStorageHelper,relatedBoardClipId,userEntities.get(userId),"",
+                                rowKey,azureStorageHelper,relatedBoardClipId,userEntity,"",
                                 "item-based:log-likelyhood","board",RECOMMEND_BY_CREATED_BOARD_PREFIX+
                                 "《"+recommendBoardEntity.getName() +"》"+RECOMMEND_BY_BOARD_SUFFIX);
                         if(recommendClipEntity ==null)
