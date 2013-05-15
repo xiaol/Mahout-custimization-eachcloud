@@ -254,15 +254,15 @@ public class IntrestBasedRecommendEntryPoint {
             for(String board:createdBoards){
                 List<RecommendBoardEntity> recommendBoardEntities =
                         azureStorageHelper.retrieveBoardByPartitionKey("RecommendBoardEntity",board);
-
+                int relatedRecommendCount = 1;
                 for(RecommendBoardEntity recommendBoardEntity:recommendBoardEntities){
                     List<String> relatedBoardClipIds =
                             datalayer.getClipByBoard(recommendBoardEntity.getRowKey(),true,userId);
-                    int relatedRecommendCount = 1;
+
                     for(String relatedBoardClipId:relatedBoardClipIds){
                         Date date = new Date();
                         long time =  date.getTime();
-                        String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ count;
+                        String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ relatedRecommendCount;
                         RecommendClipEntity recommendClipEntity = generateClipEntity(uuidWithoutDash,
                                 rowKey,azureStorageHelper,relatedBoardClipId,userEntity,"",
                                 "item-based:log-likelyhood","board",RECOMMEND_BY_CREATED_BOARD_PREFIX+
@@ -271,12 +271,10 @@ public class IntrestBasedRecommendEntryPoint {
                             continue;
                         recommendClipEntityList.add(recommendClipEntity);
                         createdBoardRecount++;
-
                     }
                     relatedRecommendCount++;
                     if(relatedRecommendCount >2)
                         break;
-
                     System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
                 }
                 if(createdBoardRecount > 20)

@@ -116,17 +116,20 @@ public class AzureStorageHelper {
         }
         TableBatchOperation batchOperation = new TableBatchOperation();
 
+        int count = 0;
         for(RecommendClipEntity entity:recommendClipEntities){
             TableOperation deleteSmithJeff = TableOperation.delete(entity);
             batchOperation.add(deleteSmithJeff);
-
-        }
-
-        try {
-            if(!batchOperation.isEmpty())
-                _tableClient.execute(tableName, batchOperation);
-        } catch (StorageException e) {
-            e.printStackTrace();
+            if(count%99 ==0 && count !=0){
+                try {
+                    if(!batchOperation.isEmpty())
+                        _tableClient.execute(tableName, batchOperation);
+                } catch (StorageException e) {
+                    e.printStackTrace();
+                }
+                batchOperation.clear();
+            }
+            count++;
         }
 
         return recommendClipEntities;

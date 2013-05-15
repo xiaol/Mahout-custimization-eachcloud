@@ -1448,7 +1448,7 @@ public class Datalayer {
         ResultSet resultSet = null;
         int rowCount = 0;
         List<String> clipIds = new ArrayList<String>();
-        String sqlString = "SELECT TOP 2 * FROM BoardClipEntity WHERE ";
+        String sqlString = "SELECT TOP 1 * FROM BoardClipEntity WHERE ";
 
         sqlString = sqlString + "board_id = '" + boardId + "'";
         sqlString = sqlString +" AND clip_id NOT IN " +

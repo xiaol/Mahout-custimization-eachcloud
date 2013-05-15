@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
@@ -27,7 +29,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="336" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="334" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -163,7 +165,7 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="259" column="47" selection-start="13767" selection-end="13767" vertical-scroll-proportion="0.46986088">
+            <state line="259" column="44" selection-start="13810" selection-end="13810" vertical-scroll-proportion="-0.12882447">
               <folding />
             </state>
           </provider>
@@ -181,7 +183,7 @@
       <file leaf-file-name="SocketInputStream.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/SocketInputStream.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="23" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0">
+            <state line="16" column="23" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -199,7 +201,7 @@
       <file leaf-file-name="AzureStorageHelper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="30" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
+            <state line="182" column="47" selection-start="7041" selection-end="7041" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -246,12 +248,12 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java" />
         <option value="$PROJECT_DIR$/examples/pom.xml" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendClipEntity.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/RecommendBoardEntity.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       </list>
     </option>
   </component>
@@ -380,26 +382,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mahout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -730,6 +712,26 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -749,14 +751,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -960,6 +962,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -986,24 +1006,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -1135,7 +1137,7 @@
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23706897" sideWeight="0.312085" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13936782" sideWeight="0.8499336" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14152299" sideWeight="0.8499336" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21336207" sideWeight="0.8499336" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17928287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1258,7 +1260,9 @@
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/SocketInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="573" selection-end="573" vertical-scroll-proportion="0.0" />
+        <state line="16" column="23" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/ConvertAutoTagToIndex.java">
@@ -1273,7 +1277,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/AzureStorageHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="30" selection-start="3021" selection-end="3021" vertical-scroll-proportion="0.0">
+        <state line="182" column="47" selection-start="7041" selection-end="7041" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1287,7 +1291,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="259" column="47" selection-start="13767" selection-end="13767" vertical-scroll-proportion="0.46986088">
+        <state line="259" column="44" selection-start="13810" selection-end="13810" vertical-scroll-proportion="-0.12882447">
           <folding />
         </state>
       </provider>
