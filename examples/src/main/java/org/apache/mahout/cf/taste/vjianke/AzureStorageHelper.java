@@ -131,6 +131,12 @@ public class AzureStorageHelper {
             }
             count++;
         }
+        try {
+            if(!batchOperation.isEmpty())
+                _tableClient.execute(tableName, batchOperation);
+        } catch (StorageException e) {
+            e.printStackTrace();
+        }
 
         return recommendClipEntities;
     }

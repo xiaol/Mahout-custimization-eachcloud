@@ -273,9 +273,9 @@ public class IntrestBasedRecommendEntryPoint {
                         createdBoardRecount++;
                     }
                     relatedRecommendCount++;
+                    System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
                     if(relatedRecommendCount >2)
                         break;
-                    System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
                 }
                 if(createdBoardRecount > 20)
                     break;
