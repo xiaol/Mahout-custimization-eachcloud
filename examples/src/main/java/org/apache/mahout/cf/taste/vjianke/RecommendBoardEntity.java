@@ -35,7 +35,7 @@ public class RecommendBoardEntity extends TableServiceEntity {
         Name = name;
     }
 
-    public boolean isIsPrivate() {
+    public boolean getIsPrivate() {
         return IsPrivate;
     }
 
@@ -48,5 +48,13 @@ public class RecommendBoardEntity extends TableServiceEntity {
 
     public String Name;
 
+    public String getRecomendBoardName() {
+        return recomendBoardName;
+    }
 
+    public void setRecomendBoardName(String recomendBoardName) {
+        this.recomendBoardName = recomendBoardName;
+    }
+
+    public String recomendBoardName;
 }

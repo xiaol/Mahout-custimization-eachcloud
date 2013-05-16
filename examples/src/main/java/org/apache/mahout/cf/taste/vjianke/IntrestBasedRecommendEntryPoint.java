@@ -66,8 +66,9 @@ public class IntrestBasedRecommendEntryPoint {
     public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";
     public static String RECOMMEND_BY_BEHAVIOR_SUFFIX = "过同类剪报";
     public static String RECOMMEND_BY_BOARD_PREFIX = "和你的订阅专辑";
-    public static String RECOMMEND_BY_CREATED_BOARD_PREFIX= "和你的创建专辑";
+    public static String RECOMMEND_BY_CREATED_BOARD_PREFIX= "和你的专辑";
     public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
+    public static String RECOMMEND_BY_BOARD = "来自你可能感兴趣的专辑";
 
     public static List<String> mates2 =
             Arrays.asList(
@@ -138,6 +139,7 @@ public class IntrestBasedRecommendEntryPoint {
 
 
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
+            //TODO add owner preference
             UUID currentUUID = UUID.fromString(userId);
             int userIndex = localUsers.indexOf(currentUUID);
             FastIDSet swapItemId = localprefsIDSet.get(userIndex);
@@ -256,6 +258,8 @@ public class IntrestBasedRecommendEntryPoint {
                         azureStorageHelper.retrieveBoardByPartitionKey("RecommendBoardEntity",board);
                 int relatedRecommendCount = 1;
                 for(RecommendBoardEntity recommendBoardEntity:recommendBoardEntities){
+                    if(recommendBoardEntity.getIsPrivate())
+                        continue;
                     List<String> relatedBoardClipIds =
                             datalayer.getClipByBoard(recommendBoardEntity.getRowKey(),true,userId);
 
@@ -265,8 +269,8 @@ public class IntrestBasedRecommendEntryPoint {
                         String rowKey = version.get(version.size()-1) +"|"+ time + "|u|"+ relatedRecommendCount;
                         RecommendClipEntity recommendClipEntity = generateClipEntity(uuidWithoutDash,
                                 rowKey,azureStorageHelper,relatedBoardClipId,userEntity,"",
-                                "item-based:log-likelyhood","board",RECOMMEND_BY_CREATED_BOARD_PREFIX+
-                                "《"+recommendBoardEntity.getName() +"》"+RECOMMEND_BY_BOARD_SUFFIX);
+                                "item-based:log-likelyhood","board",RECOMMEND_BY_BOARD+
+                                "《"+recommendBoardEntity.getRecomendBoardName() +"》");
                         if(recommendClipEntity ==null)
                             continue;
                         recommendClipEntityList.add(recommendClipEntity);

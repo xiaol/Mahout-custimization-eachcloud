@@ -82,6 +82,7 @@ public class BoardBasedRecommendEntryPoint {
                 recommendBoardEntity.setName(boardEntity.name);
                 recommendBoardEntity.setRank(String.valueOf(item.getValue()));
                 recommendBoardEntity.setIsPrivate(recommendEntity.isPrivate);
+                recommendBoardEntity.setRecomendBoardName(recommendEntity.name);
                 recommendBoardEntities.add(recommendBoardEntity);
             }
             if (items.isEmpty() || recommendBoardEntities.isEmpty()) {
@@ -89,6 +90,7 @@ public class BoardBasedRecommendEntryPoint {
                 continue;
             }
 
+            azureStorageHelper.deleteByPartitionKey("RecommendBoardEntity",because.getKey());
             azureStorageHelper.uploadToAzureTable("RecommendBoardEntity",recommendBoardEntities);
         }
 
