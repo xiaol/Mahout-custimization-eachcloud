@@ -115,7 +115,7 @@ public class BoardBasedRecommendEntryPoint {
 
         for(String uuid: IntrestBasedRecommendEntryPoint.mates){
 
-            List<String> itsboards = datalayer.queryCreatedBoards(uuid);
+            List<String> itsboards = datalayer.queryCreatedBoards(uuid,0);
             System.out.println("user: "+ uuid);
             for(String because: itsboards){
                 //List<RecommendedItem> items = recommend.recommendedBecause(users.indexOf(uuid.toUpperCase()), boardIds.indexOf(because), 2);

@@ -440,7 +440,8 @@ public class Datalayer {
         try
         {
             String sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
-            sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+            if(count != 0)
+                sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
             resultSet = statement.executeQuery(sqlString);
