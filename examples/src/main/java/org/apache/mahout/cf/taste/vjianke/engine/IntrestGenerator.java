@@ -94,10 +94,11 @@ public class IntrestGenerator {
         return sortedMap;
     }
 
-    public Hashtable<String,Integer> getTagFromWeibo(String userId,Datalayer layer){
+    public ArrayList<String> getTagFromWeibo(String userId,Datalayer layer){
         List<Datalayer.WeiboTag> weiboTags = layer.getWeiboTag(userId);
         //System.out.println(weiboTags);
         Hashtable<String,Integer> tagsMap = new Hashtable<String, Integer>();
+        ArrayList<String> results = new ArrayList<String>();
         Gson gs = new Gson();
 
         Type listType = new TypeToken<List<WeiboTag>>() {}.getType();
@@ -119,6 +120,7 @@ public class IntrestGenerator {
                         if(count ==1)  {
                             weight = (Integer)jojo.get(key);
                             tagsMap.put(tag,weight);
+                            results.add(tag);
                         }
                         count ++;
                     }
@@ -130,9 +132,10 @@ public class IntrestGenerator {
             WeiboFavTag favTags = gs.fromJson(weiboTag.getUserFavTag(),WeiboFavTag.class);
             for(WeiboSubTag tag:favTags.getTags()){
                 tagsMap.put(tag.tag,Integer.parseInt(tag.count));
+                results.add(tag.tag);
             }
         }
-        return tagsMap;
+        return results;
 
     }
 

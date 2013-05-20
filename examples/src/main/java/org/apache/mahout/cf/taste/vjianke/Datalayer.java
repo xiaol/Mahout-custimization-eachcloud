@@ -317,7 +317,7 @@ public class Datalayer {
        return clipIds;
    }
 
-   public List<String> querySubscription(String userId){
+   public List<String> querySubscription(String userId,int count){
        Statement statement = null;
        ResultSet resultSet = null;
        int rowCount = 0;
@@ -335,6 +335,7 @@ public class Datalayer {
 
            String sqlString = "SELECT * FROM BoardFollowerEntity WHERE follower_id = '" + userId +"' AND board_id NOT IN " +
                    "(SELECT id FROM BoardEntity WHERE owner_id = '" + userId + "')";
+           sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
            statement = connection.createStatement();
            statement.setQueryTimeout(0);
            resultSet = statement.executeQuery(sqlString);
@@ -424,7 +425,7 @@ public class Datalayer {
         return listBoardRelated;
     }
 
-    public List<String> queryCreatedBoards(String userId){
+    public List<String> queryCreatedBoards(String userId,int count){
         Statement statement = null;
         ResultSet resultSet = null;
         int rowCount = 0;
@@ -439,6 +440,7 @@ public class Datalayer {
         try
         {
             String sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+            sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
             resultSet = statement.executeQuery(sqlString);
@@ -832,6 +834,7 @@ public class Datalayer {
             sqlString += "Id,title,user_guid FROM ClipEntity";
             if(increment)
                 sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
+            sqlString += " ORDER BY Id";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
@@ -994,10 +997,11 @@ public class Datalayer {
         try
         {
             String sqlString = "SELECT ";
-            sqlString += "TOP "+ count +" ";
+            //sqlString += "TOP "+ count +" ";
             sqlString += "Id,title,user_guid FROM ClipEntity";
-            sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
-            sqlString += "ORDER BY add_time DESC";
+            //sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
+            //sqlString += "ORDER BY add_time DESC";
+            sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);

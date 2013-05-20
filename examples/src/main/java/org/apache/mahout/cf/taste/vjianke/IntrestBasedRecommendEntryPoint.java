@@ -94,10 +94,6 @@ public class IntrestBasedRecommendEntryPoint {
         azureStorageHelper.init();
         Datalayer datalayer = new Datalayer();
 
-        FastByIDMap<PreferenceArray> boardPrefsMap = new FastByIDMap<PreferenceArray>();
-        ArrayList<String> boardIds = new ArrayList<String>();
-        ArrayList<String> boardUsers = new ArrayList<String>();
-        BoardBasedRecommend boardBasedRecommend = null;
 
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
@@ -124,7 +120,7 @@ public class IntrestBasedRecommendEntryPoint {
             }
             //String userId = "07221718-B190-4536-8191-A0410029DE34";
             //String userId = mate.toUpperCase();
-            List<String> boards = datalayer.querySubscription(userId);
+            List<String> boards = datalayer.querySubscription(userId,4);
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
             System.out.println("users:" + userId + "  "+ count);
@@ -135,8 +131,6 @@ public class IntrestBasedRecommendEntryPoint {
             //for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
                 //tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
             //}
-
-
 
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
             //TODO add owner preference
@@ -162,10 +156,9 @@ public class IntrestBasedRecommendEntryPoint {
                 localprefsIDSet.put(userIndex,swapItemId);
             }
 
-
             List<Datalayer.ClipEntity> recentClipByUser =
-                    datalayer.getRecentClipByUser(userId,7,datalayer.baseTimestamp);
-            int recommendRecentCount = 2;
+                    datalayer.getRecentClipByUser(userId,3,datalayer.baseTimestamp);
+            int recommendRecentCount = 1;
             if(boards.size() < 2){
                 recommendRecentCount = 3;
             }
@@ -221,9 +214,9 @@ public class IntrestBasedRecommendEntryPoint {
                         new NearestNUserNeighborhood(users.size(), similarity, model);
                 IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
 
-                RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
+                //RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
                 List<RecommendClipEntity> results = proceed(userId, userEntities,recommend,
-                        prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, balanceResult.howMany,"",RECOMMEND_BY_SUBSCRIPTION);
+                        prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1,"",RECOMMEND_BY_SUBSCRIPTION);
                 for(RecommendClipEntity entity:results){
                     recommendClipEntityList.add(entity);
                     boardRecount++;
@@ -234,23 +227,27 @@ public class IntrestBasedRecommendEntryPoint {
 
             //System.out.println("Start Weibo Recommend");
             IntrestGenerator intrestGenerator = new IntrestGenerator();
-            Hashtable<String,Integer> weiboTagsTable = intrestGenerator.getTagFromWeibo(
+            ArrayList<String> weiboTagsTable = intrestGenerator.getTagFromWeibo(
                     userId,datalayer);
             ContentBasedRecommender recommender = new ContentBasedRecommender();
-            for(Map.Entry<String, Integer> weiboTag:weiboTagsTable.entrySet()){
-                weiboTag.getKey();
+            Collections.shuffle(weiboTagsTable);
+            int intrestCount = 0;
+            for(String weiboTag:weiboTagsTable){
                 Hashtable<String,Double> maps = new Hashtable<String, Double>();
-                maps.put(weiboTag.getKey(),1.0d);
+                maps.put(weiboTag,1.0d);
                 List<RecommendClipEntity> entities =
                         proceed( userEntity, maps, recommender, azureStorageHelper, datalayer);
-                System.out.println(weiboTag.getKey() + " Sina recommended: " + entities.size());
+                System.out.println(weiboTag+ " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
                     System.out.print(recommendClipEntity.getBase36()+" ");
                     recommendClipEntityList.add(recommendClipEntity);
                 }
+                intrestCount++;
+                if(intrestCount >= 7)
+                    break;
             }
 
-            List<String> createdBoards = datalayer.queryCreatedBoards(userId);
+            List<String> createdBoards = datalayer.queryCreatedBoards(userId,4);
             String uuidWithoutDash = userId.replace("-", "");
             int createdBoardRecount = 0;
             for(String board:createdBoards){
@@ -277,8 +274,8 @@ public class IntrestBasedRecommendEntryPoint {
                         createdBoardRecount++;
                     }
                     relatedRecommendCount++;
-                    System.out.println("Recommend board from: " +board+" to "+recommendBoardEntity.getRowKey());
-                    if(relatedRecommendCount >2)
+                    System.out.println("Recommend board from: " + board + " to "+ recommendBoardEntity.getRowKey());
+                    if(relatedRecommendCount >1)
                         break;
                 }
                 if(createdBoardRecount > 20)
@@ -367,10 +364,6 @@ public class IntrestBasedRecommendEntryPoint {
             }
             recommendClipEntityList.clear();
 
-            if(bSwitch){
-
-            }
-
         }
 
     }
@@ -423,7 +416,6 @@ public class IntrestBasedRecommendEntryPoint {
                 recommend.recommend(uuid, users, howMany, neighborhoodUsers);
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
-
         Datalayer datalayer = new Datalayer();
 
         List<Long> arraySourceUser = new ArrayList<Long>();

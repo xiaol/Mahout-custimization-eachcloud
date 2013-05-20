@@ -27,6 +27,7 @@ public class ConvertAutoTagToIndex {
     }
 
     public void convert(Datalayer layer, AzureStorageHelper helper){
+        //TODO order by clip id , 越小越日期越近
             List<Datalayer.ClipEntity> clipEntities =
                     layer.getClips(Integer.toString(1), false, false);
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
