@@ -112,6 +112,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -164,6 +165,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -222,6 +224,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -311,6 +314,7 @@ public class Datalayer {
            {
                if (null != statement) statement.close();
                if (null != resultSet) resultSet.close();
+               connection.close();
            }
            catch (SQLException sqlException){}
        }
@@ -365,6 +369,7 @@ public class Datalayer {
            {
                if (null != statement) statement.close();
                if (null != resultSet) resultSet.close();
+               connection.close();
            }
            catch (SQLException sqlException){}
        }
@@ -419,6 +424,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -473,6 +479,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -566,6 +573,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -646,6 +654,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -725,6 +734,7 @@ public class Datalayer {
             {
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -798,6 +808,7 @@ public class Datalayer {
             {
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -871,6 +882,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -929,6 +941,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -982,6 +995,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1039,6 +1053,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException) {}
         }
@@ -1088,6 +1103,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1140,6 +1156,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1196,6 +1213,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1248,6 +1266,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1301,6 +1320,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1354,6 +1374,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1451,6 +1472,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1510,6 +1532,7 @@ public class Datalayer {
             {
                 if (null != statement) statement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1572,6 +1595,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
@@ -1625,6 +1649,7 @@ public class Datalayer {
                 // Close resources.
                 if (null != preparedStatement) preparedStatement.close();
                 if (null != resultSet) resultSet.close();
+                connection.close();
             }
             catch (SQLException sqlException){}
         }
