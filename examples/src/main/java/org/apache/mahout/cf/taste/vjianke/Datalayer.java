@@ -333,9 +333,10 @@ public class Datalayer {
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
-           String sqlString = "SELECT * FROM BoardFollowerEntity WHERE follower_id = '" + userId +"' AND board_id NOT IN " +
+           String sqlString = "SELECT TOP "+count+" * FROM BoardFollowerEntity WHERE follower_id = '" + userId +"' AND board_id NOT IN " +
                    "(SELECT id FROM BoardEntity WHERE owner_id = '" + userId + "')";
-           sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+           //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+           sqlString = sqlString + "ORDER BY NEWID()";
            statement = connection.createStatement();
            statement.setQueryTimeout(0);
            resultSet = statement.executeQuery(sqlString);
@@ -439,9 +440,15 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
-            if(count != 0)
-                sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+            String sqlString;
+            if(count != 0){
+                //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+                sqlString = "SELECT TOP "+count+
+                        " id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+                sqlString = sqlString + "ORDER BY NEWID()";
+            }else{
+                sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+            }
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
             resultSet = statement.executeQuery(sqlString);
