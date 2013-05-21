@@ -445,7 +445,7 @@ public class Datalayer {
                 //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
                 sqlString = "SELECT TOP "+count+
                         " id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
-                sqlString = sqlString + "ORDER BY NEWID()";
+                sqlString = sqlString + " ORDER BY NEWID()";
             }else{
                 sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
             }
