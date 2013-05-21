@@ -444,7 +444,7 @@ public class Datalayer {
             if(count != 0){
                 //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
                 sqlString = "SELECT TOP "+count+
-                        " id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
+                        " id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "'";
                 sqlString = sqlString + " ORDER BY NEWID()";
             }else{
                 sqlString = "SELECT id,follower_num FROM BoardEntity WHERE owner_id = '"+ userId + "' ORDER BY follower_num DESC";
@@ -1010,7 +1010,7 @@ public class Datalayer {
             //sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
             //sqlString += "ORDER BY add_time DESC";
             //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
-            sqlString = sqlString + "ORDER BY NEWID()";
+            sqlString = sqlString + " ORDER BY NEWID()";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
