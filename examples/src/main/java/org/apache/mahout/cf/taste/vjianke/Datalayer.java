@@ -1005,11 +1005,12 @@ public class Datalayer {
         try
         {
             String sqlString = "SELECT ";
-            //sqlString += "TOP "+ count +" ";
+            sqlString += "TOP "+ count +" ";
             sqlString += "Id,title,user_guid FROM ClipEntity";
             //sqlString += " where add_time < '"+ upTimestamp+"' and user_guid = '"+ strUserId +"'";
             //sqlString += "ORDER BY add_time DESC";
-            sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+            //sqlString = sqlString + " TABLESAMPLE("+ count +" ROWS)";
+            sqlString = sqlString + "ORDER BY NEWID()";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
             statement.setQueryTimeout(0);
