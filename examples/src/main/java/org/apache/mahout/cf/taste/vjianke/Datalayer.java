@@ -832,7 +832,7 @@ public class Datalayer {
     }
 
     public List<ClipEntity>  getClips(
-            String count, boolean limited, boolean increment){
+            String count, boolean limited, boolean increment, boolean exclusive,boolean needTitle){
         Statement statement = null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
@@ -850,9 +850,15 @@ public class Datalayer {
             String sqlString = "SELECT ";
             if(limited)
                 sqlString += "TOP "+ count +" ";
-            sqlString += "Id,title,user_guid FROM ClipEntity";
+            sqlString += "Id,";
+            if(needTitle)
+                sqlString += "title,";
+            sqlString += "user_guid FROM ClipEntity ";
             if(increment)
                 sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
+            if(exclusive)
+                sqlString += "WHERE Id NOT IN " +
+                        "(SELECT ClipId FROM ClipTagEntity)";
             sqlString += " ORDER BY Id";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
@@ -863,8 +869,13 @@ public class Datalayer {
             {
                 ClipEntity entity = new ClipEntity();
                 entity.id = resultSet.getString(1);
-                entity.title = resultSet.getString(2);
-                entity.user_id = resultSet.getString(3);
+                //System.out.println(entity.id);
+                if(needTitle){
+                    entity.title = resultSet.getString(2);
+                    entity.user_id = resultSet.getString(3);
+                }else{
+                    entity.user_id = resultSet.getString(2);
+                }
                 clipEntities.add(entity);
                 rowCount++;
             }

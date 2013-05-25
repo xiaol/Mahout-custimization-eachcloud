@@ -128,7 +128,7 @@ public class TikaIndexer {
         List<Datalayer.ClipEntity> clipEntityList =
                 layer.getClips(
                         Integer.toString(50),ContentBasedRecommender.bDebug,
-                        ContentBasedRecommender.bIncrement);
+                        ContentBasedRecommender.bIncrement,false,true);
 
         for(Datalayer.ClipEntity entity:clipEntityList){
             try {

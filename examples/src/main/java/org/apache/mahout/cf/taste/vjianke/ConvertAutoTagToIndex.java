@@ -29,13 +29,13 @@ public class ConvertAutoTagToIndex {
     public void convert(Datalayer layer, AzureStorageHelper helper){
         //TODO order by clip id , 越小越日期越近
             List<Datalayer.ClipEntity> clipEntities =
-                    layer.getClips(Integer.toString(1), false, false);
+                    layer.getClips(Integer.toString(1), false, false,true,false);
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
         int count = 0;
             for(Datalayer.ClipEntity entity:clipEntities){
-                if(layer.isInTable(entity.id,"ClipTagEntity","ClipId")){
-                    continue;
-                }
+                //if(layer.isInTable(entity.id,"ClipTagEntity","ClipId")){
+                    //continue;
+                //}
                 AzureStorageHelper.TagEntity tagEntity =
                         helper.retrieveTagEntity(entity.id, "-", "AutoTag");
                 Gson gs = new Gson();
