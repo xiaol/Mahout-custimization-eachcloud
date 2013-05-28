@@ -83,11 +83,13 @@ public class IntrestBasedRecommendEntryPoint {
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
 
+        System.out.println("Start to get preference---");
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
         userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
         FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
+        System.out.println("Start to query users---");
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         JSONArray activeUsers = datalayer.getActiveUsers(14);
         for(Object actvieUser:activeUsers){
