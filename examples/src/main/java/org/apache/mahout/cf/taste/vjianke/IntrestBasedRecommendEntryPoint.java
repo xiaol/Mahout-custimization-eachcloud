@@ -112,13 +112,14 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(18).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            String userId = "C48A7D66-5478-42C7-8182-ADCE0342713E";//"07221718-B190-4536-8191-A0410029DE34";
             Datalayer.UserEntity userEntity = userEntities.get(userId);
             if(userEntity == null){
                 System.out.println("lost user "+ userId);
                 continue;
             }
-            //String userId = "07221718-B190-4536-8191-A0410029DE34";
+
             //String userId = mate.toUpperCase();
             List<String> boards = datalayer.querySubscription(userId,4);
             count++;
@@ -146,7 +147,7 @@ public class IntrestBasedRecommendEntryPoint {
             IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                     localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7, "Fullscope ",RECOMMEND_BY_USER);
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 3, "Fullscope ",RECOMMEND_BY_USER);
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
@@ -157,7 +158,7 @@ public class IntrestBasedRecommendEntryPoint {
             }
 
             List<Datalayer.ClipEntity> recentClipByUser =
-                    datalayer.getRecentClipByUser(userId,3,datalayer.baseTimestamp);
+                    datalayer.getRecentClipByUser(userId,2,datalayer.baseTimestamp);
             int recommendRecentCount = 1;
             if(boards.size() < 2){
                 recommendRecentCount = 3;
@@ -247,7 +248,7 @@ public class IntrestBasedRecommendEntryPoint {
                     break;
             }
 
-            List<String> createdBoards = datalayer.queryCreatedBoards(userId,4);
+            List<String> createdBoards = datalayer.queryCreatedBoards(userId,3);
             String uuidWithoutDash = userId.replace("-", "");
             int createdBoardRecount = 0;
             for(String board:createdBoards){
