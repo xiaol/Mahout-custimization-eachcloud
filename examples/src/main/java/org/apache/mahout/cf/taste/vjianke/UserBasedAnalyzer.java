@@ -155,7 +155,7 @@ public class UserBasedAnalyzer {
         int rowCount = 0;
         PreferenceArray preferenceArray = null;
 
-        String sqlString = "SELECT TOP 40 * FROM ClickEntity " +
+        String sqlString = "SELECT TOP 20 * FROM ClickEntity " +
                 "WHERE user_id = '"+strUserId+"' ORDER BY add_time DESC";
 
         UUID uuid = UUID.fromString(strUserId);

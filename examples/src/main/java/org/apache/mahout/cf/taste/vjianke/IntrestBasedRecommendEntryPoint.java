@@ -70,30 +70,15 @@ public class IntrestBasedRecommendEntryPoint {
     public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
     public static String RECOMMEND_BY_BOARD = "来自你可能感兴趣的专辑";
 
-    public static List<String> mates2 =
-            Arrays.asList(
-
-            );
-
-    static class BoardCachedEntity{
-        FastByIDMap<FastIDSet> prefsIDSet;
-        ArrayList<UUID> users;
-    }
 
     public static void main(String[] args) throws Exception{
         Timestamp _ts = Timestamp.valueOf("2013-05-16 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-06-01 23:23:23");
         int count = 0;
 
-        Map<String,BoardCachedEntity> cachedEntityMap = new HashMap<String, BoardCachedEntity>();
-        FastByIDMap<PreferenceArray> prefsMap = null;
-        ArrayList<UUID> users = null;
-        FastByIDMap<FastIDSet> prefsIDSet;
-
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
         azureStorageHelper.init();
         Datalayer datalayer = new Datalayer();
-
 
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
@@ -128,11 +113,6 @@ public class IntrestBasedRecommendEntryPoint {
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
-            //FastByIDMap<PreferenceArray> tempLocalPrefsMap = new FastByIDMap<PreferenceArray>();
-            //for(Map.Entry<Long, PreferenceArray> entity:localPrefsMap.entrySet()){
-                //tempLocalPrefsMap.put(entity.getKey(),entity.getValue());
-            //}
-
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
             //TODO add owner preference
             UUID currentUUID = UUID.fromString(userId);
@@ -147,7 +127,7 @@ public class IntrestBasedRecommendEntryPoint {
             IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                     localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 3, "Fullscope ",RECOMMEND_BY_USER);
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 2, "Fullscope ",RECOMMEND_BY_USER);
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
@@ -183,47 +163,23 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
-            int boardRecount = 0;
             for(final String board:boards){
+                List<String> clipIds = datalayer.queryClipByBoard(
+                        new ArrayList<String>(){{ add(board); }},true,1,userId);
                 //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
-                if(!cachedEntityMap.containsKey(board)){
-                    prefsMap =  new FastByIDMap<PreferenceArray>();
-                    users = new ArrayList<UUID>();
-                    List<String> clipIds = datalayer.queryClipByBoard(new ArrayList<String>(){{ add(board); }});
-                    if(clipIds.isEmpty())
+                for(String clipId:clipIds){
+                    Date date = new Date();
+                    long time =  date.getTime();
+                    String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ clipIds.indexOf(clipId);
+                    String uuidWithoutDash = userId.replace("-","");
+                    String strSource = "Subscription";
+                    RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
+                            clipId, userEntity, strSource,"random-pick","Subscription board",RECOMMEND_BY_SUBSCRIPTION);
+                    if(clipEntity == null) {
                         continue;
-                    datalayer.getPreferenceByClick(prefsMap, users, clipIds);
-                    datalayer.getPreferenceByUserClip(prefsMap,userId,users,clipIds);
-                    BoardCachedEntity cachedEntity = new BoardCachedEntity();
-                    prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
-                    cachedEntity.prefsIDSet = prefsIDSet;
-                    cachedEntity.users = users;
-                    cachedEntityMap.put(board,cachedEntity);
-                }else{
-                    //System.out.println("hit board: "+board.replace("-","") +".clip");
-                    prefsIDSet = cachedEntityMap.get(board).prefsIDSet;
-                    users = cachedEntityMap.get(board).users;
+                    }
+                    recommendClipEntityList.add(clipEntity);
                 }
-                DataModel model = new GenericBooleanPrefDataModel(prefsIDSet);
-
-                if(users.size() < 1)
-                    continue;
-
-                UserSimilarity similarity =
-                        new LogLikelihoodSimilarity(model);
-                UserNeighborhood neighborhood =
-                        new NearestNUserNeighborhood(users.size(), similarity, model);
-                IntrestBasedRecommend recommend = new IntrestBasedRecommend(model, neighborhood, similarity);
-
-                //RecommendBalancer.BalanceResult balanceResult = balancer.balance(0, null);
-                List<RecommendClipEntity> results = proceed(userId, userEntities,recommend,
-                        prefsIDSet, users, azureStorageHelper, _ts, _tsEnd, 1,"",RECOMMEND_BY_SUBSCRIPTION);
-                for(RecommendClipEntity entity:results){
-                    recommendClipEntityList.add(entity);
-                    boardRecount++;
-                }
-                if(boardRecount > 20)
-                    break;
             }
 
             //System.out.println("Start Weibo Recommend");
@@ -249,6 +205,9 @@ public class IntrestBasedRecommendEntryPoint {
             }
 
             List<String> createdBoards = datalayer.queryCreatedBoards(userId,3);
+            for(String board:boards){
+                createdBoards.add(board);
+            }
             String uuidWithoutDash = userId.replace("-", "");
             int createdBoardRecount = 0;
             for(String board:createdBoards){

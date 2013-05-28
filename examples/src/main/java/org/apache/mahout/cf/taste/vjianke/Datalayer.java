@@ -261,19 +261,26 @@ public class Datalayer {
         String profile_image_url;
     }
 
-   public List<String> queryClipByBoard(List<String> boards){
+   public List<String> queryClipByBoard(
+           List<String> boards, boolean limited, int count, String userId){
        Statement statement = null;
        ResultSet resultSet = null;
        int rowCount = 0;
        if(boards.isEmpty())
            return null;
        List<String> clipIds = new ArrayList<String>();
-       String sqlString = "SELECT * FROM BoardClipEntity WHERE ";
+       String sqlString = "SELECT";
+       if(limited)
+           sqlString += " TOP "+count;
+       sqlString += " * FROM BoardClipEntity WHERE ";
 
-       sqlString = sqlString + "board_id = '" + boards.get(0) +"'";
+       sqlString = sqlString + "(board_id = '" + boards.get(0) +"'";
        for(int i=1;i < boards.size(); i++){
-           sqlString = sqlString +"' OR " + boards.get(i) + "'";
+           sqlString = sqlString +"' OR " + boards.get(i) + "')";
        }
+       if(limited)
+           sqlString = sqlString +" AND clip_id NOT IN " +
+                   "(SELECT clip_id FROM ClickEntity WHERE user_id = '" +userId +"') ORDER BY NEWID()";
 
        Connection connection;
        try {
@@ -286,7 +293,6 @@ public class Datalayer {
        try
        {
            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
            statement = connection.createStatement();
            statement.setQueryTimeout(0);
            resultSet = statement.executeQuery(sqlString);
