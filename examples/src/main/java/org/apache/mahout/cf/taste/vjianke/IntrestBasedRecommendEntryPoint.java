@@ -85,9 +85,9 @@ public class IntrestBasedRecommendEntryPoint {
 
         System.out.println("Start to get preference---");
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
-        //userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
+        userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
         System.out.println("load preferences , parse to data map.x");
-        FastByIDMap<FastIDSet> localprefsIDSet = null;//GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
+        FastByIDMap<FastIDSet> localprefsIDSet =GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         System.out.println("Start to query users---");
