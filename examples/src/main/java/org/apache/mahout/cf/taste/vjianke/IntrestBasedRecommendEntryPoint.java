@@ -86,23 +86,25 @@ public class IntrestBasedRecommendEntryPoint {
         System.out.println("Start to get preference---");
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
         userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
-        System.out.println("load preferences , parse to data map.x");
+        System.out.println("load preferences , parse to data map");
         FastByIDMap<FastIDSet> localprefsIDSet =GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         System.out.println("Start to query users---");
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
-        JSONArray activeUsers = datalayer.getActiveUsers(14);
-        for(Object actvieUser:activeUsers){
-        //for(Map.Entry<String, Datalayer.UserEntity> userEntity:userEntities.entrySet()){
+        //System.out.println("Get active users.");
+        //JSONArray activeUsers = datalayer.getActiveUsers(14);
+        //for(Object actvieUser:activeUsers){
+        for(Map.Entry<String, Datalayer.UserEntity> userEntrySet:userEntities.entrySet()){
         //for(String mate:mates){
-            //String userId = userEntity.getKey();
+            Datalayer.UserEntity userEntity = userEntrySet.getValue();
+            String userId = userEntrySet.getKey();
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(18).toUpperCase();
-            StringBuilder sb = new StringBuilder((String)actvieUser);
-            sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            //StringBuilder sb = new StringBuilder((String)actvieUser);
+            //sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
             //String userId = "C48A7D66-5478-42C7-8182-ADCE0342713E";//"07221718-B190-4536-8191-A0410029DE34";
-            Datalayer.UserEntity userEntity = userEntities.get(userId);
+            //Datalayer.UserEntity userEntity = userEntities.get(userId);
             if(userEntity == null){
                 System.out.println("lost user "+ userId);
                 continue;
@@ -319,7 +321,6 @@ public class IntrestBasedRecommendEntryPoint {
                     if(newRecommendClipEntities.isEmpty()){
                         System.out.println("No news.");
                     }
-
 
                     azureStorageHelper.uploadToAzureTable(
                             "RecommendClipEntity",recommendClipEntityList);
