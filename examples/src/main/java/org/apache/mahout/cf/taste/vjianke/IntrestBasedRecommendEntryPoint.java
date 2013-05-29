@@ -87,7 +87,7 @@ public class IntrestBasedRecommendEntryPoint {
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
         userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
         System.out.println("load preferences , parse to data map");
-        FastByIDMap<FastIDSet> localprefsIDSet =GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
+        FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         System.out.println("Start to query users---");
@@ -109,14 +109,33 @@ public class IntrestBasedRecommendEntryPoint {
                 System.out.println("lost user "+ userId);
                 continue;
             }
-
+            System.out.println("users:" + userId + "  "+ count);
+            List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
             //String userId = mate.toUpperCase();
+
             List<String> boards = datalayer.querySubscription(userId,4);
+            RecommendBalancer balancer = new RecommendBalancer(boards.size());
+            for(final String board:boards){
+                List<String> clipIds = datalayer.queryClipByBoard(
+                        new ArrayList<String>(){{ add(board); }},true,1,userId);
+                //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
+                for(String clipId:clipIds){
+                    Date date = new Date();
+                    long time =  date.getTime();
+                    String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ clipIds.indexOf(clipId);
+                    String uuidWithoutDash = userId.replace("-","");
+                    String strSource = "Subscription";
+                    RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
+                            clipId, userEntity, strSource,"random-pick","Subscription board",RECOMMEND_BY_SUBSCRIPTION);
+                    if(clipEntity == null) {
+                        continue;
+                    }
+                    recommendClipEntityList.add(clipEntity);
+                }
+            }
+
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
-            System.out.println("users:" + userId + "  "+ count);
-            RecommendBalancer balancer = new RecommendBalancer(boards.size());
-            List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
 
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
             //TODO add owner preference
@@ -168,24 +187,6 @@ public class IntrestBasedRecommendEntryPoint {
                 }
             }
 
-            for(final String board:boards){
-                List<String> clipIds = datalayer.queryClipByBoard(
-                        new ArrayList<String>(){{ add(board); }},true,1,userId);
-                //System.out.println("board: http://vjianke.com/board/"+board.replace("-","") +".clip");
-                for(String clipId:clipIds){
-                    Date date = new Date();
-                    long time =  date.getTime();
-                    String rowKey = version.get(version.size()-1) +"|"+ time + "|c|"+ clipIds.indexOf(clipId);
-                    String uuidWithoutDash = userId.replace("-","");
-                    String strSource = "Subscription";
-                    RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
-                            clipId, userEntity, strSource,"random-pick","Subscription board",RECOMMEND_BY_SUBSCRIPTION);
-                    if(clipEntity == null) {
-                        continue;
-                    }
-                    recommendClipEntityList.add(clipEntity);
-                }
-            }
 
             //System.out.println("Start Weibo Recommend");
             IntrestGenerator intrestGenerator = new IntrestGenerator();

@@ -274,7 +274,9 @@ public class Datalayer {
            sqlString += " TOP "+count;
        sqlString += " * FROM BoardClipEntity WHERE ";
 
-       sqlString = sqlString + "(board_id = '" + boards.get(0) +"'";
+       if(boards.size() >1 )
+           sqlString += "(";
+       sqlString += "board_id = '" + boards.get(0) +"'";
        for(int i=1;i < boards.size(); i++){
            sqlString = sqlString +"' OR " + boards.get(i) + "')";
        }
