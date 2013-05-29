@@ -29,13 +29,13 @@ import java.util.*;
  * To change this template use File | Settings | File Templates.
  */
 public class Datalayer {
-    public static final String _connectionStringBeijing =
+    public static final String _connectionString =
             "jdbc:sqlserver://qm05uctv57.database.chinacloudapi.cn" + ";" +
                     "database=demo1" + ";" +
                     "user=eachcloud@qm05uctv57" + ";" +
                     "password=IONisgreat!";
 
-    public static final String _connectionString =
+    public static final String _connectionStringHongkong =
             "jdbc:sqlserver://llwko2tjlq.database.windows.net" + ";" +
                     "database=demo1" + ";" +
                     "user=eachcloud@llwko2tjlq" + ";" +
@@ -192,7 +192,7 @@ public class Datalayer {
         }
         try
         {
-            String sqlString = "SELECT * FROM PanamaUserEntity";
+            String sqlString = "SELECT Id,user_screen_name,profile_image_url FROM PanamaUserEntity";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
 
             preparedStatement = connection.prepareStatement(sqlString);
@@ -205,8 +205,8 @@ public class Datalayer {
             {
                 UserEntity userEntity = new UserEntity();
                 userEntity.setUuid(resultSet.getString(1));
-                userEntity.setUser_screen_name(resultSet.getString(3));
-                userEntity.setProfile_image_url(resultSet.getString(17));
+                userEntity.setUser_screen_name(resultSet.getString(2));
+                userEntity.setProfile_image_url(resultSet.getString(3));
                 userEntities.put(userEntity.uuid,userEntity);
                 rowCount++;
             }
