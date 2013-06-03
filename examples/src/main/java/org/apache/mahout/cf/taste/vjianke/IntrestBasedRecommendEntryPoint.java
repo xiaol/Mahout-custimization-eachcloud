@@ -133,7 +133,6 @@ public class IntrestBasedRecommendEntryPoint {
                     recommendClipEntityList.add(clipEntity);
                 }
             }
-
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
 
@@ -186,7 +185,6 @@ public class IntrestBasedRecommendEntryPoint {
                     recommendClipEntityList.add(clipEntity);
                 }
             }
-
 
             //System.out.println("Start Weibo Recommend");
             IntrestGenerator intrestGenerator = new IntrestGenerator();

@@ -32,7 +32,7 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 398051;//378145;
+    static int idStamp = 410272;//378145;
     static int nextIdStamp = 410272;
     static IndexReader _reader = null;
 
