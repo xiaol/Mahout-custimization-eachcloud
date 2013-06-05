@@ -755,11 +755,11 @@ public class Datalayer {
         PreparedStatement preparedStatement= null;    // For the SQL statement
         ResultSet resultSet = null;    // For the result set, if applicable
         int rowCount = 0;
-        PreferenceArray preferenceArray = null;
 
-        String sqlString = "SELECT * FROM BoardClipEntity";
-        sqlString = sqlString + " ORDER BY clip_id ";
+        String sqlString = "SELECT a.board_id,a.clip_id,b.origurl FROM BoardClipEntity a INNER JOIN ClipEntity b on a.clip_id = b.id";
+        sqlString = sqlString + " ORDER BY a.clip_id ";
 
+        Hashtable<String,String> originUrlTable = new Hashtable<String, String>();
         Connection connection;
         try {
             connection = DriverManager.getConnection(_connectionString);
@@ -770,21 +770,30 @@ public class Datalayer {
         try
         {
             preparedStatement = connection.prepareStatement(sqlString);
-            //preparedStatement.setTimestamp(1, _ts);
-            //preparedStatement.setTimestamp(2, _tsEnd);
             preparedStatement.setQueryTimeout(0);
             resultSet = preparedStatement.executeQuery();
             ArrayList<GenericPreference> prefs = new ArrayList<GenericPreference>();
 
             while (resultSet.next())
             {
-                String boardId = resultSet.getString(2);
-                String clipId = resultSet.getString(3);
+                String boardId = resultSet.getString(1);
+                String clipId = resultSet.getString(2);
+                String originUrl = resultSet.getString(3);
+
                 if(!boards.contains(boardId)){
                     boards.add(boardId);
                 }
                 float value = 1.0f;
-                if(!clipIds.contains(clipId))  {
+                if(originUrlTable.contains(originUrl) && !originUrl.contains("vjianke")){
+                    String sameSourceClip = originUrlTable.get(originUrl);
+                    GenericPreference pref = new GenericPreference(
+                            clipIds.indexOf(sameSourceClip),boards.indexOf(boardId),value);
+                    if(rowCount != 0){
+                        prefsMap.put(clipIds.indexOf(clipId)-1,new GenericUserPreferenceArray(prefs));
+                        prefs = new ArrayList<GenericPreference>();
+                    }
+                    prefs.add(pref);
+                }else if(!clipIds.contains(clipId))  {
                     clipIds.add(clipId);
                     GenericPreference pref = new GenericPreference(
                             clipIds.indexOf(clipId),boards.indexOf(boardId),value);
@@ -793,6 +802,7 @@ public class Datalayer {
                         prefs = new ArrayList<GenericPreference>();
                     }
                     prefs.add(pref);
+                    originUrlTable.put(originUrl,clipId);
                 }else{
                     GenericPreference pref = new GenericPreference(
                             clipIds.indexOf(clipId),boards.indexOf(boardId),value);
@@ -823,13 +833,11 @@ public class Datalayer {
         return prefsMap;
     }
 
-
-
     public class ClipEntity{
         public String id;
         public String title;
         public String user_id;
-
+        public String origurl;
     }
 
     public class BoardEntity{
@@ -861,7 +869,7 @@ public class Datalayer {
             sqlString += "Id,";
             if(needTitle)
                 sqlString += "title,";
-            sqlString += "user_guid FROM ClipEntity ";
+            sqlString += "user_guid, origurl FROM ClipEntity ";
             if(increment)
                 sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
             if(exclusive)
@@ -881,8 +889,10 @@ public class Datalayer {
                 if(needTitle){
                     entity.title = resultSet.getString(2);
                     entity.user_id = resultSet.getString(3);
+                    entity.origurl = resultSet.getString(4);
                 }else{
                     entity.user_id = resultSet.getString(2);
+                    entity.origurl = resultSet.getString(3);
                 }
                 clipEntities.add(entity);
                 rowCount++;

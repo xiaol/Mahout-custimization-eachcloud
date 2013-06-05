@@ -44,7 +44,6 @@ public class BoardBasedRecommendEntryPoint {
         datalayer.getBoardRelationByClips(prefsMap, boardIds,clipIds);
         DataModel model = new GenericDataModel(prefsMap);
         BoardBasedRecommend recommend = null;
-        BoardBasedRecommend recommend1 = null;
         ItemSimilarity similarity =
             new LogLikelihoodSimilarity(model);
         recommend = new BoardBasedRecommend(model,similarity);
