@@ -231,6 +231,59 @@ public class Datalayer {
         return userEntities;
     }
 
+    public List<String> QueryContributor(){
+        // The types for the following variables are
+        // defined in the java.sql library.
+        PreparedStatement preparedStatement = null;    // For the SQL statement
+        ResultSet resultSet = null;    // For the result set, if applicable
+        int rowCount = 0;
+
+        List<String> userEntities =
+                new ArrayList<String>();
+        Connection connection;
+        try {
+            connection = DriverManager.getConnection(_connectionString);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return Collections.EMPTY_LIST;
+        }
+        try
+        {
+            String sqlString = "SELECT DISTINCT  user_id FROM UnLikeClipEntity";
+            //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
+
+            preparedStatement = connection.prepareStatement(sqlString);
+            //preparedStatement.setTimestamp(1, _ts);
+            //preparedStatement.setTimestamp(2, _tsEnd);
+            preparedStatement.setQueryTimeout(0);
+            resultSet = preparedStatement.executeQuery();
+            // Print out the returned number of rows.
+            while (resultSet.next())
+            {
+                userEntities.add(resultSet.getString(1));
+                rowCount++;
+            }
+
+        }
+        catch (Exception e)
+        {
+            System.out.println("Exception " + e.getMessage());
+            e.printStackTrace();
+        }
+        finally
+        {
+            try
+            {
+                // Close resources.
+                if (null != preparedStatement) preparedStatement.close();
+                if (null != resultSet) resultSet.close();
+                connection.close();
+            }
+            catch (SQLException sqlException) {}
+        }
+        return userEntities;
+    }
+
     public class UserEntity{
         public String getProfile_image_url() {
             return profile_image_url;

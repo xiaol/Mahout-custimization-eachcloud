@@ -311,7 +311,8 @@ public class ContentBasedRecommender {
 
         TopDocs matches;
         List<RelativeClipInfo> relativeClipInfoList = new ArrayList<RelativeClipInfo>();
-
+        List<String> titleList= new ArrayList<String>();
+        titleList.add(srcTitle);
         try {
             matches = searcher.search(query,20);
             //System.out.println(matches.totalHits);
@@ -329,6 +330,20 @@ public class ContentBasedRecommender {
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
                 if(destTitle.equals(srcTitle))
                     continue;
+                boolean bIn = true;
+                for(String title:titleList){
+                    if(title.contains(destTitle)){
+                        bIn = false;
+                    }else if(destTitle.contains(title)){
+                        bIn = false;
+                    }else if(destTitle.equals(title)){
+                        bIn = false;
+                    }else{
+                    }
+                }
+                if(!bIn){
+                    continue;
+                }
                 if(Float.compare(scoreDoc.score,1.6f) > 0 && count ==0){
                     cachedIds.add(destId);
                     cachedScore.add(scoreDoc.score);
@@ -360,6 +375,7 @@ public class ContentBasedRecommender {
                 relativeClipInfo.score = scoreDoc.score;
                 relativeClipInfo.index = count;
                 relativeClipInfoList.add(relativeClipInfo);
+                titleList.add(destTitle);
 
                 count++;
             }
