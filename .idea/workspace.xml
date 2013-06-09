@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +57,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="327" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="329" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -73,7 +70,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="122" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" line="124" class="org.apache.mahout.cf.taste.vjianke.IntrestBasedRecommendEntryPoint" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -181,8 +178,20 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="12" selection-start="6011" selection-end="6011" vertical-scroll-proportion="0.94014084">
-              <folding />
+            <state line="91" column="8" selection-start="4566" selection-end="4566" vertical-scroll-proportion="-1.7183099">
+              <folding>
+                <element signature="e#6150#6171#0" expanded="true" />
+                <element signature="e#11002#11018#0" expanded="true" />
+                <element signature="e#14334#14355#0" expanded="true" />
+                <element signature="e#14473#14494#0" expanded="true" />
+                <element signature="e#16537#16558#0" expanded="true" />
+                <element signature="e#18564#18585#0" expanded="true" />
+                <element signature="e#20276#20282#0" expanded="true" />
+                <element signature="e#20647#20668#0" expanded="true" />
+                <element signature="e#20770#20776#0" expanded="true" />
+                <element signature="e#20841#20855#0" expanded="true" />
+                <element signature="e#20920#20928#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -190,7 +199,7 @@
       <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="32" selection-start="8500" selection-end="8546" vertical-scroll-proportion="0.0">
+            <state line="46" column="21" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6050#6070#0" expanded="true" />
@@ -544,6 +553,48 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vjianke" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout-distribution-0.7" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mahout" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taste" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vjianke" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1032,9 +1083,9 @@
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21982759" sideWeight="0.37583002" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24497126" sideWeight="0.9296149" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1716954" sideWeight="0.9296149" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19899425" sideWeight="0.9296149" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20043103" sideWeight="0.9296149" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4741036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23204023" sideWeight="0.16334662" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73306775" order="2" side_tool="false" content_ui="combo" />
@@ -1166,6 +1217,11 @@
         <state line="39" column="13" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEvaluatorRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="149" column="97" selection-start="5248" selection-end="5248" vertical-scroll-proportion="0.0">
@@ -1178,7 +1234,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="32" selection-start="8500" selection-end="8546" vertical-scroll-proportion="0.0">
+        <state line="46" column="21" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6050#6070#0" expanded="true" />
@@ -1206,15 +1262,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEvaluatorRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="12" selection-start="6011" selection-end="6011" vertical-scroll-proportion="0.94014084">
-          <folding />
+        <state line="91" column="8" selection-start="4566" selection-end="4566" vertical-scroll-proportion="-1.7183099">
+          <folding>
+            <element signature="e#6150#6171#0" expanded="true" />
+            <element signature="e#11002#11018#0" expanded="true" />
+            <element signature="e#14334#14355#0" expanded="true" />
+            <element signature="e#14473#14494#0" expanded="true" />
+            <element signature="e#16537#16558#0" expanded="true" />
+            <element signature="e#18564#18585#0" expanded="true" />
+            <element signature="e#20276#20282#0" expanded="true" />
+            <element signature="e#20647#20668#0" expanded="true" />
+            <element signature="e#20770#20776#0" expanded="true" />
+            <element signature="e#20841#20855#0" expanded="true" />
+            <element signature="e#20920#20928#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
