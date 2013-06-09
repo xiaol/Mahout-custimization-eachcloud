@@ -178,19 +178,19 @@
       <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="8" selection-start="4566" selection-end="4566" vertical-scroll-proportion="-1.7183099">
+            <state line="95" column="58" selection-start="4896" selection-end="4896" vertical-scroll-proportion="0.45070422">
               <folding>
-                <element signature="e#6150#6171#0" expanded="true" />
-                <element signature="e#11002#11018#0" expanded="true" />
-                <element signature="e#14334#14355#0" expanded="true" />
-                <element signature="e#14473#14494#0" expanded="true" />
-                <element signature="e#16537#16558#0" expanded="true" />
-                <element signature="e#18564#18585#0" expanded="true" />
-                <element signature="e#20276#20282#0" expanded="true" />
-                <element signature="e#20647#20668#0" expanded="true" />
-                <element signature="e#20770#20776#0" expanded="true" />
-                <element signature="e#20841#20855#0" expanded="true" />
-                <element signature="e#20920#20928#0" expanded="true" />
+                <element signature="e#6149#6170#0" expanded="true" />
+                <element signature="e#11001#11017#0" expanded="true" />
+                <element signature="e#14333#14354#0" expanded="true" />
+                <element signature="e#14472#14493#0" expanded="true" />
+                <element signature="e#16536#16557#0" expanded="true" />
+                <element signature="e#18563#18584#0" expanded="true" />
+                <element signature="e#20275#20281#0" expanded="true" />
+                <element signature="e#20646#20667#0" expanded="true" />
+                <element signature="e#20769#20775#0" expanded="true" />
+                <element signature="e#20840#20854#0" expanded="true" />
+                <element signature="e#20919#20927#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1264,19 +1264,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="8" selection-start="4566" selection-end="4566" vertical-scroll-proportion="-1.7183099">
+        <state line="95" column="58" selection-start="4896" selection-end="4896" vertical-scroll-proportion="0.45070422">
           <folding>
-            <element signature="e#6150#6171#0" expanded="true" />
-            <element signature="e#11002#11018#0" expanded="true" />
-            <element signature="e#14334#14355#0" expanded="true" />
-            <element signature="e#14473#14494#0" expanded="true" />
-            <element signature="e#16537#16558#0" expanded="true" />
-            <element signature="e#18564#18585#0" expanded="true" />
-            <element signature="e#20276#20282#0" expanded="true" />
-            <element signature="e#20647#20668#0" expanded="true" />
-            <element signature="e#20770#20776#0" expanded="true" />
-            <element signature="e#20841#20855#0" expanded="true" />
-            <element signature="e#20920#20928#0" expanded="true" />
+            <element signature="e#6149#6170#0" expanded="true" />
+            <element signature="e#11001#11017#0" expanded="true" />
+            <element signature="e#14333#14354#0" expanded="true" />
+            <element signature="e#14472#14493#0" expanded="true" />
+            <element signature="e#16536#16557#0" expanded="true" />
+            <element signature="e#18563#18584#0" expanded="true" />
+            <element signature="e#20275#20281#0" expanded="true" />
+            <element signature="e#20646#20667#0" expanded="true" />
+            <element signature="e#20769#20775#0" expanded="true" />
+            <element signature="e#20840#20854#0" expanded="true" />
+            <element signature="e#20919#20927#0" expanded="true" />
           </folding>
         </state>
       </provider>
