@@ -69,6 +69,7 @@ public class IntrestBasedRecommendEntryPoint {
     public static String RECOMMEND_BY_CREATED_BOARD_PREFIX= "和你的专辑";
     public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
     public static String RECOMMEND_BY_BOARD = "来自你可能感兴趣的专辑";
+    public static String RECOMMEND_BY_TOPIC = "你可能感兴趣的";
 
 
     public static void main(String[] args) throws Exception{
@@ -184,7 +185,7 @@ public class IntrestBasedRecommendEntryPoint {
                     String strSource = relativeClipInfo.srcId;
                     RecommendClipEntity clipEntity = generateClipEntity(uuidWithoutDash, rowKey, azureStorageHelper,
                             relativeClipInfo.destId, userEntity, strSource,"content-based:vsm","recentClip",
-                            RECOMMEND_BY_BEHAVIOR_PREFIX+"发布"+RECOMMEND_BY_BEHAVIOR_SUFFIX);
+                            RECOMMEND_BY_TOPIC);
                     if(clipEntity == null) {
                         continue;
                     }
