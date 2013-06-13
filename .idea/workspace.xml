@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3559294-c563-41c8-b20a-72084465fd1e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" afterPath="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
     </list>
     <ignored path="mahout-distribution-0.7.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +31,7 @@
   </component>
   <component name="DebuggerManager">
     <line_breakpoints>
-      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" line="1110" class="org.apache.mahout.cf.taste.vjianke.Datalayer" package="org.apache.mahout.cf.taste.vjianke">
+      <breakpoint url="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" line="1111" class="org.apache.mahout.cf.taste.vjianke.Datalayer" package="org.apache.mahout.cf.taste.vjianke">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -173,10 +172,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="IntrestBasedRecommendEntryPoint.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="217" column="51" selection-start="11708" selection-end="11708" vertical-scroll-proportion="5.480969">
+            <state line="170" column="38" selection-start="9120" selection-end="9120" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#6206#6227#0" expanded="true" />
                 <element signature="e#14346#14367#0" expanded="true" />
@@ -192,10 +191,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Datalayer.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Datalayer.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="495" column="27" selection-start="16379" selection-end="16397" vertical-scroll-proportion="-7.269231">
+            <state line="1106" column="32" selection-start="39695" selection-end="39695" vertical-scroll-proportion="0.8701923">
               <folding />
             </state>
           </provider>
@@ -231,7 +230,7 @@
       <file leaf-file-name="SocketInputStream.class" pinned="false" current="false" current-in-tab="false">
         <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/SocketInputStream.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="32" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+            <state line="16" column="32" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -291,8 +290,8 @@
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/UserBasedAnalyzer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/engine/ContentBasedRecommender.java" />
-        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
         <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java" />
+        <option value="$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java" />
       </list>
     </option>
   </component>
@@ -389,6 +388,16 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -591,16 +600,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -630,14 +629,14 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="Downloaded.Files.Path" value="$PROJECT_DIR$/lib" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -839,24 +838,6 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -883,6 +864,24 @@
       <envs />
       <properties />
       <listeners />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -998,26 +997,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.057104915" sideWeight="0.9159483" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27224436" sideWeight="0.9058908" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.07038513" sideWeight="0.9030172" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.057104915" sideWeight="0.07902299" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27224436" sideWeight="0.08908046" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934928" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21982759" sideWeight="0.37583002" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17385058" sideWeight="0.9428951" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17600575" sideWeight="0.72775567" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994253" sideWeight="0.82771534" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20043103" sideWeight="0.9428951" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20043103" sideWeight="0.72775567" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4741036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23204023" sideWeight="0.16334662" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.73306775" order="2" side_tool="false" content_ui="combo" />
@@ -1126,6 +1125,11 @@
         <state line="22" column="13" selection-start="900" selection-end="900" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="47" selection-start="5441" selection-end="5441" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/core/src/main/java/org/apache/mahout/cf/taste/impl/model/GenericUserPreferenceArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="2511" selection-end="2511" vertical-scroll-proportion="0.0" />
@@ -1133,7 +1137,7 @@
     </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/net/SocketInputStream.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="582" selection-end="582" vertical-scroll-proportion="0.0">
+        <state line="16" column="32" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1153,23 +1157,9 @@
         <state line="39" column="13" selection-start="1831" selection-end="1831" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="495" column="27" selection-start="16379" selection-end="16397" vertical-scroll-proportion="-7.269231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/BoardBasedRecommendEntryPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="47" selection-start="5441" selection-end="5441" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/IntrestBasedRecommendEntryPoint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="51" selection-start="11708" selection-end="11708" vertical-scroll-proportion="5.480969">
+        <state line="170" column="38" selection-start="9120" selection-end="9120" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#6206#6227#0" expanded="true" />
             <element signature="e#14346#14367#0" expanded="true" />
@@ -1181,6 +1171,13 @@
             <element signature="e#20782#20788#0" expanded="true" />
             <element signature="e#20932#20940#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/src/main/java/org/apache/mahout/cf/taste/vjianke/Datalayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1106" column="32" selection-start="39695" selection-end="39695" vertical-scroll-proportion="0.8701923">
+          <folding />
         </state>
       </provider>
     </entry>
