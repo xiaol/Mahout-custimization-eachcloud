@@ -5,6 +5,7 @@ import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
+import org.apache.mahout.cf.taste.vjianke.engine.IntrestGenerator;
 
 import java.sql.Timestamp;
 import java.util.*;
@@ -45,6 +46,13 @@ public class EntryPoint {
             );
 
     public static void main(String[] args) throws Exception{
+        Datalayer datalayer = new Datalayer();
+        IntrestGenerator intrestGenerator = new IntrestGenerator();
+        ArrayList<String> weiboTagsTable = intrestGenerator.getTagFromWeibo(
+                mates.get(0),datalayer);
+
+        Collections.shuffle(weiboTagsTable);
+
         Timestamp _ts = Timestamp.valueOf("2011-12-01 23:23:23");
         Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
         UserBasedAnalyzer analyzer = new UserBasedAnalyzer();
@@ -53,6 +61,7 @@ public class EntryPoint {
         analyzer.init(prefsMap, users, _ts, _tsEnd);
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
         FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
+
 
         azureStorageHelper.init();
 

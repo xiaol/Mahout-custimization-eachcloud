@@ -52,7 +52,7 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
 
 
     public List<RecommendedItem> recommend(String strUuid,ArrayList<UUID> users,
-                                           int howMany, List<Long> nearestNUsers) throws TasteException {
+                                           int howMany, List<Long> nearestNUsers,List<String> exceptionItemIds) throws TasteException {
 
 
         int userIndex = users.indexOf(UUID.fromString(strUuid/*"07221718-b190-4536-8191-a0410029de34")*/));
@@ -67,6 +67,9 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
         }
 
         FastIDSet allItemIDs = getAllOtherItems(theNeighborhood, userIndex);
+        for(String exceptionId:exceptionItemIds){
+            allItemIDs.remove( Long.parseLong(exceptionId,36));
+        }
 
         TopItems.Estimator<Long> estimator = new Estimator(userIndex, theNeighborhood);
 
@@ -105,5 +108,6 @@ public class IntrestBasedRecommend extends GenericUserBasedRecommender {
             return doEstimatePreference(theUserID, theNeighborhood, itemID);
         }
     }
+
 
 }

@@ -120,20 +120,20 @@ public class ContentBasedRecommender {
     }
 
     public List<RelativeClipInfo> recomendByClip(String clipId, int count,
-                                                 Datalayer layer,String userId){
+                                                 Datalayer layer,String userId,List<String> unLikeIds){
         initIfNeeded(TikaIndexer.INDEX_PATH);
         int docId = getClipFromId(clipId,_reader);
         if(docId == -1)
             return Collections.emptyList();
         IndexSearcher searcher = new IndexSearcher(_reader);
         List<RelativeClipInfo> relativeClipInfoList =
-            booleanQuery(docId,_reader,searcher,count,layer,userId,true);
+            booleanQuery(docId,_reader,searcher,count,layer,userId,true,unLikeIds);
         return relativeClipInfoList;
     }
 
     public Hashtable<String, Float> recommendByTerms(Map<String, Double> terms,
                                                      String userId, Datalayer layer,
-                                                     String indexPath
+                                                     String indexPath, List<String> unLikeIds
     ) {
         initIfNeeded(indexPath);
 
@@ -182,6 +182,16 @@ public class ContentBasedRecommender {
 
                 String destId =  _reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+
+                boolean isUnLike = false;
+                for(String unLikeClipId:unLikeIds){
+                    if(destId.equals(unLikeClipId)){
+                        isUnLike = true;
+                        break;
+                    }
+                }
+                if(isUnLike)
+                    continue;
 
                 boolean isRead = layer.isClipRead(destId,userId);
                 if(isRead){
@@ -234,7 +244,7 @@ public class ContentBasedRecommender {
         //moreLikeThisQuery(terms,searcher,analyzer);
         //termQuery(terms,searcher);
         List<RelativeClipInfo> relativeClipInfoList =
-                booleanQuery(docId,reader,searcher,6,layer,"",false);
+                booleanQuery(docId,reader,searcher,6,layer,"",false,Collections.EMPTY_LIST);
 
         for(RelativeClipInfo relativeClipInfo:relativeClipInfoList){
             process(relativeClipInfo.srcId, String.format("%03d", relativeClipInfo.index),
@@ -271,7 +281,7 @@ public class ContentBasedRecommender {
     static List<RelativeClipInfo> booleanQuery(int docId, IndexReader reader,
                                                IndexSearcher searcher,
                                                int recommendCount,
-                                               Datalayer layer,String userId,boolean bUser){
+                                               Datalayer layer,String userId,boolean bUser,List<String> unLikeIds){
         Map<String,Double> terms = null;
         float factor = 1.0f;
         BooleanQuery query = new BooleanQuery();
@@ -328,6 +338,17 @@ public class ContentBasedRecommender {
                         scoreDoc.doc).get(TikaIndexer.CLIP_TITLE);
                 String destId =  reader.document(
                         scoreDoc.doc).get(TikaIndexer.CLIP_ID);
+
+                boolean isUnLike = false;
+                for(String unLikeClipId:unLikeIds){
+                    if(destId.equals(unLikeClipId)){
+                        isUnLike = true;
+                        break;
+                    }
+                }
+                if(isUnLike)
+                    continue;
+
                 if(destTitle.equals(srcTitle))
                     continue;
                 boolean bIn = true;

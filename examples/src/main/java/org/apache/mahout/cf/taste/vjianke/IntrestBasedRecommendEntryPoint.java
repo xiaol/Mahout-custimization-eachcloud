@@ -120,6 +120,8 @@ public class IntrestBasedRecommendEntryPoint {
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
             //String userId = mate.toUpperCase();
 
+            List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
+
             List<String> boards = datalayer.querySubscription(userId,4);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             for(final String board:boards){
@@ -157,7 +159,7 @@ public class IntrestBasedRecommendEntryPoint {
             IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                     localModel, localNeighborhood, localSimilarity);
             List<RecommendClipEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 2, "Fullscope ",RECOMMEND_BY_USER);
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 2, "Fullscope ",unLikeClipIds,RECOMMEND_BY_USER);
             for(RecommendClipEntity entity:userBasedResults){
                 recommendClipEntityList.add(entity);
             }
@@ -176,7 +178,7 @@ public class IntrestBasedRecommendEntryPoint {
 
             for(Datalayer.ClipEntity recentClipEntity:recentClipByUser){
                 List<ContentBasedRecommender.RelativeClipInfo> relativeClipInfoList =
-                        contentBasedRecommender.recomendByClip(recentClipEntity.id,recommendRecentCount,datalayer,userId);
+                        contentBasedRecommender.recomendByClip(recentClipEntity.id,recommendRecentCount,datalayer,userId,unLikeClipIds);
                 for(ContentBasedRecommender.RelativeClipInfo relativeClipInfo:relativeClipInfoList){
                     Date date = new Date();
                     long time =  date.getTime();
@@ -204,7 +206,7 @@ public class IntrestBasedRecommendEntryPoint {
                 Hashtable<String,Double> maps = new Hashtable<String, Double>();
                 maps.put(weiboTag,1.0d);
                 List<RecommendClipEntity> entities =
-                        proceed( userEntity, maps, recommender, azureStorageHelper, datalayer);
+                        proceed( userEntity, maps, recommender, azureStorageHelper, datalayer,unLikeClipIds);
                 System.out.println(weiboTag+ " Sina recommended: " + entities.size());
                 for(RecommendClipEntity recommendClipEntity:entities){
                     System.out.print(recommendClipEntity.getBase36()+" ");
@@ -304,7 +306,7 @@ public class IntrestBasedRecommendEntryPoint {
                         recommendClipEntityList.add(entity);
                     }
 
-                    List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
+
                     List<RecommendClipEntity> unLikeClipInRecommend = new ArrayList<RecommendClipEntity>();
                     for(String unLikeClipId:unLikeClipIds){
                         for(RecommendClipEntity restRecommendClipEntity:recommendClipEntityList){
@@ -342,10 +344,10 @@ public class IntrestBasedRecommendEntryPoint {
                                                     Hashtable<String,Double> tagsTable,
                                                     ContentBasedRecommender recommender,
                                                     AzureStorageHelper helper,
-                                                    Datalayer layer){
+                                                    Datalayer layer, List<String> unLikeIds){
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
         Hashtable<String,Float> recommendResult = recommender.recommendByTerms(
-                tagsTable, userEntity.getUuid(),layer, TikaIndexer.INDEX_PATH);
+                tagsTable, userEntity.getUuid(),layer, TikaIndexer.INDEX_PATH,unLikeIds);
         String uuidWithoutDash = userEntity.getUuid().replace("-", "");
 
         int count = 0;
@@ -375,7 +377,7 @@ public class IntrestBasedRecommendEntryPoint {
                                ArrayList<UUID> users,
                                AzureStorageHelper azureStorageHelper,
                                Timestamp _ts,
-                               Timestamp _tsEnd, int howMany, String prefix,
+                               Timestamp _tsEnd, int howMany, String prefix,List<String> exceptionItemIds,
                                String recommendReason) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
@@ -383,7 +385,7 @@ public class IntrestBasedRecommendEntryPoint {
             System.out.println("Null PointerException");
         }
         List<RecommendedItem> recommendedItemList =
-                recommend.recommend(uuid, users, howMany, neighborhoodUsers);
+                recommend.recommend(uuid, users, howMany, neighborhoodUsers,exceptionItemIds);
 
         List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
         Datalayer datalayer = new Datalayer();
