@@ -73,8 +73,12 @@ public class IntrestBasedRecommendEntryPoint {
 
 
     public static void main(String[] args) throws Exception{
-        Timestamp _ts = Timestamp.valueOf("2013-05-16 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-06-01 23:23:23");
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, -7);
+        Date endDate = new Date();
+        Date startDate = calendar.getTime();
+        Timestamp _ts = new Timestamp(startDate.getTime());
+        Timestamp _tsEnd = new Timestamp(endDate.getTime());
         int count = 0;
 
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
@@ -108,8 +112,8 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = IntrestBasedRecommendEntryPoint.mates.get(18).toUpperCase();
             StringBuilder sb = new StringBuilder((String)actvieUser);
             sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
-            String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
-            //String userId = "C48A7D66-5478-42C7-8182-ADCE0342713E";//"07221718-B190-4536-8191-A0410029DE34";
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+            String userId = "07221718-B190-4536-8191-A0410029DE34";
             Datalayer.UserEntity userEntity = userEntities.get(userId);
 
             if(userEntity == null){
@@ -213,7 +217,7 @@ public class IntrestBasedRecommendEntryPoint {
                     recommendClipEntityList.add(recommendClipEntity);
                 }
                 intrestCount++;
-                if(intrestCount >= 7)
+                if(intrestCount >= 2)
                     break;
             }
 
