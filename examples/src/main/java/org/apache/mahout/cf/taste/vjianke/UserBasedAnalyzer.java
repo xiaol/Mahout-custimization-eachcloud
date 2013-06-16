@@ -89,7 +89,9 @@ public class UserBasedAnalyzer {
                         +Long.toString(Long.parseLong(resultSet.getString(2),36),36)+
                         "3: " + UUID.fromString(resultSet.getString(3)) + "4: " + resultSet.getDate(4)
                         +" rows returned.");*/
-
+                String clipId = resultSet.getString(2);
+                if(clipId.equals(""))
+                    continue;
                 UUID uuid = UUID.fromString(resultSet.getString(3));
                 if(!users.contains(uuid))  {
                     users.add(uuid);
