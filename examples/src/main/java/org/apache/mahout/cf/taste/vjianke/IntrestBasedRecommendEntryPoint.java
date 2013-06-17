@@ -123,7 +123,6 @@ public class IntrestBasedRecommendEntryPoint {
             System.out.println("users:" + userId + "  "+ count);
             List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
             //String userId = mate.toUpperCase();
-
             List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
 
             List<String> boards = datalayer.querySubscription(userId,4);
