@@ -59,7 +59,7 @@ public class IntrestBasedRecommendEntryPoint {
                     "96c04d86-c4a4-487a-ba6d-a0e400299937"      // paul
             );
 
-    public static String RECOMMEND_BY_USER = "你的好友看过同类剪报";
+    public static String RECOMMEND_BY_USER = "你可能感兴趣的";
     public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的订阅剪报";//"你错过的来自";
     public static String RECOMMEND_BY_SUBSCRIPTION_SUFFIX = "的剪报";
     public static String RECOMMEND_BY_SINA = "和你在微博的喜好相关";
@@ -125,8 +125,9 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = mate.toUpperCase();
             List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
 
-            List<String> boards = datalayer.querySubscription(userId,4);
+            List<String> boards = datalayer.querySubscription(userId,20);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
+            int boardCount = 0;
             for(final String board:boards){
                 List<String> clipIds = datalayer.queryClipByBoard(
                         new ArrayList<String>(){{ add(board); }},true,1,userId);
@@ -144,6 +145,9 @@ public class IntrestBasedRecommendEntryPoint {
                     }
                     recommendClipEntityList.add(clipEntity);
                 }
+                if(boardCount >= 4)
+                    break;
+                boardCount++;
             }
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
@@ -220,9 +224,14 @@ public class IntrestBasedRecommendEntryPoint {
                     break;
             }
 
-            List<String> createdBoards = datalayer.queryCreatedBoards(userId,3);
+            List<String> createdBoards = datalayer.queryCreatedBoards(userId,10);
+            Collections.shuffle(createdBoards);
+            int createdBoardCount = 0;
             for(String board:boards){
                 createdBoards.add(board);
+                if(createdBoardCount >= 3)
+                    break;
+                createdBoardCount++;
             }
             String uuidWithoutDash = userId.replace("-", "");
             int createdBoardRecount = 0;
