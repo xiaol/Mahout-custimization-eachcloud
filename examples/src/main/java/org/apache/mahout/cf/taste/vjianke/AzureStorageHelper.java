@@ -82,12 +82,12 @@ public class AzureStorageHelper {
         }
     }
 
-    public List<RecommendClipEntity> deleteByPartitionKey(String tableName, String partitinKey){
+    public List<RecommendClipEntity> deleteByPartitionKey(String tableName, String partitionKey){
         // Create a filter condition where the partition key is "Smith".
         String partitionFilter = TableQuery.generateFilterCondition(
                 TableConstants.PARTITION_KEY,
                 TableQuery.QueryComparisons.EQUAL,
-                partitinKey);
+                partitionKey);
 
 
         String rowFilter = TableQuery.generateFilterCondition(

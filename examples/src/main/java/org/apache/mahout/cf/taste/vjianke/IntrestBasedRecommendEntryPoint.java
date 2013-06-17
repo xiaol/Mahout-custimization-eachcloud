@@ -88,11 +88,11 @@ public class IntrestBasedRecommendEntryPoint {
         FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
         ArrayList<UUID> localUsers = new ArrayList<UUID>();
 
-        System.out.println("Start to get preference---");
+        /*System.out.println("Start to get preference---");
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
         userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
         System.out.println("load preferences , parse to data map");
-        FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
+        FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);  */
 
         ContentBasedRecommender contentBasedRecommender = new ContentBasedRecommender();
         System.out.println("Start to query users---");
@@ -152,6 +152,7 @@ public class IntrestBasedRecommendEntryPoint {
             count++;
             //List<Datalayer.BoardRelated> relatedBoards = datalayer.queryRelatedBoards(uuid);
 
+            /*
             FastIDSet itemsId = userBasedAnalyzer.getPreferenceByReadHistory( userId, localUsers);
             //TODO add owner preference
             UUID currentUUID = UUID.fromString(userId);
@@ -172,9 +173,11 @@ public class IntrestBasedRecommendEntryPoint {
             }
             if(swapItemId == null) {
                 localprefsIDSet.remove(userIndex);
+                itemsId.clear();
             }else{
                 localprefsIDSet.put(userIndex,swapItemId);
             }
+            */
 
             List<Datalayer.ClipEntity> recentClipByUser =
                     datalayer.getRecentClipByUser(userId,2,datalayer.baseTimestamp);
