@@ -125,7 +125,7 @@ public class IntrestBasedRecommendEntryPoint {
             //String userId = mate.toUpperCase();
             List<String> unLikeClipIds = datalayer.getUnlikeClip(userId);
 
-            List<String> boards = datalayer.querySubscription(userId,20);
+            List<String> boards = datalayer.querySubscription(userId,6);
             RecommendBalancer balancer = new RecommendBalancer(boards.size());
             int boardCount = 0;
             for(final String board:boards){
@@ -224,12 +224,12 @@ public class IntrestBasedRecommendEntryPoint {
                     break;
             }
 
-            List<String> createdBoards = datalayer.queryCreatedBoards(userId,10);
+            List<String> createdBoards = datalayer.queryCreatedBoards(userId,5);
             Collections.shuffle(createdBoards);
             int createdBoardCount = 0;
             for(String board:boards){
                 createdBoards.add(board);
-                if(createdBoardCount >= 3)
+                if(createdBoardCount >= 2)
                     break;
                 createdBoardCount++;
             }
