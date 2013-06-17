@@ -184,11 +184,12 @@ public class UserBasedAnalyzer {
             ArrayList<BooleanPreference> userPrefs = new ArrayList<BooleanPreference>();
             while (resultSet.next())
             {
+                String clipId = resultSet.getString(2);
+                if(clipId.equals(""))
+                    continue;
                 BooleanPreference booleanPreference = new BooleanPreference(
-                        users.indexOf(uuid), Long.parseLong(resultSet.getString(2),36));
+                        users.indexOf(uuid), Long.parseLong(clipId,36));
                 userPrefs.add(booleanPreference);
-
-
                 rowCount++;
             }
             FastIDSet itemIDs = new FastIDSet(userPrefs.size());
