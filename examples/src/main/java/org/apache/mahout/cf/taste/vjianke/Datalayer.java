@@ -42,7 +42,7 @@ public class Datalayer {
                     "password=IONisgreat!";
 
     public final String baseTimestamp = "2013-05-26";
-    public  final String upTimestamp = "2013-05-15";       //morning 10:00
+    public  final String upTimestamp = "2013-06-15";       //morning 10:00
 
     public Datalayer(){
     }
