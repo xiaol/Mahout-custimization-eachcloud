@@ -59,7 +59,7 @@ public class IntrestBasedRecommendEntryPoint {
                     "96c04d86-c4a4-487a-ba6d-a0e400299937"      // paul
             );
 
-    public static String RECOMMEND_BY_USER = "你可能感兴趣的";
+    public static String RECOMMEND_BY_USER = "来自你的兴趣热点";
     public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的订阅剪报";//"你错过的来自";
     public static String RECOMMEND_BY_SUBSCRIPTION_SUFFIX = "的剪报";
     public static String RECOMMEND_BY_SINA = "和你在微博的喜好相关";
