@@ -60,7 +60,7 @@ public class IntrestBasedRecommendEntryPoint {
             );
 
     public static String RECOMMEND_BY_USER = "来自你的兴趣热点";
-    public static String RECOMMEND_BY_SUBSCRIPTION = "你错过的订阅剪报";//"你错过的来自";
+    public static String RECOMMEND_BY_SUBSCRIPTION = "你可能感兴趣的";//"你错过的来自";
     public static String RECOMMEND_BY_SUBSCRIPTION_SUFFIX = "的剪报";
     public static String RECOMMEND_BY_SINA = "和你在微博的喜好相关";
     public static String RECOMMEND_BY_BEHAVIOR_PREFIX = "因为";
@@ -69,7 +69,7 @@ public class IntrestBasedRecommendEntryPoint {
     public static String RECOMMEND_BY_CREATED_BOARD_PREFIX= "和你的专辑";
     public static String RECOMMEND_BY_BOARD_SUFFIX = "相关的";
     public static String RECOMMEND_BY_BOARD = "来自你可能感兴趣的专辑";
-    public static String RECOMMEND_BY_TOPIC = "你可能感兴趣的";
+    public static String RECOMMEND_BY_TOPIC = "你可能感兴趣的主题";
 
 
     public static void main(String[] args) throws Exception{
