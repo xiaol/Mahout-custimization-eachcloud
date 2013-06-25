@@ -21,8 +21,8 @@ import java.util.List;
  */
 public class AzureStorageHelper {
     public static final String storageConnectionString =
-            "BlobEndpoint=https://eachcloudcn.blob.core.chinacloudapi.cn/;QueueEndpoint=https://eachcloudcn.queue.core.chinacloudapi.cn/;TableEndpoint=https://eachcloudcn.table.core.chinacloudapi.cn/;" +
-                    "DefaultEndpointsProtocol=https;" +
+            "BlobEndpoint=http://eachcloudcn.blob.core.chinacloudapi.cn/;QueueEndpoint=http://eachcloudcn.queue.core.chinacloudapi.cn/;TableEndpoint=http://eachcloudcn.table.core.chinacloudapi.cn/;" +
+                    "DefaultEndpointsProtocol=http;" +
                     "AccountName=eachcloudcn;" +
                     "AccountKey=l5IO6gj+r+pKri09QGzQ33bN31/XyaLcRaurhQsOT2EkC71bJyk+rjetUhANbk9WXq6z6OgOfYdimRLGE5W6Ew==";
     private CloudTableClient _tableClient;
