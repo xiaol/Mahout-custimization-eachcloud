@@ -41,8 +41,8 @@ public class Datalayer {
                     "user=eachcloud@llwko2tjlq" + ";" +
                     "password=IONisgreat!";
 
-    public final String baseTimestamp = "2013-05-26";
-    public  final String upTimestamp = "2013-06-15";       //morning 10:00
+    public final String baseTimestamp = "2013-06-15";
+    public  final String upTimestamp = "2013-07-01";       //morning 10:00
 
     public Datalayer(){
     }
