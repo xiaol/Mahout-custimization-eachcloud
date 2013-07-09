@@ -32,8 +32,8 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 563654;//378145;
-    static int nextIdStamp = 563654;
+    static int idStamp = 600544;//378145;
+    static int nextIdStamp = 600544;
     static IndexReader _reader = null;
 
     public void initIfNeeded(String indexPath){
@@ -259,7 +259,6 @@ public class ContentBasedRecommender {
             helper.uploadToAzureTable("SuggestedClipByContent",suggestedClipEntities);
         }
         suggestedClipEntities.clear();
-
 
     }
 
