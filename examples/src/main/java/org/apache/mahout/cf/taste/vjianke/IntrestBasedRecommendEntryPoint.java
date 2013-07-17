@@ -528,7 +528,7 @@ public class IntrestBasedRecommendEntryPoint {
             clipEntity.settitlePic(titlePic);
         }
 
-        clipEntity.settitlePic(feedClipEntity.gettitlePic());
+        //clipEntity.settitlePic(feedClipEntity.gettitlePic());
         clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
         clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
         clipEntity.settype(feedClipEntity.gettype());
