@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 600544;//378145;
-    static int nextIdStamp = 600544;
+    static int nextIdStamp = 612276;
     static IndexReader _reader = null;
 
     public void initIfNeeded(String indexPath){
@@ -498,7 +498,9 @@ public class ContentBasedRecommender {
         clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
         clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
         clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
-        clipEntity.settitlePic(feedClipEntity.gettitlePic());
+
+
+
         clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
         clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
         clipEntity.settype(feedClipEntity.gettype());

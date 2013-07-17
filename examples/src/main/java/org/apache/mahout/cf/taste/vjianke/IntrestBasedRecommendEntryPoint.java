@@ -521,6 +521,13 @@ public class IntrestBasedRecommendEntryPoint {
         clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
         clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
         clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
+
+        String titlePic = feedClipEntity.gettitlePic();
+        if(Long.parseLong(clipId,36) >= Long.parseLong("ZMMRO",36)) {
+        }else{
+            clipEntity.settitlePic(titlePic);
+        }
+
         clipEntity.settitlePic(feedClipEntity.gettitlePic());
         clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
         clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
