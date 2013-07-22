@@ -79,7 +79,7 @@
     <orderEntry type="library" name="Maven: com.ecyrd.speed4j:speed4j:0.9" level="project" />
     <orderEntry type="module" module-name="mahout-examples" />
     <orderEntry type="library" name="Maven: com.microsoft.sqlserver:sqljdbc4:4.0" level="project" />
-    <orderEntry type="library" name="Maven: com.microsoft.windowsazure:microsoft-windowsazure-api:0.4.0" level="project" />
+    <orderEntry type="library" name="Maven: com.microsoft.windowsazure:microsoft-windowsazure-api:0.4.3" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-client:1.13" level="project" />
     <orderEntry type="library" name="Maven: com.sun.jersey:jersey-core:1.13" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
