@@ -3,10 +3,16 @@ package org.apache.mahout.cf.taste.vjianke;
 import org.apache.mahout.cf.taste.impl.common.FastByIDMap;
 import org.apache.mahout.cf.taste.impl.common.FastIDSet;
 import org.apache.mahout.cf.taste.impl.model.GenericBooleanPrefDataModel;
+import org.apache.mahout.cf.taste.impl.neighborhood.NearestNUserNeighborhood;
+import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
+import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.model.PreferenceArray;
+import org.apache.mahout.cf.taste.neighborhood.UserNeighborhood;
 import org.apache.mahout.cf.taste.recommender.RecommendedItem;
-import org.apache.mahout.cf.taste.vjianke.engine.IntrestGenerator;
+import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+import org.json.simple.JSONArray;
 
+import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.*;
 
@@ -46,113 +52,160 @@ public class EntryPoint {
             );
 
     public static void main(String[] args) throws Exception{
-        Datalayer datalayer = new Datalayer();
-        IntrestGenerator intrestGenerator = new IntrestGenerator();
-        ArrayList<String> weiboTagsTable = intrestGenerator.getTagFromWeibo(
-                mates.get(0),datalayer);
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DAY_OF_MONTH, -7);
+        Date endDate = new Date();
+        Date startDate = calendar.getTime();
+        Timestamp _ts = new Timestamp(startDate.getTime());
+        Timestamp _tsEnd = new Timestamp(endDate.getTime());
 
-        Collections.shuffle(weiboTagsTable);
-
-        Timestamp _ts = Timestamp.valueOf("2011-12-01 23:23:23");
-        Timestamp _tsEnd = Timestamp.valueOf("2013-01-23 23:23:23");
-        UserBasedAnalyzer analyzer = new UserBasedAnalyzer();
-        FastByIDMap<PreferenceArray> prefsMap = new FastByIDMap<PreferenceArray>();
-        ArrayList<UUID> users = new ArrayList<UUID>();
-        analyzer.init(prefsMap, users, _ts, _tsEnd);
         AzureStorageHelper azureStorageHelper = new AzureStorageHelper();
-        FastByIDMap<FastIDSet> prefsIDSet = GenericBooleanPrefDataModel.toDataMap(prefsMap);
-
-
         azureStorageHelper.init();
+        Datalayer datalayer = new Datalayer();
 
-          for(String uuid: mates2){
-              proceed(uuid, analyzer, prefsIDSet, users, azureStorageHelper, _ts, _tsEnd);
-          }
+        FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
+        ArrayList<UUID> localUsers = new ArrayList<UUID>();
 
+        System.out.println("Start to get preference---");
+        UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
+        userBasedAnalyzer.init(localPrefsMap, localUsers, _ts, _tsEnd);
+        System.out.println("load preferences , parse to data map");
+        FastByIDMap<FastIDSet> localprefsIDSet = GenericBooleanPrefDataModel.toDataMap(localPrefsMap);
+
+        System.out.println("Start to query users---");
+        Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
+        System.out.println("Get active users.");
+        JSONArray activeUsers = datalayer.getActiveUsers(1);
+
+        DataModel localModel = new GenericBooleanPrefDataModel(localprefsIDSet);
+
+        UserSimilarity localSimilarity = new LogLikelihoodSimilarity(localModel);
+        UserNeighborhood localNeighborhood =
+                new NearestNUserNeighborhood(localUsers.size(), localSimilarity, localModel);
+        IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
+                localModel, localNeighborhood, localSimilarity);
+
+
+        for(String uuid: mates2){
+            List<RecommendUserEntity> userBasedResults = proceed(uuid, userEntities, localRecommend,
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 2,
+                    "Fullscope ",Collections.EMPTY_LIST, "推荐用户");
+
+            if(userBasedResults.isEmpty()){
+            }else{
+
+                 azureStorageHelper.uploadToAzureTable(
+                            "RecommendUserEntity",userBasedResults);
+
+            }
+        }
     }
 
-    public static void proceed(String uuid,
-                               UserBasedAnalyzer analyzer,
-                               FastByIDMap<FastIDSet> prefsIDSet,
-                               ArrayList<UUID> users,
-                               AzureStorageHelper azureStorageHelper,
-                               Timestamp _ts,
-                               Timestamp _tsEnd) throws Exception {
+    public static List<RecommendUserEntity> proceed(String uuid, Hashtable<String, Datalayer.UserEntity> userEntityHashtable,
+                                                    IntrestBasedRecommend recommend,
+                                                    FastByIDMap<FastIDSet> prefsIDSet,
+                                                    ArrayList<UUID> users,
+                                                    AzureStorageHelper azureStorageHelper,
+                                                    Timestamp _ts,
+                                                    Timestamp _tsEnd, int howMany, String prefix,List<String> exceptionItemIds,
+                                                    String recommendReason) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
+
         List<RecommendedItem> recommendedItemList =
-                analyzer.recommend(uuid, prefsIDSet, users, 12, neighborhoodUsers);
+                recommend.recommend(uuid, users, howMany, neighborhoodUsers,exceptionItemIds);
 
-        List<RecommendClipEntity> recommendClipEntityList = new ArrayList<RecommendClipEntity>();
-
+        List<RecommendUserEntity> recommendUserEntityList = new ArrayList<RecommendUserEntity>();
         Datalayer datalayer = new Datalayer();
+
+        List<Long> arraySourceUser = new ArrayList<Long>();
+        Map<Long,Double> mapSourceUserInfluence = new HashMap<Long, Double>();
+        List<Double> arraySourceUserInfluence = new ArrayList<Double>();
+
+        int userIndex = users.indexOf(UUID.fromString(uuid));
 
         for(RecommendedItem item : recommendedItemList ){
             String clipId = Long.toString(item.getItemID(),36).toUpperCase();
-            long sourceUser = -1;
+            long mate = -1;
             for(long neighborhoodUser : neighborhoodUsers){
                 boolean hasPref = prefsIDSet.get(neighborhoodUser).contains(item.getItemID());
                 if(hasPref) {
-                    sourceUser = neighborhoodUser;
-                    break;
+                    arraySourceUser.add(neighborhoodUser);
+                    double value = recommend.getSimilarity().userSimilarity(neighborhoodUser,userIndex);
+                    BigDecimal influence = new BigDecimal(value);
+                    //System.out.println(users.get((int)neighborhoodUser).toString()+" to user's influence: " +influence.setScale(2,2));
+                    mapSourceUserInfluence.put(neighborhoodUser, influence.setScale(2,2).doubleValue());
+                    arraySourceUserInfluence.add(influence.setScale(2,2).doubleValue());
                 }
+                hasPref = false;
             }
             String uuidWithoutDash = uuid.replace("-","");
-            if(sourceUser == -1)
+            if(mapSourceUserInfluence.isEmpty())
                 throw new Exception("No Way");
 
-            RecommendClipEntity clipEntity = new RecommendClipEntity(
-                    uuidWithoutDash,
-                    Long.toString(_ts.getTime())+recommendedItemList.indexOf(item));
+            mate = arraySourceUser.get(0);
 
-            AzureStorageHelper.FeedClipEntity feedClipEntity =
-                    azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
+            Date date = new Date();
+            long time =  date.getTime();
+            String rowKey =  users.get((int) mate).toString().toUpperCase();
+            Datalayer.UserEntity userEntity = userEntityHashtable.get(users.get((int) mate).toString().toUpperCase());
+            if(userEntity == null){
+                System.out.println("can't find user in hashtable");
+                userEntity = datalayer.Query(users.get((int) mate).toString());
 
-            if(feedClipEntity == null){
-                System.out.println("Can't retrieve Clip: " +clipId);
-                continue;
+            }
+            String strSource= prefix;
+            for(int i =0; i< arraySourceUser.size();i++){
+                Datalayer.UserEntity entity = userEntityHashtable.get(users.get(arraySourceUser.get(i).intValue()).toString().toUpperCase());
+                if(entity == null)
+                    entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
+                strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
             }
 
-            Datalayer.UserEntity userEntity = datalayer.Query(users.get((int)sourceUser).toString());
-            clipEntity.setRecommendStrategy("user-based:log-likelyhood");
-            clipEntity.setRecommendContext("feedhome");
-            clipEntity.setBase36(clipId);
-            clipEntity.setAction("");
-            clipEntity.setSender(uuidWithoutDash);
-            clipEntity.setSenderName(userEntity.getUser_screen_name());
-            clipEntity.setSenderImage(userEntity.getProfile_image_url());
-            clipEntity.setSenderLink("/home/" + uuidWithoutDash + ".clip");
-            clipEntity.setSenderComment("");
-            clipEntity.setcontentBrief(feedClipEntity.getcontentBrief());
-            clipEntity.sethasUT(feedClipEntity.gethasUT());
-            clipEntity.setcontentTitle(feedClipEntity.getcontentTitle());
-            clipEntity.setheight(feedClipEntity.getheight());
-            clipEntity.setwidth(feedClipEntity.getwidth());
-
-            clipEntity.setorigheight(feedClipEntity.getorigheight());
-            clipEntity.setorigsite(feedClipEntity.getorigheight());
-            clipEntity.setorigtitle(feedClipEntity.getorigtitle());
-            clipEntity.setorigurl(feedClipEntity.getorigurl());
-            clipEntity.setorigwidth(feedClipEntity.getorigwidth());
-            clipEntity.setsmallTitlePic(feedClipEntity.getsmallTitlePic());
-            clipEntity.setsmallTPHeight(feedClipEntity.getsmallTPHeight());
-            clipEntity.setsmallTPWidth(feedClipEntity.getsmallTPWidth());
-            clipEntity.settitlePic(feedClipEntity.gettitlePic());
-            clipEntity.settitlePicHeight(feedClipEntity.gettitlePicHeight());
-            clipEntity.settitlePicWidth(feedClipEntity.gettitlePicWidth());
-            clipEntity.settype(feedClipEntity.gettype());
-
-            clipEntity.setuguid(feedClipEntity.getuguid());
-            clipEntity.setuimage(feedClipEntity.getuimage());
-            clipEntity.setuname(feedClipEntity.getuname());
-
-            recommendClipEntityList.add(clipEntity);
+            RecommendUserEntity recommendUserEntity = generateUserEntity(uuidWithoutDash,
+                    rowKey, azureStorageHelper, clipId, userEntity, strSource,
+                    "user-based:log-likelyhood", "feedhome", recommendReason);
+            if(recommendUserEntity == null) {
+                arraySourceUser.clear();
+                mapSourceUserInfluence.clear();
+                continue;
+            }
+            recommendUserEntityList.add(recommendUserEntity);
         }
 
-        if(recommendClipEntityList.isEmpty()){
-           System.out.println("no recommend clip found.");
+        if(recommendUserEntityList.isEmpty()){
+            //System.out.println("no recommend clip found.");
+            return Collections.EMPTY_LIST;
         }else{
-            azureStorageHelper.uploadToAzureTable("RecommendClipEntity",recommendClipEntityList);
+            return recommendUserEntityList;
         }
+    }
+
+    public static RecommendUserEntity generateUserEntity(String uuidWithoutDash,
+                                                         String rowKey,
+                                                         AzureStorageHelper azureStorageHelper,
+                                                         String clipId,
+                                                         Datalayer.UserEntity userEntity,
+                                                         String strSource,
+                                                         String recommendStrategy,
+                                                         String recommendContext,
+                                                         String recommendReason
+    ){
+        RecommendUserEntity recommendUserEntity = new RecommendUserEntity(
+                uuidWithoutDash,
+                rowKey);
+
+        AzureStorageHelper.FeedClipEntity feedClipEntity =
+                azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
+
+        if(feedClipEntity == null){
+            //System.out.println("Can't retrieve Clip: " +clipId);
+            return null;
+        }
+
+        recommendUserEntity.setUserScreenName(userEntity.getUser_screen_name());
+        recommendUserEntity.setProfileImageUrl(userEntity.getProfile_image_url());
+
+        return recommendUserEntity;
     }
 }

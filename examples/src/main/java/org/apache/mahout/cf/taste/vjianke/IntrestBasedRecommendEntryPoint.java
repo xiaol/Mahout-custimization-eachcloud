@@ -85,8 +85,8 @@ public class IntrestBasedRecommendEntryPoint {
         azureStorageHelper.init();
         Datalayer datalayer = new Datalayer();
 
-        FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
-        ArrayList<UUID> localUsers = new ArrayList<UUID>();
+        /*FastByIDMap<PreferenceArray> localPrefsMap = new FastByIDMap<PreferenceArray>();
+        ArrayList<UUID> localUsers = new ArrayList<UUID>(); */
 
         /*System.out.println("Start to get preference---");
         UserBasedAnalyzer userBasedAnalyzer = new UserBasedAnalyzer();
