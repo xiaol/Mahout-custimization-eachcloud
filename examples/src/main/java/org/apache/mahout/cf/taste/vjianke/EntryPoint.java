@@ -85,15 +85,21 @@ public class EntryPoint {
         IntrestBasedRecommend localRecommend = new IntrestBasedRecommend(
                 localModel, localNeighborhood, localSimilarity);
 
+        //for(Object actvieUser:activeUsers){
 
-        for(String uuid: mates2){
-            List<RecommendUserEntity> userBasedResults = proceed(uuid, userEntities, localRecommend,
-                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 2,
+
+            //StringBuilder sb = new StringBuilder((String)actvieUser);
+            //sb.insert(8,"-").insert(13,"-").insert(18,"-").insert(23,"-");
+            //String userId = UUID.fromString(sb.toString()).toString().toUpperCase();
+        for(String userId: mates){
+            List<RecommendUserEntity> userBasedResults = proceed(userId, userEntities, localRecommend,
+                    localprefsIDSet, localUsers, azureStorageHelper, _ts, _tsEnd, 7,
                     "Fullscope ",Collections.EMPTY_LIST, "推荐用户");
 
             if(userBasedResults.isEmpty()){
             }else{
-
+                List<RecommendClipEntity> deletedRecommendClipEntity =
+                        azureStorageHelper.deleteByPartitionKey("RecommendUserEntity",userId.replace("-",""));
                  azureStorageHelper.uploadToAzureTable(
                             "RecommendUserEntity",userBasedResults);
 
@@ -107,7 +113,7 @@ public class EntryPoint {
                                                     ArrayList<UUID> users,
                                                     AzureStorageHelper azureStorageHelper,
                                                     Timestamp _ts,
-                                                    Timestamp _tsEnd, int howMany, String prefix,List<String> exceptionItemIds,
+                                                    Timestamp _tsEn, int howMany, String prefix,List<String> exceptionItemIds,
                                                     String recommendReason) throws Exception {
 
         List<Long> neighborhoodUsers= new ArrayList<Long>();
@@ -118,32 +124,10 @@ public class EntryPoint {
         List<RecommendUserEntity> recommendUserEntityList = new ArrayList<RecommendUserEntity>();
         Datalayer datalayer = new Datalayer();
 
-        List<Long> arraySourceUser = new ArrayList<Long>();
-        Map<Long,Double> mapSourceUserInfluence = new HashMap<Long, Double>();
-        List<Double> arraySourceUserInfluence = new ArrayList<Double>();
-
-        int userIndex = users.indexOf(UUID.fromString(uuid));
-
-        for(RecommendedItem item : recommendedItemList ){
-            String clipId = Long.toString(item.getItemID(),36).toUpperCase();
+        int count = 0;
+        for(long neighborhoodUser : neighborhoodUsers){
             long mate = -1;
-            for(long neighborhoodUser : neighborhoodUsers){
-                boolean hasPref = prefsIDSet.get(neighborhoodUser).contains(item.getItemID());
-                if(hasPref) {
-                    arraySourceUser.add(neighborhoodUser);
-                    double value = recommend.getSimilarity().userSimilarity(neighborhoodUser,userIndex);
-                    BigDecimal influence = new BigDecimal(value);
-                    //System.out.println(users.get((int)neighborhoodUser).toString()+" to user's influence: " +influence.setScale(2,2));
-                    mapSourceUserInfluence.put(neighborhoodUser, influence.setScale(2,2).doubleValue());
-                    arraySourceUserInfluence.add(influence.setScale(2,2).doubleValue());
-                }
-                hasPref = false;
-            }
-            String uuidWithoutDash = uuid.replace("-","");
-            if(mapSourceUserInfluence.isEmpty())
-                throw new Exception("No Way");
-
-            mate = arraySourceUser.get(0);
+            mate = neighborhoodUser;
 
             Date date = new Date();
             long time =  date.getTime();
@@ -152,25 +136,18 @@ public class EntryPoint {
             if(userEntity == null){
                 System.out.println("can't find user in hashtable");
                 userEntity = datalayer.Query(users.get((int) mate).toString());
-
             }
-            String strSource= prefix;
-            for(int i =0; i< arraySourceUser.size();i++){
-                Datalayer.UserEntity entity = userEntityHashtable.get(users.get(arraySourceUser.get(i).intValue()).toString().toUpperCase());
-                if(entity == null)
-                    entity = datalayer.Query(users.get(arraySourceUser.get(i).intValue()).toString());
-                strSource += arraySourceUserInfluence.get(i)+":"+entity.getUser_screen_name()+" | ";
-            }
-
+            String uuidWithoutDash = uuid.replace("-","");
             RecommendUserEntity recommendUserEntity = generateUserEntity(uuidWithoutDash,
-                    rowKey, azureStorageHelper, clipId, userEntity, strSource,
+                    rowKey, azureStorageHelper, null, userEntity, null,
                     "user-based:log-likelyhood", "feedhome", recommendReason);
             if(recommendUserEntity == null) {
-                arraySourceUser.clear();
-                mapSourceUserInfluence.clear();
                 continue;
             }
             recommendUserEntityList.add(recommendUserEntity);
+            count++;
+            if(count > 12)
+                break;
         }
 
         if(recommendUserEntityList.isEmpty()){
@@ -194,14 +171,6 @@ public class EntryPoint {
         RecommendUserEntity recommendUserEntity = new RecommendUserEntity(
                 uuidWithoutDash,
                 rowKey);
-
-        AzureStorageHelper.FeedClipEntity feedClipEntity =
-                azureStorageHelper.retrieveFeedClipEntity(clipId, "-","ClipEntity");
-
-        if(feedClipEntity == null){
-            //System.out.println("Can't retrieve Clip: " +clipId);
-            return null;
-        }
 
         recommendUserEntity.setUserScreenName(userEntity.getUser_screen_name());
         recommendUserEntity.setProfileImageUrl(userEntity.getProfile_image_url());
