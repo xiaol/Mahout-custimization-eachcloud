@@ -32,8 +32,8 @@ public class ContentBasedRecommender {
     static boolean bDebug = false;
     static boolean bIncrement = true;
 
-    static int idStamp = 600544;//378145;
-    static int nextIdStamp = 612276;
+    static int idStamp = 612276;//378145;
+    static int nextIdStamp = 656653;
     static IndexReader _reader = null;
 
     public void initIfNeeded(String indexPath){
