@@ -195,9 +195,15 @@ public class AzureStorageHelper {
 
         List<RecommendBoardEntity> recommendBoardEntities =
                 new ArrayList<RecommendBoardEntity>();
+
+        try{
         for (RecommendBoardEntity entity : _tableClient.execute(rangeQuery)) {
             // Create an operation to delete the entity.
             recommendBoardEntities.add(entity);
+        }
+        }catch (Exception e) {
+            System.out.println(partitinKey);
+            e.printStackTrace();
         }
         return recommendBoardEntities;
     }
