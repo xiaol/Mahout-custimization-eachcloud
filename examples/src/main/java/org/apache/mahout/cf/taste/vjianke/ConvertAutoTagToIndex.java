@@ -30,6 +30,7 @@ public class ConvertAutoTagToIndex {
         //TODO order by clip id , 越小越日期越近
             List<Datalayer.ClipEntity> clipEntities =
                     layer.getClips(Integer.toString(1), false, false,true,false);
+            System.out.println("Total delta clips count:"+clipEntities.size());
             List<ClipTagEntity> clipTagEntities = new ArrayList<ClipTagEntity>();
         int count = 0;
             for(Datalayer.ClipEntity entity:clipEntities){

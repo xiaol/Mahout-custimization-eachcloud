@@ -927,7 +927,7 @@ public class Datalayer {
                 sqlString += " where add_time > '"+ baseTimestamp+"' and add_time < '"+ upTimestamp +"'";
             if(exclusive)
                 sqlString += "WHERE Id NOT IN " +
-                        "(SELECT ClipId FROM ClipTagEntity)";
+                        "(SELECT DISTINCT ClipId FROM ClipTagEntity)";
             sqlString += " ORDER BY Id";
             //PreparedStatement preparedStatement = connection.prepareStatement(sqlString);
             statement = connection.createStatement();
