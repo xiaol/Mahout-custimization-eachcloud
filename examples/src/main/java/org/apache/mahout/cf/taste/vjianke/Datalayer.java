@@ -1335,6 +1335,12 @@ public class Datalayer {
                 preparedStatement.clearParameters();
             }
             int[] results = preparedStatement.executeBatch();
+            for(int i= 0; i < results.length; i++){
+                if(results[i] !=  1){
+                    System.out.println(entityList.get(i).ClipId+" not insert.");
+                }
+            }
+            System.out.println(results);
 
         }
         catch (Exception e)
@@ -1351,7 +1357,7 @@ public class Datalayer {
                 if (null != resultSet) resultSet.close();
                 connection.close();
             }
-            catch (SQLException sqlException){}
+            catch (SQLException sqlException){System.out.println(sqlException);}
         }
     }
 
