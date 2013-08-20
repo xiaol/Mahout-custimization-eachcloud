@@ -98,7 +98,7 @@ public class IntrestBasedRecommendEntryPoint {
         System.out.println("Start to query users---");
         Hashtable<String, Datalayer.UserEntity> userEntities = datalayer.QueryUsers();
         System.out.println("Get active users.");
-        JSONArray activeUsers = datalayer.getActiveUsers(1);
+        JSONArray activeUsers = datalayer.getActiveUsers(3);
         for(Object actvieUser:activeUsers){
 
         /*List<String> contributorList = datalayer.QueryContributor();
