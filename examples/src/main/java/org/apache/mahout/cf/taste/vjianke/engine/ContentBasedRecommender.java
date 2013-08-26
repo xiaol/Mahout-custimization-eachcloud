@@ -33,7 +33,7 @@ public class ContentBasedRecommender {
     static boolean bIncrement = true;
 
     static int idStamp = 656653;//378145;
-    static int nextIdStamp = 656653;
+    static int nextIdStamp = 680334;
     static IndexReader _reader = null;
 
     public void initIfNeeded(String indexPath){

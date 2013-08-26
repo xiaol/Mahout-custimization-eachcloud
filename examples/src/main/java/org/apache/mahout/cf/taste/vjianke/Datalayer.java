@@ -1475,7 +1475,7 @@ public class Datalayer {
 
             DefaultHttpClient httpClient = new DefaultHttpClient();// http://vjiankebuildcn.chinacloudapp.cn/User/ActiveUsers?days=2
             HttpGet getRequest = new HttpGet(
-                    "http://vjiankeyoda.cloudapp.net/User/ActiveUsers?days="+countDays);
+                    "http://vjiankebuildcn.chinacloudapp.cn/User/ActiveUsers?days="+countDays);
             getRequest.addHeader("accept", "application/json");
 
             HttpResponse response = httpClient.execute(getRequest);
